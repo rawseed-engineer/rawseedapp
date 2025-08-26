@@ -31,7 +31,7 @@ const ContactUs = () => {
             />
             <textarea
               placeholder="Your Message"
-              rows="4"
+              rows={4}
               style={{ padding: "0.5rem", border: "1px solid #ccc" }}
             ></textarea>
             <button

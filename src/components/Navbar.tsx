@@ -29,7 +29,7 @@ const Navbar = () => {
             }}
           > */}
           <Link
-            to="/spa-web"
+            to="/rawseedapp"
             style={{
               textDecoration:
                 location.pathname === "/spa-web" ? "underline" : "none",
@@ -49,7 +49,7 @@ const Navbar = () => {
             }}
           > */}
           <Link
-            to="/spa-web/products"
+            to="/rawseedapp/products"
             style={{
               textDecoration:
                 location.pathname === "/spa-web/products"
@@ -73,7 +73,7 @@ const Navbar = () => {
             }}
           > */}
           <Link
-            to="/spa-web/contact-us"
+            to="/rawseedapp/contact-us"
             style={{
               textDecoration:
                 location.pathname === "/spa-web/contact-us"

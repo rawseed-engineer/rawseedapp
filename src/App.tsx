@@ -12,9 +12,9 @@ function App() {
         <Navbar />
         <main>
           <Routes>
-            <Route path="/spa-web" element={<Home />} />
-            <Route path="/spa-web/products" element={<Products />} />
-            <Route path="/spa-web/contact-us" element={<ContactUs />} />
+            <Route path="/rawseedapp" element={<Home />} />
+            <Route path="/rawseedapp/products" element={<Products />} />
+            <Route path="/rawseedapp/contact-us" element={<ContactUs />} />
           </Routes>
         </main>
       </div>
