@@ -1,4 +1,4 @@
-const ContactUs = () => {
+const BlackseedOil = () => {
   return (
     <div style={{ padding: "2rem" }}>
       <h1>Contact Us</h1>
@@ -69,4 +69,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default BlackseedOil;

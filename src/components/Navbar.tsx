@@ -32,11 +32,12 @@ const Navbar = () => {
             to="/rawseedapp"
             style={{
               textDecoration:
-                location.pathname === "/spa-web" ? "underline" : "none",
-              fontWeight: location.pathname === "/spa-web" ? "bold" : "normal",
+                location.pathname === "/rawseedapp" ? "underline" : "none",
+              fontWeight:
+                location.pathname === "/rawseedapp" ? "bold" : "normal",
             }}
           >
-            Home
+            Rawseed
           </Link>
         </li>
         <li>
@@ -49,17 +50,19 @@ const Navbar = () => {
             }}
           > */}
           <Link
-            to="/rawseedapp/products"
+            to="/rawseedapp/sesame-oil"
             style={{
               textDecoration:
-                location.pathname === "/spa-web/products"
+                location.pathname === "/rawseedapp/sesame-oil"
                   ? "underline"
                   : "none",
               fontWeight:
-                location.pathname === "/spa-web/products" ? "bold" : "normal",
+                location.pathname === "/rawseedapp/sesame-oil"
+                  ? "bold"
+                  : "normal",
             }}
           >
-            Products
+            Sesame Oil
           </Link>
         </li>
         <li>
@@ -73,17 +76,19 @@ const Navbar = () => {
             }}
           > */}
           <Link
-            to="/rawseedapp/contact-us"
+            to="/rawseedapp/blackseed-oil"
             style={{
               textDecoration:
-                location.pathname === "/spa-web/contact-us"
+                location.pathname === "/rawseedapp/blackseed-oil"
                   ? "underline"
                   : "none",
               fontWeight:
-                location.pathname === "/spa-web/contact-us" ? "bold" : "normal",
+                location.pathname === "/rawseedapp/blackseed-oil"
+                  ? "bold"
+                  : "normal",
             }}
           >
-            Contact Us
+            Blackseed Oil
           </Link>
         </li>
       </ul>
