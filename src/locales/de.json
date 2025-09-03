@@ -1,0 +1,6 @@
+{
+  "welcome_message": "Willkommen zum React i18n Demo!",
+  "greeting": "Hallo, {{name}}!",
+  "items_count": "Sie haben {{count}} Artikel",
+  "items_count_plural": "Sie haben {{count}} Artikel"
+}

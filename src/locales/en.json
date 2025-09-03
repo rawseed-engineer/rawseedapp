@@ -1,0 +1,95 @@
+{
+  "welcome_message": "Welcome to the React i18n demo!",
+  "greeting": "Hello, {{name}}!",
+  "items_count": "You have {{count}} item",
+  "items_count_plural": "You have {{count}} items",
+  "hero": {
+    "home": {
+      "title": "Welcome to RawSeed",
+      "subtitle": "Purity from the Ground Up",
+      "description": "At RawSeed, we believe that nature holds the key to true nourishment. Founded in the UK, our mission is to reconnect people with the honest power of natural oils—pure, unrefined, and rooted in tradition. We specialize in the production of cold-pressed sesame oil and black seed oil, proudly presented under our flagship brand: Golden Drop.",
+      "learn": "Contact us"
+    },
+    "sesame_oil": {
+      "title": "Why Sesame Oil?",
+      "subtitle": "Ancient Wisdom, Modern Cooking",
+      "description": "At RawSeed, we believe in reconnecting with ingredients that have stood the test of time. Sesame oil is one of the oldest, most nourishing oils known to humankind—yet it remains underused in modern kitchens. Here&#39;s why we think it’s time for sesame oil to reclaim its place in your pantry.",
+      "learn": "Contact us"
+    }
+  },
+  "menu": {
+    "sesame_oil": "Sesame Oil",
+    "black_seed_oil": "Black Seed Oil",
+    "contact_us": "Contact Us",
+    "get_started": "Get Started"
+  },
+  "story": {
+    "title": "Our Story",
+    "description": {
+      "p1": "RawSeed began with a simple question: What if oil could be made the way it used to be—slow, clean, and full of life?",
+      "p2": "Disheartened by the rise of over-processed, chemically refined oils, we set out to create an alternative. Drawing on generations of knowledge and inspired by traditional methods, we established RawSeed to produce oils that are not only healthy, but also meaningful.",
+      "p3": "We saw a growing need for transparency in food and wellness products. So we took a different path: back to the roots.",
+      "p4": "We come from families that value natural remedies and time-honoured foods. Inspired by this heritage, we studied traditional oil pressing techniques across cultures—from ancient Anatolian sesame presses to the rich herbal traditions of the Middle East. We travelled, studied, and built partnerships with trusted growers—starting with sesame seeds sourced from rich soils in Afghanistan and Nigella sativa seeds carefully harvested in regions with long-standing herbal traditions.",
+      "p5": "What we found was powerful: nature doesn't need to be altered to be effective—it just needs to be respected."
+    }
+  },
+  "what_we_do": {
+    "title": "What We Do",
+    "p1": "We produce and supply 100% cold-pressed oils that are:",
+    "item1": "Additive-free",
+    "item2": "Unrefined",
+    "item3": "Packed with nutrients",
+    "item4": "Ethically sourced",
+    "p2": "At the heart of our process is a simple yet powerful method: cold pressing. We use high-quality, raw seeds and apply zero heat and no chemicals—preserving all the nutrients, antioxidants, health benefits and delicate flavours that nature intended.",
+    "p3": "Our oils are bottled with care and presented with clarity. Each product tells a story—from soil to seed to the golden drop in your hands."
+  },
+  "products": {
+    "sesame": {
+      "title": "Golden Drop Sesame Oil",
+      "description": "A smooth, golden oil rich in antioxidants and essential fatty acids."
+    },
+    "black_seed": {
+      "title": "Golden Drop Black Seed Oil",
+      "description": "Highly prized for its healing properties and strong, earthy taste. Revered for centuries in traditional medicine, now available in its purest form."
+    }
+  },
+  "why_raw_seed": {
+    "title": "Why RawSeed?",
+    "p1": "Because we believe:",
+    "item1": "What you consume matters.",
+    "item2": "How it’s made matters even more.",
+    "p2": "We work directly with farmers, building long-term relationships based on trust, fair pricing, and mutual respect for the land. Sustainability is a core value: we support traditional agriculture and strive to leave a light footprint in every step we take. We apply rigorous quality standards at every stage. Our packaging is minimal and recyclable. Our message is simple: let nature speak for itself.",
+    "p3": "Whether you're using our oils for cooking or daily wellness, RawSeed is here to offer you a cleaner, more honest choice—crafted with care and rooted in authenticity."
+  },
+  "value": {
+    "title1": "Purity",
+    "p1": "No shortcuts. No additives. Only nature.",
+    "title2": "Tradition",
+    "p2": "Honouring the wisdom of those before us.",
+    "title3": "Sustainability",
+    "p3": "Ethical sourcing and earth-friendly practices.",
+    "title4": "Wellness",
+    "p4": "Supporting health through quality and transparency."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "p1": "We dream of a world where natural, honest food is accessible and valued.",
+    "p2": "We want to inspire others to:",
+    "p3": "Our future plans include expanding our line to include other cold-pressed oils following the same principles of purity and sustainability.",
+    "item1": "Choose ingredients with intention",
+    "item2": "Honour traditional methods",
+    "item3": "Prioritize wellness from the inside out"
+  },
+  "journey": {
+    "title": "Join Our Journey",
+    "p1": "RawSeed is more than a product—it's a movement back to the essentials. We're proud to grow with our community of health seekers, conscious cooks, and lovers of natural living.",
+    "p2": "We invite you to explore the golden standard of our natural oils—with nothing added, and nothing taken away, learn our story, and taste the difference that true craftsmanship makes.",
+    "p3": "Welcome to RawSeed."
+  },
+  "history": {
+    "title": "The History of Sesame Oil",
+    "p1": "Sesame oil has been used for over 4,000 years. Civilizations across Asia, the Middle East, and Africa valued sesame oil not only for cooking, but also for medicine, skincare, and spiritual rituals.",
+    "p2": "In Ayurveda and Traditional Chinese Medicine, sesame oil has long been revered for its healing, detoxifying, and balancing properties. It was known as the &quot;queen of oils&quot; for a reason.",
+    "p3": "Today, we’re proud to continue this tradition through Golden Drop — our premium, cold-pressed sesame oil."
+  }
+}
