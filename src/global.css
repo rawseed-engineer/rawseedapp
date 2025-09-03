@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Gilda+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "tailwindcss";
+
+:root {
+}
+
+h1,
+h2 {
+  font-family: serif;
+}
+
+p {
+  /* font-family: "Montserrat", serif; */
+  font-family: serif;
+}
+
+li {
+  font-family: serif;
+}

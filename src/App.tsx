@@ -3,13 +3,13 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import SesameOil from "./pages/SesameOil";
 import BlackseedOil from "./pages/BlackseedOil";
-import "./App.css";
+// import "./App.css";
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar />
+        {/* <Navbar /> */}
         <main>
           <Routes>
             <Route path="/rawseedapp" element={<Home />} />
