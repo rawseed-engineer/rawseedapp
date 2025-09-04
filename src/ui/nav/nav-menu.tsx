@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 // import RawSeedLogo from "./../../assets/rawseed_logo.png";
 import { Link, useLocation } from "react-router-dom";
+import RawSeedLogo from "../../assets/rawseed_logo.png";
 
 const NavMenu: React.FC = () => {
   // const [count, setCount] = useState(0);
@@ -31,6 +32,7 @@ const NavMenu: React.FC = () => {
         isSticky
           ? "bg-[#181818] bg-opacity-95 backdrop-blur-lg shadow-lg"
           : "bg-transparent"
+        // "bg-[#181818] bg-opacity-95 backdrop-blur-lg shadow-lg"
       }`}
     >
       {/* Sticky Navigation */}
@@ -51,7 +53,11 @@ const NavMenu: React.FC = () => {
                 location.pathname === "/rawseedapp" ? "bold" : "normal",
             }}
           >
-            Rawseed
+            <img
+              src={RawSeedLogo}
+              alt="RawSeed Logo"
+              className="mx-8 h-[2.5rem] aspect-auto"
+            />
           </Link>
         </div>
 
@@ -77,7 +83,9 @@ const NavMenu: React.FC = () => {
                   : "normal",
             }}
           >
-            Sesame Oil
+            <div className="text-gray-300 hover:text-white transition-colors duration-200">
+              {t("menu.sesame_oil")}
+            </div>
           </Link>
 
           {/* <a
@@ -99,7 +107,9 @@ const NavMenu: React.FC = () => {
                   : "normal",
             }}
           >
-            Blackseed Oil
+            <div className="text-gray-300 hover:text-white transition-colors duration-200">
+              {t("menu.black_seed_oil")}
+            </div>
           </Link>
 
           <button className="bg-gradient-to-r from-amber-300 to-yellow-700 text-white px-6 py-2 rounded-full hover:from-amber-700 hover:to-yellow-700 transition-all duration-200 transform hover:scale-105">
