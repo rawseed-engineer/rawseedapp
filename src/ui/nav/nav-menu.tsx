@@ -32,18 +32,11 @@ const NavMenu: React.FC = () => {
         isSticky
           ? "bg-[#181818] bg-opacity-95 backdrop-blur-lg shadow-lg"
           : "bg-transparent"
-        // "bg-[#181818] bg-opacity-95 backdrop-blur-lg shadow-lg"
       }`}
     >
       {/* Sticky Navigation */}
       <div className="flex items-center justify-between max-w-7xl mx-auto">
-        {/* Logo */}
         <div className="flex items-center space-x-2">
-          {/* <img
-            src={RawSeedLogo}
-            alt="RawSeed Logo"
-            className="mx-8 h-[2.5rem] aspect-auto"
-          /> */}
           <Link
             to="/rawseedapp"
             style={{
@@ -63,13 +56,6 @@ const NavMenu: React.FC = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8 text-3xl">
-          {/* <a
-            href="/rawseed-webapp/raw-seed-oil"
-            className="text-gray-300 hover:text-white transition-colors duration-200"
-          >
-            {t("menu.sesame_oil")}
-          </a> */}
-
           <Link
             to="/rawseedapp/sesame-oil"
             style={{
@@ -88,12 +74,6 @@ const NavMenu: React.FC = () => {
             </div>
           </Link>
 
-          {/* <a
-            href="#features"
-            className="text-gray-300 hover:text-white transition-colors duration-200"
-          >
-            {t("menu.black_seed_oil")}
-          </a> */}
           <Link
             to="/rawseedapp/blackseed-oil"
             style={{
@@ -131,7 +111,7 @@ const NavMenu: React.FC = () => {
       </div>
 
       {/* Mobile Navigation Menu */}
-      {/* {isMenuOpen && (
+      {isMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-slate-800 backdrop-blur-lg bg-opacity-95 border-t border-gray-700">
           <div className="px-4 py-6 space-y-4">
             <a
@@ -169,7 +149,7 @@ const NavMenu: React.FC = () => {
             </button>
           </div>
         </div>
-      )} */}
+      )}
     </nav>
   );
 };
