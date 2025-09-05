@@ -91,5 +91,30 @@
     "p1": "Sesame oil has been used for over 4,000 years. Civilizations across Asia, the Middle East, and Africa valued sesame oil not only for cooking, but also for medicine, skincare, and spiritual rituals.",
     "p2": "In Ayurveda and Traditional Chinese Medicine, sesame oil has long been revered for its healing, detoxifying, and balancing properties. It was known as the &quot;queen of oils&quot; for a reason.",
     "p3": "Today, we’re proud to continue this tradition through Golden Drop — our premium, cold-pressed sesame oil."
+  },
+  "sesame": {
+    "reason": {
+      "heading": "Why Choose Sesame Oil Today?",
+      "p1": {
+        "title": "Bold Flavour, Natural Goodness",
+        "description": "Sesame oil has a warm, nutty flavour that adds depth and aroma to any dish. Use it in cooking, salad dressings, dips, marinades, stir-fries, or simply drizzle over roasted vegetables or warm bread."
+      },
+      "p2": {
+        "title": "Heart-Healthy Fats",
+        "description": "Cold-pressed sesame oil is rich in monounsaturated and polyunsaturated fats—the kind that help lower bad cholesterol and support overall cardiovascular health."
+      },
+      "p3": {
+        "title": "Naturally Rich in Antioxidants",
+        "description": "Packed with compounds like sesamol, sesamin, and vitamin E, sesame oil helps protect your body from oxidative stress while supporting skin and cellular health."
+      },
+      "p4": {
+        "title": "High Smoke Point",
+        "description": "Whether you’re sautéing, roasting, or finishing a dish, sesame oil holds up beautifully in the kitchen thanks to its stable structure and high smoke point."
+      },
+      "p5": {
+        "/.sesame.reason.p5.title": "Sustainable Minimal",
+        "/.sesame.reason.p5.description": "Sesame seeds are drought-resistant and grow with minimal inputs, making sesame oil a more sustainable choice compared to many mass-produced oils."
+      }
+    }
   }
 }
