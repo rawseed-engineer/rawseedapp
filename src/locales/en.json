@@ -115,6 +115,19 @@
         "/.sesame.reason.p5.title": "Sustainable Minimal",
         "/.sesame.reason.p5.description": "Sesame seeds are drought-resistant and grow with minimal inputs, making sesame oil a more sustainable choice compared to many mass-produced oils."
       }
+    },
+    "rediscovery": {
+      "title": "Rediscovering Sesame Oil",
+      "p1": "We believe sesame oil is more than just an ingredient—it’s a story of heritage, health, and natural excellence.",
+      "p2": "That’s why every bottle of Golden Drop by RawSeed is:",
+      "item1": "Cold-pressed from premium, ethically sourced sesame seeds",
+      "item2": "Free from chemicals, additives, or refining",
+      "item3": "Bottled with care to preserve aroma, taste, and nutrients",
+      "p3": "Bring the richness of tradition and the purity of nature to your kitchen with Golden Drop Sesame Oil — the oil your cooking deserves."
+    },
+    "callout": {
+      "title": "Ready to Make the Switch?",
+      "p1": "Explore our product range or learn more about how sesame oil can enhance your recipes, your health, and your lifestyle."
     }
   }
 }

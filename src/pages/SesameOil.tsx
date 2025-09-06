@@ -2,6 +2,11 @@ import { useTranslation } from "react-i18next";
 import NavMenu from "../ui/nav/nav-menu";
 import Ayurveda from "./../assets/ayurveda.jpeg";
 import Reasons from "../ui/sesame-oil/reasons";
+import Discovery from "../ui/sesame-oil/discovery";
+import Callout from "../ui/sesame-oil/callout";
+import EmailForm from "../ui/email-form";
+import Explore from "../ui/sesame-oil/explore";
+import Footer from "../ui/nav/footer";
 
 const SesameOil = () => {
   const { t } = useTranslation();
@@ -73,6 +78,27 @@ const SesameOil = () => {
       <section className="rounded bg-[#181818] py-12 sm:py-24">
         <Reasons />
       </section>
+
+      <section className="rounded py-8 mt-12 sm:py-12 mx-64">
+        <Discovery />
+      </section>
+
+      <section className="flex-grow overflow-x-auto w-full ">
+        <Callout />
+      </section>
+
+      {/* Contact Us */}
+      <section className="rounded py-8 mt-12 sm:py-12 mx-64">
+        <div className="mx-auto grid grid-cols-1 items-center justify-items-center gap-8 px-8 sm:px-16 md:grid-cols-2">
+          <Explore />
+          <EmailForm />
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-[#181818] border-t border-gray-800 py-16">
+        <Footer />
+      </footer>
     </div>
   );
 };
