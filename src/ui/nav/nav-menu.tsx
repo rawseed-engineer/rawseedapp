@@ -58,16 +58,16 @@ const NavMenu: React.FC = () => {
         <div className="hidden md:flex items-center space-x-8 text-3xl">
           <Link
             to="/rawseedapp/sesame-oil"
-            style={{
-              textDecoration:
-                location.pathname === "/rawseedapp/sesame-oil"
-                  ? "underline"
-                  : "none",
-              fontWeight:
-                location.pathname === "/rawseedapp/sesame-oil"
-                  ? "bold"
-                  : "normal",
-            }}
+            // style={{
+            //   textDecoration:
+            //     location.pathname === "/rawseedapp/sesame-oil"
+            //       ? "underline"
+            //       : "none",
+            //   fontWeight:
+            //     location.pathname === "/rawseedapp/sesame-oil"
+            //       ? "bold"
+            //       : "normal",
+            // }}
           >
             <div className="text-gray-300 hover:text-white transition-colors duration-200">
               {t("menu.sesame_oil")}
@@ -76,16 +76,16 @@ const NavMenu: React.FC = () => {
 
           <Link
             to="/rawseedapp/blackseed-oil"
-            style={{
-              textDecoration:
-                location.pathname === "/rawseedapp/blackseed-oil"
-                  ? "underline"
-                  : "none",
-              fontWeight:
-                location.pathname === "/rawseedapp/blackseed-oil"
-                  ? "bold"
-                  : "normal",
-            }}
+            // style={{
+            //   textDecoration:
+            //     location.pathname === "/rawseedapp/blackseed-oil"
+            //       ? "underline"
+            //       : "none",
+            //   fontWeight:
+            //     location.pathname === "/rawseedapp/blackseed-oil"
+            //       ? "bold"
+            //       : "normal",
+            // }}
           >
             <div className="text-gray-300 hover:text-white transition-colors duration-200">
               {t("menu.black_seed_oil")}
