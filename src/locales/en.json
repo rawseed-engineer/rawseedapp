@@ -129,5 +129,39 @@
       "title": "Ready to Make the Switch?",
       "p1": "Explore our product range or learn more about how sesame oil can enhance your recipes, your health, and your lifestyle."
     }
+  },
+  "blackseed_oil": {
+    "hero": {
+      "title": "Why Black Seed Oil?",
+      "subtitle": "A Drop of Tradition. A Lifetime of Benefits.",
+      "description": "For centuries, black seed oil has been revered as a healing remedy across cultures and continents. Known as the “Oil of the Pharaohs” and mentioned in ancient medical texts, it is now gaining global recognition for its powerful natural benefits. At RawSeed, we’re proud to produce premium, cold-pressed black seed oil that honours this timeless legacy.",
+      "learn": "Contact us"
+    },
+    "story": {
+      "title": "The Legacy of Black Seed",
+      "p1": "Black seed oil is pressed from the seeds of Nigella sativa, a flowering plant native to South and Southwest Asia. These tiny black seeds—also known as black cumin, kalonji, or habbat al-barakah (the blessed seed)—have been used for over 2,000 years in traditional healing systems like Unani, Ayurveda, and Islamic medicine.",
+      "p2": "It was found in the tomb of King Tutankhamun, praised by Hippocrates, and famously referenced in hadith as a remedy for “every disease except death.”",
+      "p3": "At RawSeed, we extract this oil using traditional cold-pressing methods, without heat or chemicals, to preserve its full potency and purity."
+    },
+    "why_special": "What Makes Black Seed Oil Special?",
+    "immunity_booster": {
+      "title": "Natural Immunity Booster",
+      "description": "Black seed oil is rich in thymoquinone, a compound known for its anti-inflammatory,antioxidant, and immune-supporting properties."
+    },
+    "healthy_skin_and_hair": {
+      "title": "Skin, Hair Beauty",
+      "description": "Used topically, black seed oil can:",
+      "item1": "Soothe dry or irritated skin",
+      "item2": "Support scalp health and promote hair growth",
+      "item3": "Help reduce acne and inflammation. It’s a favourite in natural skincare and beauty routines"
+    },
+    "peaceful_mind_body": {
+      "title": "Mind & Body Balance",
+      "description": "Black seed oil supports mental clarity, eases occasional stress, and is often used to promote respiratory health, joint comfort, and digestive wellness."
+    },
+    "natural_wellness": {
+      "title": "100% Natural Wellness",
+      "description": "Free from synthetic additives, cold-pressed black seed oil is a powerful and gentle way to incorporate ancient wellness into your modern lifestyle."
+    }
   }
 }
