@@ -70,12 +70,70 @@ const Home = () => {
           <WhatWeDo />
         </section>
 
+        {/* Section - Animation */}
+        <section className="rounded py-8 mt-12 sm:py-12 mx-64 my-32 text-pretty text-white text-center text-4xl">
+          <div className="relative flex justify-center items-center gap-20">
+            <p
+              className="relative w-3xs h-72 p-8 flex justify-center items-center bg-[#fac42f] 
+              animate-[BorderAnimation_3s_linear_infinite] rounded-lg
+              shadow-[inset_20px_20px_40px_10px_rgba(255,255,255,0.8),inset_-3px_-6px_50px_-10px_rgba(0,0,0,0.7)]"
+            >
+              Additive-free
+            </p>
+
+            <p
+              className="relative w-3xs h-60 p-8 flex justify-center items-center bg-[#fac42f] 
+              animate-[BorderAnimation_6s_linear_infinite] rounded-lg
+              shadow-[inset_15px_10px_50px_20px_rgba(255,255,255,0.8),inset_-5px_-10px_40px_-10px_rgba(0,0,0,0.7)]
+              "
+            >
+              Unrefined
+            </p>
+
+            <p
+              className="relative w-3xs h-84 p-8 flex justify-center items-center bg-[#fac42f] 
+              animate-[BorderAnimation_7s_linear_infinite] rounded-lg
+              shadow-[inset_20px_20px_30px_5px_rgba(255,255,255,0.8),inset_0px_0px_70px_-20px_rgba(0,0,0,0.7)]"
+            >
+              Packed with nutrients
+            </p>
+
+            <p
+              className="relative w-3xs h-50 p-8 flex justify-center items-center bg-[#fac42f] 
+              animate-[BorderAnimation_4s_linear_infinite] rounded-lg
+              shadow-[inset_10px_10px_40px_20px_rgba(255,255,255,0.8),inset_-10px_-10px_30px_-20px_rgba(0,0,0,0.7)]"
+            >
+              Ethically sourced
+            </p>
+          </div>
+
+          {/* <div className="flex justify-center">
+            <svg className="animate-spin"></svg>
+          </div> */}
+
+          {/* <div className="flex justify-center">
+            <span className="relative flex h-16 w-16">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75"></span>
+              <span className="relative inline-flex h-16 w-16 rounded-full bg-blue-500"></span>
+            </span>
+          </div> */}
+
+          {/* <div className="flex justify-center">
+            <div className="h-16 w-16 animate-[BorderAnimation_4s_linear_infinite] rounded-full bg-blue-500"></div>
+          </div> */}
+        </section>
+
         <section className="flex-grow overflow-x-auto w-full ">
-          <img
-            src={SeedsHorizontal}
-            alt="All RawSeed Oils"
-            className="w-full brightness-70 aspect-auto"
-          />
+          <div className="relative">
+            <img
+              src={SeedsHorizontal}
+              alt="All RawSeed Oils"
+              className="w-full brightness-50 aspect-auto"
+            />
+            <div className="absolute p-10 text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 space-y-4 bg-[rgba(0,0,0,0.3)]">
+              <p className="text-4xl text-neutral-200">{t("what_we_do.p2")}</p>
+            </div>
+          </div>
         </section>
 
         <section className="rounded py-8 sm:py-12 mx-64">

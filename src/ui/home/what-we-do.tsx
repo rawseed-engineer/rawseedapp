@@ -16,11 +16,11 @@ const WhatWeDo: React.FC = () => {
           {t("what_we_do.title")}
         </h2>
         <p className="text-pretty text-2xl">{t("what_we_do.p1")}</p>
-        <li className="text-2xl">{t("what_we_do.item1")}</li>
+        {/* <li className="text-2xl">{t("what_we_do.item1")}</li>
         <li className="text-2xl">{t("what_we_do.item2")}</li>
         <li className="text-2xl">{t("what_we_do.item3")}</li>
         <li className="text-2xl">{t("what_we_do.item4")}</li>
-        <p className="text-pretty text-2xl">{t("what_we_do.p2")}</p>
+        <p className="text-pretty text-2xl">{t("what_we_do.p2")}</p> */}
       </div>
     </div>
   );

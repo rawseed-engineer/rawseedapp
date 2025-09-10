@@ -59,6 +59,34 @@ const BlackSeedOilPage: React.FC = () => {
       <section className="rounded py-8 mt-12 sm:py-12 mx-64">
         <NaturalWellness />
       </section>
+
+      <section className="rounded py-8 mt-12 sm:py-12 mx-64">
+        <div className="relative flex justify-center items-center gap-20">
+          <div
+            className="relative w-lg h-120 p-8 flex justify-center items-center bg-[#fac42f] 
+            animate-[BorderAnimation_4s_linear_infinite] rounded-lg
+            shadow-[inset_20px_20px_40px_20px_rgba(255,255,255,0.8),inset_-5px_-5px_70px_10px_rgba(0,0,0,0.7)]"
+          >
+            Choose
+          </div>
+        </div>
+
+        <div className="flex justify-center">
+          <svg className="animate-spin"></svg>
+        </div>
+
+        <div className="flex justify-center">
+          <span className="relative flex h-16 w-16">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75"></span>
+            <span className="relative inline-flex h-16 w-16 rounded-full bg-blue-500"></span>
+          </span>
+        </div>
+
+        <div className="flex justify-center">
+          {/* <div className="h-16 w-16 animate-[wiggle_1s_ease-in-out_infinite] rounded-full bg-blue-500"></div> */}
+          <div className="h-16 w-16 animate-[BorderAnimation_4s_linear_infinite] rounded-full bg-blue-500"></div>
+        </div>
+      </section>
     </div>
   );
 };
