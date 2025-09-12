@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 const WhyRawSeed: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <div className="mx-auto grid grid-cols-1 items-center justify-items-center  px-8 sm:px-16 md:grid-cols-1">
+    <div className="mx-auto grid grid-cols-1 items-center justify-items-center px-8 sm:px-16 md:grid-cols-1">
       <div className="max-w-3xl text-neutral-400 space-y-4">
         <h2 className="text-balance text-[#a18458] text-5xl font-bold tracking-tight md:text-5xl">
           {t("why_raw_seed.title")}

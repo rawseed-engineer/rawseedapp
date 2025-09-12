@@ -112,8 +112,8 @@
         "description": "Whether you’re sautéing, roasting, or finishing a dish, sesame oil holds up beautifully in the kitchen thanks to its stable structure and high smoke point."
       },
       "p5": {
-        "/.sesame.reason.p5.title": "Sustainable Minimal",
-        "/.sesame.reason.p5.description": "Sesame seeds are drought-resistant and grow with minimal inputs, making sesame oil a more sustainable choice compared to many mass-produced oils."
+        "title": "Sustainable Minimal",
+        "description": "Sesame seeds are drought-resistant and grow with minimal inputs, making sesame oil a more sustainable choice compared to many mass-produced oils."
       }
     },
     "rediscovery": {

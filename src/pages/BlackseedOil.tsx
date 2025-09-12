@@ -8,6 +8,7 @@ import ImmunityBooster from "../ui/blackseed-oil/immunity-booster";
 import HairSkinBeauty from "../ui/blackseed-oil/hair-skin-beauty";
 import PeacefulBodyBalance from "../ui/blackseed-oil/peaceful-body-balance";
 import NaturalWellness from "../ui/blackseed-oil/natural-wellness";
+import Footer from "../ui/nav/footer";
 
 const BlackSeedOilPage: React.FC = () => {
   const { t } = useTranslation();
@@ -24,7 +25,7 @@ const BlackSeedOilPage: React.FC = () => {
       </section>
 
       {/* White Background Section - Features */}
-      <section className="rounded py-8 mt-12 sm:py-12 mx-64">
+      <section className="rounded py-8 mt-16 sm:py-12 mx-64 ">
         <Story />
       </section>
 
@@ -77,8 +78,8 @@ const BlackSeedOilPage: React.FC = () => {
 
         <div className="flex justify-center">
           <span className="relative flex h-16 w-16">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75"></span>
-            <span className="relative inline-flex h-16 w-16 rounded-full bg-blue-500"></span>
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gradient-to-tr from-amber-300 to-yellow-700 opacity-75"></span>
+            <span className="relative inline-flex h-16 w-16 rounded-full bg-gradient-to-tr from-amber-300 to-yellow-700"></span>
           </span>
         </div>
 
@@ -87,6 +88,11 @@ const BlackSeedOilPage: React.FC = () => {
           <div className="h-16 w-16 animate-[BorderAnimation_4s_linear_infinite] rounded-full bg-blue-500"></div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-[#181818] border-t border-gray-800 py-16">
+        <Footer />
+      </footer>
     </div>
   );
 };

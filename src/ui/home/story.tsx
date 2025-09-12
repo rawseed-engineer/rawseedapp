@@ -10,11 +10,21 @@ const Story: React.FC = () => {
         <h1 className="text-balance text-[#a18458] text-5xl font-bold tracking-tight md:text-5xl">
           {t("story.title")}
         </h1>
-        <p className="text-pretty text-2xl">{t("story.description.p1")}</p>
-        <p className="text-pretty text-2xl">{t("story.description.p2")}</p>
-        <p className="text-pretty text-2xl">{t("story.description.p3")}</p>
-        <p className="text-pretty text-2xl">{t("story.description.p4")}</p>
-        <p className="text-pretty text-2xl">{t("story.description.p5")}</p>
+        <p className="text-pretty text-justify text-2xl">
+          {t("story.description.p1")}
+        </p>
+        <p className="text-pretty text-justify text-2xl">
+          {t("story.description.p2")}
+        </p>
+        <p className="text-pretty text-justify text-2xl">
+          {t("story.description.p3")}
+        </p>
+        <p className="text-pretty text-justify text-2xl">
+          {t("story.description.p4")}
+        </p>
+        <p className="text-pretty text-justify text-2xl">
+          {t("story.description.p5")}
+        </p>
       </div>
       <img
         src={AllOils}

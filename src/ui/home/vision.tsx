@@ -13,7 +13,7 @@ const Vision: React.FC = () => {
       />
 
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 space-y-4">
-        <div className="bg-[rgba(0,0,0,0.2)] p-10">
+        <div className="bg-[rgba(0,0,0,0.2)] p-10 space-y-4">
           <h2 className="text-5xl text-neutral-200">{t("vision.title")}</h2>
 
           <p className="text-2xl text-neutral-200">{t("vision.p1")}</p>

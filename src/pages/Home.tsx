@@ -11,6 +11,7 @@ import Vision from "../ui/home/vision";
 import JoinOurJourney from "../ui/home/joinOurJourney";
 import EmailForm from "../ui/email-form";
 import Footer from "../ui/nav/footer";
+import { Callout } from "../ui/callout";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -51,11 +52,8 @@ const Home = () => {
                 {t("hero.home.description")}
               </p>
 
-              {/* Call Out Button */}
-              <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                <button className="group bg-gradient-to-tr from-amber-300 to-yellow-700 text-white px-10 py-5 rounded-full hover:from-amber-700 hover:to-yellow-300 transition-all duration-200 transform hover:scale-105 flex items-center text-xl font-semibold shadow-2xl">
-                  {t("hero.home.learn")}
-                </button>
+              <div className="flex justify-center mt-30">
+                <Callout />
               </div>
             </div>
           </div>
@@ -136,7 +134,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="rounded py-8 sm:py-12 mx-64">
+        <section className="rounded py-8 sm:py-12 mx-64 my-24">
           <Products />
         </section>
 
@@ -155,7 +153,7 @@ const Home = () => {
         </section>
 
         {/* Contact Us */}
-        <section className="rounded py-8 mt-12 sm:py-12 mx-64">
+        <section className="rounded py-8 mt-12 sm:py-12 mx-1 lg:mx-84">
           <div className="mx-auto grid grid-cols-1 items-center justify-items-center gap-8 px-8 sm:px-16 md:grid-cols-2">
             <JoinOurJourney />
             <EmailForm />

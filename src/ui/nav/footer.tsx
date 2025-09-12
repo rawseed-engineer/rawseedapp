@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import RawSeedLogo from "../../assets/rawseed_logo.png";
 
 const Footer: React.FC = () => {
   return (
@@ -7,41 +9,44 @@ const Footer: React.FC = () => {
         {/* Company Info */}
         <div className="md:col-span-1">
           <div className="flex items-center space-x-2 mb-4">
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-              {/* <Zap className="w-5 h-5 text-white" /> */}
+            {/* <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
               ZAP
-            </div>
-            <span className="text-xl font-bold text-white">NextApp</span>
+            </div> */}
+            <img
+              src={RawSeedLogo}
+              alt="RawSeed Logo"
+              className="h-[1.5rem] aspect-auto"
+            />
+            {/* <span className="text-xl font-bold text-white">Rawseed</span> */}
           </div>
-          <p className="text-gray-400 mb-6 leading-relaxed">
-            Building the future of web applications with innovative technology
-            and exceptional user experiences.
+          <p className="text-gray-200 mb-6 leading-relaxed">
+            Own our health with natural oils
           </p>
           <div className="flex space-x-4">
             <a
               href="#"
-              className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-200"
+              className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#a18458] transition-colors duration-200"
             >
               {/* <Facebook className="w-5 h-5 text-gray-400 hover:text-white" /> */}
-              FAcebook
+              Facebook
             </a>
             <a
               href="#"
-              className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-200"
+              className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#a18458] transition-colors duration-200"
             >
               {/* <Twitter className="w-5 h-5 text-gray-400 hover:text-white" /> */}
-              Twitter
+              X
             </a>
             <a
               href="#"
-              className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-200"
+              className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#a18458] transition-colors duration-200"
             >
               {/* <Linkedin className="w-5 h-5 text-gray-400 hover:text-white" /> */}
               Linkedin
             </a>
             <a
               href="#"
-              className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-200"
+              className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#a18458] transition-colors duration-200"
             >
               {/* <Instagram className="w-5 h-5 text-gray-400 hover:text-white" /> */}
               Instagam
@@ -54,42 +59,42 @@ const Footer: React.FC = () => {
           <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
           <ul className="space-y-3">
             <li>
-              <a
-                href="#home"
+              <Link
+                to="/rawseedapp/"
                 className="text-gray-400 hover:text-white transition-colors duration-200"
               >
-                Home
-              </a>
+                Rawseed Home
+              </Link>
             </li>
             <li>
-              <a
-                href="#features"
+              <Link
+                to="/rawseedapp/sesame-oil"
                 className="text-gray-400 hover:text-white transition-colors duration-200"
               >
-                Features
-              </a>
+                Sesame Oil
+              </Link>
             </li>
             <li>
-              <a
-                href="#services"
+              <Link
+                to="/rawseedapp/blackseed-oil"
                 className="text-gray-400 hover:text-white transition-colors duration-200"
               >
-                Services
-              </a>
+                Blackseed Oil
+              </Link>
             </li>
             <li>
               <a
                 href="#about"
                 className="text-gray-400 hover:text-white transition-colors duration-200"
               >
-                About
+                Golden Drop
               </a>
             </li>
           </ul>
         </div>
 
         {/* Support */}
-        <div>
+        {/* <div>
           <h3 className="text-lg font-semibold text-white mb-4">Support</h3>
           <ul className="space-y-3">
             <li>
@@ -125,7 +130,7 @@ const Footer: React.FC = () => {
               </a>
             </li>
           </ul>
-        </div>
+        </div> */}
 
         {/* Contact Info */}
         <div id="contact">
@@ -133,18 +138,18 @@ const Footer: React.FC = () => {
           <div className="space-y-3">
             <div className="flex items-center space-x-3">
               {/* <Mail className="w-5 h-5 text-purple-400" /> */}
-              Mail
-              <span className="text-gray-400">hello@nextapp.com</span>
+              Email
+              <span className="text-gray-400">info@rawseed.com</span>
             </div>
             <div className="flex items-center space-x-3">
               {/* <Phone className="w-5 h-5 text-purple-400" /> */}
               Phone
-              <span className="text-gray-400">+1 (555) 123-4567</span>
+              <span className="text-gray-400">+44 123-4567-89</span>
             </div>
             <div className="flex items-center space-x-3">
               {/* <MapPin className="w-5 h-5 text-purple-400" /> */}
               Map
-              <span className="text-gray-400">San Francisco, CA</span>
+              <span className="text-gray-400">London, UK</span>
             </div>
           </div>
         </div>

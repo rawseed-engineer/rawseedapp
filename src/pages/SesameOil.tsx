@@ -3,10 +3,11 @@ import NavMenu from "../ui/nav/nav-menu";
 import Ayurveda from "./../assets/ayurveda.jpeg";
 import Reasons from "../ui/sesame-oil/reasons";
 import Discovery from "../ui/sesame-oil/discovery";
-import Callout from "../ui/sesame-oil/callout";
 import EmailForm from "../ui/email-form";
 import Explore from "../ui/sesame-oil/explore";
 import Footer from "../ui/nav/footer";
+import { Callout } from "../ui/callout";
+import SesamePageCallout from "../ui/sesame-oil/callout";
 
 const SesameOil = () => {
   const { t } = useTranslation();
@@ -48,23 +49,27 @@ const SesameOil = () => {
             </p>
 
             {/* Call Out Button */}
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+            {/* <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <button className="group bg-gradient-to-tr from-amber-300 to-yellow-700 text-white px-10 py-5 rounded-full hover:from-amber-700 hover:to-yellow-300 transition-all duration-200 transform hover:scale-105 flex items-center text-xl font-semibold shadow-2xl">
                 {t("hero.sesame_oil.learn")}
               </button>
+            </div> */}
+
+            <div className="flex justify-center mt-30">
+              <Callout />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="rounded bg-white py-8 sm:py-12 mx-64">
+      <section className="rounded bg-white sm:py-12 mx-64">
         <div className="mx-auto grid grid-cols-1 items-center justify-items-center gap-8 px-8 sm:px-16 md:grid-cols-2">
           <img
             src={Ayurveda}
             alt="Ayurveda"
-            className="mx-8 w-md aspect-auto"
+            className="mx-12 w-xl aspect-auto"
           />
-          <div className="max-w-md text-neutral-600 space-y-4">
+          <div className="max-w-md text-neutral-600 space-y-6 py-24">
             <h2 className="text-balance text-[#a18458] text-5xl font-bold tracking-tight md:text-5xl">
               {t("history.title")}
             </h2>
@@ -84,7 +89,7 @@ const SesameOil = () => {
       </section>
 
       <section className="flex-grow overflow-x-auto w-full ">
-        <Callout />
+        <SesamePageCallout />
       </section>
 
       {/* Contact Us */}

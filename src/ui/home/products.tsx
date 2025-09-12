@@ -22,11 +22,11 @@ const Products: React.FC = () => {
             className="mx-8 w-md aspect-auto"
           />
         </div>
-        <div className="mt-4 text-center">
-          <h2 className="text-[#a18458] text-balance text-4xl font-bold tracking-tight md:text-4xl">
+        <div className="m-12 text-center">
+          <h2 className="my-6 text-[#a18458] text-balance text-4xl font-bold tracking-tight md:text-4xl">
             {t("products.sesame.title")}
           </h2>
-          <p className="text-pretty text-[#a18458] text-2xl">
+          <p className="text-pretty text-neutral-500 text-2xl">
             {t("products.sesame.description")}
           </p>
         </div>
@@ -39,11 +39,11 @@ const Products: React.FC = () => {
             className="mx-8 w-md aspect-auto"
           />
         </div>
-        <div className="mt-4 text-center">
-          <h2 className="text-[#a18458] text-balance  text-4xl font-bold tracking-tight md:text-4xl">
+        <div className="m-12 text-center">
+          <h2 className="my-6 text-[#a18458] text-balance  text-4xl font-bold tracking-tight md:text-4xl">
             {t("products.black_seed.title")}
           </h2>
-          <p className="text-pretty text-[#a18458] text-2xl">
+          <p className="text-pretty text-neutral-500 text-2xl">
             {t("products.black_seed.description")}
           </p>
         </div>

@@ -2,7 +2,7 @@ import React from "react";
 import SesamePlant from "../../assets/sesame_plant_banner.jpg";
 import { useTranslation } from "react-i18next";
 
-const Callout: React.FC = () => {
+const SesamePageCallout: React.FC = () => {
   const { t } = useTranslation();
   return (
     <div className="relative">
@@ -35,4 +35,4 @@ const Callout: React.FC = () => {
   );
 };
 
-export default Callout;
+export default SesamePageCallout;

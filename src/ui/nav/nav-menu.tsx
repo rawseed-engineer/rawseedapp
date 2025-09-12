@@ -30,7 +30,7 @@ const NavMenu: React.FC = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 px-8 py-8 sm:px-6 lg:px-8 transition-all duration-300 ${
         isSticky
-          ? "bg-[#181818] bg-opacity-95 backdrop-blur-lg shadow-lg"
+          ? "bg-[#181818] bg-opacity-50 backdrop-blur-lg shadow-lg animate-[changeColorAnim_4s_linear]"
           : "bg-transparent"
       }`}
     >
