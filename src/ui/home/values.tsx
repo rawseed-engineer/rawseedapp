@@ -23,7 +23,7 @@ const Values: React.FC = () => {
             />
           </p>
         </div>
-        <h2 className="text-center text-balance text-3xl text-neutral-600 font-bold tracking-tight md:text-4xl">
+        <h2 className="text-center text-balance text-3xl text-neutral-600 text-shadow-lg font-bold tracking-tight md:text-4xl">
           {t("value.title1")}
         </h2>
         <p className="text-center text-pretty text-neutral-600 text-xl">
@@ -41,7 +41,7 @@ const Values: React.FC = () => {
             />
           </p>
         </div>
-        <h2 className="text-center text-balance text-3xl text-neutral-600 font-bold tracking-tight md:text-4xl">
+        <h2 className="text-center text-balance text-3xl text-neutral-600 text-shadow-lg font-bold tracking-tight md:text-4xl">
           {t("value.title2")}
         </h2>
         <p className="text-center text-pretty text-neutral-600 text-xl">
@@ -59,7 +59,7 @@ const Values: React.FC = () => {
             />
           </p>
         </div>
-        <h2 className="text-center text-balance text-3xl text-neutral-600 font-bold tracking-tight md:text-4xl">
+        <h2 className="text-center text-balance text-3xl text-neutral-600 text-shadow-lg font-bold tracking-tight md:text-4xl">
           {t("value.title3")}
         </h2>
         <p className="text-center text-pretty text-neutral-600 text-xl">
@@ -77,7 +77,7 @@ const Values: React.FC = () => {
             />
           </p>
         </div>
-        <h2 className="text-center text-balance text-3xl text-neutral-600 font-bold tracking-tight md:text-4xl">
+        <h2 className="text-center text-balance text-3xl text-neutral-600 text-shadow-lg font-bold tracking-tight md:text-4xl">
           {t("value.title4")}
         </h2>
         <p className="text-center text-pretty text-neutral-600 text-xl">

@@ -1,11 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import RawSeedLogo from "../../assets/rawseed_logo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPhone,
+  faEnvelope,
+  faLocationDot,
+  // faFacebook,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebook,
+  faXTwitter,
+  faLinkedinIn,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Footer: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Company Info */}
         <div className="md:col-span-1">
           <div className="flex items-center space-x-2 mb-4">
@@ -22,34 +35,61 @@ const Footer: React.FC = () => {
           <p className="text-gray-200 mb-6 leading-relaxed">
             Own our health with natural oils
           </p>
-          <div className="flex space-x-4">
+          <div className="flex space-x-1">
             <a
               href="#"
               className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#a18458] transition-colors duration-200"
             >
               {/* <Facebook className="w-5 h-5 text-gray-400 hover:text-white" /> */}
-              Facebook
+              {/* <FontAwesomeIcon
+                icon={faFacebook}
+                className="text-[#cfb997] inline-block w-full"
+              /> */}
+              <FontAwesomeIcon
+                icon={faFacebook}
+                className="text-[#0165E1] inline-block"
+                style={{ height: "36px" }}
+                size={"2x"}
+              />
             </a>
             <a
               href="#"
               className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#a18458] transition-colors duration-200"
             >
               {/* <Twitter className="w-5 h-5 text-gray-400 hover:text-white" /> */}
-              X
+
+              <FontAwesomeIcon
+                icon={faXTwitter}
+                className="text-[#1DA1F2] inline-block"
+                style={{ height: "36px" }}
+                size={"2x"}
+              />
             </a>
             <a
               href="#"
               className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#a18458] transition-colors duration-200"
             >
+              <FontAwesomeIcon
+                icon={faLinkedinIn}
+                className="text-[#0077B5] inline-block"
+                style={{ height: "36px" }}
+                size={"2x"}
+              />
               {/* <Linkedin className="w-5 h-5 text-gray-400 hover:text-white" /> */}
-              Linkedin
             </a>
             <a
               href="#"
               className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#a18458] transition-colors duration-200"
             >
               {/* <Instagram className="w-5 h-5 text-gray-400 hover:text-white" /> */}
-              Instagam
+              <FontAwesomeIcon
+                icon={faInstagram}
+                className="bg-gradient-to-r from-[#405de6] via-[#5851db] via-[#833ab4] via-[#c13584] via-[#e1306c] to-[#fd1d1d] inline-block"
+                style={{ height: "36px" }}
+                size={"2x"}
+
+                // linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+              />
             </a>
           </div>
         </div>
@@ -138,17 +178,29 @@ const Footer: React.FC = () => {
           <div className="space-y-3">
             <div className="flex items-center space-x-3">
               {/* <Mail className="w-5 h-5 text-purple-400" /> */}
-              Email
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                className="text-[#cfb997] inline-block"
+                style={{ height: "36px" }}
+              />
               <span className="text-gray-400">info@rawseed.com</span>
             </div>
             <div className="flex items-center space-x-3">
               {/* <Phone className="w-5 h-5 text-purple-400" /> */}
-              Phone
+              <FontAwesomeIcon
+                icon={faPhone}
+                className="text-[#cfb997] inline-block"
+                style={{ height: "36px" }}
+              />
               <span className="text-gray-400">+44 123-4567-89</span>
             </div>
             <div className="flex items-center space-x-3">
               {/* <MapPin className="w-5 h-5 text-purple-400" /> */}
-              Map
+              <FontAwesomeIcon
+                icon={faLocationDot}
+                className="text-[#cfb997] inline-block"
+                style={{ height: "36px" }}
+              />
               <span className="text-gray-400">London, UK</span>
             </div>
           </div>

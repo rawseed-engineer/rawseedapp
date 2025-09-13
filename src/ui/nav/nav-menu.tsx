@@ -55,46 +55,24 @@ const NavMenu: React.FC = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8 text-3xl">
-          <Link
-            to="/rawseedapp/sesame-oil"
-            // style={{
-            //   textDecoration:
-            //     location.pathname === "/rawseedapp/sesame-oil"
-            //       ? "underline"
-            //       : "none",
-            //   fontWeight:
-            //     location.pathname === "/rawseedapp/sesame-oil"
-            //       ? "bold"
-            //       : "normal",
-            // }}
-          >
-            <div className="text-gray-300 hover:text-white transition-colors duration-200">
+        <div className="hidden md:flex items-center space-x-8 text-4xl">
+          <Link to="/rawseedapp/sesame-oil">
+            <h2 className="text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200">
               {t("menu.sesame_oil")}
-            </div>
+            </h2>
           </Link>
 
-          <Link
-            to="/rawseedapp/blackseed-oil"
-            // style={{
-            //   textDecoration:
-            //     location.pathname === "/rawseedapp/blackseed-oil"
-            //       ? "underline"
-            //       : "none",
-            //   fontWeight:
-            //     location.pathname === "/rawseedapp/blackseed-oil"
-            //       ? "bold"
-            //       : "normal",
-            // }}
-          >
-            <div className="text-gray-300 hover:text-white transition-colors duration-200">
+          <Link to="/rawseedapp/blackseed-oil">
+            <h2 className="text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200">
               {t("menu.black_seed_oil")}
-            </div>
+            </h2>
           </Link>
 
-          <button className="bg-gradient-to-r from-amber-300 to-yellow-700 text-white px-6 py-2 rounded-full hover:from-amber-700 hover:to-yellow-700 transition-all duration-200 transform hover:scale-105">
-            {t("menu.get_started")}
-          </button>
+          <Link to="/rawseedapp/contact">
+            <h2 className="bg-gradient-to-r from-amber-300 to-yellow-700 text-white text-shadow-lg px-6 py-2 rounded-full hover:from-amber-700 hover:to-yellow-700 transition-all duration-200 transform hover:scale-105">
+              {t("menu.get_started")}
+            </h2>
+          </Link>
         </div>
 
         {/* Mobile menu button */}

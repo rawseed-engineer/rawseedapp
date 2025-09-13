@@ -162,6 +162,29 @@
     "natural_wellness": {
       "title": "100% Natural Wellness",
       "description": "Free from synthetic additives, cold-pressed black seed oil is a powerful and gentle way to incorporate ancient wellness into your modern lifestyle."
+    },
+    "process": {
+      "cold_pressed": {
+        "title": "Cold-pressed and unrefined"
+      },
+      "rich": {
+        "title": "Rich in thymoquinone"
+      },
+      "bottle": {
+        "title": "Bottled fresh in small batches"
+      },
+      "pure": {
+        "title": "100% pure, vegan, and non-GMO"
+      }
+    },
+    "journey": {
+      "title": "Bring the Blessing Home",
+      "p1": "Black seed oil is more than a supplement—it’s a daily ritual, a gift from nature, and a bridge between ancient wisdom and modern health.",
+      "p2": "Try Golden Drop Black Seed Oil and experience the benefits of a remedy that has been trusted for generations."
     }
+  },
+  "contact": {
+    "title": "Get in touch",
+    "action": "Send Message"
   }
 }

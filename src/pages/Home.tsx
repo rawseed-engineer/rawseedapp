@@ -36,7 +36,7 @@ const Home = () => {
             }}
           />
 
-          <div className="absolute top-[35%] ">
+          <div className="absolute top-[10%] sm:top-[20%] md:top-[35%] ">
             <div className="relative z-10  px-4 py-12 sm:px-6 lg:px-8 max-w-7xl mx-auto">
               {/* Hero Heading */}
               <h1 className="text-balance text-5xl font-bold text-white  md:text-7xl mb-5">
@@ -72,7 +72,7 @@ const Home = () => {
         <section className="rounded py-8 mt-12 sm:py-12 mx-64 my-32 text-pretty text-white text-center text-4xl">
           <div className="relative flex justify-center items-center gap-20">
             <p
-              className="relative w-3xs h-72 p-8 flex justify-center items-center bg-[#fac42f] 
+              className="relative w-3xs h-72 p-8 flex justify-center items-center bg-[#fac42f] text-shadow-lg
               animate-[BorderAnimation_3s_linear_infinite] rounded-lg
               shadow-[inset_20px_20px_40px_10px_rgba(255,255,255,0.8),inset_-3px_-6px_50px_-10px_rgba(0,0,0,0.7)]"
             >
@@ -80,7 +80,7 @@ const Home = () => {
             </p>
 
             <p
-              className="relative w-3xs h-60 p-8 flex justify-center items-center bg-[#fac42f] 
+              className="relative w-3xs h-60 p-8 flex justify-center items-center bg-[#fac42f] text-shadow-lg
               animate-[BorderAnimation_6s_linear_infinite] rounded-lg
               shadow-[inset_15px_10px_50px_20px_rgba(255,255,255,0.8),inset_-5px_-10px_40px_-10px_rgba(0,0,0,0.7)]
               "
@@ -89,7 +89,7 @@ const Home = () => {
             </p>
 
             <p
-              className="relative w-3xs h-84 p-8 flex justify-center items-center bg-[#fac42f] 
+              className="relative w-3xs h-84 p-8 flex justify-center items-center bg-[#fac42f] text-shadow-lg
               animate-[BorderAnimation_7s_linear_infinite] rounded-lg
               shadow-[inset_20px_20px_30px_5px_rgba(255,255,255,0.8),inset_0px_0px_70px_-20px_rgba(0,0,0,0.7)]"
             >
@@ -97,7 +97,7 @@ const Home = () => {
             </p>
 
             <p
-              className="relative w-3xs h-50 p-8 flex justify-center items-center bg-[#fac42f] 
+              className="relative w-3xs h-50 p-8 flex justify-center items-center bg-[#fac42f] text-shadow-lg
               animate-[BorderAnimation_4s_linear_infinite] rounded-lg
               shadow-[inset_10px_10px_40px_20px_rgba(255,255,255,0.8),inset_-10px_-10px_30px_-20px_rgba(0,0,0,0.7)]"
             >

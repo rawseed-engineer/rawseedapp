@@ -1,8 +1,10 @@
 import { faComments, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const EmailForm: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div className="bg-white w-md p-10 mt-16 mb-16 relative overflow-hidden rounded-lg shadow-lg duration-300 ease-in-out hover:-translate-y-4 hover:shadow-[#a18458]">
       <div className=" mb-8 pb-5 relative">
@@ -12,8 +14,8 @@ const EmailForm: React.FC = () => {
             className="text-[#a18458] inline-block mr-4"
             style={{ height: "36px" }}
           />
-          <span className="text-center text-balance text-[#a18458] text-5xl">
-            <h2>Get in touch</h2>
+          <span className="text-center text-balance text-[#a18458] text-shadow-lg text-5xl">
+            <h2>{t("contact.title")}</h2>
           </span>
         </div>
 
@@ -77,15 +79,21 @@ const EmailForm: React.FC = () => {
           <div className="p-4">
             <button
               type="submit"
-              className="bg-[#a18458] hover:bg-[#cfb997] text-white font-bold py-2 px-4 mr-2 rounded"
+              className="flex justify-center items-center
+              flex justify-center items-center bg-[#a18458] duration-900
+              text-white font-bold py-2 px-4 mr-2 rounded
+              hover:bg-gradient-to-r from-amber-300 to-yellow-700"
+              // className="px-6 py-3 bg-blue-500 text-white rounded-lg duration-1000 hover:bg-blue-900"
             >
-              Send Message
-              {/* <i className="fas fa-paper-plane ms-1"></i> */}
-              <FontAwesomeIcon
-                icon={faPaperPlane}
-                className="text-white inline-block ml-4 mr-4"
-                style={{ height: "36px" }}
-              />
+              {/* hover:bg-from-amber-700 hover:bg-to-yellow-700 transition-all duration-200  */}
+              <span className="align-middle mr-2">{t("contact.action")}</span>
+              <span>
+                <FontAwesomeIcon
+                  icon={faPaperPlane}
+                  className="text-white inline-block"
+                  style={{ height: "36px" }}
+                />
+              </span>
             </button>
           </div>
         </form>
