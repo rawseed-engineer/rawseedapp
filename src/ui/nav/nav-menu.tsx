@@ -56,11 +56,11 @@ const NavMenu: React.FC = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8 text-3xl">
-          <Link to="/rawseedapp/golden-drop">
+          {/* <Link to="/rawseedapp/golden-drop">
             <h2 className="text-43l text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200">
               Golden Drop
             </h2>
-          </Link>
+          </Link> */}
 
           <Link to="/rawseedapp/sesame-oil">
             <h2 className="text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200">
