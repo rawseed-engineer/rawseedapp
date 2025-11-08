@@ -26,6 +26,10 @@ const EmailForm: React.FC = () => {
     message: "",
   });
 
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState(false);
+
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -40,10 +44,11 @@ const EmailForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
+    setError(null);
     try {
       const response = await fetch(
         "https://email-service-wine.vercel.app/contact-us",
-        // "http://localhost:3000/contact-us",
         {
           method: "POST",
           headers: {
@@ -52,9 +57,28 @@ const EmailForm: React.FC = () => {
           body: JSON.stringify(formData),
         }
       );
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Failed to send email");
+      }
+
       console.log("Form submitted successfully:", response);
+      setSuccess(true);
+      // Reset form
+      setFormData({
+        subject: "",
+        firstName: "",
+        lastName: "",
+        from: "",
+        // countryCode: '',
+        // mobileNumber: '',
+        message: "",
+      });
     } catch (err: any) {
       console.error("Error submitting form:", err);
+      setError(err.message || "Something went wrong. Please try again.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -137,13 +161,32 @@ const EmailForm: React.FC = () => {
               </div>
             </div> */}
 
+          {error && (
+            <div className="p-3 bg-red-50 border border-red-200 text-red-700 rounded-md text-sm">
+              {error}
+            </div>
+          )}
+
+          {success && (
+            <div className="p-3 bg-green-50 border border-green-200 text-green-700 rounded-md text-sm">
+              Email sent successfully!
+            </div>
+          )}
+
           <div className="p-4">
             <button
               type="submit"
-              className="flex justify-center items-center
+              disabled={isLoading}
+              className={`flex justify-center items-center
               flex justify-center items-center bg-[#a18458] duration-900
               text-white font-bold py-2 px-4 mr-2 rounded
-              hover:bg-gradient-to-r from-amber-300 to-yellow-700"
+              hover:bg-gradient-to-r from-amber-300 to-yellow-700 
+                ${
+                  isLoading
+                    ? "bg-gray-400 cursor-not-allowed"
+                    : "bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                }
+              `}
               // className="px-6 py-3 bg-blue-500 text-white rounded-lg duration-1000 hover:bg-blue-900"
             >
               {/* hover:bg-from-amber-700 hover:bg-to-yellow-700 transition-all duration-200  */}
@@ -156,6 +199,7 @@ const EmailForm: React.FC = () => {
                 />
               </span>
             </button>
+            {/* {isLoading ? "Sending..." : "Send Email"} */}
           </div>
         </form>
       </div>
