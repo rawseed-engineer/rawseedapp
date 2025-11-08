@@ -48,8 +48,8 @@ const EmailForm: React.FC = () => {
     setError(null);
     try {
       const response = await fetch(
-        // "https://email-service-wine.vercel.app/contact-us",
-        "http://127.0.0.1:3000/contact-us",
+        "https://email-service-wine.vercel.app/contact-us",
+        // "http://127.0.0.1:3000/contact-us",
         {
           method: "POST",
           headers: {
