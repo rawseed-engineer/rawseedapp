@@ -1,10 +1,63 @@
 import { faComments, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+
+interface FormData {
+  subject: string;
+  firstName: string;
+  lastName: string;
+  from: string;
+  // countryCode: string;
+  // mobileNumber: string;
+  message: string;
+}
 
 const EmailForm: React.FC = () => {
   const { t } = useTranslation();
+
+  const [formData, setFormData] = useState<FormData>({
+    subject: "RawSeed Customer Enquiry",
+    firstName: "",
+    lastName: "",
+    from: "",
+    // countryCode: "",
+    // mobileNumber: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(
+        "https://email-service-wine.vercel.app/contact-us",
+        // "http://localhost:3000/contact-us",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+      console.log("Form submitted successfully:", response);
+    } catch (err: any) {
+      console.error("Error submitting form:", err);
+    }
+  };
+
   return (
     <div className="bg-white w-md p-10 mt-16 mb-16 relative overflow-hidden rounded-lg shadow-lg duration-300 ease-in-out hover:-translate-y-4 hover:shadow-[#a18458]">
       <div className=" mb-8 pb-5 relative">
@@ -19,29 +72,35 @@ const EmailForm: React.FC = () => {
           </span>
         </div>
 
-        <form className="">
+        <form onSubmit={handleSubmit} className="">
           <div className="flex p-4 inline-block">
             <input
               className="inline-block w-64 p-2 border-2 border-neutral-200 rounded-lg shadow-lg focus:border-[#a18458] focus:outline-none focus:ring-0"
               type="text"
-              name="First name"
+              id="firstName"
+              name="firstName"
               placeholder="Your first name"
+              onChange={handleChange}
             ></input>
           </div>
           <div className="flex p-4 inline-block">
             <input
               className="inline-block w-64 p-2 border-2 border-neutral-200 rounded-lg shadow-lg focus:border-[#a18458] focus:outline-none focus:ring-0"
               type="text"
-              name="Last name"
+              id="lastName"
+              name="lastName"
               placeholder="Last name"
+              onChange={handleChange}
             ></input>
           </div>
           <div className="flex p-4 inline-block">
             <input
               className="inline-block w-64 p-2 border-2 border-neutral-200 rounded-lg shadow-lg focus:border-[#a18458] focus:outline-none focus:ring-0"
               type="text"
-              name="email"
+              id="from"
+              name="from"
               placeholder="Email"
+              onChange={handleChange}
             ></input>
           </div>
 
@@ -49,6 +108,7 @@ const EmailForm: React.FC = () => {
             {/* <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label> */}
             <textarea
               id="message"
+              name="message"
               rows={4}
               className="block p-2 w-80 text-gray-900 rounded-lg border-2 border-neutral-200 shadow-lg
               focus:outline-none 
@@ -61,6 +121,7 @@ const EmailForm: React.FC = () => {
               dark:focus:ring-blue-500 
               dark:focus:border-blue-500"
               placeholder="Tell us your needs"
+              onChange={handleChange}
             ></textarea>
           </div>
 
