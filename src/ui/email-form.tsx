@@ -8,8 +8,8 @@ interface FormData {
   firstName: string;
   lastName: string;
   from: string;
-  // countryCode: string;
-  // mobileNumber: string;
+  countryCode: string;
+  mobileNumber: string;
   message: string;
 }
 
@@ -21,8 +21,8 @@ const EmailForm: React.FC = () => {
     firstName: "",
     lastName: "",
     from: "",
-    // countryCode: "",
-    // mobileNumber: "",
+    countryCode: "",
+    mobileNumber: "",
     message: "",
   });
 
@@ -48,7 +48,8 @@ const EmailForm: React.FC = () => {
     setError(null);
     try {
       const response = await fetch(
-        "https://email-service-wine.vercel.app/contact-us",
+        // "https://email-service-wine.vercel.app/contact-us",
+        "http://127.0.0.1:3000/contact-us",
         {
           method: "POST",
           headers: {
@@ -70,8 +71,8 @@ const EmailForm: React.FC = () => {
         firstName: "",
         lastName: "",
         from: "",
-        // countryCode: '',
-        // mobileNumber: '',
+        countryCode: "",
+        mobileNumber: "",
         message: "",
       });
     } catch (err: any) {
@@ -129,6 +130,81 @@ const EmailForm: React.FC = () => {
               placeholder="Email"
               onChange={handleChange}
             ></input>
+          </div>
+
+          <div className="flex p-4 ">
+            <span className="">
+              <select
+                id="countryCode"
+                name="countryCode"
+                value={formData.countryCode}
+                onChange={handleChange}
+                required
+                className="h-11 inline-block w-36 p-2 border-2 border-neutral-200 rounded-lg shadow-lg focus:border-[#a18458] focus:outline-none focus:ring-0 text-neutral-500"
+              >
+                <option value="">Country Code</option>
+                <option value="+376">+376 (Andorra)</option>
+                <option value="+355">+355 (Albania)</option>
+                <option value="+43">+43 (Austria)</option>
+                <option value="+375">+375 (Belarus)</option>
+                <option value="+32">+32 (Belgium)</option>
+                <option value="+387">+387 (Bosnia and Herzegovina)</option>
+                <option value="+359">+359 (Bulgaria)</option>
+                <option value="+385">+385 (Croatia)</option>
+                <option value="+420">+420 (Czech Republic)</option>
+                <option value="+45">+45 (Denmark)</option>
+                <option value="+372">+372 (Estonia)</option>
+                <option value="+358">+358 (Finland)</option>
+                <option value="+33">+33 (France)</option>
+                <option value="+49">+49 (Germany)</option>
+                <option value="+350">+350 (Gibraltar)</option>
+                <option value="+30">+30 (Greece)</option>
+                <option value="+299">+299 (Greenland)</option>
+                <option value="+36">+36 (Hungary)</option>
+                <option value="+354">+354 (Iceland)</option>
+                <option value="+353">+353 (Ireland)</option>
+                <option value="+39">+39 (Italy)</option>
+                <option value="+371">+371 (Latvia)</option>
+                <option value="+423">+423 (Liechtenstein)</option>
+                <option value="+370">+370 (Lithuania)</option>
+                <option value="+352">+352 (Luxembourg)</option>
+                <option value="+389">+389 (North Macedonia)</option>
+                <option value="+356">+356 (Malta)</option>
+                <option value="+373">+373 (Moldova)</option>
+                <option value="+377">+377 (Monaco)</option>
+                <option value="+382">+382 (Montenegro)</option>
+                <option value="+31">+31 (Netherlands)</option>
+                <option value="+47">+47 (Norway)</option>
+                <option value="+48">+48 (Poland)</option>
+                <option value="+351">+351 (Portugal)</option>
+                <option value="+40">+40 (Romania)</option>
+                <option value="+7">+7 (Russia)</option>
+                <option value="+378">+378 (San Marino)</option>
+                <option value="+381">+381 (Serbia)</option>
+                <option value="+421">+421 (Slovakia)</option>
+                <option value="+386">+386 (Slovenia)</option>
+                <option value="+34">+34 (Spain)</option>
+                <option value="+46">+46 (Sweden)</option>
+                <option value="+41">+41 (Switzerland)</option>
+                <option value="+380">+380 (Ukraine)</option>
+                <option value="+44">+44 (United Kingdom)</option>
+                <option value="+379">+379 (Vatican City)</option>
+                {/* Add more as needed */}
+              </select>
+            </span>
+
+            <span className="pl-4">
+              <input
+                className="inline-block w-48 p-2 border-2 border-neutral-200 rounded-lg shadow-lg focus:border-[#a18458] focus:outline-none focus:ring-0"
+                type="tel"
+                id="mobileNumber"
+                name="mobileNumber"
+                value={formData.mobileNumber}
+                onChange={handleChange}
+                required
+                placeholder="Mobile number"
+              />
+            </span>
           </div>
 
           <div className="flex p-4 inline-block">
