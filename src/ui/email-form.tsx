@@ -103,6 +103,7 @@ const EmailForm: React.FC = () => {
               type="text"
               id="firstName"
               name="firstName"
+              value={formData.firstName}
               placeholder="Your first name"
               onChange={handleChange}
             ></input>
@@ -113,6 +114,7 @@ const EmailForm: React.FC = () => {
               type="text"
               id="lastName"
               name="lastName"
+              value={formData.lastName}
               placeholder="Last name"
               onChange={handleChange}
             ></input>
@@ -123,6 +125,7 @@ const EmailForm: React.FC = () => {
               type="text"
               id="from"
               name="from"
+              value={formData.from}
               placeholder="Email"
               onChange={handleChange}
             ></input>
@@ -133,6 +136,7 @@ const EmailForm: React.FC = () => {
             <textarea
               id="message"
               name="message"
+              value={formData.message}
               rows={4}
               className="block p-2 w-80 text-gray-900 rounded-lg border-2 border-neutral-200 shadow-lg
               focus:outline-none 
