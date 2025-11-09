@@ -107,6 +107,7 @@ const EmailForm: React.FC = () => {
               value={formData.firstName}
               placeholder="Your first name"
               onChange={handleChange}
+              required
             ></input>
           </div>
           <div className="flex p-4 inline-block">
@@ -118,6 +119,7 @@ const EmailForm: React.FC = () => {
               value={formData.lastName}
               placeholder="Last name"
               onChange={handleChange}
+              required
             ></input>
           </div>
           <div className="flex p-4 inline-block">
@@ -129,6 +131,7 @@ const EmailForm: React.FC = () => {
               value={formData.from}
               placeholder="Email"
               onChange={handleChange}
+              required
             ></input>
           </div>
 
@@ -139,7 +142,6 @@ const EmailForm: React.FC = () => {
                 name="countryCode"
                 value={formData.countryCode}
                 onChange={handleChange}
-                required
                 className="h-11 inline-block w-36 p-2 border-2 border-neutral-200 rounded-lg shadow-lg focus:border-[#a18458] focus:outline-none focus:ring-0 text-neutral-500"
               >
                 <option value="">Country Code</option>
@@ -201,7 +203,6 @@ const EmailForm: React.FC = () => {
                 name="mobileNumber"
                 value={formData.mobileNumber}
                 onChange={handleChange}
-                required
                 placeholder="Mobile number"
               />
             </span>
@@ -226,6 +227,7 @@ const EmailForm: React.FC = () => {
               dark:focus:border-blue-500"
               placeholder="Tell us your needs"
               onChange={handleChange}
+              required
             ></textarea>
           </div>
 
