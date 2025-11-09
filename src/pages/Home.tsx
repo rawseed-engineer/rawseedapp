@@ -39,16 +39,31 @@ const Home = () => {
           <div className="absolute top-[10%] sm:top-[20%] md:top-[35%] ">
             <div className="relative z-10  px-4 py-12 sm:px-6 lg:px-8 max-w-7xl mx-auto">
               {/* Hero Heading */}
-              <h1 className="text-balance text-5xl font-bold text-white  md:text-7xl mb-5">
+              <h1
+                className="text-balance 
+                  text-4xl sm:text-5xl md:text-6xl lg:text-7xl
+                  text-center lg:text-left
+                  font-bold text-white   mb-5"
+              >
                 {t("hero.home.title")}
               </h1>
 
-              <h2 className="text-balance text-xl font-bold text-white md:text-6xl mb-5">
+              <h2
+                className="text-balance 
+                text-2xl sm:text-3xl md:text-4xl lg:text-5xl 
+                text-center lg:text-left
+                font-bold text-white mb-5"
+              >
                 {t("hero.home.subtitle")}
               </h2>
 
               {/* Hero Description */}
-              <p className="text-pretty text-white text-2xl mb-6">
+              <p
+                className="text-pretty text-white 
+                text-2xl 
+                text-center lg:text-left
+                mb-6"
+              >
                 {t("hero.home.description")}
               </p>
 
@@ -60,17 +75,23 @@ const Home = () => {
         </section>
 
         {/* White Background Section - Features */}
-        <section className="rounded py-8 mt-12 sm:py-12 mx-64">
+        <section
+          className="rounded py-8 mt-12 sm:py-12 
+          mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:128"
+        >
           <Story />
         </section>
 
-        <section className="rounded py-8 mt-12 sm:py-12 mx-64">
+        <section
+          className="rounded py-8 mt-12 sm:py-12 
+          mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:128"
+        >
           <WhatWeDo />
         </section>
 
         {/* Section - Animation */}
         <section className="rounded py-8 mt-12 sm:py-12 mx-64 my-32 text-pretty text-white text-center text-4xl">
-          <div className="relative flex justify-center items-center gap-20">
+          {/* <div className="relative flex justify-center items-center gap-20">
             <p
               className="relative w-3xs h-72 p-8 flex justify-center items-center bg-[#fac42f] text-shadow-lg
               animate-[BorderAnimation_3s_linear_infinite] rounded-lg
@@ -103,7 +124,7 @@ const Home = () => {
             >
               Ethically sourced
             </p>
-          </div>
+          </div> */}
 
           {/* <div className="flex justify-center">
             <svg className="animate-spin"></svg>
@@ -121,20 +142,39 @@ const Home = () => {
           </div> */}
         </section>
 
-        <section className="flex-grow overflow-x-auto w-full ">
+        <section
+          className="flex-grow overflow-x-auto w-full 
+          "
+        >
           <div className="relative">
             <img
               src={SeedsHorizontal}
               alt="All RawSeed Oils"
               className="w-full brightness-50 aspect-auto"
             />
-            <div className="absolute p-10 text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 space-y-4 bg-[rgba(0,0,0,0.3)]">
-              <p className="text-4xl text-neutral-200">{t("what_we_do.p2")}</p>
+            <div
+              className="absolute 
+              p-2 lg:p-10
+              text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+              space-y-1 lg:space-y-4
+              space-x-1
+              bg-[rgba(0,0,0,0.3)]"
+            >
+              <p
+                className="text-xl sm:text-xl md:text-2xl lg:text-4xl
+                text-neutral-200"
+              >
+                {t("what_we_do.p2")}
+              </p>
             </div>
           </div>
         </section>
 
-        <section className="rounded py-8 sm:py-12 mx-64 my-24">
+        <section
+          className="rounded py-8 sm:py-12 
+          mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:128 
+          my-24"
+        >
           <Products />
         </section>
 
@@ -143,7 +183,10 @@ const Home = () => {
           <WhyRawSeed />
         </section>
 
-        <section className="rounded bg-white py-8 sm:py-12 md:mx-64">
+        <section
+          className="rounded bg-white py-8 sm:py-12 
+          mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:128"
+        >
           <Values />
         </section>
 
@@ -154,7 +197,10 @@ const Home = () => {
 
         {/* Contact Us */}
         <section className="rounded py-8 mt-12 sm:py-12 mx-1 lg:mx-84">
-          <div className="mx-auto grid grid-cols-1 items-center justify-items-center gap-8 px-8 sm:px-16 md:grid-cols-2">
+          <div
+            className="mx-auto grid grid-cols-1 items-center justify-items-center gap-8 px-8 sm:px-16 
+            grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2"
+          >
             <JoinOurJourney />
             <EmailForm />
           </div>

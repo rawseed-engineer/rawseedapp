@@ -4,7 +4,7 @@ import SesameOil from "./pages/SesameOil";
 import BlackseedOil from "./pages/BlackseedOil";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./ui/ScrollToTop";
-// import "./App.css";
+import "./global.css";
 
 function App() {
   return (

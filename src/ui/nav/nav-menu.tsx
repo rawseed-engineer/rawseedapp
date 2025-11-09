@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 // import RawSeedLogo from "./../../assets/rawseed_logo.png";
 import { Link, useLocation } from "react-router-dom";
 import RawSeedLogo from "../../assets/rawseed_logo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const NavMenu: React.FC = () => {
   // const [count, setCount] = useState(0);
@@ -55,7 +57,7 @@ const NavMenu: React.FC = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8 text-3xl">
+        <div className="hidden lg:flex items-center space-x-8 text-3xl">
           {/* <Link to="/rawseedapp/golden-drop">
             <h2 className="text-43l text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200">
               Golden Drop
@@ -100,19 +102,26 @@ const NavMenu: React.FC = () => {
         {/* Mobile menu button */}
         <button
           onClick={toggleMenu}
-          className="md:hidden text-white hover:text-gray-300 transition-colors duration-200"
+          className="lg:hidden text-4xl text-white hover:text-gray-300 transition-colors duration-200"
         >
-          {isMenuOpen
-            ? // <X className="w-6 h-6" />
-              `X`
-            : // <Menu className="w-6 h-6" />
-              `Menu`}
+          {isMenuOpen ? (
+            // <X className="w-6 h-6" />
+            `X`
+          ) : (
+            // <Menu className="w-6 h-6" />
+            // `Menu`
+            <FontAwesomeIcon
+              icon={faBars}
+              className="text-white inline-block"
+              style={{ height: "36px" }}
+            />
+          )}
         </button>
       </div>
 
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-slate-800 backdrop-blur-lg bg-opacity-95 border-t border-gray-700">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-slate-800 backdrop-blur-lg bg-opacity-95 border-t border-gray-700">
           <div className="px-4 py-6 space-y-4">
             <a
               href="#home"

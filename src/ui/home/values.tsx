@@ -11,10 +11,13 @@ import { useTranslation } from "react-i18next";
 const Values: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <div className="mx-auto grid grid-cols-1 items-center justify-items-center gap-8 pt-8 pb-20 sm:px-16 md:grid-cols-4">
+    <div
+      className="mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2lg:grid-cols-4 
+      items-center justify-items-center gap-8 pt-8 pb-20 sm:px-16"
+    >
       {/* <div className="max-w-md space-y-4"> */}
       <div>
-        <div className="h-64">
+        <div className="h-64 flex justify-center items-center">
           <p>
             <FontAwesomeIcon
               icon={faSeedling}
@@ -32,7 +35,7 @@ const Values: React.FC = () => {
       </div>
 
       <div>
-        <div className="h-64">
+        <div className="h-64 flex justify-center items-center">
           <p>
             <FontAwesomeIcon
               icon={faEarthAsia}
@@ -50,7 +53,7 @@ const Values: React.FC = () => {
       </div>
 
       <div>
-        <div className="h-64">
+        <div className="h-64 flex justify-center items-center">
           <p>
             <FontAwesomeIcon
               icon={faPeopleGroup}
@@ -68,7 +71,7 @@ const Values: React.FC = () => {
       </div>
 
       <div>
-        <div className="h-64">
+        <div className="h-64 flex justify-center items-center">
           <p>
             <FontAwesomeIcon
               icon={faHeartCircleCheck}

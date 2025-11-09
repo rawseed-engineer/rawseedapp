@@ -6,9 +6,12 @@ import { useTranslation } from "react-i18next";
 const Products: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <div className="mx-auto grid grid-cols-1 items-center justify-items-center gap-8 px-8 sm:px-16 md:grid-cols-2">
+    <div
+      className="mx-auto grid grid-cols-1 lg:grid-cols-2 
+    items-center justify-items-center gap-8 px-8 sm:px-16"
+    >
       <div>
-        <div>
+        <div className="flex justify-center items-center">
           {/* <Image
             src="/sesame_bottle.png"
             width={500}
@@ -32,7 +35,7 @@ const Products: React.FC = () => {
         </div>
       </div>
       <div>
-        <div>
+        <div className="flex justify-center items-center">
           <img
             src={BlackSeedOilBottle}
             alt="All RawSeed Oils"

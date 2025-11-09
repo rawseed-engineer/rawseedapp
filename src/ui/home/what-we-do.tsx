@@ -5,7 +5,10 @@ import { useTranslation } from "react-i18next";
 const WhatWeDo: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <div className="mx-auto grid grid-cols-1 items-center justify-items-center gap-8 px-8 sm:px-16 md:grid-cols-2">
+    <div
+      className="mx-auto grid grid-cols-1 lg:grid-cols-2
+      items-center justify-items-center gap-8 px-8 sm:px-16 "
+    >
       <img
         src={AllOils}
         alt="All RawSeed Oils"
