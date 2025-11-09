@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import SesameFlower from "../../assets/sesame_flower.jpg";
+import SesameFlower from "../../assets/sesame_flower_plant.jpg";
 
 const Discovery: React.FC = () => {
   const { t } = useTranslation();

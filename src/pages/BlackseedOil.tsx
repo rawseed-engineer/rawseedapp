@@ -3,7 +3,7 @@ import NavMenu from "../ui/nav/nav-menu";
 import { useTranslation } from "react-i18next";
 import BlackseedHero from "../ui/blackseed-oil/hero";
 import Story from "../ui/blackseed-oil/story";
-import BlackseedCloseUp from "./../assets/blackseed_closeup_separator.jpg";
+import BlackseedCloseUp from "./../assets/blackseed_seed_closeup_4K.jpg";
 import ImmunityBooster from "../ui/blackseed-oil/immunity-booster";
 import HairSkinBeauty from "../ui/blackseed-oil/hair-skin-beauty";
 import PeacefulBodyBalance from "../ui/blackseed-oil/peaceful-body-balance";
@@ -37,7 +37,7 @@ const BlackSeedOilPage: React.FC = () => {
           <img
             src={BlackseedCloseUp}
             alt="Blackseed Close Up"
-            className="w-full brightness-100 aspect-auto"
+            className="w-full brightness-70 aspect-auto"
           />
           <div className="absolute text-5xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 space-y-4">
             <h2 className="text-5xl text-neutral-200">

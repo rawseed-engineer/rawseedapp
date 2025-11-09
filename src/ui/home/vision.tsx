@@ -1,5 +1,5 @@
 import React from "react";
-import SesamePlantBanner from "../../assets/sesame_plant_banner.jpg";
+import SesamePlantBanner from "../../assets/sesame_crop_field.jpg";
 import { useTranslation } from "react-i18next";
 
 const Vision: React.FC = () => {
