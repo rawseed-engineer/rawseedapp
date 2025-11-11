@@ -84,7 +84,10 @@ const EmailForm: React.FC = () => {
   };
 
   return (
-    <div className="bg-white w-md p-10 mt-16 mb-16 relative overflow-hidden rounded-lg shadow-lg duration-300 ease-in-out hover:-translate-y-4 hover:shadow-[#a18458]">
+    <div
+      className="bg-white w-7/8 lg:w-md p-1 lg:p-10 mt-16 mb-16 relative overflow-hidden rounded-lg shadow-lg 
+        duration-300 ease-in-out hover:-translate-y-4 hover:shadow-[#a18458]"
+    >
       <div className=" mb-8 pb-5 relative">
         <div className="mb-2 flex items-center">
           <FontAwesomeIcon
@@ -142,9 +145,9 @@ const EmailForm: React.FC = () => {
                 name="countryCode"
                 value={formData.countryCode}
                 onChange={handleChange}
-                className="h-11 inline-block w-36 p-2 border-2 border-neutral-200 rounded-lg shadow-lg focus:border-[#a18458] focus:outline-none focus:ring-0 text-neutral-500"
+                className="h-11 inline-block w-25 p-2 border-2 border-neutral-200 rounded-lg shadow-lg focus:border-[#a18458] focus:outline-none focus:ring-0 text-neutral-500"
               >
-                <option value="">Country Code</option>
+                <option value="">Country</option>
                 <option value="+376">+376 (Andorra)</option>
                 <option value="+355">+355 (Albania)</option>
                 <option value="+43">+43 (Austria)</option>
@@ -197,7 +200,7 @@ const EmailForm: React.FC = () => {
 
             <span className="pl-4">
               <input
-                className="inline-block w-48 p-2 border-2 border-neutral-200 rounded-lg shadow-lg focus:border-[#a18458] focus:outline-none focus:ring-0"
+                className="inline-block w-35 p-2 border-2 border-neutral-200 rounded-lg shadow-lg focus:border-[#a18458] focus:outline-none focus:ring-0"
                 type="tel"
                 id="mobileNumber"
                 name="mobileNumber"
@@ -215,7 +218,7 @@ const EmailForm: React.FC = () => {
               name="message"
               value={formData.message}
               rows={4}
-              className="block p-2 w-80 text-gray-900 rounded-lg border-2 border-neutral-200 shadow-lg
+              className="block p-2 w-64 sm:w-80 text-gray-900 rounded-lg border-2 border-neutral-200 shadow-lg
               focus:outline-none 
               focus:ring-0
               focus:border-[#a18458] 

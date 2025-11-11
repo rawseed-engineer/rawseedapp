@@ -37,7 +37,7 @@ const NavMenu: React.FC = () => {
       }`}
     >
       {/* Sticky Navigation */}
-      <div className="flex items-center justify-between max-w-7xl mx-auto">
+      <div className="flex items-center justify-between lg:max-w-7xl mx-auto">
         <div className="flex items-center space-x-2">
           <Link
             to="/rawseedapp"
@@ -51,7 +51,7 @@ const NavMenu: React.FC = () => {
             <img
               src={RawSeedLogo}
               alt="RawSeed Logo"
-              className="mx-8 h-[2.5rem] aspect-auto"
+              className="mx-8 h-[1.5rem] lg:h-[2.5rem] aspect-auto"
             />
           </Link>
         </div>

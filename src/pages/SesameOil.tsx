@@ -31,20 +31,35 @@ const SesameOil = () => {
           }}
         />
 
-        <div className="absolute top-[35%] ">
+        <div className="absolute top-[10%] sm:top-[20%] lg:top-[35%] ">
           <div className="relative z-10  px-4 py-12 sm:px-6 lg:px-8 max-w-7xl mx-auto">
             {/* Hero Heading */}
             {/* <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight"> */}
-            <h1 className="text-balance text-5xl font-bold text-white  md:text-7xl mb-5">
+            <h1
+              className="text-balance 
+              text-4xl sm:text-5xl md:text-6xl lg:text-7xl
+              text-center lg:text-left
+              font-bold text-white mb-5"
+            >
               {t("hero.sesame_oil.title")}
-              {/* <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-300"> */}
             </h1>
-            <h2 className="text-balance text-xl font-bold text-white md:text-6xl mb-5">
+
+            <h2
+              className="text-balance 
+              text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+              text-center lg:text-left
+              font-bold text-white mb-5"
+            >
               {t("hero.sesame_oil.subtitle")}
             </h2>
 
             {/* Hero Description */}
-            <p className="text-pretty text-white text-2xl mb-6">
+            <p
+              className="text-pretty text-white 
+              text-2xl
+              text-center lg:text-left 
+              mb-6"
+            >
               {t("hero.sesame_oil.description")}
             </p>
 
@@ -62,14 +77,20 @@ const SesameOil = () => {
         </div>
       </section>
 
-      <section className="rounded bg-white sm:py-12 mx-64">
-        <div className="mx-auto grid grid-cols-1 items-center justify-items-center gap-8 px-8 sm:px-16 md:grid-cols-2">
-          <img
-            src={Ayurveda}
-            alt="Ayurveda"
-            className="mx-12 w-xl aspect-auto"
-          />
-          <div className="max-w-md text-neutral-600 space-y-6 py-24">
+      <section
+        className="rounded bg-white mt-12 sm:py-12 
+        mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:128"
+      >
+        <div
+          className="mx-auto grid grid-cols-1 lg:grid-cols-2
+        items-center justify-items-center gap-8 
+        px-8 sm:px-16 md:px-4"
+        >
+          <img src={Ayurveda} alt="Ayurveda" className="lg:w-xl aspect-auto" />
+          <div
+            className="lg:max-w-md text-neutral-600 
+            space-y-1 lg:space-y-4"
+          >
             <h2 className="text-balance text-[#a18458] text-5xl font-bold tracking-tight md:text-5xl">
               {t("history.title")}
             </h2>
@@ -84,7 +105,10 @@ const SesameOil = () => {
         <Reasons />
       </section>
 
-      <section className="rounded py-8 mt-12 sm:py-12 mx-64">
+      <section
+        className="rounded py-8 mt-12 sm:py-12
+        mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:mx-128"
+      >
         <Discovery />
       </section>
 
@@ -93,8 +117,12 @@ const SesameOil = () => {
       </section>
 
       {/* Contact Us */}
-      <section className="rounded py-8 mt-12 sm:py-12 mx-64">
-        <div className="mx-auto grid grid-cols-1 items-center justify-items-center gap-8 px-8 sm:px-16 md:grid-cols-2">
+      <section className="rounded py-8 mt-12 sm:py-12 mx-2 lg:mx-64">
+        <div
+          className="mx-auto grid grid-cols-1 xl:grid-cols-2
+          items-center justify-items-center px-2 xl:px-16
+          mx-1 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:mx-128"
+        >
           <Explore />
           <EmailForm />
         </div>

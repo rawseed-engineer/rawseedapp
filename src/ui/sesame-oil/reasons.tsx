@@ -18,7 +18,14 @@ const Reasons: React.FC = () => {
       </h2>
 
       {/* <div className="mx-auto grid grid-cols-1  gap-8 pt-8 pb-20 sm:px-64 md:grid-cols-3"> */}
-      <div className="mx-auto grid grid-cols-1 sm:px-64 md:grid-cols-3">
+      <div
+        className="
+        lg:px-32
+        mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center 
+        justify-items-center 
+        gap-8 pt-8 pb-20 sm:px-64
+        "
+      >
         <div className="m-8 w-96">
           <div className="flex items-center justify-center h-48 w-full rounded-lg">
             <FontAwesomeIcon
