@@ -123,39 +123,35 @@ const NavMenu: React.FC = () => {
       {isMenuOpen && (
         <div className="lg:hidden absolute top-full left-0 right-0 bg-slate-800 backdrop-blur-lg bg-opacity-95 border-t border-gray-700">
           <div className="px-4 py-6 space-y-4">
-            <a
-              href="#home"
-              className="block text-gray-300 hover:text-white transition-colors duration-200 py-2"
-            >
-              Home
-            </a>
-            <a
-              href="#features"
-              className="block text-gray-300 hover:text-white transition-colors duration-200 py-2"
-            >
-              Features
-            </a>
-            <a
-              href="#services"
-              className="block text-gray-300 hover:text-white transition-colors duration-200 py-2"
-            >
-              Services
-            </a>
-            <a
-              href="#about"
-              className="block text-gray-300 hover:text-white transition-colors duration-200 py-2"
-            >
-              About
-            </a>
-            <a
-              href="#contact"
-              className="block text-gray-300 hover:text-white transition-colors duration-200 py-2"
-            >
-              Contact
-            </a>
-            <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-full hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:scale-105 mt-4">
-              Get Started
-            </button>
+            <Link to="/rawseedapp/">
+              <div className="block text-gray-300 hover:text-white transition-colors duration-200 py-2">
+                Home
+              </div>
+            </Link>
+            <Link to="/rawseedapp/sesame-oil">
+              <div className="block text-gray-300 hover:text-white transition-colors duration-200 py-2">
+                {t("menu.sesame_oil")}
+              </div>
+            </Link>
+            <Link to="/rawseedapp/blackseed-oil">
+              <div className="block text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200 py-2">
+                {t("menu.black_seed_oil")}
+              </div>
+            </Link>
+            <Link to="/rawseedapp/about-us">
+              <div className="block text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200 py-2">
+                About us
+              </div>
+            </Link>
+
+            <Link to="/rawseedapp/contact">
+              <div
+                className="block text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200 py-2 
+              "
+              >
+                {t("menu.get_started")}
+              </div>
+            </Link>
           </div>
         </div>
       )}
