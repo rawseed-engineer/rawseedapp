@@ -4,14 +4,14 @@ import { useTranslation } from "react-i18next";
 import BlackseedHero from "../ui/blackseed-oil/hero";
 import Story from "../ui/blackseed-oil/story";
 import BlackseedCloseUp from "./../assets/blackseed_seed_closeup_4K.jpg";
-import ImmunityBooster from "../ui/blackseed-oil/immunity-booster";
-import HairSkinBeauty from "../ui/blackseed-oil/hair-skin-beauty";
-import PeacefulBodyBalance from "../ui/blackseed-oil/peaceful-body-balance";
-import NaturalWellness from "../ui/blackseed-oil/natural-wellness";
+// import ImmunityBooster from "../ui/blackseed-oil/immunity-booster";
+// import HairSkinBeauty from "../ui/blackseed-oil/hair-skin-beauty";
+// import PeacefulBodyBalance from "../ui/blackseed-oil/peaceful-body-balance";
+// import NaturalWellness from "../ui/blackseed-oil/natural-wellness";
 import Footer from "../ui/nav/footer";
 import Process from "../ui/blackseed-oil/process";
-import EmailForm from "../ui/email-form";
-import JoinOurJourney from "../ui/blackseed-oil/joinOurJourney";
+// import EmailForm from "../ui/email-form";
+// import JoinOurJourney from "../ui/blackseed-oil/joinOurJourney";
 
 const BlackSeedOilPage: React.FC = () => {
   const { t } = useTranslation();
