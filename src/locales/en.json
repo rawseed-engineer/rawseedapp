@@ -21,7 +21,8 @@
     "sesame_oil": "Sesame Oil",
     "black_seed_oil": "Black Seed Oil",
     "contact_us": "Contact Us",
-    "get_started": "Contact"
+    "get_started": "Contact",
+    "flax_seed_oil": "Flaxseed Oil"
   },
   "story": {
     "title": "Our Story",
@@ -89,7 +90,7 @@
   "history": {
     "title": "The History of Sesame Oil",
     "p1": "Sesame oil has been used for over 4,000 years. Civilizations across Asia, the Middle East, and Africa valued sesame oil not only for cooking, but also for medicine, skincare, and spiritual rituals.",
-    "p2": "In Ayurveda and Traditional Chinese Medicine, sesame oil has long been revered for its healing, detoxifying, and balancing properties. It was known as the &quot;queen of oils&quot; for a reason.",
+    "p2": "In Ayurveda and Traditional Chinese Medicine, sesame oil has long been revered for its healing, detoxifying, and balancing properties. It was known as the \"queen of oils\" for a reason.",
     "p3": "Today, we’re proud to continue this tradition through Golden Drop — our premium, cold-pressed sesame oil."
   },
   "sesame": {

@@ -14,7 +14,7 @@ const Process: React.FC = () => {
     <div className="mx-auto grid grid-cols-1 items-center justify-items-center gap-8 pt-8 pb-20 sm:px-72 md:grid-cols-4">
       {/* <div className="max-w-md space-y-4"> */}
       <div>
-        <div className="h-64">
+        <div className="h-64 flex justify-center items-center">
           <p>
             <FontAwesomeIcon
               icon={faDroplet}
@@ -29,7 +29,7 @@ const Process: React.FC = () => {
       </div>
 
       <div>
-        <div className="h-64">
+        <div className="h-64 flex justify-center items-center">
           <p>
             <FontAwesomeIcon
               icon={faHandHoldingDroplet}
@@ -44,7 +44,7 @@ const Process: React.FC = () => {
       </div>
 
       <div>
-        <div className="h-64">
+        <div className="h-64 flex justify-center items-center">
           <p>
             <FontAwesomeIcon
               icon={faBottleDroplet}
@@ -59,7 +59,7 @@ const Process: React.FC = () => {
       </div>
 
       <div>
-        <div className="h-64">
+        <div className="h-64 flex justify-center items-center">
           <p>
             <FontAwesomeIcon
               icon={faLeaf}

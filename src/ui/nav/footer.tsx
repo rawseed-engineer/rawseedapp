@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import RawSeedLogo from "../../assets/rawseed_logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faPhone,
   faEnvelope,
   faLocationDot,
   // faFacebook,
@@ -11,7 +10,6 @@ import {
 import {
   faFacebook,
   faXTwitter,
-  faLinkedinIn,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
@@ -33,7 +31,7 @@ const Footer: React.FC = () => {
             {/* <span className="text-xl font-bold text-white">Rawseed</span> */}
           </div>
           <p className="text-gray-200 mb-6 leading-relaxed">
-            Own our health with natural oils
+            Wholesome Oils for Healthy Living
           </p>
           <div className="flex space-x-1">
             <a
@@ -64,18 +62,6 @@ const Footer: React.FC = () => {
                 style={{ height: "36px" }}
                 size={"2x"}
               />
-            </a>
-            <a
-              href="#"
-              className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#a18458] transition-colors duration-200"
-            >
-              <FontAwesomeIcon
-                icon={faLinkedinIn}
-                className="text-[#0077B5] inline-block"
-                style={{ height: "36px" }}
-                size={"2x"}
-              />
-              {/* <Linkedin className="w-5 h-5 text-gray-400 hover:text-white" /> */}
             </a>
             <a
               href="#"
@@ -123,11 +109,19 @@ const Footer: React.FC = () => {
               </Link>
             </li>
             <li>
-              <a
-                href="#about"
+              <Link
+                to="/rawseedapp/flaxseed-oil"
                 className="text-gray-400 hover:text-white transition-colors duration-200"
               >
-                Golden Drop
+                Flaxseed Oil
+              </Link>
+            </li>
+            <li>
+              <a
+                href="/rawseedapp/about-us"
+                className="text-gray-400 hover:text-white transition-colors duration-200"
+              >
+                About Us
               </a>
             </li>
           </ul>
@@ -185,15 +179,14 @@ const Footer: React.FC = () => {
               />
               <span className="text-gray-400">info@rawseed.com</span>
             </div>
-            <div className="flex items-center space-x-3">
-              {/* <Phone className="w-5 h-5 text-purple-400" /> */}
+            {/* <div className="flex items-center space-x-3">
               <FontAwesomeIcon
                 icon={faPhone}
                 className="text-[#cfb997] inline-block"
                 style={{ height: "36px" }}
               />
               <span className="text-gray-400">+44 123-4567-89</span>
-            </div>
+            </div> */}
             <div className="flex items-center space-x-3">
               {/* <MapPin className="w-5 h-5 text-purple-400" /> */}
               <FontAwesomeIcon
@@ -201,7 +194,9 @@ const Footer: React.FC = () => {
                 className="text-[#cfb997] inline-block"
                 style={{ height: "36px" }}
               />
-              <span className="text-gray-400">London, UK</span>
+              <span className="text-gray-400">
+                167-169 Great Portland Street, London
+              </span>
             </div>
           </div>
         </div>
@@ -209,7 +204,7 @@ const Footer: React.FC = () => {
 
       <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
         <p className="text-gray-400 mb-4 md:mb-0">
-          © 2025 RawSeed Inc. All rights reserved.
+          © 2025 RawSeed Ltd. All rights reserved.
         </p>
         <div className="flex space-x-6">
           <a

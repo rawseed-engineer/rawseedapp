@@ -12,6 +12,7 @@ import JoinOurJourney from "../ui/home/joinOurJourney";
 import EmailForm from "../ui/email-form";
 import Footer from "../ui/nav/footer";
 import { Callout } from "../ui/callout";
+import RawSeedLogo from "./../assets/rawseed_logo.png";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -36,14 +37,22 @@ const Home = () => {
             }}
           />
 
-          <div className="absolute top-[10%] sm:top-[20%] md:top-[35%] ">
-            <div className="relative z-10  px-4 py-12 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          <div className="absolute top-[10%] sm:top-[20%] md:top-[35%]">
+            <div className="relative z-10 px-4 py-12 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+              <div className="flex items-center justify-center">
+                <img
+                  src={RawSeedLogo}
+                  alt="RawSeed Logo"
+                  className="block md:hidden lg:hidden mx-8 h-[3rem] lg:h-[5rem] aspect-auto"
+                />
+              </div>
+
               {/* Hero Heading */}
               <h1
                 className="text-balance 
                   text-4xl sm:text-5xl md:text-6xl lg:text-7xl
                   text-center lg:text-left
-                  font-bold text-white   mb-5"
+                  font-bold text-white   mb-5 mt-5"
               >
                 {t("hero.home.title")}
               </h1>

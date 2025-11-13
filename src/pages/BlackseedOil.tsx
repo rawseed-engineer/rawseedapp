@@ -28,7 +28,10 @@ const BlackSeedOilPage: React.FC = () => {
       </section>
 
       {/* White Background Section - Features */}
-      <section className="rounded py-8 mt-16 sm:py-12 mx-64 ">
+      <section
+        className="rounded py-8 mt-12 sm:py-12 
+        mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:128"
+      >
         <Story />
       </section>
 
@@ -40,7 +43,7 @@ const BlackSeedOilPage: React.FC = () => {
             className="w-full brightness-70 aspect-auto"
           />
           <div className="absolute text-5xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 space-y-4">
-            <h2 className="text-5xl text-neutral-200">
+            <h2 className="text-4xl sm:text-5xl text-neutral-200">
               {t("blackseed_oil.why_special")}
             </h2>
           </div>
@@ -48,21 +51,21 @@ const BlackSeedOilPage: React.FC = () => {
       </section>
 
       {/* White Background Section - Features */}
-      <section className="rounded py-8 mt-12 sm:py-12 mx-64">
+      {/* <section className="rounded py-8 mt-12 sm:py-12 mx-64">
         <ImmunityBooster />
-      </section>
+      </section> */}
 
-      <section className="rounded py-8 mt-12 sm:py-12 mx-64">
+      {/* <section className="rounded py-8 mt-12 sm:py-12 mx-64">
         <HairSkinBeauty />
-      </section>
+      </section> */}
 
-      <section className="rounded py-8 mt-12 sm:py-12 mx-64">
+      {/* <section className="rounded py-8 mt-12 sm:py-12 mx-64">
         <PeacefulBodyBalance />
-      </section>
+      </section> */}
 
-      <section className="rounded py-8 mt-12 sm:py-12 mx-64">
+      {/* <section className="rounded py-8 mt-12 sm:py-12 mx-64">
         <NaturalWellness />
-      </section>
+      </section> */}
 
       {/* <section className="rounded py-8 mt-12 sm:py-12 mx-64">
         <div className="relative flex justify-center items-center gap-20">
@@ -98,12 +101,12 @@ const BlackSeedOilPage: React.FC = () => {
       {/* Contact Us */}
       {/* <section className="rounded bg-[#181818] py-8 mt-12 sm:py-12 mx-64">
        */}
-      <section className="rounded py-8 mt-12 sm:py-12 mx-1 lg:mx-84">
+      {/* <section className="rounded py-8 mt-12 sm:py-12 mx-1 lg:mx-84">
         <div className="mx-auto grid grid-cols-1 items-center justify-items-center gap-8 px-8 sm:px-16 md:grid-cols-2">
           <JoinOurJourney />
           <EmailForm />
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
       <footer className="bg-[#181818] border-t border-gray-800 py-16">
