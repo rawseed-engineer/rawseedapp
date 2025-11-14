@@ -122,7 +122,7 @@ const SesameOil = () => {
       {/* Contact Us */}
       <section
         className="rounded py-8 sm:py-12 mt-12
-        mx-4 sm:mx-4 lg:mx-24 xl:mx-48 2xl:mx-128"
+        mx-4 sm:mx-4 lg:mx-12 xl:mx-24 2xl:mx-64"
       >
         <div
           className="mx-auto grid grid-cols-1 lg:grid-cols-2
