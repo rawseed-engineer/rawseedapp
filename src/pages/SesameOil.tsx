@@ -101,13 +101,16 @@ const SesameOil = () => {
         </div>
       </section>
 
-      <section className="rounded bg-[#181818] py-12 sm:py-24">
+      <section
+        className="rounded bg-[#181818] py-12 sm:py-24 mt-12
+        "
+      >
         <Reasons />
       </section>
 
       <section
         className="rounded py-8 mt-12 sm:py-12
-        mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:mx-128"
+        mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:mx-64"
       >
         <Discovery />
       </section>
@@ -117,11 +120,14 @@ const SesameOil = () => {
       </section>
 
       {/* Contact Us */}
-      <section className="rounded py-8 mt-12 sm:py-12 mx-2 lg:mx-64">
+      <section
+        className="rounded py-8 sm:py-12 mt-12
+        mx-4 sm:mx-4 lg:mx-24 xl:mx-48 2xl:mx-128"
+      >
         <div
-          className="mx-auto grid grid-cols-1 xl:grid-cols-2
-          items-center justify-items-center px-2 xl:px-16
-          mx-1 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:mx-128"
+          className="mx-auto grid grid-cols-1 lg:grid-cols-2
+          items-center justify-items-center px-2 sm:px-4 lg:px-8
+          "
         >
           <Explore />
           <EmailForm />

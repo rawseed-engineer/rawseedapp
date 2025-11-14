@@ -97,3 +97,15 @@ li {
     opacity: 1;
   }
 }
+
+@keyframes smoothAppear {
+  to {
+    bottom: 20px;
+    opacity: 1;
+  }
+
+  /* from {
+    bottom: 0px;
+    opacity: 0;
+  } */
+}

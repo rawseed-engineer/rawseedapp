@@ -11,9 +11,11 @@ import { useTranslation } from "react-i18next";
 const Process: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <div className="mx-auto grid grid-cols-1 items-center justify-items-center gap-8 pt-8 pb-20 sm:px-72 md:grid-cols-4">
-      {/* <div className="max-w-md space-y-4"> */}
-      <div>
+    <div
+      className="mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 
+      items-center justify-items-center gap-8 pt-8 pb-4 px-4 lg:px-64"
+    >
+      <div className="transition duration-300 hover:scale-110">
         <div className="h-64 flex justify-center items-center">
           <p>
             <FontAwesomeIcon
@@ -28,7 +30,7 @@ const Process: React.FC = () => {
         </h2>
       </div>
 
-      <div>
+      <div className="transition duration-300 hover:scale-110">
         <div className="h-64 flex justify-center items-center">
           <p>
             <FontAwesomeIcon
@@ -43,7 +45,7 @@ const Process: React.FC = () => {
         </h2>
       </div>
 
-      <div>
+      <div className="transition duration-300 hover:scale-110">
         <div className="h-64 flex justify-center items-center">
           <p>
             <FontAwesomeIcon
@@ -58,7 +60,7 @@ const Process: React.FC = () => {
         </h2>
       </div>
 
-      <div>
+      <div className="transition duration-300 hover:scale-110">
         <div className="h-64 flex justify-center items-center">
           <p>
             <FontAwesomeIcon

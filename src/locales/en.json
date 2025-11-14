@@ -141,7 +141,7 @@
     "story": {
       "title": "The Legacy of Black Seed",
       "p1": "Black seed oil is pressed from the seeds of Nigella sativa, a flowering plant native to South and Southwest Asia. These tiny black seeds—also known as black cumin, kalonji, or habbat al-barakah (the blessed seed)—have been used for over 2,000 years in traditional healing systems like Unani, Ayurveda, and Islamic medicine.",
-      "p2": "It was found in the tomb of King Tutankhamun, praised by Hippocrates, and famously referenced in hadith as a remedy for “every disease except death.”",
+      "p2": "It was found in the tomb of King Tutankhamun, praised by Hippocrates, and famously referenced in hadith as a remedy for “every disease except death”.",
       "p3": "At RawSeed, we extract this oil using traditional cold-pressing methods, without heat or chemicals, to preserve its full potency and purity."
     },
     "why_special": "What Makes Black Seed Oil Special?",
@@ -151,6 +151,7 @@
     },
     "healthy_skin_and_hair": {
       "title": "Skin, Hair Beauty",
+      "p1": "Used topically, black seed oil can:",
       "description": "Used topically, black seed oil can:",
       "item1": "Soothe dry or irritated skin",
       "item2": "Support scalp health and promote hair growth",

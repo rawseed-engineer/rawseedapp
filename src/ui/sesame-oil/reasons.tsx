@@ -21,12 +21,12 @@ const Reasons: React.FC = () => {
       <div
         className="
         lg:px-32
-        mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center 
+        mx-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 items-center 
         justify-items-center 
         gap-8 pt-8 pb-20 sm:px-64
         "
       >
-        <div className="m-8 w-96">
+        <div className="m-8 w-96 transition duration-300 hover:scale-110">
           <div className="flex items-center justify-center h-48 w-full rounded-lg">
             <FontAwesomeIcon
               icon={faUtensils}
@@ -43,7 +43,7 @@ const Reasons: React.FC = () => {
           </p>
         </div>
 
-        <div className="m-8 w-96">
+        <div className="m-8 w-96 transition duration-300 hover:scale-110">
           <div className="flex items-center justify-center h-48 w-full rounded-lg">
             <FontAwesomeIcon
               icon={faHeartCircleCheck}
@@ -60,7 +60,7 @@ const Reasons: React.FC = () => {
           </p>
         </div>
 
-        <div className="m-8 w-96">
+        <div className="m-8 w-96 transition duration-300 hover:scale-110">
           <div className="flex items-center justify-center h-48 w-full rounded-lg">
             <FontAwesomeIcon
               icon={faLemon}
@@ -78,8 +78,8 @@ const Reasons: React.FC = () => {
         </div>
       </div>
 
-      <div className="mx-auto grid grid-cols-1 items-center justify-items-center gap-8 pt-8 pb-20 sm:px-64 md:grid-cols-2">
-        <div className="m-8 w-96">
+      <div className="mx-auto grid grid-cols-1 items-center justify-items-center gap-8 pt-8 pb-20 sm:px-64 lg:grid-cols-2">
+        <div className="m-8 w-96 transition duration-300 hover:scale-110">
           <div className="flex items-center justify-center h-48 w-full rounded-lg">
             <FontAwesomeIcon
               icon={faTemperatureThreeQuarters}
@@ -95,7 +95,7 @@ const Reasons: React.FC = () => {
           </p>
         </div>
 
-        <div className="m-8 w-96">
+        <div className="m-8 w-96 transition duration-300 hover:scale-110">
           <div className="flex items-center justify-center h-48 w-full rounded-lg">
             <FontAwesomeIcon
               icon={faEarthAsia}

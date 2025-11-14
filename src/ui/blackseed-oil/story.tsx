@@ -9,7 +9,7 @@ const Story: React.FC = () => {
       className="mx-auto grid 
       grid-cols-1 md:grid-cols-2
       items-center justify-items-center gap-8 
-      px-8 sm:px-16 md:px-4
+      px-8 sm:px-16 md:px-4 lg:px-36
       my-8"
     >
       <div

@@ -4,14 +4,14 @@ import { useTranslation } from "react-i18next";
 import BlackseedHero from "../ui/blackseed-oil/hero";
 import Story from "../ui/blackseed-oil/story";
 import BlackseedCloseUp from "./../assets/blackseed_seed_closeup_4K.jpg";
-// import ImmunityBooster from "../ui/blackseed-oil/immunity-booster";
-// import HairSkinBeauty from "../ui/blackseed-oil/hair-skin-beauty";
-// import PeacefulBodyBalance from "../ui/blackseed-oil/peaceful-body-balance";
-// import NaturalWellness from "../ui/blackseed-oil/natural-wellness";
+import ImmunityBooster from "../ui/blackseed-oil/immunity-booster";
+import HairSkinBeauty from "../ui/blackseed-oil/hair-skin-beauty";
+import PeacefulBodyBalance from "../ui/blackseed-oil/peaceful-body-balance";
+import NaturalWellness from "../ui/blackseed-oil/natural-wellness";
 import Footer from "../ui/nav/footer";
 import Process from "../ui/blackseed-oil/process";
-// import EmailForm from "../ui/email-form";
-// import JoinOurJourney from "../ui/blackseed-oil/joinOurJourney";
+import EmailForm from "../ui/email-form";
+import JoinOurJourney from "../ui/blackseed-oil/joinOurJourney";
 
 const BlackSeedOilPage: React.FC = () => {
   const { t } = useTranslation();
@@ -51,21 +51,33 @@ const BlackSeedOilPage: React.FC = () => {
       </section>
 
       {/* White Background Section - Features */}
-      {/* <section className="rounded py-8 mt-12 sm:py-12 mx-64">
+      <section
+        className="rounded py-12 sm:py-24 mt-12 
+        mx-4 sm:mx-4 lg:mx-24 xl:mx-48 2xl:128"
+      >
         <ImmunityBooster />
-      </section> */}
+      </section>
 
-      {/* <section className="rounded py-8 mt-12 sm:py-12 mx-64">
+      <section
+        className="rounded py-12 sm:py-12 mt-12 
+        mx-4 sm:mx-4 lg:mx-24 xl:mx-48 2xl:128"
+      >
         <HairSkinBeauty />
-      </section> */}
+      </section>
 
-      {/* <section className="rounded py-8 mt-12 sm:py-12 mx-64">
+      <section
+        className="rounded py-12 sm:py-12 mt-12 
+        mx-4 sm:mx-4 lg:mx-24 xl:mx-48 2xl:128"
+      >
         <PeacefulBodyBalance />
-      </section> */}
+      </section>
 
-      {/* <section className="rounded py-8 mt-12 sm:py-12 mx-64">
+      <section
+        className="rounded py-12 sm:py-12 mt-12
+        mx-4 sm:mx-4 lg:mx-24 xl:mx-48 2xl:128"
+      >
         <NaturalWellness />
-      </section> */}
+      </section>
 
       {/* <section className="rounded py-8 mt-12 sm:py-12 mx-64">
         <div className="relative flex justify-center items-center gap-20">
@@ -99,14 +111,20 @@ const BlackSeedOilPage: React.FC = () => {
       </section>
 
       {/* Contact Us */}
-      {/* <section className="rounded bg-[#181818] py-8 mt-12 sm:py-12 mx-64">
-       */}
-      {/* <section className="rounded py-8 mt-12 sm:py-12 mx-1 lg:mx-84">
-        <div className="mx-auto grid grid-cols-1 items-center justify-items-center gap-8 px-8 sm:px-16 md:grid-cols-2">
+      {/* <section className="rounded bg-[#181818] py-8 mt-12 sm:py-12 mx-64"> */}
+
+      <section
+        className="rounded py-12 sm:py-12 mt-12 
+        mx-4 sm:mx-4 lg:mx-24 xl:mx-48 2xl:128"
+      >
+        <div
+          className="mx-auto grid grid-cols-1 lg:grid-cols-2 
+          items-center justify-items-center gap-8 px-1 sm:px-16"
+        >
           <JoinOurJourney />
           <EmailForm />
         </div>
-      </section> */}
+      </section>
 
       {/* Footer */}
       <footer className="bg-[#181818] border-t border-gray-800 py-16">

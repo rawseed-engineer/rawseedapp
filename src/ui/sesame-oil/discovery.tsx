@@ -7,9 +7,9 @@ const Discovery: React.FC = () => {
   return (
     <div
       className="mx-auto grid grid-cols-1 lg:grid-cols-2 
-      items-center justify-items-center"
+      items-center justify-items-center gap-8 px-8 sm:px-16"
     >
-      <div className=" text-neutral-600">
+      <div className="space-y-4 text-neutral-600">
         <h1
           className="text-balance text-[#a18458] 
           text-5xl md:text-5xl font-bold tracking-tight "
@@ -42,7 +42,7 @@ const Discovery: React.FC = () => {
         src={SesameFlower}
         alt="Rawseed flower"
         // className="w-full brightness-70 aspect-auto"
-        className="w-full aspect-auto"
+        className="aspect-auto"
       />
     </div>
   );

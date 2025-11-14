@@ -127,8 +127,23 @@ const NavMenu: React.FC = () => {
 
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-slate-800 backdrop-blur-lg bg-opacity-95 border-t border-gray-700">
-          <div className="px-4 py-6 space-y-4">
+        // <div
+        //   className="lg:hidden absolute top-full left-0 right-0 bg-slate-800
+        //   backdrop-blur-lg  border-t border-gray-700
+        //   translate-y-1/2
+        //   animate-[smoothAppear_2s_ease_forwards]"
+        // >
+        // <div
+        //   className="lg:hidden absolute top-full left-0 right-0
+        //     transition: 300ms left cubic-bezier(0.77, 0, 0.175, 1)"
+        // >
+        <div
+          className="h-full fixed left-0 w-[250px] mt-6
+          transform translate-x-4
+          transition-transform duration-250 ease-in-out
+          linear-gradient(180deg, #FC466B 0%, #3F5EFB 100%)"
+        >
+          <div className="px-4 py-6 space-y-4 bg-[#181818] bg-opacity-90 backdrop-blur-lg border-t border-gray-700">
             <Link to="/rawseedapp/">
               <div className="block text-gray-300 hover:text-white transition-colors duration-200 py-2">
                 Home
@@ -151,7 +166,7 @@ const NavMenu: React.FC = () => {
             </Link>
             <Link to="/rawseedapp/about-us">
               <div className="block text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200 py-2">
-                About us
+                About Us
               </div>
             </Link>
 
