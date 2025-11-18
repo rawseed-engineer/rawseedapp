@@ -1,5 +1,5 @@
 import React from "react";
-import AllOils from "../../assets/hero_oil.jpg";
+import AllOils from "../../assets/range_of_oils.jpg";
 import { useTranslation } from "react-i18next";
 
 const WhatWeDo: React.FC = () => {

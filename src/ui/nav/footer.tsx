@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Quick Links */}
-        <div className="hidden md:block">
+        {/* <div className="hidden md:block">
           <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
           <ul className="space-y-3">
             <li>
@@ -122,45 +122,6 @@ const Footer: React.FC = () => {
                 className="text-gray-400 hover:text-white transition-colors duration-200"
               >
                 About Us
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Support */}
-        {/* <div>
-          <h3 className="text-lg font-semibold text-white mb-4">Support</h3>
-          <ul className="space-y-3">
-            <li>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors duration-200"
-              >
-                Help Center
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors duration-200"
-              >
-                Documentation
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors duration-200"
-              >
-                Contact Support
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors duration-200"
-              >
-                Status Page
               </a>
             </li>
           </ul>
@@ -213,7 +174,7 @@ const Footer: React.FC = () => {
           >
             Privacy Policy
           </a>
-          <a
+          {/* <a
             href="#"
             className="text-gray-400 hover:text-white transition-colors duration-200"
           >
@@ -224,7 +185,7 @@ const Footer: React.FC = () => {
             className="text-gray-400 hover:text-white transition-colors duration-200"
           >
             Cookie Policy
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

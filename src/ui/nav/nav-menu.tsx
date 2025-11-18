@@ -84,7 +84,7 @@ const NavMenu: React.FC = () => {
 
           <Link to="/rawseedapp/about-us">
             <h2 className="text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200">
-              About us
+              About Us
             </h2>
           </Link>
 

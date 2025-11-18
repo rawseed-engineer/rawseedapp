@@ -23,7 +23,7 @@ const Contact: React.FC = () => {
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
               // backgroundImage: `url("/rawseedapp/hero_image_home.jpg")`,
-              backgroundImage: `url("sesame_seed_hero.jpg")`,
+              backgroundImage: `url("flaxseed_flower_farm.jpg")`,
               opacity: 0.9,
               filter: "brightness(50%)",
             }}

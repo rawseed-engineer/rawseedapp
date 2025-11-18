@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import AllOils from "../../assets/hero_oil.jpg";
+import AllOils from "../../assets/sesame_fruit.jpg";
 
 const Story: React.FC = () => {
   const { t } = useTranslation();
@@ -35,11 +35,7 @@ const Story: React.FC = () => {
           {t("story.description.p5")}
         </p>
       </div>
-      <img
-        src={AllOils}
-        alt="All RawSeed Oils"
-        className="mx-8 h-[40rem] aspect-auto"
-      />
+      <img src={AllOils} alt="All RawSeed Oils" className="mx-8 aspect-auto" />
     </div>
   );
 };
