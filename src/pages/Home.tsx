@@ -76,9 +76,9 @@ const Home = () => {
                 {t("hero.home.description")}
               </p>
 
-              <div className="flex justify-center mt-30">
+              {/* <div className="flex justify-center mt-30">
                 <Callout />
-              </div>
+              </div> */}
             </div>
           </div>
         </section>

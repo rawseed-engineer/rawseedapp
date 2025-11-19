@@ -263,13 +263,12 @@ const EmailForm: React.FC = () => {
               type="submit"
               disabled={isLoading}
               className={`flex justify-center items-center
-              flex justify-center items-center bg-[#a18458] duration-900
+              flex justify-center items-center duration-900
               text-white font-bold py-2 px-4 mr-2 rounded
-              hover:bg-gradient-to-r from-amber-300 to-yellow-700 
                 ${
                   isLoading
                     ? "bg-gray-400 cursor-not-allowed"
-                    : "bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    : "bg-gradient-to-tr from-amber-300 to-yellow-700 hover:from-amber-700 hover:to-yellow-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 }
               `}
               // className="px-6 py-3 bg-blue-500 text-white rounded-lg duration-1000 hover:bg-blue-900"

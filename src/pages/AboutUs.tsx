@@ -33,7 +33,7 @@ const AboutUs: React.FC = () => {
               </h1>
 
               <h2 className="text-balance text-xl font-bold text-white md:text-6xl mb-5">
-                {t("hero.home.subtitle")}
+                {t("about_us.subtitle")}
               </h2>
 
               {/* Hero Description */}

@@ -88,21 +88,37 @@ const NavMenu: React.FC = () => {
             </h2>
           </Link>
 
-          <Link to="/rawseedapp/contact">
-            {/* bg-[#a18458] */}
-            {/* <h2
-              className="bg-gradient-to-r from-amber-300 to-yellow-700 text-white text-shadow-lg px-6 py-2 rounded-full 
-            hover:from-amber-700 hover:to-yellow-700 transition-all duration-200 transform hover:scale-105"
-            > */}
+          {/* <Link to="/rawseedapp/contact">
             <h2
               className="bg-gradient-to-r from-[#996515] to-[#996515] text-white px-6 py-2 rounded-full 
             "
             >
-              {/* hover:from-amber-700 hover:to-yellow-700 transition-all
-              duration-200 transform hover:scale-105" */}
               {t("menu.get_started")}
             </h2>
-          </Link>
+          </Link> */}
+
+          {/* bg-gradient-to-tr from-[#996515] to-[#a67c00] */}
+
+          <div className="relative mt-4 flex h-12 w-12">
+            <Link to="/rawseedapp/contact">
+              <div className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gradient-to-tr from-amber-300 to-yellow-700 opacity-75"></div>
+              <div
+                className="absolute
+              -top-[25%] w-full h-full
+              rounded-[100%_5%_100%_100%]
+              rotate-[-45deg]
+              bg-gradient-to-tr from-[#cfb997] to-[#a67c00]
+              hover:from-[#a67c00] hover:to-yellow transition-all duration-200 transform 
+              hover:scale-120
+              hover:opacity-100 duration-300
+              text-white py-5 text-xl text-center font-semibold"
+              >
+                <div className="relative -translate-x-1 -translate-y-4 text-pretty text-sm text-white text-shadow-lg opacity-0 hover:opacity-100 duration-300 rotate-[45deg]">
+                  Contact Us
+                </div>
+              </div>
+            </Link>
+          </div>
         </div>
 
         {/* Mobile menu button */}

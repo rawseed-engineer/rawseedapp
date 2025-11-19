@@ -185,13 +185,28 @@
       "p2": "Try Golden Drop Black Seed Oil and experience the benefits of a remedy that has been trusted for generations."
     }
   },
+  "flaxseed_oil": {
+    "hero": {
+      "title": "Why Flaxseed Oil?",
+      "subtitle": "Nature's Omega-3 Powerhouse",
+      "description": "Flaxseed oil, derived from the seeds of the flax plant (Linum usitatissimum), is a rich source of alpha-linolenic acid (ALA), a type of plant-based omega-3 fatty acid. Known for its numerous health benefits, flaxseed oil has been used for centuries in traditional medicine and is now gaining popularity as a natural supplement for modern wellness.",
+      "learn": "Contact us"
+    }
+  },
   "about_us": {
-    "title": "Our Team",
+    "title": "Our RawSeed Team",
+    "subtitle": "Build the healthy future together",
     "mission": "Our Mission",
     "vision": "Our Vision",
     "values": "Our Values"
   },
   "contact": {
+    "hero": {
+      "title": "Share with us your thoughts",
+      "subtitle": "Let's build a healthier future together",
+      "description": "Whether you have questions about our products, want to learn more about our sourcing practices, or are interested in partnering with us, we're here to help. Reach out to the RawSeed team and we'll get back to you as soon as possible.",
+      "learn": "Send us a message"
+    },
     "title": "Get in touch",
     "action": "Send Message"
   }

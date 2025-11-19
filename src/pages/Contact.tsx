@@ -33,16 +33,16 @@ const Contact: React.FC = () => {
             <div className="relative z-10  px-4 py-12 sm:px-6 lg:px-8 max-w-7xl mx-auto">
               {/* Hero Heading */}
               <h1 className="text-balance text-5xl font-bold text-white  md:text-7xl mb-5">
-                {t("hero.home.title")}
+                {t("contact.hero.title")}
               </h1>
 
               <h2 className="text-balance text-xl font-bold text-white md:text-6xl mb-5">
-                {t("hero.home.subtitle")}
+                {t("contact.hero.subtitle")}
               </h2>
 
               {/* Hero Description */}
               <p className="text-pretty text-white text-2xl mb-6">
-                {t("hero.home.description")}
+                {t("contact.hero.description")}
               </p>
 
               <div className="flex justify-center mt-30">
