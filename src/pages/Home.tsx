@@ -11,7 +11,7 @@ import Vision from "../ui/home/vision";
 import JoinOurJourney from "../ui/home/joinOurJourney";
 import EmailForm from "../ui/email-form";
 import Footer from "../ui/nav/footer";
-import { Callout } from "../ui/callout";
+// import { Callout } from "../ui/callout";
 import RawSeedLogo from "./../assets/rawseed_logo.png";
 
 const Home = () => {
