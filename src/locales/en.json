@@ -185,6 +185,12 @@
       "p2": "Try Golden Drop Black Seed Oil and experience the benefits of a remedy that has been trusted for generations."
     }
   },
+  "about_us": {
+    "title": "Our Team",
+    "mission": "Our Mission",
+    "vision": "Our Vision",
+    "values": "Our Values"
+  },
   "contact": {
     "title": "Get in touch",
     "action": "Send Message"
