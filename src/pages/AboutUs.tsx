@@ -1,6 +1,8 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import NavMenu from "../ui/nav/nav-menu";
+import Team from "../ui/about-us/team";
+import Footer from "../ui/nav/footer";
 
 const AboutUs: React.FC = () => {
   const { t } = useTranslation();
@@ -43,6 +45,22 @@ const AboutUs: React.FC = () => {
             </div>
           </div>
         </section>
+
+        <section
+          className="rounded bg-white py-8 sm:py-12 
+          mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:128
+          mt-10"
+        >
+          <h2 className="text-balance text-center text-[#a18458] text-5xl text-shadow-lg font-bold tracking-tight md:text-5xl">
+            {t("about_us.team")}
+          </h2>
+          <Team />
+        </section>
+
+        {/* Footer */}
+        <footer className="bg-[#181818] border-t border-gray-800 py-16">
+          <Footer />
+        </footer>
       </div>
     </>
   );
