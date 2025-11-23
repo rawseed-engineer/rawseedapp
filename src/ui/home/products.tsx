@@ -1,13 +1,15 @@
 import React from "react";
-import SesameOilBottle from "../../assets/sesame_bottle.png";
-import BlackSeedOilBottle from "../../assets/blackseed_bottle.png";
+import BlackSeedOilBottle from "../../assets/bottle_blackseed.jpg";
+import SesameSeedOilBottle from "../../assets/bottle_sesame_seed.jpg";
+import FlaxSeedOilBottle from "../../assets/bottle_flaxseed.jpg";
+
 import { useTranslation } from "react-i18next";
 
 const Products: React.FC = () => {
   const { t } = useTranslation();
   return (
     <div
-      className="mx-auto grid grid-cols-1 lg:grid-cols-2 
+      className="mx-auto grid grid-cols-1 lg:grid-cols-3 
     items-center justify-items-center gap-8 px-8 sm:px-16"
     >
       <div>
@@ -20,7 +22,7 @@ const Products: React.FC = () => {
             alt="Rawseed oils"
           /> */}
           <img
-            src={SesameOilBottle}
+            src={SesameSeedOilBottle}
             alt="All RawSeed Oils"
             className="mx-8 w-md aspect-auto"
           />
@@ -48,6 +50,24 @@ const Products: React.FC = () => {
           </h2>
           <p className="text-pretty text-neutral-500 text-2xl">
             {t("products.black_seed.description")}
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <div className="flex justify-center items-center">
+          <img
+            src={FlaxSeedOilBottle}
+            alt="Golder Drop Flaxseed Oil Bottle"
+            className="mx-8 w-md aspect-auto"
+          />
+        </div>
+        <div className="m-12 text-center">
+          <h2 className="my-6 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl">
+            {t("products.flaxseed.title")}
+          </h2>
+          <p className="text-pretty text-neutral-500 text-2xl">
+            {t("products.flaxseed.description")}
           </p>
         </div>
       </div>

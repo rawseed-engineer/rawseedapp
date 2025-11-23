@@ -52,6 +52,10 @@
     "black_seed": {
       "title": "Golden Drop Black Seed Oil",
       "description": "Highly prized for its healing properties and strong, earthy taste. Revered for centuries in traditional medicine, now available in its purest form."
+    },
+    "flaxseed": {
+      "title": "Golden Drop Flaxseed Oil",
+      "description": "A rich source of plant-based omega-3 fatty acids, perfect for supporting heart and brain health."
     }
   },
   "why_raw_seed": {
@@ -197,7 +201,10 @@
     "title": "Our RawSeed Team",
     "subtitle": "Build the healthy future together",
     "mission": "Our Mission",
-    "vision": "Our Vision",
+    "vision": {
+      "title": "Our Vision",
+      "p1": "We dream of a world where natural, honest food is once again cherished and within everyone’s reach—food made with intention, from carefully chosen ingredients and time-honoured traditional methods that preserve authenticity, flavour, and nourishment. Through our pure, sustainably produced cold-pressed oils and the expanding range that will follow the same uncompromising principles, we aim to honour the wisdom of the past while inspiring people today to rediscover the joy and value of real food."
+    },
     "values": "Our Values",
     "team": "Our Team"
   },
