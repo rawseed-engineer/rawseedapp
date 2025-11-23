@@ -11,7 +11,7 @@ const Team: React.FC = () => {
       <div className="relative h-96 w-64 overflow-hidden">
         <div
           className="hover:scale-120 hover:-translate-y-8 brightness-100 hover:brightness-80
-          click:scale-120 click:-translate-y-8 brightness-100 click:brightness-80
+          active:scale-120 active:-translate-y-8 brightness-100 active:brightness-80
           transition duration-700 ease-in-out"
         >
           <div
@@ -22,8 +22,8 @@ const Team: React.FC = () => {
 
           <div
             className="z-2 absolute h-96 w-64 text-white text-center text-pretty text-shadow-lg/30 p-4
-            pt-80 hover:pt-20 click:pt-20
-            opacity-80 hover:opacity-100 click:opacity-100
+            pt-80 hover:pt-20 active:pt-20
+            opacity-80 hover:opacity-100 active:opacity-100
             
             duration-300 ease-in-out "
           >
