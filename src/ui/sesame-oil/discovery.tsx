@@ -12,7 +12,7 @@ const Discovery: React.FC = () => {
       <div className="space-y-4 text-neutral-600">
         <h1
           className="text-balance text-[#a18458] 
-          text-5xl md:text-5xl font-bold tracking-tight "
+          text-5xl md:text-5xl font-bold tracking-tight text-shadow-lg"
         >
           {t("sesame.rediscovery.title")}
         </h1>

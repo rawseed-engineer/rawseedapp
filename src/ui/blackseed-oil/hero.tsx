@@ -63,11 +63,11 @@ const BlackseedHero: React.FC = () => {
           </p>
 
           {/* Call Out Button */}
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+          {/* <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <button className="group bg-gradient-to-tr from-amber-300 to-yellow-700 text-white px-10 py-5 rounded-full hover:from-amber-700 hover:to-yellow-300 transition-all duration-200 transform hover:scale-105 flex items-center text-xl font-semibold shadow-2xl">
               {t("blackseed_oil.hero.learn")}
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

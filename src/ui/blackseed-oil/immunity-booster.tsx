@@ -10,7 +10,7 @@ const ImmunityBooster: React.FC = () => {
       items-center justify-items-center gap-8 px-8 sm:px-16"
     >
       <div className="max-w-md space-y-4 text-neutral-600">
-        <h1 className="text-balance text-[#a18458] text-5xl font-bold tracking-tight md:text-5xl">
+        <h1 className="text-balance text-[#a18458] text-5xl font-bold text-shadow-lg tracking-tight md:text-5xl">
           {t("blackseed_oil.immunity_booster.title")}
         </h1>
         <p className="text-pretty text-2xl">

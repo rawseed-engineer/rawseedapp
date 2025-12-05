@@ -16,12 +16,18 @@ const Story: React.FC = () => {
         className=" 
         space-y-1 lg:space-y-4 text-neutral-600"
       >
-        <h1 className="text-balance text-[#a18458] text-5xl font-bold tracking-tight md:text-5xl">
+        <h1 className="text-balance text-[#a18458] text-5xl text-shadow-lg font-bold tracking-tight md:text-5xl">
           {t("blackseed_oil.story.title")}
         </h1>
-        <p className="text-pretty text-2xl">{t("blackseed_oil.story.p1")}</p>
-        <p className="text-pretty text-2xl">{t("blackseed_oil.story.p2")}</p>
-        <p className="text-pretty text-2xl">{t("blackseed_oil.story.p3")}</p>
+        <p className="text-pretty text-justify text-2xl">
+          {t("blackseed_oil.story.p1")}
+        </p>
+        <p className="text-pretty text-justify text-2xl">
+          {t("blackseed_oil.story.p2")}
+        </p>
+        <p className="text-pretty text-justify  text-2xl">
+          {t("blackseed_oil.story.p3")}
+        </p>
       </div>
       <img
         src={BlackseedFlower}

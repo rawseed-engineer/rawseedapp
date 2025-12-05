@@ -6,8 +6,9 @@ import Discovery from "../ui/sesame-oil/discovery";
 import EmailForm from "../ui/email-form";
 import Explore from "../ui/sesame-oil/explore";
 import Footer from "../ui/nav/footer";
-import { Callout } from "../ui/callout";
+// import { Callout } from "../ui/callout";
 import SesamePageCallout from "../ui/sesame-oil/callout";
+import RawSeedLogo from "./../assets/rawseed_logo.png";
 
 const SesameOil = () => {
   const { t } = useTranslation();
@@ -33,6 +34,15 @@ const SesameOil = () => {
 
         <div className="absolute top-[10%] sm:top-[20%] lg:top-[35%] ">
           <div className="relative z-10  px-4 py-12 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            {/* Hero Logo - Mobile only */}
+            <div className="flex items-center justify-center">
+              <img
+                src={RawSeedLogo}
+                alt="RawSeed Logo"
+                className="block md:hidden lg:hidden mx-8 mb-8 h-[3rem] lg:h-[5rem] aspect-auto"
+              />
+            </div>
+
             {/* Hero Heading */}
             {/* <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight"> */}
             <h1
@@ -57,7 +67,7 @@ const SesameOil = () => {
             <p
               className="text-pretty text-white 
               text-2xl
-              text-center lg:text-left 
+              text-center text-justify lg:text-left 
               mb-6"
             >
               {t("hero.sesame_oil.description")}
@@ -70,9 +80,9 @@ const SesameOil = () => {
               </button>
             </div> */}
 
-            <div className="flex justify-center mt-30">
+            {/* <div className="flex justify-center mt-30">
               <Callout />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -88,15 +98,21 @@ const SesameOil = () => {
         >
           <img src={Ayurveda} alt="Ayurveda" className="lg:w-xl aspect-auto" />
           <div
-            className="lg:max-w-md text-neutral-600 
+            className="lg:max-w-md text-neutral-600
             space-y-1 lg:space-y-4"
           >
-            <h2 className="text-balance text-[#a18458] text-5xl font-bold tracking-tight md:text-5xl">
+            <h2 className="text-balance text-[#a18458] text-5xl text-shadow-lg font-bold tracking-tight md:text-5xl">
               {t("history.title")}
             </h2>
-            <p className="text-pretty text-2xl">{t("history.p1")}</p>
-            <p className="text-pretty text-2xl">{t("history.p2")}</p>
-            <p className="text-pretty text-2xl">{t("history.p3")}</p>
+            <p className="text-pretty text-justify text-2xl">
+              {t("history.p1")}
+            </p>
+            <p className="text-pretty text-justify text-2xl">
+              {t("history.p2")}
+            </p>
+            <p className="text-pretty text-justify text-2xl">
+              {t("history.p3")}
+            </p>
           </div>
         </div>
       </section>

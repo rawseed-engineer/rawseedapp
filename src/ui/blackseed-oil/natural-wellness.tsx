@@ -15,7 +15,7 @@ const NaturalWellness: React.FC = () => {
         className="mx-8"
       />
       <div className="max-w-md text-neutral-600 space-y-4">
-        <h2 className="text-balance text-[#a18458] text-5xl font-bold tracking-tight md:text-5xl">
+        <h2 className="text-balance text-[#a18458] text-5xl font-bold text-shadow-lg tracking-tight md:text-5xl">
           {t("blackseed_oil.natural_wellness.title")}
         </h2>
         <p className="text-pretty text-2xl">

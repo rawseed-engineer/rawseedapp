@@ -40,7 +40,7 @@ const BlackSeedOilPage: React.FC = () => {
           <img
             src={BlackseedCloseUp}
             alt="Blackseed Close Up"
-            className="w-full brightness-70 aspect-auto"
+            className="w-full brightness-40 aspect-auto"
           />
           <div className="absolute text-5xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 space-y-4">
             <h2 className="text-4xl sm:text-5xl text-neutral-200">
