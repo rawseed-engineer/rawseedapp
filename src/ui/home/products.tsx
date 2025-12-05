@@ -10,10 +10,10 @@ const Products: React.FC = () => {
   return (
     <div
       className="mx-auto grid grid-cols-1 lg:grid-cols-3 
-    items-center justify-items-center gap-8 px-8 sm:px-16"
+     gap-8 px-8 sm:px-16"
     >
       <div>
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center">
           {/* <Image
             src="/sesame_bottle.png"
             width={500}
@@ -37,7 +37,7 @@ const Products: React.FC = () => {
         </div>
       </div>
       <div>
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center">
           <img
             src={BlackSeedOilBottle}
             alt="All RawSeed Oils"
@@ -55,7 +55,7 @@ const Products: React.FC = () => {
       </div>
 
       <div>
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center">
           <img
             src={FlaxSeedOilBottle}
             alt="Golder Drop Flaxseed Oil Bottle"
