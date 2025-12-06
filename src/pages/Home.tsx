@@ -14,7 +14,7 @@ import EmailForm from "../ui/email-form";
 import Footer from "../ui/nav/footer";
 // import { Callout } from "../ui/callout";
 import RawSeedLogo from "./../assets/rawseed_logo.png";
-import ScrollFadeText from "../ui/ScrollFadeText";
+// import ScrollFadeText from "../ui/ScrollFadeText";
 
 const Home = () => {
   const { t } = useTranslation();
