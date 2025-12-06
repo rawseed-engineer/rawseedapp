@@ -51,8 +51,8 @@ const Team: React.FC = () => {
 
           <div
             className="z-2 absolute h-96 w-64 text-white text-center text-pretty text-shadow-lg/30 p-4
-            pt-80 hover:pt-20
-            opacity-80 hover:opacity-100
+            pt-80 hover:pt-20 active:pt-20
+            opacity-80 hover:opacity-100 active:opacity-100
             
             duration-300 ease-in-out "
           >
@@ -80,8 +80,8 @@ const Team: React.FC = () => {
 
           <div
             className="z-2 absolute h-96 w-64 text-white text-center text-pretty text-shadow-lg/30 p-4
-            pt-80 hover:pt-20
-            opacity-80 hover:opacity-100
+            pt-80 hover:pt-20 active:pt-20
+            opacity-80 hover:opacity-100 active:opacity-100
             
             duration-300 ease-in-out "
           >
@@ -109,8 +109,8 @@ const Team: React.FC = () => {
 
           <div
             className="z-2 absolute h-96 w-64 text-white text-center text-pretty text-shadow-lg/30 p-4
-            pt-80 hover:pt-20
-            opacity-80 hover:opacity-100
+            pt-80 hover:pt-20 active:pt-20
+            opacity-80 hover:opacity-100 activ:opacity-100
             
             duration-300 ease-in-out "
           >
