@@ -9,12 +9,14 @@ const WhyRawSeed: React.FC = () => {
       px-12 sm:px-16 md:grid-cols-1"
     >
       <div className="max-w-3xl text-neutral-400 space-y-4 text-justify">
-        <h2 className="text-balance text-[#a18458] text-5xl text-shadow-lg text-shadow-slate-700 font-bold tracking-tight md:text-5xl">
+        <h2 className="text-balance text-[#a18458] text-5xl font-bold tracking-tight md:text-5xl">
           {t("why_raw_seed.title")}
         </h2>
         <p className="text-pretty text-2xl">{t("why_raw_seed.p1")}</p>
-        <li className="text-2xl">{t("why_raw_seed.item1")}</li>
-        <li className=" text-2xl">{t("why_raw_seed.item2")}</li>
+        <ul className="list-disc list-inside">
+          <li className="text-2xl">{t("why_raw_seed.item1")}</li>
+          <li className=" text-2xl">{t("why_raw_seed.item2")}</li>
+        </ul>
         <p className="text-pretty text-2xl">{t("why_raw_seed.p2")}</p>
         <p className="text-pretty text-2xl">{t("why_raw_seed.p3")}</p>
       </div>

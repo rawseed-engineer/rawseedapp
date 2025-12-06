@@ -40,7 +40,8 @@ const Team: React.FC = () => {
       <div className="relative h-96 w-64 overflow-hidden">
         <div
           className="hover:scale-120 hover:-translate-y-8 brightness-100 hover:brightness-80
-        transition duration-700 ease-in-out"
+          active:scale-120 active:-translate-y-8 brightness-100 active:brightness-80
+          transition duration-700 ease-in-out"
         >
           <div
             className="z-1 absolute h-96 w-64 bg-cover 
@@ -68,7 +69,8 @@ const Team: React.FC = () => {
       <div className="relative h-96 w-64 overflow-hidden">
         <div
           className="hover:scale-120 hover:-translate-y-8 brightness-100 hover:brightness-80
-        transition duration-700 ease-in-out"
+          active:scale-120 active:-translate-y-8 brightness-100 active:brightness-80
+          transition duration-700 ease-in-out"
         >
           <div
             className="z-1 absolute h-96 w-64 bg-cover 
@@ -96,7 +98,8 @@ const Team: React.FC = () => {
       <div className="relative h-96 w-64 overflow-hidden">
         <div
           className="hover:scale-120 hover:-translate-y-8 brightness-100 hover:brightness-80
-        transition duration-700 ease-in-out"
+          active:scale-120 active:-translate-y-8 brightness-100 active:brightness-80
+          transition duration-700 ease-in-out"
         >
           <div
             className="z-1 absolute h-96 w-64 bg-cover 
