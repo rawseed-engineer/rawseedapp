@@ -12,8 +12,9 @@ import Vision from "../ui/home/vision";
 import JoinOurJourney from "../ui/home/joinOurJourney";
 import EmailForm from "../ui/email-form";
 import Footer from "../ui/nav/footer";
+import Hero from "../ui/home/hero";
+
 // import { Callout } from "../ui/callout";
-import RawSeedLogo from "./../assets/rawseed_logo.png";
 // import ScrollFadeText from "../ui/ScrollFadeText";
 
 const Home = () => {
@@ -24,65 +25,11 @@ const Home = () => {
       <div className="min-h-screen antialiased">
         <NavMenu />
 
-        {/* Hero Section with Full Page Image */}
         <section
           id="home"
           className="relative min-h-screen flex items-center justify-center"
         >
-          {/* Hero Background Image */}
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: `url("/rawseedapp/hero_image_home.jpg")`,
-              opacity: 0.9,
-              filter: "brightness(50%)",
-            }}
-          />
-
-          <div className="absolute top-[10%] sm:top-[20%] md:top-[35%]">
-            <div className="relative z-10 px-4 py-12 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-              <div className="flex items-center justify-center">
-                <img
-                  src={RawSeedLogo}
-                  alt="RawSeed Logo"
-                  className="block md:hidden lg:hidden mx-8 h-[3rem] lg:h-[5rem] aspect-auto"
-                />
-              </div>
-
-              {/* Hero Heading */}
-              <h1
-                className="text-balance 
-                  text-4xl sm:text-5xl md:text-6xl lg:text-7xl
-                  text-center lg:text-left
-                  font-bold text-white   mb-5 mt-5"
-              >
-                {t("hero.home.title")}
-              </h1>
-
-              <h2
-                className="text-balance 
-                text-2xl sm:text-3xl md:text-4xl lg:text-5xl 
-                text-center lg:text-left
-                font-bold text-white mb-5"
-              >
-                {t("hero.home.subtitle")}
-              </h2>
-
-              {/* Hero Description */}
-              <p
-                className="text-pretty text-white 
-                text-2xl 
-                text-center lg:text-left
-                mb-6"
-              >
-                {t("hero.home.description")}
-              </p>
-
-              {/* <div className="flex justify-center mt-30">
-                <Callout />
-              </div> */}
-            </div>
-          </div>
+          <Hero />
         </section>
 
         {/* White Background Section - Features */}
@@ -101,8 +48,8 @@ const Home = () => {
         </section>
 
         {/* Section - Animation */}
-        <section className="rounded py-8 mt-12 sm:py-12 mx-64 my-32 text-pretty text-white text-center text-4xl">
-          {/* <div className="relative flex justify-center items-center gap-20">
+        {/* <section className="rounded py-8 mt-12 sm:py-12 mx-64 my-32 text-pretty text-white text-center text-4xl">
+          <div className="relative flex justify-center items-center gap-20">
             <p
               className="relative w-3xs h-72 p-8 flex justify-center items-center bg-[#fac42f] text-shadow-lg
               animate-[BorderAnimation_3s_linear_infinite] rounded-lg
@@ -135,23 +82,23 @@ const Home = () => {
             >
               Ethically sourced
             </p>
-          </div> */}
+          </div>
 
-          {/* <div className="flex justify-center">
+          <div className="flex justify-center">
             <svg className="animate-spin"></svg>
-          </div> */}
+          </div>
 
-          {/* <div className="flex justify-center">
+          <div className="flex justify-center">
             <span className="relative flex h-16 w-16">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75"></span>
               <span className="relative inline-flex h-16 w-16 rounded-full bg-blue-500"></span>
             </span>
-          </div> */}
+          </div>
 
-          {/* <div className="flex justify-center">
+          <div className="flex justify-center">
             <div className="h-16 w-16 animate-[BorderAnimation_4s_linear_infinite] rounded-full bg-blue-500"></div>
-          </div> */}
-        </section>
+          </div>
+        </section> */}
 
         <section
           className="flex-grow overflow-x-auto w-full 

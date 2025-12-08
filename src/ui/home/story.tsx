@@ -25,15 +25,35 @@ const Story: React.FC = () => {
         <p className="text-pretty text-justify text-2xl">
           {t("story.description.p2")}
         </p>
-        <p className="text-pretty text-justify text-2xl">
-          {t("story.description.p3")}
-        </p>
-        <p className="text-pretty text-justify text-2xl">
-          {t("story.description.p4")}
-        </p>
-        <p className="text-pretty text-justify text-2xl">
-          {t("story.description.p5")}
-        </p>
+
+        <div className="text-pretty text-justify text-2xl">
+          <label className="peer block w-full">
+            <input type="checkbox" className="hidden"></input>
+            <p
+              className="my-4 text-balance text-[#a18458] text-shadow-lg
+            "
+            >
+              Learn more
+            </p>
+          </label>
+          <div
+            className="
+            max-h-0 
+            overflow-hidden transition-all  duration-3000 
+            ease-in-out
+            peer-has-checked:max-h-200"
+          >
+            <p className="text-pretty text-justify text-2xl">
+              {t("story.description.p3")}
+            </p>
+            <p className="text-pretty text-justify text-2xl">
+              {t("story.description.p4")}
+            </p>
+            <p className="text-pretty text-justify text-2xl">
+              {t("story.description.p5")}
+            </p>
+          </div>
+        </div>
       </div>
       <img src={AllOils} alt="All RawSeed Oils" className="mx-8 aspect-auto" />
     </div>
