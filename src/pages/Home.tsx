@@ -1,10 +1,8 @@
 import "../i18n";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 import NavMenu from "../ui/nav/nav-menu";
 import Story from "../ui/home/story";
 import WhatWeDo from "../ui/home/what-we-do";
-import SeedsHorizontal from "./../assets/seeds_horizontal.jpg";
-import SeedsVertical from "./../assets/seeds_vertical.jpg";
 import Products from "../ui/home/products";
 import WhyRawSeed from "../ui/home/why-raw-seed";
 import Values from "../ui/home/values";
@@ -13,13 +11,12 @@ import JoinOurJourney from "../ui/home/joinOurJourney";
 import EmailForm from "../ui/email-form";
 import Footer from "../ui/nav/footer";
 import Hero from "../ui/home/hero";
+import ColdPressed from "../ui/home/coldPressed";
 
 // import { Callout } from "../ui/callout";
 // import ScrollFadeText from "../ui/ScrollFadeText";
 
 const Home = () => {
-  const { t } = useTranslation();
-
   return (
     <>
       <div className="min-h-screen antialiased">
@@ -104,46 +101,7 @@ const Home = () => {
           className="flex-grow overflow-x-auto w-full 
           "
         >
-          <div className="relative">
-            {/* Image at mobile view */}
-            <img
-              src={SeedsHorizontal}
-              alt="All RawSeed Oils"
-              className="hidden md:block w-full brightness-50 aspect-auto"
-            />
-
-            {/* Image at non-mobile view */}
-            <img
-              src={SeedsVertical}
-              alt="All RawSeed Oils"
-              className="block md:hidden w-full brightness-30 aspect-auto"
-            />
-
-            <div
-              className="hidden md:block absolute 
-              p-1 lg:p-10
-              text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
-              space-y-1 lg:space-y-4
-              space-x-0.5
-              bg-[rgba(0,0,0,0.3)]"
-            >
-              <p
-                className="text-2xl sm:text-xl md:text-2xl lg:text-4xl
-                text-neutral-200"
-              >
-                {t("what_we_do.p2")}
-              </p>
-            </div>
-
-            <div className="block md:hidden absolute top-0 left-0 mx-12 my-24">
-              <p
-                className="text-center text-justify text-2xl sm:text-xl md:text-2xl lg:text-4xl
-                text-neutral-200"
-              >
-                {t("what_we_do.p2")}
-              </p>
-            </div>
-          </div>
+          <ColdPressed />
         </section>
 
         <section

@@ -70,15 +70,15 @@ const NavMenu: React.FC = () => {
             </h2>
           </Link>
 
-          <Link to="/rawseedapp/blackseed-oil">
-            <h2 className="text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200">
-              {t("menu.black_seed_oil")}
-            </h2>
-          </Link>
-
           <Link to="/rawseedapp/flaxseed-oil">
             <h2 className="text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200">
               {t("menu.flax_seed_oil")}
+            </h2>
+          </Link>
+
+          <Link to="/rawseedapp/blackseed-oil">
+            <h2 className="text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200">
+              {t("menu.black_seed_oil")}
             </h2>
           </Link>
 
@@ -170,14 +170,14 @@ const NavMenu: React.FC = () => {
                 {t("menu.sesame_oil")}
               </div>
             </Link>
-            <Link to="/rawseedapp/blackseed-oil">
-              <div className="block text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200 py-2">
-                {t("menu.black_seed_oil")}
-              </div>
-            </Link>
             <Link to="/rawseedapp/flaxseed-oil">
               <div className="block text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200 py-2">
                 {t("menu.flax_seed_oil")}
+              </div>
+            </Link>
+            <Link to="/rawseedapp/blackseed-oil">
+              <div className="block text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200 py-2">
+                {t("menu.black_seed_oil")}
               </div>
             </Link>
             <Link to="/rawseedapp/about-us">

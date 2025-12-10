@@ -27,19 +27,29 @@ const Story: React.FC = () => {
         </p>
 
         <div className="text-pretty text-justify text-2xl">
-          <label className="peer block w-full">
-            <input type="checkbox" className="hidden"></input>
-            <p
-              className="my-4 text-balance text-[#a18458] text-shadow-lg
+          <label className="peer block w-full flex hover:animate-bounce">
+            <input type="checkbox" className="peer hidden"></input>
+            <span
+              className="text-balance text-[#a18458] text-shadow-lg
             "
             >
-              Learn more
-            </p>
+              {t("story.expand")}
+            </span>
+            <span
+              className="after:content-['\2193'] w-[2em] h-[2em] text-[#a18458] text-center transform
+                transition-all duration-[0.35s]
+                ml-auto items-center
+                
+                peer-checked:rotate-180
+                peer-checked:-translate-y-4
+                "
+            ></span>
           </label>
+
           <div
             className="
             max-h-0 
-            overflow-hidden transition-all  duration-3000 
+            overflow-hidden transition-all  duration-1000 
             ease-in-out
             peer-has-checked:max-h-200"
           >
