@@ -73,6 +73,7 @@ const ColdPressed = () => {
           className="block md:hidden w-full brightness-30 aspect-auto"
         />
 
+        {/* Mobile view */}
         <div
           ref={addToRefs}
           className="hidden md:block absolute 
@@ -80,22 +81,24 @@ const ColdPressed = () => {
         text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
         space-y-1 lg:space-y-4
         space-x-0.5
-        bg-[rgba(0,0,0,0.3)]"
+        bg-[rgba(0,0,0,0.4)]
+        shadow-2xl/80 shadow-white"
         >
           <p
             className="text-2xl sm:text-xl md:text-2xl lg:text-4xl
-          text-neutral-200"
+          text-neutral-200 text-center"
           >
-            {t("what_we_do.p2")}kk
+            {t("what_we_do.p2")}
           </p>
         </div>
 
+        {/* Non mobile view */}
         <div
           ref={addToRefs}
           className="block md:hidden absolute top-0 left-0 mx-12 my-24"
         >
           <p
-            className="text-center text-justify text-2xl sm:text-xl md:text-2xl lg:text-4xl
+            className="text-justify text-2xl sm:text-xl md:text-2xl lg:text-4xl
             text-neutral-200"
           >
             {t("what_we_do.p2")}

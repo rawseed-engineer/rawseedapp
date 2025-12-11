@@ -1,5 +1,5 @@
 import React from "react";
-import RawSeedLogo from "../../assets/rawseed_logo.png";
+import RawSeedLogo from "../../assets/rawseed_logo3.png";
 import { useTranslation } from "react-i18next";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
         style={{
           backgroundImage: `url("/rawseedapp/hero_image_home.jpg")`,
           opacity: 0.9,
-          filter: "brightness(50%)",
+          filter: "brightness(60%)",
         }}
       />
 
@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
               alt="RawSeed Logo"
               className="block md:hidden
               mx-8 mb-8 
-              h-[3rem] lg:h-[5rem] 
+              h-[12rem] lg:h-[12rem] 
               aspect-auto"
             />
           </div>

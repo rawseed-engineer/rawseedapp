@@ -1,5 +1,4 @@
 import "../i18n";
-// import { useTranslation } from "react-i18next";
 import NavMenu from "../ui/nav/nav-menu";
 import Story from "../ui/home/story";
 import WhatWeDo from "../ui/home/what-we-do";
@@ -29,7 +28,6 @@ const Home = () => {
           <Hero />
         </section>
 
-        {/* White Background Section - Features */}
         <section
           className="rounded py-8 mt-12 sm:py-12 
           mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:128"

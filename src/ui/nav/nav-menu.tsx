@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 // import RawSeedLogo from "./../../assets/rawseed_logo.png";
 import { Link, useLocation } from "react-router-dom";
-import RawSeedLogo from "../../assets/rawseed_logo.png";
+import RawSeedLogo from "../../assets/rawseed_logo2.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
@@ -51,7 +51,7 @@ const NavMenu: React.FC = () => {
             <img
               src={RawSeedLogo}
               alt="RawSeed Logo"
-              className="mx-8 h-[1.5rem] lg:h-[2.5rem] aspect-auto"
+              className="mx-8 h-[2.5rem] lg:h-[4rem] aspect-auto"
             />
           </Link>
         </div>
