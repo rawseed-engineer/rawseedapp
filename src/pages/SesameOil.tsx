@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import NavMenu from "../ui/nav/nav-menu";
-import Ayurveda from "./../assets/ayurveda.jpeg";
+// import Ayurveda from "./../assets/ayurveda.jpeg";
 import Reasons from "../ui/sesame-oil/reasons";
 import Discovery from "../ui/sesame-oil/discovery";
 import EmailForm from "../ui/email-form";
@@ -12,7 +12,6 @@ import Hero from "../ui/sesame-oil/hero";
 import FullScreenVideo from "../ui/FullScreenVideo";
 
 const SesameOil = () => {
-  const { t } = useTranslation();
   return (
     <div className="min-h-screen antialiased">
       <NavMenu />
