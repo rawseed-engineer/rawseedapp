@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next";
 import NavMenu from "../ui/nav/nav-menu";
 // import Ayurveda from "./../assets/ayurveda.jpeg";
 import Reasons from "../ui/sesame-oil/reasons";
