@@ -8,7 +8,8 @@ import Explore from "../ui/sesame-oil/explore";
 import Footer from "../ui/nav/footer";
 // import { Callout } from "../ui/callout";
 import SesamePageCallout from "../ui/sesame-oil/callout";
-import RawSeedLogo from "./../assets/rawseed_logo.png";
+import Hero from "../ui/sesame-oil/hero";
+import FullScreenVideo from "../ui/FullScreenVideo";
 
 const SesameOil = () => {
   const { t } = useTranslation();
@@ -21,73 +22,10 @@ const SesameOil = () => {
         id="home"
         className="relative min-h-screen flex items-center justify-center"
       >
-        {/* Hero Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url("sesame_seed_hero.jpg")`,
-            opacity: 0.9,
-            filter: "brightness(50%)",
-            //   backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><rect width="1920" height="1080" fill="%23667eea"/><circle cx="960" cy="540" r="300" fill="%23764ba2" opacity="0.8"/><circle cx="600" cy="300" r="200" fill="%23f093fb" opacity="0.6"/><circle cx="1300" cy="700" r="250" fill="%234facfe" opacity="0.7"/></svg>')`,
-          }}
-        />
-
-        <div className="absolute top-[10%] sm:top-[20%] lg:top-[35%] ">
-          <div className="relative z-10  px-4 py-12 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-            {/* Hero Logo - Mobile only */}
-            <div className="flex items-center justify-center">
-              <img
-                src={RawSeedLogo}
-                alt="RawSeed Logo"
-                className="block md:hidden lg:hidden mx-8 mb-8 h-[3rem] lg:h-[5rem] aspect-auto"
-              />
-            </div>
-
-            {/* Hero Heading */}
-            {/* <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight"> */}
-            <h1
-              className="text-balance 
-              text-4xl sm:text-5xl md:text-6xl lg:text-7xl
-              text-center lg:text-left
-              font-bold text-white mb-5"
-            >
-              {t("hero.sesame_oil.title")}
-            </h1>
-
-            <h2
-              className="text-balance 
-              text-2xl sm:text-3xl md:text-4xl lg:text-5xl
-              text-center lg:text-left
-              font-bold text-white mb-5"
-            >
-              {t("hero.sesame_oil.subtitle")}
-            </h2>
-
-            {/* Hero Description */}
-            <p
-              className="text-pretty text-white 
-              text-2xl
-              text-center text-justify lg:text-left 
-              mb-6"
-            >
-              {t("hero.sesame_oil.description")}
-            </p>
-
-            {/* Call Out Button */}
-            {/* <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <button className="group bg-gradient-to-tr from-amber-300 to-yellow-700 text-white px-10 py-5 rounded-full hover:from-amber-700 hover:to-yellow-300 transition-all duration-200 transform hover:scale-105 flex items-center text-xl font-semibold shadow-2xl">
-                {t("hero.sesame_oil.learn")}
-              </button>
-            </div> */}
-
-            {/* <div className="flex justify-center mt-30">
-              <Callout />
-            </div> */}
-          </div>
-        </div>
+        <Hero />
       </section>
 
-      <section
+      {/* <section
         className="rounded bg-white mt-12 sm:py-12 
         mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:128"
       >
@@ -115,8 +53,27 @@ const SesameOil = () => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
+      <section
+      // className="rounded bg-white mt-12 sm:py-12
+      // 2xl:128"
+      >
+        <FullScreenVideo />
+        {/* <div
+          className="relative flex items-center 
+        justify-center h-screen overflow-hidden"
+        >
+          <div className="aspect-w-16 aspect-h-9">
+            <iframe
+              src="https://www.youtube.com/embed/abllhb_L4Ms?si=P_brCTkSKGVB1Qkz"
+              frameBorder="0"
+              allowFullScreen
+              className="absolute w-full h-full top-0 left-0"
+            ></iframe>
+          </div>
+        </div> */}
+      </section>
       <section
         className="rounded bg-[#181818] py-12 sm:py-24 mt-12
         "
