@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const FullScreenVideo = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoId = "abllhb_L4Ms"; // Replace with your YouTube video ID
-  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+  // const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
   const { t } = useTranslation();
 
   const handlePlay = () => {
