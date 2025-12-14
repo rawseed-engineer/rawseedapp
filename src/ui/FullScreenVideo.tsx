@@ -104,13 +104,14 @@ const FullScreenVideo = () => {
               </div>
             </div>
 
-            <button
-              ref={addToRefs}
-              onClick={handlePlay}
-              className="bg-red-600 text-white px-6 py-3 mt-3 rounded-full text-lg font-semibold hover:bg-red-700 transition"
-            >
-              Watch Video
-            </button>
+            <div ref={addToRefs}>
+              <button
+                onClick={handlePlay}
+                className="bg-red-600 text-white px-6 py-3 mt-3 rounded-full text-lg font-semibold hover:bg-red-700 transition"
+              >
+                Watch Video
+              </button>
+            </div>
           </div>
         </div>
       )}
