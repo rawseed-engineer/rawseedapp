@@ -73,7 +73,7 @@ const SesameOil = () => {
         </div> */}
       </section>
       <section
-        className="rounded bg-[#181818] py-12 sm:py-24 mt-12
+        className="rounded bg-[#181818] py-12 sm:py-24
         "
       >
         <Reasons />

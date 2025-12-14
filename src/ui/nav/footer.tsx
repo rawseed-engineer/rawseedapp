@@ -156,7 +156,7 @@ const Footer: React.FC = () => {
                 style={{ height: "36px" }}
               />
               <span className="text-gray-400">
-                167-169 Great Portland Street, London
+                167-169 Great Portland Street, 5th Floor, London, W1W 5PF
               </span>
             </div>
           </div>
