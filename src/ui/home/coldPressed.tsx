@@ -60,6 +60,7 @@ const ColdPressed = () => {
     <>
       <div ref={containerRef} className="relative">
         {/* Image at mobile view */}
+
         <img
           src={SeedsHorizontal}
           alt="All RawSeed Oils"
@@ -82,7 +83,7 @@ const ColdPressed = () => {
         space-y-1 lg:space-y-4
         space-x-0.5
         bg-[rgba(0,0,0,0.4)]
-        shadow-2xl/80 shadow-white"
+        shadow-2xl/80 shadow-white rounded-xl"
         >
           <p
             className="text-2xl sm:text-xl md:text-2xl lg:text-4xl
