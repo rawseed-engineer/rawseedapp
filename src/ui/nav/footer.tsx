@@ -138,7 +138,7 @@ const Footer: React.FC = () => {
                 className="text-[#cfb997] inline-block"
                 style={{ height: "36px" }}
               />
-              <span className="text-gray-400">info@rawseed.com</span>
+              <span className="text-gray-400">info@rawseed.co.uk</span>
             </div>
             {/* <div className="flex items-center space-x-3">
               <FontAwesomeIcon
