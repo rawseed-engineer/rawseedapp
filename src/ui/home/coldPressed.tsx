@@ -64,7 +64,7 @@ const ColdPressed = () => {
         <img
           src={SeedsHorizontal}
           alt="All RawSeed Oils"
-          className="hidden md:block w-full brightness-50 aspect-auto"
+          className="hidden md:block w-full brightness-80 aspect-auto"
         />
 
         {/* Image at non-mobile view */}
@@ -82,8 +82,8 @@ const ColdPressed = () => {
         text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
         space-y-1 lg:space-y-4
         space-x-0.5
-        bg-[rgba(0,0,0,0.4)]
-        shadow-2xl/80 shadow-white rounded-xl"
+        bg-[rgba(0,0,0,0.3)]
+         rounded-xl"
         >
           <p
             className="text-2xl sm:text-xl md:text-2xl lg:text-4xl
