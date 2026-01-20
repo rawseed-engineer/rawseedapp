@@ -7,6 +7,11 @@ import Footer from "../ui/nav/footer";
 import JoinOurJourney from "../ui/home/joinOurJourney";
 import EmailForm from "../ui/email-form";
 
+import { useTranslation } from "react-i18next";
+import UseCases from "../ui/flaxseed-oil/useCases";
+import ImmunityBooster from "../ui/blackseed-oil/immunity-booster";
+import Smoothie from "../ui/flaxseed-oil/smoothie";
+
 const FlaxseedOil: React.FC = () => {
   return (
     <>
@@ -34,6 +39,18 @@ const FlaxseedOil: React.FC = () => {
         > */}
         <section className="py-12">
           <ScrollHighlightSection />
+        </section>
+
+        <section className="flex-grow overflow-x-auto w-full ">
+          <UseCases />
+        </section>
+
+        {/* White Background Section - Features */}
+        <section
+          className="rounded py-12 sm:py-24 mt-12 
+          mx-4 sm:mx-4 lg:mx-24 xl:mx-48 2xl:128"
+        >
+          <Smoothie />
         </section>
 
         <section

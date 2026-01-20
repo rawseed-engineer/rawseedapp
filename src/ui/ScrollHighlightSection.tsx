@@ -194,7 +194,7 @@ const ScrollHighlightSection = () => {
       </div>
 
       {/* Below section to give some space before the next section */}
-      <div className="h-[50vh] flex items-center justify-center bg-white"></div>
+      <div className="h-[100vh] flex items-center justify-center bg-white"></div>
     </div>
   );
 };
