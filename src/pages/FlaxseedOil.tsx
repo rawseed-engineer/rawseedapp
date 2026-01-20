@@ -7,9 +7,7 @@ import Footer from "../ui/nav/footer";
 import JoinOurJourney from "../ui/home/joinOurJourney";
 import EmailForm from "../ui/email-form";
 
-import { useTranslation } from "react-i18next";
 import UseCases from "../ui/flaxseed-oil/useCases";
-import ImmunityBooster from "../ui/blackseed-oil/immunity-booster";
 import Smoothie from "../ui/flaxseed-oil/smoothie";
 
 const FlaxseedOil: React.FC = () => {
