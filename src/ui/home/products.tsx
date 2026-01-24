@@ -4,6 +4,8 @@ import React from "react";
 import BlackSeedOilBottle from "../../assets/bottle_blackseed.jpg";
 import SesameSeedOilBottle from "../../assets/bottle_sesame_seed.jpg";
 import FlaxSeedOilBottle from "../../assets/bottle_flaxseed.jpg";
+import GoldenDropLogo from "../../assets/golden_drop_logo.svg";
+import GoldenDropOnlyLogo from "../../assets/golden_drop_logo_only.svg";
 
 import { useTranslation } from "react-i18next";
 
@@ -67,7 +69,7 @@ const Products: React.FC = () => {
             toggleActions: "play none none reverse",
             // markers: true, // Remove in production
           },
-        }
+        },
       );
     }, containerRef);
 
@@ -81,62 +83,115 @@ const Products: React.FC = () => {
   };
 
   return (
-    <div
-      ref={containerRef}
-      className="mx-auto grid grid-cols-1 lg:grid-cols-3
-     gap-8 px-8 sm:px-16"
-    >
-      <div ref={addToRefs}>
-        <div className="flex justify-center">
-          <img
-            src={SesameSeedOilBottle}
-            alt="All RawSeed Oils"
-            className="mx-8 w-md aspect-auto"
-          />
-        </div>
-        <div className="m-12 text-center">
-          <h2 className="my-6 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl">
-            {t("products.sesame.title")}
-          </h2>
-          <p className="text-pretty text-neutral-500 text-2xl">
-            {t("products.sesame.description")}
-          </p>
-        </div>
+    <div ref={containerRef} className="mx-auto gap-8 px-8 sm:px-16">
+      <div className="flex justify-center">
+        <img
+          ref={addToRefs}
+          src={GoldenDropLogo}
+          alt="Golden Drop Logo"
+          className="mx-8 mb-30 w-md aspect-auto brightness-80 drop-shadow-lg"
+        />
       </div>
 
-      <div ref={addToRefs}>
-        <div className="flex justify-center">
-          <img
-            src={BlackSeedOilBottle}
-            alt="All RawSeed Oils"
-            className="mx-8 w-md aspect-auto"
-          />
-        </div>
-        <div className="m-12 text-center">
-          <h2 className="my-6 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl">
-            {t("products.black_seed.title")}
-          </h2>
-          <p className="text-pretty text-neutral-500 text-2xl">
-            {t("products.black_seed.description")}
-          </p>
-        </div>
+      <div ref={addToRefs} className="m-12 text-center">
+        <h2 className="my-6 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl">
+          {t("products.title")}
+        </h2>
       </div>
 
-      <div ref={addToRefs}>
-        <div className="flex justify-center">
-          <img
-            src={FlaxSeedOilBottle}
-            alt="Golder Drop Flaxseed Oil Bottle"
-            className="mx-8 w-md aspect-auto"
-          />
+      <div
+        className="mx-auto grid grid-cols-1 lg:grid-cols-3
+      gap-8 px-8 sm:px-16"
+      >
+        <div ref={addToRefs}>
+          <div className="flex justify-center">
+            <img
+              src={SesameSeedOilBottle}
+              alt="All RawSeed Oils"
+              className="mx-8 w-md aspect-auto"
+            />
+          </div>
+          <div className="m-12 text-center">
+            {/* <span>
+              <img
+                src={GoldenDropLogo}
+                alt="Golden Drop Logo"
+                className="h-10 aspect-auto brightness-80"
+              />
+              <h2 className="inline my-6 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl">
+                {t("products.sesame.title")}
+              </h2>
+            </span> */}
+            <div className="mb-4 flex items-center justify-center">
+              <img
+                src={GoldenDropOnlyLogo}
+                alt="Golden Drop Logo"
+                className="h-13 aspect-auto brightness-70 shrink-0"
+              />
+              <h2 className="my-0 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl">
+                {t("products.sesame.title")}
+              </h2>
+            </div>
+            <p className="text-pretty text-neutral-500 text-justify text-2xl">
+              {t("products.sesame.description")}
+            </p>
+          </div>
         </div>
-        <div className="m-12 text-center">
-          <h2 className="my-6 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl">
-            {t("products.flaxseed.title")}
-          </h2>
-          <p className="text-pretty text-neutral-500 text-2xl">
-            {t("products.flaxseed.description")}
-          </p>
+
+        <div ref={addToRefs}>
+          <div className="flex justify-center">
+            <img
+              src={BlackSeedOilBottle}
+              alt="All RawSeed Oils"
+              className="mx-8 w-md aspect-auto"
+            />
+          </div>
+          <div className="m-12 text-center">
+            {/* <h2 className="my-6 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl">
+              {t("products.black_seed.title")}
+            </h2> */}
+            <div className="mb-4 flex items-center justify-center">
+              <img
+                src={GoldenDropOnlyLogo}
+                alt="Golden Drop Logo"
+                className="h-13 aspect-auto brightness-70 shrink-0"
+              />
+              <h2 className="my-0 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl">
+                {t("products.black_seed.title")}
+              </h2>
+            </div>
+            <p className="text-pretty text-neutral-500 text-justify text-2xl">
+              {t("products.black_seed.description")}
+            </p>
+          </div>
+        </div>
+
+        <div ref={addToRefs}>
+          <div className="flex justify-center">
+            <img
+              src={FlaxSeedOilBottle}
+              alt="Golder Drop Flaxseed Oil Bottle"
+              className="mx-8 w-md aspect-auto"
+            />
+          </div>
+          <div className="m-12 text-center">
+            {/* <h2 className="my-6 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl">
+              {t("products.flaxseed.title")}
+            </h2> */}
+            <div className="mb-4 flex items-center justify-center">
+              <img
+                src={GoldenDropOnlyLogo}
+                alt="Golden Drop Logo"
+                className="h-13 aspect-auto brightness-70 shrink-0"
+              />
+              <h2 className="my-0 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl">
+                {t("products.flaxseed.title")}
+              </h2>
+            </div>
+            <p className="text-pretty text-neutral-500 text-justify text-2xl">
+              {t("products.flaxseed.description")}
+            </p>
+          </div>
         </div>
       </div>
     </div>

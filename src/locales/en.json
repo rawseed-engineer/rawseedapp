@@ -46,17 +46,18 @@
     "p3": "Our oils are bottled with care and presented with clarity. Each product tells a story—from soil to seed to the golden drop in your hands."
   },
   "products": {
+    "title": "Start Your Wellness Revolution Today: Golden Drop Premium Trio of Healthy Oils",
     "sesame": {
-      "title": "Golden Drop Sesame Oil",
+      "title": "Sesame Oil",
       "description": "A smooth, golden oil rich in antioxidants and essential fatty acids."
     },
     "black_seed": {
-      "title": "Golden Drop Black Seed Oil",
-      "description": "Highly prized for its healing properties and strong, earthy taste. Revered for centuries in traditional medicine, now available in its purest form."
+      "title": "Black Seed Oil",
+      "description": "A natural superfood packed with Omega 3,6 and 9 fatty acids and Thymoquinone, known for its powerful health benefits. It helps boost immunity and promotes overall wellness."
     },
     "flaxseed": {
-      "title": "Golden Drop Flaxseed Oil",
-      "description": "A rich source of plant-based omega-3 fatty acids, perfect for supporting heart and brain health."
+      "title": "Flaxseed Oil",
+      "description": "A 100% natural, cold-pressed and rich in Omega-3 fatty acids. Its mild and nutty flavor makes it perfect for cooking and salad dressings. A delicious and healthy addition to your kitchen."
     }
   },
   "why_raw_seed": {

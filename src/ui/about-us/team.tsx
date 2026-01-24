@@ -5,7 +5,7 @@ const Team: React.FC = () => {
   // const { t } = useTranslation();
   return (
     <div
-      className="mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2lg:grid-cols-4 
+      className="mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 2lg:grid-cols-4 
       items-center justify-items-center gap-8 pt-8 pb-20 sm:px-16 md:px-16 lg:px-48 mt-10"
     >
       <div className="relative h-96 w-64 overflow-hidden">
