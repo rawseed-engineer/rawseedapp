@@ -1,6 +1,6 @@
 import React from "react";
-import FlaxseedCloseUp from "../../assets/flaxseed_closeup_4K.jpg";
 import { useTranslation } from "react-i18next";
+import ImageHairAndScalp from "../../assets/hair.jpg";
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const UseCases: React.FC = () => {
+const HairAndScalp: React.FC = () => {
   const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRefs = useRef<HTMLParagraphElement[]>([]);
@@ -51,22 +51,27 @@ const UseCases: React.FC = () => {
   };
 
   return (
-    <div ref={containerRef} className="relative">
+    <div
+      ref={containerRef}
+      className="mx-auto grid grid-cols-1 md:grid-cols-2 
+      items-center justify-items-center gap-8 px-8 sm:px-16"
+    >
       <img
-        src={FlaxseedCloseUp}
-        alt="Flaxseed Close Up"
-        className="w-full brightness-40 aspect-auto"
-      />
-      <div
+        src={ImageHairAndScalp}
         ref={addToRefs}
-        className="absolute text-5xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 space-y-4"
-      >
-        <h2 className="text-4xl sm:text-5xl text-neutral-200">
-          {t("flaxseed_oil.use_cases.title")}
+        alt="RawSeed's flaxseed oils make your hair and scalp healthy"
+        className="mx-8"
+      />
+      <div className="max-w-md text-neutral-600 space-y-4">
+        <h2 className="text-balance text-[#a18458] text-5xl font-bold text-shadow-lg tracking-tight md:text-5xl">
+          {t("flaxseed_oil.skin_health.hair.title")}
         </h2>
+        <p className="text-pretty text-2xl">
+          {t("flaxseed_oil.skin_health.hair.description")}
+        </p>
       </div>
     </div>
   );
 };
 
-export default UseCases;
+export default HairAndScalp;

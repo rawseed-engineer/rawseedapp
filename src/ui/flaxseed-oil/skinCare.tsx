@@ -1,5 +1,5 @@
 import React from "react";
-import FlaxseedCloseUp from "../../assets/flaxseed_closeup_4K.jpg";
+import FlaxseedWithHand from "../../assets/flaxseed_skin_care.jpg";
 import { useTranslation } from "react-i18next";
 
 import { useEffect, useRef } from "react";
@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const UseCases: React.FC = () => {
+const skinCare: React.FC = () => {
   const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRefs = useRef<HTMLParagraphElement[]>([]);
@@ -53,20 +53,23 @@ const UseCases: React.FC = () => {
   return (
     <div ref={containerRef} className="relative">
       <img
-        src={FlaxseedCloseUp}
-        alt="Flaxseed Close Up"
+        src={FlaxseedWithHand}
+        alt="Flaxseed with hands"
         className="w-full brightness-40 aspect-auto"
       />
-      <div
-        ref={addToRefs}
-        className="absolute text-5xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 space-y-4"
-      >
-        <h2 className="text-4xl sm:text-5xl text-neutral-200">
-          {t("flaxseed_oil.use_cases.title")}
+      <div className="absolute text-5xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 space-y-4">
+        <h2 ref={addToRefs} className="text-4xl sm:text-5xl text-neutral-200">
+          {t("flaxseed_oil.skin_health.title")}
         </h2>
+        <p
+          ref={addToRefs}
+          className="text-lg sm:text-2xl text-neutral-200  mx-auto"
+        >
+          {t("flaxseed_oil.skin_health.description")}
+        </p>
       </div>
     </div>
   );
 };
 
-export default UseCases;
+export default skinCare;

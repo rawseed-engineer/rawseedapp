@@ -212,6 +212,22 @@
       "smoothie": {
         "title": "Smoothie Boost for Daily Wellness",
         "description": "Blend a tablespoon into your morning green smoothie with spinach, banana, and almond milk. This simple addition infuses your routine with omega-3s to support brain function and sustained energy, helping you tackle the day with focus and vitality—perfect for busy professionals reaping anti-inflammatory benefits over time."
+      },
+      "salad": {
+        "title": "Salad Dressing Delight",
+        "description": "Whisk it with lemon juice, Dijon mustard, and herbs for a zesty vinaigrette over fresh greens. Consumers love this for heart-healthy meals, as the preserved lignans aid digestion and may even assist in weight management, making it a go-to for those prioritizing clean eating and long-term cardiovascular support."
+      }
+    },
+    "skin_health": {
+      "title": "Skincare Secrets; Nourish from the Outside In",
+      "description": "Beyond the kitchen, cold-pressed flaxseed oil is a skincare savior, harnessing its nutrient density for topical bliss. Its lightweight texture absorbs quickly, delivering hydration without greasiness.",
+      "skin": {
+        "title": "Moisturizing Face Serum",
+        "description": "Mix a few drops with your favorite carrier oil or apply directly to damp skin post-cleansing. The high ALA content soothes irritation and balances oil production, ideal for acne-prone or mature skin types seeking reduced fine lines and a radiant glow—users often notice improved texture and elasticity within weeks."
+      },
+      "hair": {
+        "title": "Hair and Scalp Treatment",
+        "description": "Massage into your scalp before shampooing or add to a DIY hair mask with yogurt and honey. This harnesses the oil's vitamins to combat dryness and promote shine, benefiting those with flaky scalps or brittle strands by strengthening from root to tip, all while providing a natural alternative to synthetic conditioners."
       }
     }
   },

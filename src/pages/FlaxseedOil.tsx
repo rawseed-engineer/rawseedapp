@@ -9,6 +9,10 @@ import EmailForm from "../ui/email-form";
 
 import UseCases from "../ui/flaxseed-oil/useCases";
 import Smoothie from "../ui/flaxseed-oil/smoothie";
+import Salad from "../ui/blackseed-oil/salad";
+import SkinCare from "../ui/flaxseed-oil/skinCare";
+import FaceSerum from "../ui/flaxseed-oil/faceSerum";
+import ImageHairAndScalp from "../ui/flaxseed-oil/HairAndScalp";
 
 const FlaxseedOil: React.FC = () => {
   return (
@@ -49,6 +53,31 @@ const FlaxseedOil: React.FC = () => {
           mx-4 sm:mx-4 lg:mx-24 xl:mx-48 2xl:128"
         >
           <Smoothie />
+        </section>
+
+        <section
+          className="rounded py-12 sm:py-12 mt-12 
+          mx-4 sm:mx-4 lg:mx-24 xl:mx-48 2xl:128"
+        >
+          <Salad />
+        </section>
+
+        <section className="flex-grow overflow-x-auto w-full ">
+          <SkinCare />
+        </section>
+
+        <section
+          className="rounded py-12 sm:py-24 mt-12 
+          mx-4 sm:mx-4 lg:mx-24 xl:mx-48 2xl:128"
+        >
+          <FaceSerum />
+        </section>
+
+        <section
+          className="rounded py-12 sm:py-12 mt-12
+          mx-4 sm:mx-4 lg:mx-24 xl:mx-48 2xl:128"
+        >
+          <ImageHairAndScalp />
         </section>
 
         <section
