@@ -46,10 +46,11 @@
     "p3": "Our oils are bottled with care and presented with clarity. Each product tells a story—from soil to seed to the golden drop in your hands."
   },
   "products": {
-    "title": "Start Your Wellness Revolution Today: Golden Drop Premium Trio of Healthy Oils",
+    "heading": "Start Your Wellness Revolution Today With",
+    "title": "Explore Our Premium Trio of Healthy Oils",
     "sesame": {
       "title": "Sesame Oil",
-      "description": "A smooth, golden oil rich in antioxidants and essential fatty acids."
+      "description": "Golden Drop brings you the purest cold-pressed sesame oil, crafted without heat or chemicals to preserve the seed's natural richness."
     },
     "black_seed": {
       "title": "Black Seed Oil",

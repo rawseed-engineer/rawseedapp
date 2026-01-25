@@ -64,7 +64,7 @@ const Products: React.FC = () => {
           stagger: 0.5, // This is the magic: each item delays by 0.2s
           scrollTrigger: {
             trigger: containerRef.current,
-            start: "top 50%", // When the container hits 75% of viewport
+            start: "top 30%", // When the container hits 75% of viewport
             end: "bottom 20%",
             toggleActions: "play none none reverse",
             // markers: true, // Remove in production
@@ -84,12 +84,20 @@ const Products: React.FC = () => {
 
   return (
     <div ref={containerRef} className="mx-auto gap-8 px-8 sm:px-16">
+      <div className="flex justify-center text-center">
+        <h2
+          ref={addToRefs}
+          className="my-6 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl"
+        >
+          {t("products.heading")}
+        </h2>
+      </div>
       <div className="flex justify-center">
         <img
           ref={addToRefs}
           src={GoldenDropLogo}
           alt="Golden Drop Logo"
-          className="mx-8 mb-30 w-md aspect-auto brightness-80 drop-shadow-lg"
+          className="mx-8 my-20 w-md aspect-auto brightness-80 drop-shadow-lg"
         />
       </div>
 
