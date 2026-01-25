@@ -11,6 +11,7 @@ import EmailForm from "../ui/email-form";
 import Footer from "../ui/nav/footer";
 import Hero from "../ui/home/hero";
 import ColdPressed from "../ui/home/coldPressed";
+import WhatWeDoScrollHighlight from "../ui/home/whatWeDoScrollHighlight";
 
 // import { Callout } from "../ui/callout";
 // import ScrollFadeText from "../ui/ScrollFadeText";
@@ -94,6 +95,10 @@ const Home = () => {
             <div className="h-16 w-16 animate-[BorderAnimation_4s_linear_infinite] rounded-full bg-blue-500"></div>
           </div>
         </section> */}
+
+        <section className="py-12">
+          <WhatWeDoScrollHighlight />
+        </section>
 
         <section
           className="flex-grow overflow-x-auto w-full 
