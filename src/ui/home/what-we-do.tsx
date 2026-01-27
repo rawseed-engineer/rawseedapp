@@ -7,7 +7,7 @@ const WhatWeDo: React.FC = () => {
   return (
     <div
       className="mx-auto grid grid-cols-1 lg:grid-cols-2
-      items-center justify-items-center gap-8 px-8 sm:px-24"
+      items-center justify-items-center gap-8 px-8 sm:px-24 pb-100"
     >
       <img src={AllOils} alt="All RawSeed Oils" className="mx-8 aspect-auto" />
       <div className="max-w-md text-neutral-600 space-y-4">
