@@ -96,7 +96,7 @@ const Home = () => {
           </div>
         </section> */}
 
-        <section className="py-12">
+        <section id="id1" className="py-12">
           <WhatWeDoScrollHighlight />
         </section>
 

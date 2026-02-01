@@ -101,7 +101,8 @@ const NavMenu: React.FC = () => {
 
           <div className="relative mt-4 flex h-12 w-12">
             <Link to="/rawseedapp/contact">
-              <div className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gradient-to-tr from-amber-300 to-yellow-700 opacity-75"></div>
+              {/* <div className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gradient-to-tr from-amber-300 to-yellow-700 opacity-75"></div> */}
+              <div className="absolute inline-flex h-full w-full animate-[ping_5s_cubic-bezier(0.22,1,0.36,1)_infinite] rounded-full bg-gradient-to-tr from-amber-300 to-yellow-700 opacity-75"></div>
               <div
                 className="absolute
               -top-[25%] w-full h-full
