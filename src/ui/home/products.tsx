@@ -149,34 +149,6 @@ const Products: React.FC = () => {
         <div ref={addToRefs}>
           <div className="flex justify-center">
             <img
-              src={BlackSeedOilBottle}
-              alt="All RawSeed Oils"
-              className="mx-8 w-md aspect-auto"
-            />
-          </div>
-          <div className="m-12 text-center">
-            {/* <h2 className="my-6 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl">
-              {t("products.black_seed.title")}
-            </h2> */}
-            <div className="mb-4 flex items-center justify-center">
-              <img
-                src={GoldenDropOnlyLogo}
-                alt="Golden Drop Logo"
-                className="h-13 aspect-auto brightness-70 shrink-0"
-              />
-              <h2 className="my-0 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl">
-                {t("products.black_seed.title")}
-              </h2>
-            </div>
-            <p className="text-pretty text-neutral-500 text-justify text-2xl">
-              {t("products.black_seed.description")}
-            </p>
-          </div>
-        </div>
-
-        <div ref={addToRefs}>
-          <div className="flex justify-center">
-            <img
               src={FlaxSeedOilBottle}
               alt="Golder Drop Flaxseed Oil Bottle"
               className="mx-8 w-md aspect-auto"
@@ -198,6 +170,34 @@ const Products: React.FC = () => {
             </div>
             <p className="text-pretty text-neutral-500 text-justify text-2xl">
               {t("products.flaxseed.description")}
+            </p>
+          </div>
+        </div>
+
+        <div ref={addToRefs}>
+          <div className="flex justify-center">
+            <img
+              src={BlackSeedOilBottle}
+              alt="All RawSeed Oils"
+              className="mx-8 w-md aspect-auto"
+            />
+          </div>
+          <div className="m-12 text-center">
+            {/* <h2 className="my-6 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl">
+              {t("products.black_seed.title")}
+            </h2> */}
+            <div className="mb-4 flex items-center justify-center">
+              <img
+                src={GoldenDropOnlyLogo}
+                alt="Golden Drop Logo"
+                className="h-13 aspect-auto brightness-70 shrink-0"
+              />
+              <h2 className="my-0 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl">
+                {t("products.black_seed.title")}
+              </h2>
+            </div>
+            <p className="text-pretty text-neutral-500 text-justify text-2xl">
+              {t("products.black_seed.description")}
             </p>
           </div>
         </div>
