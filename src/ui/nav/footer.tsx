@@ -12,8 +12,12 @@ import {
   faXTwitter,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import ShineText from "../ShineText";
+import { useTranslation } from "react-i18next";
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -31,7 +35,9 @@ const Footer: React.FC = () => {
             {/* <span className="text-xl font-bold text-white">Rawseed</span> */}
           </div>
           <p className="text-gray-200 mb-6 leading-relaxed">
-            Wholesome Oils for Healthy Living
+            <ShineText className="text-lg" duration="3s">
+              {t("hero.home.subtitle")}
+            </ShineText>
           </p>
           <div className="flex space-x-1">
             <a

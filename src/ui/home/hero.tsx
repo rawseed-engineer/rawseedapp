@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ShineText from "../ShineText";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,7 +38,7 @@ const Hero: React.FC = () => {
             toggleActions: "play none none reverse",
             // markers: true, // Remove in production
           },
-        }
+        },
       );
     }, containerRef);
 
@@ -75,7 +76,6 @@ const Hero: React.FC = () => {
               aspect-auto"
             />
           </div>
-
           {/* Hero Heading */}
           <h1
             ref={addToRefs}
@@ -87,17 +87,17 @@ const Hero: React.FC = () => {
           >
             {t("hero.home.title")}
           </h1>
-
           <h2
             ref={addToRefs}
             className="text-balance 
-            text-3xl sm:text-3xl md:text-4xl lg:text-5xl 
+            text-2xl sm:text-2xl md:text-2xl lg:text-2xl 
             text-center lg:text-left
-            font-bold text-white mb-5"
+            text-white mb-5"
           >
-            {t("hero.home.subtitle")}
+            <ShineText className="font-bold" duration="10s">
+              {t("hero.home.subtitle")}
+            </ShineText>
           </h2>
-
           {/* Hero Description */}
           <p
             ref={addToRefs}
@@ -109,10 +109,27 @@ const Hero: React.FC = () => {
           >
             {t("hero.home.description")}
           </p>
-
           {/* <div className="flex justify-center mt-30">
           <Callout />
         </div> */}
+          {/* <h1>
+            <ShineText duration="3s">Shine Bright Like a Diamond</ShineText>
+          </h1> */}
+
+          {/* <h1
+            className="
+              inline-block
+              bg-gradient-to-r from-gray-500 20% via-white 60% to-gray-500 20%
+              bg-[length:200%_auto]
+              bg-clip-text
+              text-transparent
+              font-bold
+              text-6xl
+              animate-[shine_3s_linear_infinite]
+            "
+          >
+            Wholesome Oils for Healthy Living
+          </h1> */}
         </div>
       </div>
     </>
