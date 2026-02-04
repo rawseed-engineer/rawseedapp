@@ -12,9 +12,118 @@ import Footer from "../ui/nav/footer";
 import Process from "../ui/blackseed-oil/process";
 import EmailForm from "../ui/email-form";
 import JoinOurJourney from "../ui/blackseed-oil/joinOurJourney";
+import ProductInformationAccordion from "../ui/Accordion";
 
 const BlackSeedOilPage: React.FC = () => {
   const { t } = useTranslation();
+  const nutritionUnit = "per 100ml";
+
+  const nutritionFacts = [
+    {
+      key: "Energy",
+      value: "45 kcal",
+    },
+    {
+      key: "Fat",
+      value: "5 g",
+    },
+    {
+      key: "of which saturates",
+      value: "1 g",
+    },
+    {
+      key: "Omega 3",
+      value: "2.5 g",
+    },
+    {
+      key: "Omega 6",
+      value: "580 mg",
+    },
+    {
+      key: "Omega 9",
+      value: "220 mg",
+    },
+    {
+      key: "Sodium",
+      value: "0 g",
+    },
+    {
+      key: "Thymoquinone (TQ)",
+      value: "48 mg",
+    },
+    {
+      key: "Carbohydrates",
+      value: "0 g",
+    },
+    {
+      key: "of which sugar",
+      value: "0 g",
+    },
+    {
+      key: "Protein",
+      value: "0 g",
+    },
+    {
+      key: "Sodium",
+      value: "0 g",
+    },
+  ];
+
+  const productInformation = [
+    {
+      title: "Ingredients",
+      content: (
+        <div>
+          <div>
+            100% Pure, Cold-Pressed, Unrefined Black Seed Oil (Nigella Sativa)
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Nutrition Facts",
+      content: (
+        <div className="p-4">
+          <div>Nutrition: {nutritionUnit}</div>
+          {nutritionFacts.map((fact) => (
+            <div key={fact.key} className="flex justify-between border-b py-2">
+              <span>{fact.key}</span>
+              <span>{fact.value}</span>
+            </div>
+          ))}
+        </div>
+      ),
+    },
+    {
+      title: "Usage",
+      content: (
+        <div>
+          {/* <p className="font-semibold text-[#a18458] mb-3">In your cooking</p> */}
+          <ul className="space-y-3 list-disc list-inside text-[#a18458]">
+            <li className="leading-relaxed">
+              For Oral Use. Take directly or add to water, tea or any hot/cold
+              drink. It can also be drizzled over salads or included in your
+              meals for a natural nutritional boost.
+            </li>
+            <li className="leading-relaxed">
+              For Skin and Hair. Apply 2-3 drops on face, body, hair or nails
+              and massage gently. Perfect for nourishing and moisturizing skin,
+              strengthening hair and enhancing nail health.
+            </li>
+          </ul>
+        </div>
+      ),
+    },
+    {
+      title: "Storage Instructions",
+      content: "Store in a cool, dry place. Once opened, keep refrigerated.",
+    },
+    {
+      title: "Suitable For",
+      content: "Vegans, Vegetarians, Halal, Kosher",
+    },
+  ];
+
   return (
     <div className="min-h-screen antialiased">
       <NavMenu />
@@ -112,6 +221,13 @@ const BlackSeedOilPage: React.FC = () => {
 
       {/* Contact Us */}
       {/* <section className="rounded bg-[#181818] py-8 mt-12 sm:py-12 mx-64"> */}
+
+      <section
+        className="rounded py-8 mt-12 sm:py-12
+        mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:mx-64"
+      >
+        <ProductInformationAccordion productItems={productInformation} />
+      </section>
 
       <section
         className="rounded py-12 sm:py-12 mt-12 

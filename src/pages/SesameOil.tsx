@@ -12,6 +12,8 @@ import FullScreenVideo from "../ui/FullScreenVideo";
 import ProductInformationAccordion from "../ui/Accordion";
 
 const SesameOil = () => {
+  const nutritionUnit = "per XXX ml";
+
   const nutritionFacts = [
     {
       key: "Energy",
@@ -65,6 +67,7 @@ const SesameOil = () => {
       title: "Nutrition Facts",
       content: (
         <div className="p-4">
+          <div>Nutrition: {nutritionUnit}</div>
           {nutritionFacts.map((fact) => (
             <div key={fact.key} className="flex justify-between border-b py-2">
               <span>{fact.key}</span>

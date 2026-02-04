@@ -16,6 +16,8 @@ import ImageHairAndScalp from "../ui/flaxseed-oil/HairAndScalp";
 import ProductInformationAccordion from "../ui/Accordion";
 
 const FlaxseedOil: React.FC = () => {
+  const nutritionUnit = "per (5ml) teaspoon";
+
   const nutritionFacts = [
     {
       key: "Energy",
@@ -78,6 +80,7 @@ const FlaxseedOil: React.FC = () => {
       title: "Nutrition Facts",
       content: (
         <div className="p-4">
+          <div>Nutrition: {nutritionUnit}</div>
           {nutritionFacts.map((fact) => (
             <div key={fact.key} className="flex justify-between border-b py-2">
               <span>{fact.key}</span>
