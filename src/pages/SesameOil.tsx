@@ -9,9 +9,108 @@ import Footer from "../ui/nav/footer";
 import SesamePageCallout from "../ui/sesame-oil/callout";
 import Hero from "../ui/sesame-oil/hero";
 import FullScreenVideo from "../ui/FullScreenVideo";
-import Accordion from "../ui/Accordion";
+import ProductInformationAccordion from "../ui/Accordion";
 
 const SesameOil = () => {
+  const nutritionFacts = [
+    {
+      key: "Energy",
+      value: "800 kcal",
+    },
+    {
+      key: "Fat",
+      value: "93.3 g",
+    },
+    {
+      key: "of which saturates",
+      value: "10 g",
+    },
+    {
+      key: "Carbohydrate",
+      value: "0 g",
+    },
+    {
+      key: "Protein",
+      value: "0 g",
+    },
+    {
+      key: "Sodium",
+      value: "0 mg",
+    },
+    {
+      key: "Salt",
+      value: "0 g",
+    },
+    {
+      key: "Sugar",
+      value: "0 g",
+    },
+  ];
+
+  const productInformation = [
+    {
+      title: "Ingredients",
+      content: (
+        <div>
+          <div>
+            <b>Sesame Seed</b> Oil
+          </div>
+          <div>
+            For allergens see ingredents in <b>bold</b>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Nutrition Facts",
+      content: (
+        <div className="p-4">
+          {nutritionFacts.map((fact) => (
+            <div key={fact.key} className="flex justify-between border-b py-2">
+              <span>{fact.key}</span>
+              <span>{fact.value}</span>
+            </div>
+          ))}
+        </div>
+      ),
+    },
+    {
+      title: "Usage",
+      content: (
+        <div>
+          <p className="font-semibold text-[#a18458] mb-3">In your cooking</p>
+          <ul className="space-y-3 list-disc list-inside text-[#a18458]">
+            <li className="leading-relaxed">
+              Use for stir-fries and sautés on medium heat (not smoking hot
+              woks), especially in Asian and Indian dishes.
+            </li>
+            <li className="leading-relaxed">
+              Add to salad dressings, dips, and marinades where you want a
+              nutty, aromatic flavour.
+            </li>
+            <li className="leading-relaxed">
+              Drizzle a small amount at the end on soups, cooked vegetables,
+              noodles, or rice bowls as a finishing oil rather than the main
+              frying fat.
+            </li>
+            <li className="leading-relaxed">
+              Use in South Indian-style tempering (tadka) for curries, chutneys,
+              dosa podi/gunpowder, and some pickles.
+            </li>
+          </ul>
+        </div>
+      ),
+    },
+    {
+      title: "Storage Instructions",
+      content: "Store in a cool dry place away from heat source and direct sun",
+    },
+    {
+      title: "Suitable For",
+      content: "Vegans, Vegetarians, Halal, Kosher",
+    },
+  ];
+
   return (
     <div className="min-h-screen antialiased">
       <NavMenu />
@@ -91,7 +190,7 @@ const SesameOil = () => {
         className="rounded py-8 mt-12 sm:py-12
         mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:mx-64"
       >
-        <Accordion />
+        <ProductInformationAccordion productItems={productInformation} />
       </section>
 
       <section className="flex-grow overflow-x-auto w-full ">
