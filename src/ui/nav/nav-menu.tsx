@@ -6,6 +6,7 @@ import { Link, useLocation } from "react-router-dom";
 import RawSeedLogo from "../../assets/rawseed_logo2.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import ButtonWithExpandingUnderline from "../ButtonWithExpandingUnderline";
 
 const NavMenu: React.FC = () => {
   // const [count, setCount] = useState(0);
@@ -64,29 +65,29 @@ const NavMenu: React.FC = () => {
             </h2>
           </Link> */}
 
-          <Link to="/rawseedapp/sesame-oil">
-            <h2 className="text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200">
-              {t("menu.sesame_oil")}
-            </h2>
-          </Link>
+          <ButtonWithExpandingUnderline className="text-3xl hover:text-white">
+            <Link to="/rawseedapp/sesame-oil">
+              <h2>{t("menu.sesame_oil")}</h2>
+            </Link>
+          </ButtonWithExpandingUnderline>
 
-          <Link to="/rawseedapp/flaxseed-oil">
-            <h2 className="text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200">
-              {t("menu.flax_seed_oil")}
-            </h2>
-          </Link>
+          <ButtonWithExpandingUnderline className="text-3xl hover:text-white">
+            <Link to="/rawseedapp/flaxseed-oil">
+              <h2>{t("menu.flax_seed_oil")}</h2>
+            </Link>
+          </ButtonWithExpandingUnderline>
 
-          <Link to="/rawseedapp/blackseed-oil">
-            <h2 className="text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200">
-              {t("menu.black_seed_oil")}
-            </h2>
-          </Link>
+          <ButtonWithExpandingUnderline className="text-3xl hover:text-white">
+            <Link to="/rawseedapp/blackseed-oil">
+              <h2>{t("menu.black_seed_oil")}</h2>
+            </Link>
+          </ButtonWithExpandingUnderline>
 
-          <Link to="/rawseedapp/about-us">
-            <h2 className="text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200">
-              About Us
-            </h2>
-          </Link>
+          <ButtonWithExpandingUnderline className="text-3xl hover:text-white">
+            <Link to="/rawseedapp/about-us">
+              <h2>About Us</h2>
+            </Link>
+          </ButtonWithExpandingUnderline>
 
           {/* <Link to="/rawseedapp/contact">
             <h2
