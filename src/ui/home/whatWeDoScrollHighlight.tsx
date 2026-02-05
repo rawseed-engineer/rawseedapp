@@ -5,6 +5,7 @@ import benefit1 from "../../assets/additives_free.jpg";
 import benefit2 from "../../assets/unrefined_oil.jpg";
 import benefit3 from "../../assets/nutrient_rich.jpg";
 import benefit4 from "../../assets/ethically_sourced.jpg";
+import ScrollDownIndicator from "../ScrollDownIndicator";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -175,19 +176,24 @@ const WhatWeDoScrollHighlight = () => {
 
           {/* Text list on the right */}
           <div className="hidden lg:block">
-            <div className="h-screen w-[300px] flex flex-col justify-center items-start bg-white pl-10">
-              {items.map((item, i) => (
-                <div
-                  key={i}
-                  ref={(el) => {
-                    if (el) textRefs.current[i] = el;
-                  }}
-                  className="text text-slate-400 text-2xl md:text-3xl  transform origin-left rotate-[0.1deg] w-[500px] h-[50px]"
-                >
-                  {item.key}
-                </div>
-              ))}
+            <div className="w-[300px] flex flex-col justify-center items-start bg-white pl-10">
+              <div>
+                {items.map((item, i) => (
+                  <div
+                    key={i}
+                    ref={(el) => {
+                      if (el) textRefs.current[i] = el;
+                    }}
+                    className="text text-slate-400 text-2xl md:text-3xl  transform origin-left rotate-[0.1deg] w-[500px] h-[50px]"
+                  >
+                    {item.key}
+                  </div>
+                ))}
+              </div>
             </div>
+          </div>
+          <div className="w-[200px] flex flex-col">
+            <ScrollDownIndicator />
           </div>
         </div>
       </div>

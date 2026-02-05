@@ -126,3 +126,26 @@ li {
     background-position: -200% 0;
   }
 }
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+    height: 6px;
+  }
+  40% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+    height: 10px;
+  }
+  80% {
+    transform: translate(-50%, 24px);
+    height: 10px;
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, 30px);
+    height: 4px;
+    opacity: 0;
+  }
+}
