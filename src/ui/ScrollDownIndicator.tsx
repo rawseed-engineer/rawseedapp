@@ -1,6 +1,3 @@
-// ScrollDownIndicator.tsx
-import React from "react";
-
 export default function ScrollDownIndicator() {
   return (
     <div className="flex flex-col items-center">
