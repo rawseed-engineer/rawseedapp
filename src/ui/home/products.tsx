@@ -5,7 +5,6 @@ import BlackSeedOilBottle from "../../assets/bottle_blackseed.jpg";
 import SesameSeedOilBottle from "../../assets/bottle_sesame_seed.jpg";
 import FlaxSeedOilBottle from "../../assets/bottle_flaxseed.jpg";
 import GoldenDropLogo from "../../assets/golden_drop_logo.svg";
-import GoldenDropOnlyLogo from "../../assets/golden_drop_logo_only.svg";
 
 import { useTranslation } from "react-i18next";
 
