@@ -20,7 +20,7 @@ export default function ProductInformationAccordion({
     <div
       className="mx-auto grid grid-cols-1 lg:grid-cols-2 
       items-center justify-items-center 
-      gap-1 px-8 sm:px-1"
+      gap-1 px-8 sm:px-1 mb-60"
     >
       <div>
         <img

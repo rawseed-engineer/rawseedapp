@@ -5,6 +5,8 @@ import {
   faEarthAsia,
   faPeopleGroup,
   faHeartCircleCheck,
+  faMortarPestle,
+  faAward,
 } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 
@@ -44,7 +46,7 @@ const Values: React.FC = () => {
             toggleActions: "play none none reverse",
             // markers: true, // Remove in production
           },
-        }
+        },
       );
     }, containerRef);
 
@@ -70,7 +72,7 @@ const Values: React.FC = () => {
             <p>
               <FontAwesomeIcon
                 icon={faSeedling}
-                className="text-[#a18458] p-16"
+                className="text-[#a18458] p-16 drop-shadow-lg"
                 size="8x"
               />
             </p>
@@ -90,7 +92,7 @@ const Values: React.FC = () => {
             <p>
               <FontAwesomeIcon
                 icon={faEarthAsia}
-                className="text-[#a18458] p-16"
+                className="text-[#a18458] p-16 drop-shadow-lg"
                 size="8x"
               />
             </p>
@@ -99,7 +101,7 @@ const Values: React.FC = () => {
             {t("value.title2")}
           </h2>
           <p className="text-center text-pretty text-neutral-600 text-xl">
-            {t("value.p1")}
+            {t("value.p2")}
           </p>
         </div>
       </div>
@@ -110,7 +112,7 @@ const Values: React.FC = () => {
             <p>
               <FontAwesomeIcon
                 icon={faPeopleGroup}
-                className="text-[#a18458] p-16"
+                className="text-[#a18458] p-16 drop-shadow-lg"
                 size="8x"
               />
             </p>
@@ -130,7 +132,7 @@ const Values: React.FC = () => {
             <p>
               <FontAwesomeIcon
                 icon={faHeartCircleCheck}
-                className="text-[#a18458] p-16"
+                className="text-[#a18458] p-16 drop-shadow-lg"
                 size="8x"
               />
             </p>
@@ -140,6 +142,46 @@ const Values: React.FC = () => {
           </h2>
           <p className="text-center text-pretty text-neutral-600 text-xl">
             {t("value.p4")}
+          </p>
+        </div>
+      </div>
+
+      <div ref={addToRefs}>
+        <div className="transition duration-300 hover:scale-110">
+          <div className="h-64 flex justify-center items-center">
+            <p>
+              <FontAwesomeIcon
+                icon={faMortarPestle}
+                className="text-[#a18458] p-16 drop-shadow-lg"
+                size="8x"
+              />
+            </p>
+          </div>
+          <h2 className="text-center text-balance text-3xl text-neutral-600 text-shadow-lg font-bold tracking-tight md:text-4xl">
+            {t("value.title5")}
+          </h2>
+          <p className="text-center text-pretty text-neutral-600 text-xl">
+            {t("value.p5")}
+          </p>
+        </div>
+      </div>
+
+      <div ref={addToRefs}>
+        <div className="transition duration-300 hover:scale-110">
+          <div className="h-64 flex justify-center items-center">
+            <p>
+              <FontAwesomeIcon
+                icon={faAward}
+                className="text-[#a18458] p-16 drop-shadow-lg"
+                size="8x"
+              />
+            </p>
+          </div>
+          <h2 className="text-center text-balance text-3xl text-neutral-600 text-shadow-lg font-bold tracking-tight md:text-4xl">
+            {t("value.title6")}
+          </h2>
+          <p className="text-center text-pretty text-neutral-600 text-xl">
+            {t("value.p6")}
           </p>
         </div>
       </div>

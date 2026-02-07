@@ -6,6 +6,7 @@ import benefit2 from "../assets/example2_anti_inflammatory.jpg";
 import benefit3 from "../assets/example3_digestive_health.jpg";
 import benefit4 from "../assets/example4_skin_health.jpg";
 import benefit5 from "../assets/example5_cancer_protection.jpg";
+import ScrollDownIndicator from "./ScrollDownIndicator";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -189,6 +190,10 @@ const ScrollHighlightSection = () => {
                 </div>
               ))}
             </div>
+          </div>
+
+          <div className="w-[200px] flex flex-col">
+            <ScrollDownIndicator />
           </div>
         </div>
       </div>

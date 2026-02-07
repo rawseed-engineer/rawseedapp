@@ -12,6 +12,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import BookingCard from "../BookingCard";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -111,95 +112,31 @@ const Products: React.FC = () => {
         className="mx-auto grid grid-cols-1 lg:grid-cols-3
       gap-8 px-8 sm:px-16"
       >
-        <div ref={addToRefs}>
-          <div className="flex justify-center">
-            <img
-              src={SesameSeedOilBottle}
-              alt="All RawSeed Oils"
-              className="mx-8 w-md aspect-auto"
-            />
-          </div>
-          <div className="m-12 text-center">
-            {/* <span>
-              <img
-                src={GoldenDropLogo}
-                alt="Golden Drop Logo"
-                className="h-10 aspect-auto brightness-80"
-              />
-              <h2 className="inline my-6 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl">
-                {t("products.sesame.title")}
-              </h2>
-            </span> */}
-            <div className="mb-4 flex items-center justify-center">
-              <img
-                src={GoldenDropOnlyLogo}
-                alt="Golden Drop Logo"
-                className="h-13 aspect-auto brightness-70 shrink-0"
-              />
-              <h2 className="my-0 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl">
-                {t("products.sesame.title")}
-              </h2>
-            </div>
-            <p className="text-pretty text-neutral-500 text-justify text-2xl">
-              {t("products.sesame.description")}
-            </p>
-          </div>
+        <div ref={addToRefs} className="flex justify-center">
+          <BookingCard
+            imageUrl={SesameSeedOilBottle}
+            title="Sesame Seed Oil"
+            description={t("products.sesame.description")}
+            buttonText="Order Now"
+          />
         </div>
 
-        <div ref={addToRefs}>
-          <div className="flex justify-center">
-            <img
-              src={FlaxSeedOilBottle}
-              alt="Golder Drop Flaxseed Oil Bottle"
-              className="mx-8 w-md aspect-auto"
-            />
-          </div>
-          <div className="m-12 text-center">
-            {/* <h2 className="my-6 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl">
-              {t("products.flaxseed.title")}
-            </h2> */}
-            <div className="mb-4 flex items-center justify-center">
-              <img
-                src={GoldenDropOnlyLogo}
-                alt="Golden Drop Logo"
-                className="h-13 aspect-auto brightness-70 shrink-0"
-              />
-              <h2 className="my-0 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl">
-                {t("products.flaxseed.title")}
-              </h2>
-            </div>
-            <p className="text-pretty text-neutral-500 text-justify text-2xl">
-              {t("products.flaxseed.description")}
-            </p>
-          </div>
+        <div ref={addToRefs} className="flex justify-center">
+          <BookingCard
+            imageUrl={FlaxSeedOilBottle}
+            title="Flaxseed Oil"
+            description={t("products.flaxseed.description")}
+            buttonText="Order Now"
+          />
         </div>
 
-        <div ref={addToRefs}>
-          <div className="flex justify-center">
-            <img
-              src={BlackSeedOilBottle}
-              alt="All RawSeed Oils"
-              className="mx-8 w-md aspect-auto"
-            />
-          </div>
-          <div className="m-12 text-center">
-            {/* <h2 className="my-6 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl">
-              {t("products.black_seed.title")}
-            </h2> */}
-            <div className="mb-4 flex items-center justify-center">
-              <img
-                src={GoldenDropOnlyLogo}
-                alt="Golden Drop Logo"
-                className="h-13 aspect-auto brightness-70 shrink-0"
-              />
-              <h2 className="my-0 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl">
-                {t("products.black_seed.title")}
-              </h2>
-            </div>
-            <p className="text-pretty text-neutral-500 text-justify text-2xl">
-              {t("products.black_seed.description")}
-            </p>
-          </div>
+        <div ref={addToRefs} className="flex justify-center">
+          <BookingCard
+            imageUrl={BlackSeedOilBottle}
+            title="Black Seed Oil"
+            description={t("products.black_seed.description")}
+            buttonText="Pre-order Now"
+          />
         </div>
       </div>
     </div>

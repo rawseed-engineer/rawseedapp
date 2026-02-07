@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ShineText from "../ShineText";
+import ImageGoldenDropCircle from "../../assets/golden_drop_circle.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -109,6 +110,14 @@ const Hero: React.FC = () => {
           >
             {t("hero.home.description")}
           </p>
+          <div className="flex justify-center">
+            <img
+              src={ImageGoldenDropCircle}
+              alt="Golden Drop Circle Logo"
+              className="h-[10rem] lg:h-[15rem] drop-shadow-lg"
+            />
+          </div>
+
           {/* <div className="flex justify-center mt-30">
           <Callout />
         </div> */}
