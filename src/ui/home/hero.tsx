@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url("/rawseedapp/hero_image_home_4.jpg")`,
+          backgroundImage: `url("/rawseedapp/rawseed-hero.jpg")`,
           opacity: 0.9,
           filter: "brightness(50%)",
         }}

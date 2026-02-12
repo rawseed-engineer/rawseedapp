@@ -12,6 +12,7 @@ import Footer from "../ui/nav/footer";
 import Hero from "../ui/home/hero";
 import ColdPressed from "../ui/home/coldPressed";
 import WhatWeDoScrollHighlight from "../ui/home/whatWeDoScrollHighlight";
+import TestimonialSlider from "../ui/TestimonialSlider";
 
 // import { Callout } from "../ui/callout";
 // import ScrollFadeText from "../ui/ScrollFadeText";
@@ -130,6 +131,12 @@ const Home = () => {
         {/* Our Vision */}
         <section className="flex-grow overflow-x-auto w-full ">
           <Vision />
+        </section>
+
+        <section className="rounded py-8 mt-12 sm:py-12 mx-1 lg:mx-84">
+          <div>
+            <TestimonialSlider />
+          </div>
         </section>
 
         {/* Contact Us */}
