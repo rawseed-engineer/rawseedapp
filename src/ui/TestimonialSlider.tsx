@@ -51,7 +51,7 @@ export default function TestimonialSlider() {
   const total = testimonials.length;
 
   const goToSlide = (newIndex: number) => {
-    setCurrentIndex((prev) => {
+    setCurrentIndex(() => {
       // Optional: clamp to valid range (not needed with modulo)
       return (newIndex + total) % total;
     });
