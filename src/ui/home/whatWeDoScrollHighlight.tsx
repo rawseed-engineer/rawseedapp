@@ -126,7 +126,7 @@ const WhatWeDoScrollHighlight = () => {
       <div ref={wrapperRef} className="h-screen overflow-hidden">
         <div
           ref={pinUpRef}
-          className="h-screen flex flex-row items-center mx-70"
+          className="h-screen flex flex-row items-center mx-0 lg:mx-70"
         >
           <div ref={contentWrapRef} className="relative w-[700px] h-[400px]">
             {items.map((item, i) => (
@@ -147,7 +147,7 @@ const WhatWeDoScrollHighlight = () => {
                   <img
                     src={items[i].image}
                     alt={`Oils ${i}`}
-                    className={`aspect-auto brightness-50`}
+                    className={`scale-200 lg:scale-350 max-w-full aspect-auto brightness-50`}
                   />
                   <div className="absolute mx-5">
                     <div className="">
@@ -192,7 +192,7 @@ const WhatWeDoScrollHighlight = () => {
               </div>
             </div>
           </div>
-          <div className="w-[200px] flex flex-col">
+          <div className="hidden lg:block w-[200px] flex flex-col">
             <ScrollDownIndicator />
           </div>
         </div>

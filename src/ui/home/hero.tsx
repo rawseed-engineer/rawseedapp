@@ -56,19 +56,17 @@ const Hero: React.FC = () => {
     <>
       {/* Hero Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url("/rawseedapp/rawseed-hero.jpg")`,
-          opacity: 0.9,
-          filter: "brightness(50%)",
-        }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat 
+        brightness-20 md:brightness-50 opacity-90
+        bg-[url(/rawseedapp/rawseed-hero.jpg)]"
       />
 
-      <div className="absolute top-[10%] sm:top-[20%] md:top-[35%]">
+      <div className="absolute top-[30%] sm:top-[20%] md:top-[35%]">
         <div className="relative z-10 px-10 py-12 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="flex items-center justify-center">
             {/* Hide Logo in mobile view */}
             <img
+              ref={addToRefs}
               src={RawSeedLogo}
               alt="RawSeed Logo"
               className="block md:hidden
@@ -90,7 +88,8 @@ const Hero: React.FC = () => {
           </h1>
           <h2
             ref={addToRefs}
-            className="text-balance 
+            className="hidden md:block 
+            text-balance 
             text-2xl sm:text-2xl md:text-2xl lg:text-2xl 
             text-center lg:text-left
             text-white mb-5"
@@ -102,7 +101,8 @@ const Hero: React.FC = () => {
           {/* Hero Description */}
           <p
             ref={addToRefs}
-            className="text-pretty text-white 
+            className="hidden md:block 
+            text-pretty text-white 
             text-2xl 
             text-justify
             lg:text-left
@@ -112,33 +112,12 @@ const Hero: React.FC = () => {
           </p>
           <div className="flex justify-center">
             <img
+              ref={addToRefs}
               src={ImageGoldenDropCircle}
               alt="Golden Drop Circle Logo"
               className="h-[10rem] lg:h-[15rem] drop-shadow-lg"
             />
           </div>
-
-          {/* <div className="flex justify-center mt-30">
-          <Callout />
-        </div> */}
-          {/* <h1>
-            <ShineText duration="3s">Shine Bright Like a Diamond</ShineText>
-          </h1> */}
-
-          {/* <h1
-            className="
-              inline-block
-              bg-gradient-to-r from-gray-500 20% via-white 60% to-gray-500 20%
-              bg-[length:200%_auto]
-              bg-clip-text
-              text-transparent
-              font-bold
-              text-6xl
-              animate-[shine_3s_linear_infinite]
-            "
-          >
-            Wholesome Oils for Healthy Living
-          </h1> */}
         </div>
       </div>
     </>

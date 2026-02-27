@@ -38,7 +38,7 @@ const Story: React.FC = () => {
             toggleActions: "play none none reverse",
             // markers: true, // Remove in production
           },
-        }
+        },
       );
     }, containerRef);
 
@@ -65,7 +65,7 @@ const Story: React.FC = () => {
         space-y-1 lg:space-y-4
         text-neutral-600"
       >
-        <h1 className="text-balance text-[#a18458] text-5xl text-shadow-lg font-bold tracking-tight md:text-5xl">
+        <h1 className="text-balance text-center lg:text-left text-[#a18458] text-5xl text-shadow-lg font-bold tracking-tight md:text-5xl">
           {t("story.title")}
         </h1>
         <p className="text-pretty text-justify text-2xl">
