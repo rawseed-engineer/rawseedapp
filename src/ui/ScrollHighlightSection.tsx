@@ -1,54 +1,26 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import benefit1 from "../assets/example1_health_protection.jpg";
-import benefit2 from "../assets/example2_anti_inflammatory.jpg";
-import benefit3 from "../assets/example3_digestive_health.jpg";
-import benefit4 from "../assets/example4_skin_health.jpg";
-import benefit5 from "../assets/example5_cancer_protection.jpg";
 import ScrollDownIndicator from "./ScrollDownIndicator";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ScrollHighlightSection = () => {
+interface ScrollHighlightItem {
+  key: string;
+  description: string;
+  image: string;
+}
+
+interface ScrollHighlightSectionProps {
+  items: ScrollHighlightItem[];
+}
+
+const ScrollHighlightSection: React.FC<ScrollHighlightSectionProps> = ({ items }) => {
   const wrapperRef = useRef(null);
   const pinUpRef = useRef(null);
   const contentWrapRef = useRef(null);
   const sidelineRef = useRef(null);
   const textRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-  const items = [
-    {
-      key: "Heart Health",
-      description:
-        "It may lower cholesterol levels (total and LDL), reduce blood pressure, and improve artery elasticity, potentially decreasing the risk of heart disease.",
-      image: benefit1,
-    },
-    {
-      key: "Anti-Inflammatory Effects",
-      description:
-        "The ALA in flaxseed oil can help reduce inflammation, which may benefit conditions like rheumatoid arthritis, though evidence is mixed for significant improvements in symptoms.",
-      image: benefit2,
-    },
-    {
-      key: "Digestive Health",
-      description:
-        "It can relieve constipation by promoting bowel regularity and improve stool consistency; it may also help with diarrhea in certain cases.",
-      image: benefit3,
-    },
-    {
-      key: "Skin Health",
-      description:
-        "Topical or oral use may enhance skin hydration, smoothness, and reduce sensitivity to irritation.",
-      image: benefit4,
-    },
-    {
-      key: "Potential Cancer Protection",
-      description:
-        "Test-tube and animal studies suggest it could inhibit cancer cell growth in breast, colon, and lung cancers, but human evidence is limited.",
-      image: benefit5,
-    },
-  ];
   const totalDuration = 1000; // ms
 
   // Track which item is currently active (0 = Greensock, 1 = ScrollTrigger, etc.)

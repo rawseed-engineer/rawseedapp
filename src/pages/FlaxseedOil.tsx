@@ -2,7 +2,14 @@ import React from "react";
 import NavMenu from "../ui/nav/nav-menu";
 import Hero from "../ui/flaxseed-oil/hero";
 import Story from "../ui/flaxseed-oil/story";
-import ScrollHighlightSection from "../ui/ScrollHighlightSection";
+import ScrollHighlightSection, {
+  type ScrollHighlightItem,
+} from "../ui/ScrollHighlightSection";
+import benefit1 from "../assets/example1_health_protection.jpg";
+import benefit2 from "../assets/example2_anti_inflammatory.jpg";
+import benefit3 from "../assets/example3_digestive_health.jpg";
+import benefit4 from "../assets/example4_skin_health.jpg";
+import benefit5 from "../assets/example5_cancer_protection.jpg";
 import Footer from "../ui/nav/footer";
 import JoinOurJourney from "../ui/home/joinOurJourney";
 import EmailForm from "../ui/email-form";
@@ -17,6 +24,39 @@ import ProductInformationAccordion from "../ui/Accordion";
 
 const FlaxseedOil: React.FC = () => {
   const nutritionUnit = "per (5ml) teaspoon";
+
+  const scrollItems: ScrollHighlightItem[] = [
+    {
+      key: "Heart Health",
+      description:
+        "It may lower cholesterol levels (total and LDL), reduce blood pressure, and improve artery elasticity, potentially decreasing the risk of heart disease.",
+      image: benefit1,
+    },
+    {
+      key: "Anti-Inflammatory Effects",
+      description:
+        "The ALA in flaxseed oil can help reduce inflammation, which may benefit conditions like rheumatoid arthritis, though evidence is mixed for significant improvements in symptoms.",
+      image: benefit2,
+    },
+    {
+      key: "Digestive Health",
+      description:
+        "It can relieve constipation by promoting bowel regularity and improve stool consistency; it may also help with diarrhea in certain cases.",
+      image: benefit3,
+    },
+    {
+      key: "Skin Health",
+      description:
+        "Topical or oral use may enhance skin hydration, smoothness, and reduce sensitivity to irritation.",
+      image: benefit4,
+    },
+    {
+      key: "Potential Cancer Protection",
+      description:
+        "Test-tube and animal studies suggest it could inhibit cancer cell growth in breast, colon, and lung cancers, but human evidence is limited.",
+      image: benefit5,
+    },
+  ];
 
   const nutritionFacts = [
     {
@@ -162,7 +202,7 @@ const FlaxseedOil: React.FC = () => {
           xl:mx-48 2xl:128"
         > */}
         <section className="py-12">
-          <ScrollHighlightSection />
+          <ScrollHighlightSection items={scrollItems} />
         </section>
 
         <section className="flex-grow overflow-x-auto w-full ">

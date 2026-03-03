@@ -114,7 +114,7 @@ const Story: React.FC = () => {
           </div>
         </div>
       </div>
-      <div ref={addToRefs}>
+      <div className="hidden lg:block" ref={addToRefs}>
         <img
           src={AllOils}
           alt="All RawSeed Oils"
