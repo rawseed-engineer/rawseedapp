@@ -20,7 +20,7 @@ import SkinCare from "../ui/flaxseed-oil/skinCare";
 import FaceSerum from "../ui/flaxseed-oil/faceSerum";
 import ImageHairAndScalp from "../ui/flaxseed-oil/HairAndScalp";
 import ProductInformationAccordion from "../ui/Accordion";
-
+import type { ScrollHighlightItem } from "../ui/ScrollHighlightSection";
 const FlaxseedOil: React.FC = () => {
   const nutritionUnit = "per (5ml) teaspoon";
 

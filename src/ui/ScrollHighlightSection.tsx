@@ -5,7 +5,7 @@ import ScrollDownIndicator from "./ScrollDownIndicator";
 
 gsap.registerPlugin(ScrollTrigger);
 
-interface ScrollHighlightItem {
+export interface ScrollHighlightItem {
   key: string;
   description: string;
   image: string;
@@ -15,7 +15,9 @@ interface ScrollHighlightSectionProps {
   items: ScrollHighlightItem[];
 }
 
-const ScrollHighlightSection: React.FC<ScrollHighlightSectionProps> = ({ items }) => {
+const ScrollHighlightSection: React.FC<ScrollHighlightSectionProps> = ({
+  items,
+}) => {
   const wrapperRef = useRef(null);
   const pinUpRef = useRef(null);
   const contentWrapRef = useRef(null);
