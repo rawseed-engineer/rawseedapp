@@ -11,7 +11,7 @@ const WhatWeDoScrollHighlight = ({ items }: { items: any[] }) => {
   const contentWrapRef = useRef(null);
   const sidelineRef = useRef(null);
   const textRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const totalDuration = 1000; // ms
+  // const totalDuration = 1000; // ms
 
   // Track which item is currently active (0 = Greensock, 1 = ScrollTrigger, etc.)
   const [activeIndex, setActiveIndex] = useState(0);
