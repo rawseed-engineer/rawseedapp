@@ -31,54 +31,88 @@ const WhatWeDoScrollHighlight = ({ items }: { items: any[] }) => {
       .to(sideline, { duration: 0.9, scaleY: 1, ease: "none" }, 0);
 
     // Create ScrollTrigger for pinning and line animation
-    ScrollTrigger.create({
-      trigger: pinUp,
-      start: "top top",
-      end: `+=${totalDuration}`,
-      pin: true,
-      scrub: true,
-      animation: lineTimeline,
-      // markers: true, // uncomment to debug
+    // ScrollTrigger.create({
+    //   trigger: pinUp,
+    //   start: "top top",
+    //   end: `+=${totalDuration}`,
+    //   pin: true,
+    //   scrub: true,
+    //   animation: lineTimeline,
+    //   // markers: true, // uncomment to debug
+    // });
+    // 1. Create a Master Timeline that "scrubs"
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: wrapperRef.current,
+        start: "top top",
+        end: "+=2000", // Adjust this value to control how long it takes to scroll through all items
+        pin: true,
+        scrub: 0.5, // The number adds a slight 'smooth' delay to the scrub
+        invalidateOnRefresh: true,
+      },
     });
 
     // Animate each text item and switch content
     const singleDuration = totalDuration / items.length;
 
-    items.forEach((_, i) => {
-      const smallTimeline = gsap.timeline();
+    // items.forEach((_, i) => {
+    //   const smallTimeline = gsap.timeline();
 
-      ScrollTrigger.create({
-        trigger: wrapper,
-        start: `top -=${singleDuration * i}`,
-        end: `+=${singleDuration}`,
-        animation: smallTimeline,
-        toggleActions:
-          i === items.length - 1
-            ? "play none play reverse"
-            : "play reverse play reverse",
-      });
+    //   ScrollTrigger.create({
+    //     trigger: wrapper,
+    //     start: `top -=${singleDuration * i}`,
+    //     end: `+=${singleDuration}`,
+    //     animation: smallTimeline,
+    //     toggleActions:
+    //       i === items.length - 1
+    //         ? "play none play reverse"
+    //         : "play reverse play reverse",
+    //   });
 
-      smallTimeline
-        .to(
-          textRefs.current[i],
-          {
-            duration: 0.25,
-            color: "#a18458",
-            scale: 1.2,
-            ease: "none",
-          },
-          0,
-        )
-        .call(
-          () => {
-            setActiveIndex(i);
-          },
-          [],
-          0.125,
-        );
-    });
+    //   smallTimeline
+    //     .to(
+    //       textRefs.current[i],
+    //       {
+    //         duration: 0.25,
+    //         color: "#a18458",
+    //         scale: 1.2,
+    //         ease: "none",
+    //       },
+    //       0,
+    //     )
+    //     .call(
+    //       () => {
+    //         setActiveIndex(i);
+    //       },
+    //       [],
+    //       0.125,
+    //     );
+    // });
 
     // Cleanup on unmount
+
+    // 2. Define the animation for each item within the master timeline
+    items.forEach((_, i) => {
+      // Add text highlight animation
+      tl.to(textRefs.current[i], {
+        color: "#a18458",
+        scale: 1.2,
+        duration: 1, // These are relative durations within the timeline
+      })
+        // 3. Update React state exactly when the scroll hits this position
+        .call(() => setActiveIndex(i), null, "<");
+
+      // Optional: Add a pause or transition logic if needed
+      // tl.to({}, { duration: 0.5 });
+    });
+
+    // return () => {
+    //   ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    // };
+    // 4. Line animation
+
+    tl.to(sidelineRef.current, { scaleY: 1, ease: "none" }, 0);
+
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };

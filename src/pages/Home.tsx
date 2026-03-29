@@ -196,11 +196,11 @@ const Home = () => {
           <Vision />
         </section>
 
-        <section className="rounded py-8 mt-12 sm:py-12 mx-1 lg:mx-84">
+        {/* <section className="rounded py-8 mt-12 sm:py-12 mx-1 lg:mx-84">
           <div>
             <TestimonialSlider />
           </div>
-        </section>
+        </section> */}
 
         {/* Contact Us */}
         <section className="rounded py-8 mt-12 sm:py-12 mx-1 lg:mx-84">
