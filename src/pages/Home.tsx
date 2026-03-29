@@ -12,7 +12,7 @@ import Footer from "../ui/nav/footer";
 import Hero from "../ui/home/hero";
 import ColdPressed from "../ui/home/coldPressed";
 import WhatWeDoScrollHighlight from "../ui/home/whatWeDoScrollHighlight";
-import TestimonialSlider from "../ui/TestimonialSlider";
+// import TestimonialSlider from "../ui/TestimonialSlider";
 import benefit1 from "../assets/additives_free.jpg";
 import benefit2 from "../assets/unrefined_oil.jpg";
 import benefit3 from "../assets/nutrient_rich.jpg";
@@ -21,38 +21,38 @@ import benefit4 from "../assets/ethically_sourced.jpg";
 // import ScrollFadeText from "../ui/ScrollFadeText";
 
 const Home = () => {
-  const items = [
-    {
-      key: "Additive-free",
-      description:
-        "Our cold-pressed oils are completely additive-free, meaning we skip the chemicals, preservatives, and artificial enhancers that are common in mass-produced oils. By using a traditional cold-pressing method at low temperatures, we extract the pure essence of sesame, black seed, and flaxseed without any need for solvents or synthetic additives. This results in a cleaner, safer product that's free from harmful residues, allowing you to enjoy the authentic taste and health benefits straight from nature. It's ideal for health-conscious cooks who want to avoid hidden ingredients that could compromise well-being or alter flavors in your favorite dishes.",
-      image: benefit1,
-    },
-    {
-      key: "Unrefined",
-      description:
-        "Unlike refined oils that undergo high-heat processing and bleaching, our oils remain unrefined to preserve their natural integrity. The cold-pressing technique gently crushes the seeds at room temperature, retaining the oils' original color, aroma, and texture without stripping away essential compounds. This means our sesame oil keeps its nutty richness, black seed oil its bold, earthy profile, and flaxseed oil its fresh, mild nuttiness. Unrefined oils like ours are perfect for drizzling over salads, dipping bread, or low-heat cooking, delivering a superior sensory experience and avoiding the blandness of overly processed alternatives.",
-      image: benefit2,
-    },
-    {
-      key: "Packed with nutrients",
-      description:
-        "Cold-pressing ensures our oils are bursting with vital nutrients that heat extraction often destroys. We lock in high levels of antioxidants, omega-3 fatty acids (especially abundant in flaxseed oil), vitamins like E and K, and beneficial compounds such as thymoquinone in black seed oil or lignans in sesame oil. These nutrients support heart health, reduce inflammation, boost immunity, and promote glowing skin—making our oils not just a cooking staple but a wellness booster. Whether you're stirring flaxseed oil into smoothies or using sesame oil in stir-fries, you're getting a nutrient-dense option that enhances your diet without the degradation caused by industrial methods.",
-      image: benefit3,
-    },
-    {
-      key: "Ethically sourced",
-      description:
-        "We commit to ethical sourcing by partnering with sustainable farms that prioritize fair labor practices, environmental stewardship, and seed quality. Our sesame, black seed, and flaxseed come from regions where traditional farming respects the land—avoiding pesticides and supporting biodiversity. This approach not only ensures the highest purity but also contributes to community well-being and eco-friendly agriculture. By choosing our oils, you're supporting a transparent supply chain that values people and the planet, aligning your kitchen choices with responsible consumption for a healthier world.",
-      image: benefit4,
-    },
-    // {
-    //   key: "Potential Cancer Protection",
-    //   description:
-    //     "Test-tube and animal studies suggest it could inhibit cancer cell growth in breast, colon, and lung cancers, but human evidence is limited.",
-    //   image: benefit5,
-    // },
-  ];
+  // const items = [
+  //   {
+  //     key: "Additive-free",
+  //     description:
+  //       "Our cold-pressed oils are completely additive-free, meaning we skip the chemicals, preservatives, and artificial enhancers that are common in mass-produced oils. By using a traditional cold-pressing method at low temperatures, we extract the pure essence of sesame, black seed, and flaxseed without any need for solvents or synthetic additives. This results in a cleaner, safer product that's free from harmful residues, allowing you to enjoy the authentic taste and health benefits straight from nature. It's ideal for health-conscious cooks who want to avoid hidden ingredients that could compromise well-being or alter flavors in your favorite dishes.",
+  //     image: benefit1,
+  //   },
+  //   {
+  //     key: "Unrefined",
+  //     description:
+  //       "Unlike refined oils that undergo high-heat processing and bleaching, our oils remain unrefined to preserve their natural integrity. The cold-pressing technique gently crushes the seeds at room temperature, retaining the oils' original color, aroma, and texture without stripping away essential compounds. This means our sesame oil keeps its nutty richness, black seed oil its bold, earthy profile, and flaxseed oil its fresh, mild nuttiness. Unrefined oils like ours are perfect for drizzling over salads, dipping bread, or low-heat cooking, delivering a superior sensory experience and avoiding the blandness of overly processed alternatives.",
+  //     image: benefit2,
+  //   },
+  //   {
+  //     key: "Packed with nutrients",
+  //     description:
+  //       "Cold-pressing ensures our oils are bursting with vital nutrients that heat extraction often destroys. We lock in high levels of antioxidants, omega-3 fatty acids (especially abundant in flaxseed oil), vitamins like E and K, and beneficial compounds such as thymoquinone in black seed oil or lignans in sesame oil. These nutrients support heart health, reduce inflammation, boost immunity, and promote glowing skin—making our oils not just a cooking staple but a wellness booster. Whether you're stirring flaxseed oil into smoothies or using sesame oil in stir-fries, you're getting a nutrient-dense option that enhances your diet without the degradation caused by industrial methods.",
+  //     image: benefit3,
+  //   },
+  //   {
+  //     key: "Ethically sourced",
+  //     description:
+  //       "We commit to ethical sourcing by partnering with sustainable farms that prioritize fair labor practices, environmental stewardship, and seed quality. Our sesame, black seed, and flaxseed come from regions where traditional farming respects the land—avoiding pesticides and supporting biodiversity. This approach not only ensures the highest purity but also contributes to community well-being and eco-friendly agriculture. By choosing our oils, you're supporting a transparent supply chain that values people and the planet, aligning your kitchen choices with responsible consumption for a healthier world.",
+  //     image: benefit4,
+  //   },
+  //   // {
+  //   //   key: "Potential Cancer Protection",
+  //   //   description:
+  //   //     "Test-tube and animal studies suggest it could inhibit cancer cell growth in breast, colon, and lung cancers, but human evidence is limited.",
+  //   //   image: benefit5,
+  //   // },
+  // ];
 
   return (
     <>

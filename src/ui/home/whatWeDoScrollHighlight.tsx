@@ -17,8 +17,8 @@ const WhatWeDoScrollHighlight = ({ items }: { items: any[] }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    const wrapper = wrapperRef.current;
-    const pinUp = pinUpRef.current;
+    // const wrapper = wrapperRef.current;
+    // const pinUp = pinUpRef.current;
     const sideline = sidelineRef.current;
 
     // Hide all content except the initial one
@@ -53,7 +53,7 @@ const WhatWeDoScrollHighlight = ({ items }: { items: any[] }) => {
     });
 
     // Animate each text item and switch content
-    const singleDuration = totalDuration / items.length;
+    // const singleDuration = totalDuration / items.length;
 
     // items.forEach((_, i) => {
     //   const smallTimeline = gsap.timeline();
@@ -100,7 +100,7 @@ const WhatWeDoScrollHighlight = ({ items }: { items: any[] }) => {
         duration: 1, // These are relative durations within the timeline
       })
         // 3. Update React state exactly when the scroll hits this position
-        .call(() => setActiveIndex(i), null, "<");
+        .call(() => setActiveIndex(i), [], "<");
 
       // Optional: Add a pause or transition logic if needed
       // tl.to({}, { duration: 0.5 });
