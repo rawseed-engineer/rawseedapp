@@ -6,6 +6,8 @@ interface BookingCardProps {
   title: string;
   description?: string;
   buttonText?: string;
+  imageSize?: string;
+  imagePosition?: string;
 }
 
 export default function BookingCard({
@@ -13,15 +15,22 @@ export default function BookingCard({
   title,
   description,
   buttonText = "Order Now",
+  imageSize = "cover",
+  imagePosition = "center center",
 }: BookingCardProps) {
   return (
     <div
       className={`
         group relative w-[350px] h-[650px] flex-shrink-0 overflow-hidden rounded-2xl
-        bg-cover bg-center text-center shadow-xl transition-all duration-500
+        text-center shadow-xl transition-all duration-500
         hover:shadow-2xl
       `}
-      style={{ backgroundImage: `url(${imageUrl})` }}
+      style={{
+        backgroundImage: `url(${imageUrl})`,
+        backgroundSize: imageSize,
+        backgroundPosition: imagePosition,
+        backgroundRepeat: "no-repeat",
+      }}
     >
       {/* Dark overlay on hover */}
       <div

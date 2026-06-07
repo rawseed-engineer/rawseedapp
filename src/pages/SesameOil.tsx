@@ -58,7 +58,7 @@ const SesameOil = () => {
             <b>Sesame Seed</b> Oil
           </div>
           <div>
-            For allergens see ingredents in <b>bold</b>
+            For allergens see ingredients in <b>bold</b>
           </div>
         </div>
       ),

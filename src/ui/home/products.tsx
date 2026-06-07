@@ -2,8 +2,8 @@
 
 import React from "react";
 import BlackSeedOilBottle from "../../assets/bottle_blackseed.jpg";
-import SesameSeedOilBottle from "../../assets/bottle_sesame_seed.jpg";
-import FlaxSeedOilBottle from "../../assets/bottle_flaxseed.jpg";
+import SesameSeedOilBottle from "../../assets/bottle_sesame_seed.png";
+import FlaxSeedOilBottle from "../../assets/bottle_flaxseed.png";
 import GoldenDropLogo from "../../assets/golden_drop_logo.svg";
 
 import { useTranslation } from "react-i18next";
@@ -117,6 +117,8 @@ const Products: React.FC = () => {
             title="Sesame Seed Oil"
             description={t("products.sesame.description")}
             buttonText="Order Now"
+            imageSize="100%"
+            imagePosition="center 60%"
           />
         </div>
 
@@ -126,6 +128,8 @@ const Products: React.FC = () => {
             title="Flaxseed Oil"
             description={t("products.flaxseed.description")}
             buttonText="Order Now"
+            imageSize="125%"
+            imagePosition="center 60%"
           />
         </div>
 

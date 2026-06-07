@@ -1,6 +1,6 @@
 // components/ShoppingHelpAccordion.jsx
 import { useState } from "react";
-import SesameSeedOilBottle from "../assets/bottle_sesame_seed.jpg";
+import SesameSeedOilBottle from "../assets/bottle_sesame_seed.png";
 import { useTranslation } from "react-i18next";
 
 interface ProductInformationProps {
