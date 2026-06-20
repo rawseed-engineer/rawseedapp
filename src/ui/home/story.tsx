@@ -82,7 +82,7 @@ const Story: React.FC = () => {
               className="text-balance text-[#a18458] text-shadow-lg
             "
             >
-              {t("story.expand")}
+              <i>{t("story.expand")}</i>
             </span>
             <span
               className="after:content-['\2193'] w-[2em] h-[2em] text-[#a18458] text-center transform
@@ -102,13 +102,15 @@ const Story: React.FC = () => {
             ease-in-out
             peer-has-checked:max-h-200"
           >
-            <p className="text-pretty text-justify text-2xl">
+            <p className="text-pretty text-justify text-2xl mb-6">
               {t("story.description.p3")}
             </p>
-            <p className="text-pretty text-justify text-2xl">
-              {t("story.description.p4")}
+            <p className="text-pretty text-justify text-2xl mb-6">
+              {t("story.description.p4.text1")}
+              <i>{t("story.description.p4.text2")}</i>
+              {t("story.description.p4.text3")}
             </p>
-            <p className="text-pretty text-justify text-2xl">
+            <p className="text-pretty text-justify text-2xl mb-6">
               {t("story.description.p5")}
             </p>
           </div>

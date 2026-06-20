@@ -137,15 +137,15 @@ const Home = () => {
           <WhatWeDoScrollHighlight
             items={[
               {
-                key: "Additive-free",
+                key: "Free of Additives",
                 description:
-                  "Our cold-pressed oils are completely additive-free, meaning we skip the chemicals, preservatives, and artificial enhancers that are common in mass-produced oils. By using a traditional cold-pressing method at low temperatures, we extract the pure essence of sesame, black seed, and flaxseed without any need for solvents or synthetic additives. This results in a cleaner, safer product that's free from harmful residues, allowing you to enjoy the authentic taste and health benefits straight from nature. It's ideal for health-conscious cooks who want to avoid hidden ingredients that could compromise well-being or alter flavors in your favorite dishes.",
+                  "Our cold-pressed oils are completely additive-free. We avoid the chemicals, preservatives and artificial enhancers that are common in mass-produced oils. By using a traditional cold-pressing method at low temperatures, we extract the pure essence of sesame, black seed and flaxseed, without any need for solvents or synthetic additives. This results in a cleaner, safer product free from harmful residues, allowing you to enjoy the true taste and health benefits straight from nature. It's ideal for health-conscious cooks who want to avoid hidden ingredients that could compromise well-being or alter flavours in your favorite dishes.",
                 image: benefit1,
               },
               {
                 key: "Unrefined",
                 description:
-                  "Unlike refined oils that undergo high-heat processing and bleaching, our oils remain unrefined to preserve their natural integrity. The cold-pressing technique gently crushes the seeds at room temperature, retaining the oils' original color, aroma, and texture without stripping away essential compounds. This means our sesame oil keeps its nutty richness, black seed oil its bold, earthy profile, and flaxseed oil its fresh, mild nuttiness. Unrefined oils like ours are perfect for drizzling over salads, dipping bread, or low-heat cooking, delivering a superior sensory experience and avoiding the blandness of overly processed alternatives.",
+                  "Unlike refined oils that undergo high-heat processing and bleaching, our oils remain unrefined to preserve their natural integrity. The cold-pressing technique gently crushes the seeds at room temperature, retaining the oils' original colour, aroma and texture without removing essential compounds. This means our sesame oil keeps its nutty richness, black seed oil its bold, earthy profile, and flaxseed oil its fresh, mild nuttiness. Unrefined oils like ours are perfect for drizzling over salads, dipping bread or low-heat cooking, delivering a superior taste and avoiding the blandness of overly processed alternatives.",
                 image: benefit2,
               },
               {
@@ -157,7 +157,7 @@ const Home = () => {
               {
                 key: "Ethically sourced",
                 description:
-                  "We commit to ethical sourcing by partnering with sustainable farms that prioritize fair labor practices, environmental stewardship, and seed quality. Our sesame, black seed, and flaxseed come from regions where traditional farming respects the land—avoiding pesticides and supporting biodiversity. This approach not only ensures the highest purity but also contributes to community well-being and eco-friendly agriculture. By choosing our oils, you're supporting a transparent supply chain that values people and the planet, aligning your kitchen choices with responsible consumption for a healthier world.",
+                  "We always seek to work with sustainable farms that prioritise fair labour practices and good seed quality. Our sesame, black seed, and flaxseed come from regions where traditional farming respects the land, avoiding pesticides and supporting biodiversity. This approach ensures natural purity. By choosing our oils, you're supporting a supply chain that values the natural environment, and your kitchen choices support your family’s health.",
                 image: benefit4,
               },
             ]}

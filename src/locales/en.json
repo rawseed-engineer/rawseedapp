@@ -27,18 +27,22 @@
   "story": {
     "title": "Our Story",
     "description": {
-      "p1": "RawSeed began with a simple question: What if oil could be made the way it used to be—slow, clean, and full of life?",
-      "p2": "Disheartened by the rise of over-processed, chemically refined oils, we set out to create an alternative. Drawing on generations of knowledge and inspired by traditional methods, we established RawSeed to produce oils that are not only healthy, but also meaningful.",
-      "p3": "We saw a growing need for transparency in food and wellness products. So we took a different path: back to the roots.",
-      "p4": "We come from families that value natural remedies and time-honoured foods. Inspired by this heritage, we studied traditional oil pressing techniques across cultures—from ancient Anatolian sesame presses to the rich herbal traditions of the Middle East. We travelled, studied, and built partnerships with trusted growers—starting with sesame seeds sourced from rich soils in Afghanistan and Nigella sativa seeds carefully harvested in regions with long-standing herbal traditions.",
-      "p5": "What we found was powerful: nature doesn't need to be altered to be effective—it just needs to be respected."
+      "p1": "RawSeed began with a simple question: What if oil could be made the way it used to be—slowly and full of natural goodness?",
+      "p2": "We set out to create an alternative to the over-processed, chemically refined oils found on supermarket shelves today. Inspired by traditional methods and drawing on generations of knowledge, we established RawSeed to produce oils that are healthy and tasteful.",
+      "p3": "The production of food and wellness products should be clear and transparent. We decided to take a different path and return to our family traditions.",
+      "p4": {
+        "text1": "We come from families that value natural remedies and time-honoured foods. Inspired by this heritage, we studied traditional oil pressing techniques across cultures, from ancient Anatolian sesame presses to the rich herbal traditions of the Middle East. We built partnerships with trusted growers, starting with sesame seeds sourced from rich soils in Afghanistan and ",
+        "text2": "Nigella sativa ",
+        "text3": "seeds harvested in regions with long-standing herbal traditions."
+      },
+      "p5": "We found that nature doesn't need to be altered to be effective; it just needs to be respected."
     },
     "expand": "Read more"
   },
   "what_we_do": {
     "title": "What We Do",
     "p1": "We produce and supply 100% cold-pressed oils that are:",
-    "item1": "Additive-free",
+    "item1": "Free of Additives",
     "item2": "Unrefined",
     "item3": "Packed with nutrients",
     "item4": "Ethically sourced",
