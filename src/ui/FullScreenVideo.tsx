@@ -42,7 +42,7 @@ const FullScreenVideo = () => {
             toggleActions: "play none none reverse",
             // markers: true, // Remove in production
           },
-        }
+        },
       );
     }, containerRef);
 
@@ -109,7 +109,7 @@ const FullScreenVideo = () => {
                 onClick={handlePlay}
                 className="bg-red-600 text-white px-6 py-3 mt-3 rounded-full text-lg font-semibold hover:bg-red-700 transition"
               >
-                Watch Video
+                <i>Watch Video</i>
               </button>
             </div>
           </div>

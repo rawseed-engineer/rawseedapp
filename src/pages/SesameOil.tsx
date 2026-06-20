@@ -106,11 +106,11 @@ const SesameOil = () => {
     },
     {
       title: "Storage Instructions",
-      content: "Store in a cool dry place away from heat source and direct sun",
+      content: "Store in a cool dry place away from heat sources or direct sun",
     },
     {
       title: "Suitable For",
-      content: "Vegans, Vegetarians, Halal, Kosher",
+      content: "Vegetarians, Vegans, Kosher, Halal",
     },
   ];
 
