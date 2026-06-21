@@ -7,7 +7,7 @@
     "home": {
       "title": "Welcome to RawSeed",
       "subtitle": "Wholesome Oils for Healthy Living",
-      "description": "At RawSeed, we believe that nature holds the key to true nourishment. Founded in the United Kingdom, our mission is to reconnect people with the wholesome nutrition of traditional natural oils, pure and unrefined. We specialise in the production of cold-pressed sesame oil, flaxseed oil and black seed oil under our flagship brand: Golden Drop.",
+      "description": "At RawSeed, we believe that nature holds the key to true nourishment. Founded in Great Britain, our mission is to reconnect people with the honest nutritional strength of natural oils—pure, unrefined and rooted in tradition. We specialise in the production of cold-pressed sesame oil and black seed oil, proudly presented under our flagship brand: Golden Drop.",
       "learn": "Contact us"
     },
     "sesame_oil": {
@@ -151,13 +151,19 @@
     "hero": {
       "title": "Why Black Seed Oil?",
       "subtitle": "A Drop of Tradition. A Lifetime of Benefits.",
-      "description": "For centuries, black seed oil has been revered as a healing remedy across cultures and continents. Known as the “Oil of the Pharaohs” and mentioned in ancient medical texts, it is now gaining global recognition for its powerful natural benefits. At RawSeed, we’re proud to produce premium, cold-pressed black seed oil that honours this timeless legacy.",
+      "description": "For centuries, black seed oil has been revered as a healing remedy across cultures and continents. Known as the “Oil of the Pharaohs” it was mentioned in ancient medical texts and is now gaining global recognition for its powerful natural benefits. At RawSeed, we’re proud to produce premium, cold-pressed black seed oil that honours this timeless legacy.",
       "learn": "Contact us"
     },
     "story": {
       "title": "The Legacy of Black Seed",
-      "p1": "Black seed oil is pressed from the seeds of Nigella sativa, a flowering plant native to South and Southwest Asia. These tiny black seeds—also known as black cumin, kalonji, or habbat al-barakah (the blessed seed)—have been used for over 2,000 years in traditional healing systems like Unani, Ayurveda, and Islamic medicine.",
-      "p2": "It was found in the tomb of King Tutankhamun, praised by Hippocrates, and famously referenced in hadith as a remedy for “every disease except death”.",
+      "p1": {
+        "sentence1": "Black seed oil is pressed from the seeds of ",
+        "sentence2": "Nigella sativa",
+        "sentence3": ", a flowering plant native to south and southwest Asia. These tiny black seeds—also known as black cumin, kalonji, or ",
+        "sentence4": "habbat al-barakah",
+        "sentence5": " (the blessed seed)—have been used for over 2,000 years in traditional healing systems like Unani, Ayurveda and Islamic medicine."
+      },
+      "p2": "It was found in the tomb of King Tutankhamun, praised by Hippocrates and referred to in Hadith as a remedy for “every disease except death.”",
       "p3": "At RawSeed, we extract this oil using traditional cold-pressing methods, without heat or chemicals, to preserve its full potency and purity."
     },
     "why_special": "What Makes Black Seed Oil Special?",
@@ -169,9 +175,9 @@
       "title": "Skin, Hair Beauty",
       "p1": "Used topically, black seed oil can:",
       "description": "Used topically, black seed oil can:",
-      "item1": "Soothe dry or irritated skin",
-      "item2": "Support scalp health and promote hair growth",
-      "item3": "Help reduce acne and inflammation. It’s a favourite in natural skincare and beauty routines"
+      "item1": "Soothe dry or irritated skin,",
+      "item2": "Support scalp health and promote hair growth,",
+      "item3": "Help reduce acne and inflammation. It’s a favourite in natural skincare and beauty routines."
     },
     "peaceful_mind_body": {
       "title": "Mind & Body Balance",
@@ -204,21 +210,21 @@
   "flaxseed_oil": {
     "hero": {
       "title": "Pure Cold-Pressed Flaxseed Oil",
-      "subtitle": "Rich in Omega-3s for Heart Health, Radiant Skin, and Overall Vitality",
-      "description": "Golden Drop premium cold-pressed flaxseed oil is extracted without heat or chemicals, preserving the highest levels of alpha-linolenic acid (ALA) – nature's most potent plant-based omega-3. This golden treasure delivers exceptional nutritional benefits, from supporting cardiovascular wellness to promoting glowing skin and reducing inflammation. Elevate your daily routine with this pure, unrefined superfood oil for a healthier, more vibrant you.",
+      "subtitle": "RRich in Omega-3s for Heart Health, Radiant Skin and Overall Vitality",
+      "description": "Golden Drop premium cold-pressed flaxseed oil is extracted without heat or chemicals, preserving the highest levels of alpha-linolenic acid (ALA), nature's most potent plant-based omega-3. This golden treasure delivers exceptional nutritional benefits, from supporting cardiovascular wellness and promoting glowing skin to reducing inflammation. Lift your daily routine with this pure, unrefined superfood oil for greater health and vitality.",
       "learn": "Contact us"
     },
     "story": {
       "title": "The Golden Elixir for Culinary Delights and Radiant Skincare",
       "description": {
-        "p1": "In a world where wellness meets sustainability, cold-pressed flaxseed oil emerges as a versatile powerhouse, harvested from the tiny yet mighty flax seeds. Unlike refined oils that undergo high-heat processing, our cold-pressed method gently extracts the oil at low temperatures, preserving its natural integrity and locking in a treasure trove of nutrients. This pure, unadulterated approach ensures you get the full spectrum of benefits—think vibrant golden hues, a subtle nutty flavor, and an abundance of health-boosting compounds that heat-sensitive alternatives simply can't match.",
-        "p2": "At the heart of flaxseed oil's appeal is its exceptional nutrient profile, amplified by the cold-pressing technique. It's brimming with alpha-linolenic acid (ALA), a plant-based omega-3 fatty acid that makes up over 50% of its composition. This essential nutrient supports heart health by helping to lower cholesterol and reduce inflammation, while antioxidants like lignans combat oxidative stress for overall vitality. The cold-pressed process safeguards these delicate elements from degradation, delivering higher levels of vitamins E and B, along with minerals that promote glowing skin and strong hair. No solvents, no additives—just nature's finest in every drop.",
-        "p3": "What sets cold-pressed flaxseed oil apart is its role as a compassionate, eco-friendly alternative to animal-based omega-3 sources like fish oil. For vegans, vegetarians, or anyone seeking sustainable options, it provides a clean, plant-derived way to meet omega-3 needs without the environmental concerns tied to overfishing or potential contaminants in marine sources. Backed by studies showing ALA's conversion to EPA and DHA in the body, it's a smart swap that aligns with modern lifestyles focused on plant-powered nutrition."
+        "p1": "In the world of wellness and sustainability, cold-pressed flaxseed oil is a versatile powerhouse, harvested from tiny yet mighty flax seeds. Unlike refined oils that undergo high-heat processing, our cold-pressed method gently extracts the oil at low temperatures, preserving its natural integrity and locking in a treasure trove of nutrients. This pure, unadulterated approach ensures you get the full spectrum of benefits: golden hues, a subtle nutty flavour and an abundance of health-boosting compounds that heat-sensitive alternatives simply can't match.",
+        "p2": "Central to flaxseed oil's appeal is its exceptional nutrient profile, preserved by the cold-pressing technique. It's brimming with alpha-linolenic acid (ALA), a plant-based omega-3 fatty acid that makes up over 50% of its composition. This essential nutrient supports heart health by helping to lower cholesterol and reduce inflammation, while antioxidants like lignans combat oxidative stress for overall vitality. The cold-pressed process safeguards these delicate elements from degradation, delivering higher levels of vitamins E and B, along with minerals that promote glowing skin and strong hair. No solvents, no additives—just nature's finest in every drop.",
+        "p3": "What sets cold-pressed flaxseed oil apart is its role as an eco-friendly alternative to animal-based omega-3 sources like fish oil. For vegans, vegetarians or anyone seeking sustainable options, it provides a clean, plant-derived source of essential omega-3s without the environmental concerns tied to overfishing or potential contaminants in marine sources. Backed by studies showing ALA's conversion to EPA and DHA in the body, cold-pressed flaxseed aligns with lifestyles focused on plant-based nutrition."
       },
       "expand": "Read more"
     },
     "use_cases": {
-      "title": "Elevate Your Meals with Nutrient-Rich Flavor",
+      "title": "Elevate Your Meals with Nutrient-Rich Flavour",
       "p1": "Cold-pressed flaxseed oil is a culinary gem and a skincare essential. Its mild, nutty flavor enhances salads, smoothies, and dips, while its nourishing properties make it a favorite for moisturizing skin and strengthening hair. Whether drizzled over dishes or applied topically, this oil offers a natural boost for overall wellness.",
       "smoothie": {
         "title": "Smoothie Boost for Daily Wellness",
@@ -231,10 +237,10 @@
     },
     "skin_health": {
       "title": "Skincare Secrets; Nourish from the Outside In",
-      "description": "Beyond the kitchen, cold-pressed flaxseed oil is a skincare savior, harnessing its nutrient density for topical bliss. Its lightweight texture absorbs quickly, delivering hydration without greasiness.",
+      "description": "Beyond the kitchen, cold-pressed flaxseed oil is a skincare saviour, harnessing its nutrient density. Its lightweight texture absorbs quickly, hydrating the skin without greasiness.",
       "skin": {
         "title": "Moisturizing Face Serum",
-        "description": "Mix a few drops with your favorite carrier oil or apply directly to damp skin post-cleansing. The high ALA content soothes irritation and balances oil production, ideal for acne-prone or mature skin types seeking reduced fine lines and a radiant glow—users often notice improved texture and elasticity within weeks."
+        "description": "Mix a few drops with your favourite carrier oil or apply directly to damp skin after cleansing. The high ALA content soothes irritation and balances oil production, ideal for acne-prone or mature skin types seeking reduced fine lines and a radiant glow. Users often notice improved texture and elasticity within weeks."
       },
       "hair": {
         "title": "Hair and Scalp Treatment",
@@ -244,11 +250,11 @@
   },
   "about_us": {
     "title": "Our RawSeed Team",
-    "subtitle": "Build the healthy future together",
+    "subtitle": "Building a healthy future together",
     "mission": "Our Mission",
     "vision": {
       "title": "Our Vision",
-      "p1": "We dream of a world where natural, honest food is once again cherished and within everyone’s reach—food made with intention, from carefully chosen ingredients and time-honoured traditional methods that preserve authenticity, flavour, and nourishment. Through our pure, sustainably produced cold-pressed oils and the expanding range that will follow the same uncompromising principles, we aim to honour the wisdom of the past while inspiring people today to rediscover the joy and value of real food."
+      "p1": "We seek a world where natural, honest food is cherished and within reach of everyone: food made with intention, from carefully chosen ingredients and time-honoured traditional methods that preserve authenticity, flavour and nourishment. Through our pure, sustainably produced cold-pressed oils and our expanding range, that will follow the same uncompromising principles, we aim to honour the wisdom of the past while inspiring people today to rediscover the joy and value of real, natural and wholesome foods."
     },
     "values": "Our Values",
     "team": "Our Team"

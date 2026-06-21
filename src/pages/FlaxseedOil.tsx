@@ -28,31 +28,31 @@ const FlaxseedOil: React.FC = () => {
     {
       key: "Heart Health",
       description:
-        "It may lower cholesterol levels (total and LDL), reduce blood pressure, and improve artery elasticity, potentially decreasing the risk of heart disease.",
+        "May lower cholesterol levels (total and LDL), reduce blood pressure and improve artery elasticity, potentially decreasing the risk of heart disease.",
       image: benefit1,
     },
     {
       key: "Anti-Inflammatory Effects",
       description:
-        "The ALA in flaxseed oil can help reduce inflammation, which may benefit conditions like rheumatoid arthritis, though evidence is mixed for significant improvements in symptoms.",
+        "The ALA in flaxseed oil can help reduce inflammation, which may benefit conditions like rheumatoid arthritis (although evidence is mixed for significant improvements in symptoms).",
       image: benefit2,
     },
     {
       key: "Digestive Health",
       description:
-        "It can relieve constipation by promoting bowel regularity and improve stool consistency; it may also help with diarrhea in certain cases.",
+        "Can relieve constipation by promoting bowel regularity and improve stool consistency; it may also help with diarrhoea in certain cases.",
       image: benefit3,
     },
     {
       key: "Skin Health",
       description:
-        "Topical or oral use may enhance skin hydration, smoothness, and reduce sensitivity to irritation.",
+        "Topical or oral use may enhance skin hydration, smoothness and reduce sensitivity to irritation.",
       image: benefit4,
     },
     {
       key: "Potential Cancer Protection",
       description:
-        "Test-tube and animal studies suggest it could inhibit cancer cell growth in breast, colon, and lung cancers, but human evidence is limited.",
+        "Test-tube and animal studies suggest that flaxseed may inhibit cancer cell growth in breast, colon and lung cancers. (Evidence in human cancers is limited.)",
       image: benefit5,
     },
   ];

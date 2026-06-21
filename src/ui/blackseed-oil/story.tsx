@@ -68,7 +68,11 @@ const Story: React.FC = () => {
           {t("blackseed_oil.story.title")}
         </h1>
         <p className="text-pretty text-justify text-2xl">
-          {t("blackseed_oil.story.p1")}
+          {t("blackseed_oil.story.p1.sentence1")}
+          <i>{t("blackseed_oil.story.p1.sentence2")}</i>
+          {t("blackseed_oil.story.p1.sentence3")}
+          <i>{t("blackseed_oil.story.p1.sentence4")}</i>
+          {t("blackseed_oil.story.p1.sentence5")}
         </p>
         <p className="text-pretty text-justify text-2xl">
           {t("blackseed_oil.story.p2")}
