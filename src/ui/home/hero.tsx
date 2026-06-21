@@ -9,48 +9,103 @@ import ImageGoldenDropCircle from "../../assets/golden_drop_circle.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Hero: React.FC = () => {
+interface HeroProps {
+  staggerDelay?: number;
+  initialDelay?: number;
+  titleDuration?: number;
+  subtitleDuration?: number;
+  logoDuration?: number;
+  descriptionDuration?: number;
+  circleDuration?: number;
+}
+
+const Hero: React.FC<HeroProps> = ({
+  staggerDelay = 0.8,
+  initialDelay = 0,
+  titleDuration = 1,
+  subtitleDuration = 2,
+  logoDuration = 1,
+  descriptionDuration = 10,
+  circleDuration = 1,
+}) => {
   const { t } = useTranslation();
 
   const containerRef = useRef<HTMLDivElement>(null);
-  const heroMessagesRefs = useRef<HTMLParagraphElement[]>([]);
+  const logoRef = useRef<HTMLImageElement | null>(null);
+  const titleRef = useRef<HTMLHeadingElement | null>(null);
+  const subtitleRef = useRef<HTMLHeadingElement | null>(null);
+  const descriptionRef = useRef<HTMLParagraphElement | null>(null);
+  const circleRef = useRef<HTMLImageElement | null>(null);
 
   useEffect(() => {
-    const elements = heroMessagesRefs.current;
-
     // Create one ScrollTrigger for the entire container
     const ctx = gsap.context(() => {
-      gsap.fromTo(
-        elements,
-        {
-          opacity: 0,
-          y: 60,
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 10%", // When the container hits 10% of viewport
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+          // markers: true, // Remove in production
         },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          ease: "power3.out",
-          stagger: 0.8, // This is the magic: each item delays by 0.2s
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top 10%", // When the container hits 75% of viewport
-            end: "bottom 20%",
-            toggleActions: "play none none reverse",
-            // markers: true, // Remove in production
-          },
-        },
-      );
+      });
+
+      if (logoRef.current) {
+        tl.fromTo(
+          logoRef.current,
+          { opacity: 0, y: 60 },
+          { opacity: 1, y: 0, duration: logoDuration },
+          initialDelay,
+        );
+      }
+
+      if (titleRef.current) {
+        tl.fromTo(
+          titleRef.current,
+          { opacity: 0, y: 60 },
+          { opacity: 1, y: 0, duration: titleDuration },
+          logoRef.current ? `+=${staggerDelay}` : initialDelay,
+        );
+      }
+
+      if (subtitleRef.current) {
+        tl.fromTo(
+          subtitleRef.current,
+          { opacity: 0, y: 60 },
+          { opacity: 1, y: 0, duration: subtitleDuration },
+          `+=${staggerDelay}`,
+        );
+      }
+
+      if (descriptionRef.current) {
+        tl.fromTo(
+          descriptionRef.current,
+          { opacity: 0, y: 60 },
+          { opacity: 1, y: 0, duration: descriptionDuration },
+          `+=${staggerDelay}`,
+        );
+      }
+
+      if (circleRef.current) {
+        tl.fromTo(
+          circleRef.current,
+          { opacity: 0, y: 60 },
+          { opacity: 1, y: 0, duration: circleDuration },
+          `+=${staggerDelay}`,
+        );
+      }
     }, containerRef);
 
     return () => ctx.revert(); // Cleanup on unmount
-  }, []);
-
-  const addToRefs = (el: HTMLParagraphElement | null) => {
-    if (el && !heroMessagesRefs.current.includes(el)) {
-      heroMessagesRefs.current.push(el);
-    }
-  };
+  }, [
+    initialDelay,
+    staggerDelay,
+    titleDuration,
+    subtitleDuration,
+    logoDuration,
+    descriptionDuration,
+    circleDuration,
+  ]);
 
   return (
     <>
@@ -66,7 +121,7 @@ const Hero: React.FC = () => {
           <div className="flex items-center justify-center">
             {/* Hide Logo in mobile view */}
             <img
-              ref={addToRefs}
+              ref={logoRef}
               src={RawSeedLogo}
               alt="RawSeed Logo"
               className="block md:hidden
@@ -77,7 +132,7 @@ const Hero: React.FC = () => {
           </div>
           {/* Hero Heading */}
           <h1
-            ref={addToRefs}
+            ref={titleRef}
             className="hidden md:block
             text-balance 
             text-4xl sm:text-5xl md:text-6xl lg:text-7xl
@@ -87,7 +142,7 @@ const Hero: React.FC = () => {
             {t("hero.home.title")}
           </h1>
           <h2
-            ref={addToRefs}
+            ref={subtitleRef}
             className="hidden md:block 
             text-balance 
             text-2xl sm:text-2xl md:text-2xl lg:text-2xl 
@@ -100,7 +155,7 @@ const Hero: React.FC = () => {
           </h2>
           {/* Hero Description */}
           <p
-            ref={addToRefs}
+            ref={descriptionRef}
             className="hidden md:block 
             text-pretty text-white 
             text-2xl 
@@ -112,7 +167,7 @@ const Hero: React.FC = () => {
           </p>
           <div className="flex justify-center">
             <img
-              ref={addToRefs}
+              ref={circleRef}
               src={ImageGoldenDropCircle}
               alt="Golden Drop Circle Logo"
               className="h-[10rem] lg:h-[15rem] drop-shadow-lg"
