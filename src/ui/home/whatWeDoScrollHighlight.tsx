@@ -45,10 +45,16 @@ const WhatWeDoScrollHighlight = ({ items }: { items: any[] }) => {
       scrollTrigger: {
         trigger: wrapperRef.current,
         start: "top top",
-        end: "+=2000", // Adjust this value to control how long it takes to scroll through all items
+        end: "+=1000", // Total scroll distance for the pinned section
         pin: true,
         scrub: 0.5, // The number adds a slight 'smooth' delay to the scrub
         invalidateOnRefresh: true,
+        snap: {
+          snapTo: 1 / Math.max(items.length - 1, 1),
+          duration: 0.2,
+          delay: 0,
+          ease: "power1.inOut",
+        },
       },
     });
 
