@@ -131,7 +131,7 @@ const Hero: React.FC<HeroProps> = ({
             />
           </div>
           {/* Hero Heading */}
-          <h1
+          {/* <h1
             ref={titleRef}
             className="hidden md:block
             text-balance 
@@ -140,8 +140,8 @@ const Hero: React.FC<HeroProps> = ({
             font-bold text-white  mb-5 mt-5"
           >
             {t("hero.home.title")}
-          </h1>
-          <h2
+          </h1> */}
+          <h1
             ref={subtitleRef}
             className="hidden md:block 
             text-balance 
@@ -152,7 +152,7 @@ const Hero: React.FC<HeroProps> = ({
             <ShineText className="font-bold" duration="10s">
               {t("hero.home.subtitle")}
             </ShineText>
-          </h2>
+          </h1>
           {/* Hero Description */}
           <p
             ref={descriptionRef}

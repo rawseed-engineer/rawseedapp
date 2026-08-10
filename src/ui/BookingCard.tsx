@@ -33,10 +33,16 @@ export default function BookingCard({
       }}
     >
       {/* Dark overlay on hover */}
-      <div
+      {/* <div
         className="
         absolute inset-0 bg-gradient-to-t  from-[#a67c00] to-transparent 
         opacity-0 transition-opacity duration-500 group-hover:opacity-100
+      "
+      /> */}
+      <div
+        className="
+        absolute inset-0 bg-yellow-500/100 
+        opacity-0 transition-opacity duration-500 group-hover:opacity-70
       "
       />
 
@@ -79,7 +85,7 @@ export default function BookingCard({
         group-hover:translate-y-[-206px]
       "
       >
-        <div className="mb-4 mt-24 flex items-center justify-center">
+        {/* <div className="mb-4 mt-24 flex items-center justify-center">
           <img
             src={GoldenDropOnlyLogo}
             alt="Golden Drop Logo"
@@ -88,13 +94,14 @@ export default function BookingCard({
           <h2 className="my-0 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl">
             {title}
           </h2>
-        </div>
+        </div> */}
 
         {/* Extra details – fade in */}
         <div
           className="
           mt-2 opacity-0 transition-opacity duration-700 
           group-hover:opacity-100 md:group-hover:opacity-100
+          mt-50
         "
         >
           <div className="">
