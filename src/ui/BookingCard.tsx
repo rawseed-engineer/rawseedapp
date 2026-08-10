@@ -3,7 +3,7 @@ import VeganIcon from "../assets/vegan-icon.png";
 
 interface BookingCardProps {
   imageUrl: string;
-  title: string;
+  // title: string;
   description?: string;
   buttonText?: string;
   imageSize?: string;
