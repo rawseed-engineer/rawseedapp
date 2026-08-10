@@ -1,4 +1,4 @@
-import GoldenDropOnlyLogo from "../assets/golden_drop_logo_only.svg";
+// import GoldenDropOnlyLogo from "../assets/golden_drop_logo_only.svg";
 import VeganIcon from "../assets/vegan-icon.png";
 
 interface BookingCardProps {
@@ -12,7 +12,7 @@ interface BookingCardProps {
 
 export default function BookingCard({
   imageUrl,
-  title,
+  // title,
   description,
   buttonText = "Order Now",
   imageSize = "cover",

@@ -114,7 +114,7 @@ const Products: React.FC = () => {
         <div ref={addToRefs} className="flex justify-center">
           <BookingCard
             imageUrl={SesameSeedOilBottle}
-            title="Sesame Seed Oil"
+            // title="Sesame Seed Oil"
             description={t("products.sesame.description")}
             buttonText="Order Now"
             imageSize="100%"
@@ -125,7 +125,7 @@ const Products: React.FC = () => {
         <div ref={addToRefs} className="flex justify-center">
           <BookingCard
             imageUrl={FlaxSeedOilBottle}
-            title="Flaxseed Oil"
+            // title="Flaxseed Oil"
             description={t("products.flaxseed.description")}
             buttonText="Order Now"
             imageSize="125%"
@@ -136,7 +136,7 @@ const Products: React.FC = () => {
         <div ref={addToRefs} className="flex justify-center">
           <BookingCard
             imageUrl={BlackSeedOilBottle}
-            title="Black Seed Oil"
+            // title="Black Seed Oil"
             description={t("products.black_seed.description")}
             buttonText="Pre-order Now"
           />
