@@ -126,6 +126,12 @@ const SesameOil = () => {
         <Hero />
       </section>
 
+      <section
+        className="rounded py-8 mt-12 sm:py-12
+        mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:mx-64"
+      >
+        <ProductInformationAccordion productItems={productInformation} />
+      </section>
       {/* <section
         className="rounded bg-white mt-12 sm:py-12 
         mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:128"
@@ -187,13 +193,6 @@ const SesameOil = () => {
         mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:mx-64"
       >
         <Discovery />
-      </section>
-
-      <section
-        className="rounded py-8 mt-12 sm:py-12
-        mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:mx-64"
-      >
-        <ProductInformationAccordion productItems={productInformation} />
       </section>
 
       <section className="flex-grow overflow-x-auto w-full ">
