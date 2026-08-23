@@ -189,6 +189,13 @@ const FlaxseedOil: React.FC = () => {
         </section>
 
         <section
+          className="rounded py-8 mt-12 sm:py-12
+        mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:mx-64"
+        >
+          <ProductInformationAccordion productItems={productInformation} />
+        </section>
+
+        <section
           className="rounded py-8 mt-12 sm:py-12 
           mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:128"
         >
@@ -239,13 +246,6 @@ const FlaxseedOil: React.FC = () => {
           mx-4 sm:mx-4 lg:mx-24 xl:mx-48 2xl:128"
         >
           <ImageHairAndScalp />
-        </section>
-
-        <section
-          className="rounded py-8 mt-12 sm:py-12
-        mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:mx-64"
-        >
-          <ProductInformationAccordion productItems={productInformation} />
         </section>
 
         <section

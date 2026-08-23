@@ -6,48 +6,72 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Hero: React.FC = () => {
+interface HeroProps {
+  staggerDelay?: number;
+  initialDelay?: number;
+  titleDuration?: number;
+  subtitleDuration?: number;
+  logoDuration?: number;
+  descriptionDuration?: number;
+  circleDuration?: number;
+}
+
+const Hero: React.FC<HeroProps> = ({
+  staggerDelay = 0.8,
+  initialDelay = 0,
+  titleDuration = 1,
+  subtitleDuration = 2,
+  logoDuration = 1,
+  descriptionDuration = 10,
+  circleDuration = 1,
+}) => {
   const { t } = useTranslation();
 
   const containerRef = useRef<HTMLDivElement>(null);
-  const heroMessagesRefs = useRef<HTMLParagraphElement[]>([]);
+  const subtitleRef = useRef<HTMLHeadingElement | null>(null);
+  const descriptionRef = useRef<HTMLParagraphElement | null>(null);
 
   useEffect(() => {
-    const elements = heroMessagesRefs.current;
-
-    // Create one ScrollTrigger for the entire container
     const ctx = gsap.context(() => {
-      gsap.fromTo(
-        elements,
-        {
-          opacity: 0,
-          y: 60,
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 10%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+          // markers: true,
         },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          ease: "power3.out",
-          stagger: 0.8, // This is the magic: each item delays by 0.2s
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top 10%", // When the container hits 75% of viewport
-            end: "bottom 20%",
-            toggleActions: "play none none reverse",
-            // markers: true, // Remove in production
-          },
-        }
-      );
+      });
+
+      if (subtitleRef.current) {
+        tl.fromTo(
+          subtitleRef.current,
+          { opacity: 0, y: 60 },
+          { opacity: 1, y: 0, duration: subtitleDuration },
+          initialDelay,
+        );
+      }
+
+      if (descriptionRef.current) {
+        tl.fromTo(
+          descriptionRef.current,
+          { opacity: 0, y: 60 },
+          { opacity: 1, y: 0, duration: descriptionDuration },
+          `+=${staggerDelay}`,
+        );
+      }
     }, containerRef);
 
-    return () => ctx.revert(); // Cleanup on unmount
-  }, []);
-
-  const addToRefs = (el: HTMLParagraphElement | null) => {
-    if (el && !heroMessagesRefs.current.includes(el)) {
-      heroMessagesRefs.current.push(el);
-    }
-  };
+    return () => ctx.revert();
+  }, [
+    initialDelay,
+    staggerDelay,
+    titleDuration,
+    subtitleDuration,
+    logoDuration,
+    descriptionDuration,
+    circleDuration,
+  ]);
 
   return (
     <>
@@ -65,30 +89,20 @@ const Hero: React.FC = () => {
       <div className="absolute top-[35%] ">
         <div className="relative z-10  px-4 py-12 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           {/* Hero Heading */}
-          <h1
-            ref={addToRefs}
-            className="hidden md:block
-                  text-balance 
-                  text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
-                  font-center lg:text-left
-                  font-bold text-white mb-5 mt-5"
-          >
-            {t("flaxseed_oil.hero.title")}
-          </h1>
 
-          <h2
-            ref={addToRefs}
+          <h1
+            ref={subtitleRef}
             className="text-balance 
                   text-3xl sm:text-3xl md:text-4xl lg:text-5xl 
                   text-center lg:text-left
                   font-bold text-white mb-5"
           >
             {t("flaxseed_oil.hero.subtitle")}
-          </h2>
+          </h1>
 
           {/* Hero Description */}
           <p
-            ref={addToRefs}
+            ref={descriptionRef}
             className="text-pretty text-white 
                 text-2xl text-justify
                 lg:text-left
