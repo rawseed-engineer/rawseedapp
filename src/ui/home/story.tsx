@@ -1,8 +1,9 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import AllOils from "../../assets/sesame_fruit.jpg";
+import DrySeeds from "../../assets/sesame_seed_dry.jpg";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -10,9 +11,18 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Story: React.FC = () => {
   const { t } = useTranslation();
+  const [showDrySeeds, setShowDrySeeds] = useState(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRefs = useRef<HTMLParagraphElement[]>([]);
+
+  useEffect(() => {
+    const imageInterval = window.setInterval(() => {
+      setShowDrySeeds((isDrySeedsVisible) => !isDrySeedsVisible);
+    }, 5000);
+
+    return () => window.clearInterval(imageInterval);
+  }, []);
 
   useEffect(() => {
     const elements = imageRefs.current;
@@ -116,11 +126,21 @@ const Story: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="hidden lg:block" ref={addToRefs}>
+      <div className="relative hidden lg:block mx-8" ref={addToRefs}>
         <img
           src={AllOils}
           alt="All RawSeed Oils"
-          className="mx-8 aspect-auto"
+          className={`block aspect-auto w-full transition-opacity duration-1000 ease-in-out ${
+            showDrySeeds ? "opacity-0" : "opacity-100"
+          }`}
+        />
+        <img
+          src={DrySeeds}
+          alt="Dry sesame seeds"
+          aria-hidden={!showDrySeeds}
+          className={`absolute inset-0 block h-full w-full object-cover transition-opacity duration-1000 ease-in-out ${
+            showDrySeeds ? "opacity-100" : "opacity-0"
+          }`}
         />
       </div>
     </div>
