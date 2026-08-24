@@ -6,10 +6,32 @@
     <link rel="icon" type="image/svg+xml" href="/rawseedapp/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rawseed</title>
-    <script type="module" crossorigin src="/rawseedapp/assets/index-5MMEbcX0.js"></script>
-    <link rel="stylesheet" crossorigin href="/rawseedapp/assets/index-C9b6K1hI.css">
+    <script type="module" crossorigin src="/rawseedapp/assets/index-DI_pT10l.js"></script>
+    <link rel="stylesheet" crossorigin href="/rawseedapp/assets/index--IAyrZKh.css">
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      const heroImages = {
+        "/rawseedapp": "/rawseedapp/rawseed-hero.webp",
+        "/rawseedapp/": "/rawseedapp/rawseed-hero.webp",
+        "/rawseedapp/sesame-oil": "/rawseedapp/sesame_seed_hero.webp",
+        "/rawseedapp/flaxseed-oil": "/rawseedapp/flaxseed_oil_hero.webp",
+        "/rawseedapp/blackseed-oil": "/rawseedapp/blackseed_hero_4k.webp",
+        "/rawseedapp/about-us": "/rawseedapp/about_us_hero.webp",
+        "/rawseedapp/contact": "/rawseedapp/flaxseed_flower_farm.webp",
+      };
+
+      const heroImage = heroImages[window.location.pathname];
+
+      if (heroImage) {
+        const preload = document.createElement("link");
+        preload.rel = "preload";
+        preload.as = "image";
+        preload.href = heroImage;
+        preload.type = "image/webp";
+        document.head.appendChild(preload);
+      }
+    </script>
   </body>
 </html>
