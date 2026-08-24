@@ -1,6 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
-import RawSeedLogo from "../../assets/rawseed_logo.png";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
@@ -11,78 +10,73 @@ import {
   faFacebook,
   faXTwitter,
   faInstagram,
+  faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import ShineText from "../ShineText";
 import { useTranslation } from "react-i18next";
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
+  const [isPrivacyPolicyOpen, setIsPrivacyPolicyOpen] = useState(false);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Company Info */}
         <div className="md:col-span-1">
-          <div className="flex items-center space-x-2 mb-4">
-            {/* <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-              ZAP
-            </div> */}
+          {/* <div className="flex items-center space-x-2 mb-4">
             <img
               src={RawSeedLogo}
               alt="RawSeed Logo"
               className="h-[1.5rem] aspect-auto"
             />
-            {/* <span className="text-xl font-bold text-white">Rawseed</span> */}
-          </div>
+          </div> */}
+          <h3 className="text-lg font-semibold text-white mb-4">RawSeed</h3>
           <p className="text-gray-200 mb-6 leading-relaxed">
             <ShineText className="text-lg" duration="3s">
               {t("hero.home.subtitle")}
             </ShineText>
           </p>
-          <div className="flex space-x-1">
-            <a
-              href="#"
-              className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#a18458] transition-colors duration-200"
-            >
-              {/* <Facebook className="w-5 h-5 text-gray-400 hover:text-white" /> */}
-              {/* <FontAwesomeIcon
-                icon={faFacebook}
-                className="text-[#cfb997] inline-block w-full"
-              /> */}
-              <FontAwesomeIcon
-                icon={faFacebook}
-                className="text-[#0165E1] inline-block"
-                style={{ height: "36px" }}
-                size={"2x"}
-              />
-            </a>
-            <a
-              href="#"
-              className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#a18458] transition-colors duration-200"
-            >
-              {/* <Twitter className="w-5 h-5 text-gray-400 hover:text-white" /> */}
-
-              <FontAwesomeIcon
-                icon={faXTwitter}
-                className="text-[#1DA1F2] inline-block"
-                style={{ height: "36px" }}
-                size={"2x"}
-              />
-            </a>
-            <a
-              href="#"
-              className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#a18458] transition-colors duration-200"
-            >
-              {/* <Instagram className="w-5 h-5 text-gray-400 hover:text-white" /> */}
-              <FontAwesomeIcon
-                icon={faInstagram}
-                className="bg-gradient-to-r from-[#405de6] via-[#5851db] via-[#833ab4] via-[#c13584] via-[#e1306c] to-[#fd1d1d] inline-block"
-                style={{ height: "36px" }}
-                size={"2x"}
-
-                // linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
-              />
-            </a>
+          <div className="w-full max-w-[350px]">
+            <h4 className="text-[1.1rem] text-white">Follow us on</h4>
+            <ul className="mt-3 flex flex-wrap gap-2 p-0 list-none">
+              <li>
+                <a
+                  href="#"
+                  aria-label="Facebook"
+                  className="flex h-10 w-10 items-center justify-center bg-[#181818] text-white transition-colors duration-200 hover:bg-[#3d5b99]"
+                >
+                  <FontAwesomeIcon icon={faFacebook} size="lg" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  aria-label="Instagram"
+                  className="flex h-10 w-10 items-center justify-center bg-[#181818] text-white transition-colors duration-200 hover:bg-[#c13584]"
+                >
+                  <FontAwesomeIcon icon={faInstagram} size="lg" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  aria-label="X"
+                  className="flex h-10 w-10 items-center justify-center bg-[#181818] text-white transition-colors duration-200 hover:bg-[#00aced]"
+                >
+                  <FontAwesomeIcon icon={faXTwitter} size="lg" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  aria-label="YouTube"
+                  className="flex h-10 w-10 items-center justify-center bg-[#181818] text-white transition-colors duration-200 hover:bg-[#e64a41]"
+                >
+                  <FontAwesomeIcon icon={faYoutube} size="lg" />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -174,12 +168,13 @@ const Footer: React.FC = () => {
           © 2025-2026 RawSeed Ltd. All rights reserved.
         </p>
         <div className="flex space-x-6">
-          <a
-            href="#"
+          <button
+            type="button"
+            onClick={() => setIsPrivacyPolicyOpen(true)}
             className="text-gray-400 hover:text-white transition-colors duration-200"
           >
             Privacy Policy
-          </a>
+          </button>
           {/* <a
             href="#"
             className="text-gray-400 hover:text-white transition-colors duration-200"
@@ -194,6 +189,104 @@ const Footer: React.FC = () => {
           </a> */}
         </div>
       </div>
+
+      {isPrivacyPolicyOpen && (
+        <div
+          className="fixed inset-x-0 bottom-0 z-50 border-t border-[#a18458] bg-[#181818] text-gray-200 shadow-[0_-8px_30px_rgba(0,0,0,0.35)]"
+          role="dialog"
+          aria-modal="false"
+          aria-labelledby="privacy-policy-title"
+        >
+          <div className="mx-auto max-h-[75vh] max-w-7xl overflow-y-auto px-4 py-6 sm:px-6 lg:px-8">
+            <div className="flex items-start justify-between gap-6">
+              <div>
+                <h2
+                  id="privacy-policy-title"
+                  className="text-xl font-semibold text-white"
+                >
+                  Privacy Policy
+                </h2>
+                <p className="mt-1 text-sm text-[#cfb997]">
+                  General template for RawSeed Ltd. Please review this with a
+                  qualified legal adviser before publishing.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsPrivacyPolicyOpen(false)}
+                aria-label="Close privacy policy"
+                className="shrink-0 text-2xl leading-none text-gray-400 transition-colors hover:text-white"
+              >
+                &times;
+              </button>
+            </div>
+
+            <div className="mt-5 grid gap-4 text-sm leading-relaxed md:grid-cols-2">
+              <section>
+                <h3 className="font-semibold text-white">
+                  Information we collect
+                </h3>
+                <p>
+                  When you contact us, we may collect your first name, last
+                  name, email address, telephone number, and any message you
+                  choose to send.
+                </p>
+              </section>
+              <section>
+                <h3 className="font-semibold text-white">How we use it</h3>
+                <p>
+                  We use this information to respond to enquiries, provide
+                  customer support, and manage our relationship with you. We do
+                  not use it for unrelated marketing without your consent.
+                </p>
+              </section>
+              <section>
+                <h3 className="font-semibold text-white">
+                  Sharing and retention
+                </h3>
+                <p>
+                  Form submissions are sent to our email service provider, which
+                  processes the information on our behalf. We retain personal
+                  information only for as long as necessary for the purposes
+                  described or as required by law.
+                </p>
+              </section>
+              <section>
+                <h3 className="font-semibold text-white">
+                  Your rights and contact
+                </h3>
+                <p>
+                  Depending on your location, you may have rights to access,
+                  correct, delete, or restrict use of your information. Contact
+                  us at info@rawseed.co.uk to make a request or ask a privacy
+                  question.
+                </p>
+              </section>
+              <section>
+                <h3 className="font-semibold text-white">
+                  Security and changes
+                </h3>
+                <p>
+                  We take reasonable steps to protect personal information, but
+                  no online transmission is completely secure. We may update
+                  this policy from time to time and will publish the revised
+                  version here.
+                </p>
+              </section>
+              <section>
+                <h3 className="font-semibold text-white">Policy details</h3>
+                <p>
+                  Effective date: [insert date]. Data controller: RawSeed Ltd.,
+                  167-169 Great Portland Street, 5th Floor, London, W1W 5PF. Add
+                  the applicable legal basis, supervisory authority, cookie
+                  details, and international transfer information before
+                  publication.
+                </p>
+              </section>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

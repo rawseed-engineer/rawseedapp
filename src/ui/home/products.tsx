@@ -4,7 +4,7 @@ import React from "react";
 import BlackSeedOilBottle from "../../assets/bottle_blackseed.jpg";
 import SesameSeedOilBottle from "../../assets/bottle_sesame_seed.png";
 import FlaxSeedOilBottle from "../../assets/bottle_flaxseed.png";
-import GoldenDropLogo from "../../assets/golden_drop_logo.svg";
+// import GoldenDropLogo from "../../assets/golden_drop_logo.svg";
 
 import { useTranslation } from "react-i18next";
 
@@ -84,7 +84,7 @@ const Products: React.FC = () => {
 
   return (
     <div ref={containerRef} className="mx-auto gap-8 px-8 sm:px-16">
-      <div className="flex justify-center text-center">
+      {/* <div className="flex justify-center text-center">
         <h2
           ref={addToRefs}
           className="my-6 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl"
@@ -99,7 +99,7 @@ const Products: React.FC = () => {
           alt="Golden Drop Logo"
           className="mx-8 my-20 w-md aspect-auto brightness-80 drop-shadow-lg"
         />
-      </div>
+      </div> */}
 
       <div ref={addToRefs} className="m-12 text-center">
         <h2 className="my-6 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl">

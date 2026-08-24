@@ -34,6 +34,14 @@ const Home = () => {
         </section>
 
         <section
+          className="rounded py-8 sm:py-12 
+          mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:128 
+          my-24"
+        >
+          <Products />
+        </section>
+
+        <section
           className="rounded py-8 mt-12 sm:py-12 
           mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:128"
         >
@@ -83,14 +91,6 @@ const Home = () => {
           "
         >
           <ColdPressed />
-        </section>
-
-        <section
-          className="rounded py-8 sm:py-12 
-          mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:128 
-          my-24"
-        >
-          <Products />
         </section>
 
         {/* Why Raw Seed ? */}
