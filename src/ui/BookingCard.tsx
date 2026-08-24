@@ -1,11 +1,13 @@
 // import GoldenDropOnlyLogo from "../assets/golden_drop_logo_only.svg";
 import VeganIcon from "../assets/vegan-icon.png";
+import { Link } from "react-router-dom";
 
 interface BookingCardProps {
   imageUrl: string;
   // title: string;
   description?: string;
   buttonText?: string;
+  buttonLink: string;
   imageSize?: string;
   imagePosition?: string;
 }
@@ -15,6 +17,7 @@ export default function BookingCard({
   // title,
   description,
   buttonText = "Order Now",
+  buttonLink,
   imageSize = "cover",
   imagePosition = "center center",
 }: BookingCardProps) {
@@ -58,7 +61,8 @@ export default function BookingCard({
           group-hover:translate-y-60 group-hover:opacity-100
         "
         >
-          <button
+          <Link
+            to={buttonLink}
             className="
               rounded-full border-4 border-white/90 px-8 py-4 
               text-xl font-bold uppercase tracking-wider text-white 
@@ -67,7 +71,7 @@ export default function BookingCard({
             "
           >
             {buttonText}
-          </button>
+          </Link>
           <img
             src={VeganIcon}
             alt="Suitable for Vegan"

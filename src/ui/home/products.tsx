@@ -116,7 +116,8 @@ const Products: React.FC = () => {
             imageUrl={SesameSeedOilBottle}
             // title="Sesame Seed Oil"
             description={t("products.sesame.description")}
-            buttonText="Order Now"
+            buttonText="Learn More"
+            buttonLink="/rawseedapp/sesame-oil"
             imageSize="100%"
             imagePosition="center 60%"
           />
@@ -127,7 +128,8 @@ const Products: React.FC = () => {
             imageUrl={FlaxSeedOilBottle}
             // title="Flaxseed Oil"
             description={t("products.flaxseed.description")}
-            buttonText="Order Now"
+            buttonText="Learn More"
+            buttonLink="/rawseedapp/flaxseed-oil"
             imageSize="125%"
             imagePosition="center 60%"
           />
@@ -138,7 +140,8 @@ const Products: React.FC = () => {
             imageUrl={BlackSeedOilBottle}
             // title="Black Seed Oil"
             description={t("products.black_seed.description")}
-            buttonText="Pre-order Now"
+            buttonText="Learn More"
+            buttonLink="/rawseedapp/blackseed-oil"
           />
         </div>
       </div>

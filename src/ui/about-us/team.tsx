@@ -16,7 +16,7 @@ const Team: React.FC = () => {
         >
           <div
             className="z-1 absolute h-96 w-64 bg-cover 
-            bg-[url(/rawseedapp/avatar.jpeg)]
+            bg-[url(/rawseedapp/avatar1.png)]
             "
           ></div>
 
@@ -45,7 +45,7 @@ const Team: React.FC = () => {
         >
           <div
             className="z-1 absolute h-96 w-64 bg-cover 
-            bg-[url(/rawseedapp/avatar.jpeg)]
+            bg-[url(/rawseedapp/avatar2.png)]
             "
           ></div>
 
@@ -74,7 +74,7 @@ const Team: React.FC = () => {
         >
           <div
             className="z-1 absolute h-96 w-64 bg-cover 
-            bg-[url(/rawseedapp/avatar.jpeg)]
+            bg-[url(/rawseedapp/avatar3.png)]
             "
           ></div>
 
@@ -103,7 +103,7 @@ const Team: React.FC = () => {
         >
           <div
             className="z-1 absolute h-96 w-64 bg-cover 
-            bg-[url(/rawseedapp/avatar.jpeg)]
+            bg-[url(/rawseedapp/avatar4.png)]
             "
           ></div>
 
