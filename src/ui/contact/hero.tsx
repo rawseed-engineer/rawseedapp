@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Callout } from "../callout";
 import ShineText from "../ShineText";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -12,9 +13,8 @@ interface HeroProps {
   initialDelay?: number;
   titleDuration?: number;
   subtitleDuration?: number;
-  logoDuration?: number;
   descriptionDuration?: number;
-  circleDuration?: number;
+  calloutDuration?: number;
 }
 
 const Hero: React.FC<HeroProps> = ({
@@ -22,19 +22,19 @@ const Hero: React.FC<HeroProps> = ({
   initialDelay = 0,
   titleDuration = 1,
   subtitleDuration = 2,
-  logoDuration = 1,
   descriptionDuration = 10,
-  circleDuration = 1,
+  calloutDuration = 1,
 }) => {
   const { t } = useTranslation();
-
   const containerRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLHeadingElement | null>(null);
   const subtitleRef = useRef<HTMLHeadingElement | null>(null);
   const descriptionRef = useRef<HTMLParagraphElement | null>(null);
+  const calloutRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
+      const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top 10%",
@@ -44,23 +44,23 @@ const Hero: React.FC<HeroProps> = ({
         },
       });
 
-      if (subtitleRef.current) {
-        tl.fromTo(
-          subtitleRef.current,
-          { opacity: 0, y: 60 },
-          { opacity: 1, y: 0, duration: subtitleDuration },
-          initialDelay,
-        );
-      }
+      const animations = [
+        [titleRef.current, titleDuration],
+        [subtitleRef.current, subtitleDuration],
+        [descriptionRef.current, descriptionDuration],
+        [calloutRef.current, calloutDuration],
+      ] as const;
 
-      if (descriptionRef.current) {
-        tl.fromTo(
-          descriptionRef.current,
-          { opacity: 0, y: 60 },
-          { opacity: 1, y: 0, duration: descriptionDuration },
-          `+=${staggerDelay}`,
-        );
-      }
+      animations.forEach(([element, duration], index) => {
+        if (element) {
+          timeline.fromTo(
+            element,
+            { opacity: 0, y: 60 },
+            { opacity: 1, y: 0, duration },
+            index === 0 ? initialDelay : `+=${staggerDelay}`,
+          );
+        }
+      });
     }, containerRef);
 
     return () => ctx.revert();
@@ -69,53 +69,55 @@ const Hero: React.FC<HeroProps> = ({
     staggerDelay,
     titleDuration,
     subtitleDuration,
-    logoDuration,
     descriptionDuration,
-    circleDuration,
+    calloutDuration,
   ]);
 
   return (
-    <>
-      {/* Hero Background Image */}
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center"
+    >
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          // backgroundImage: `url("/rawseedapp/hero_image_home.jpg")`,
-          backgroundImage: `url("flaxseed_oil_hero.jpg")`,
+          backgroundImage: `url("flaxseed_flower_farm.jpg")`,
           opacity: 0.9,
           filter: "brightness(50%)",
         }}
       />
 
-      <div className="absolute top-[35%] ">
-        <div className="relative z-10  px-4 py-12 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-          {/* Hero Heading */}
+      <div className="absolute top-[35%]">
+        <div className="relative z-10 px-4 py-12 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          {/* <h1
+            ref={titleRef}
+            className="text-balance text-5xl font-bold text-white md:text-7xl mb-5"
+          >
+            {t("contact.hero.title")}
+          </h1> */}
 
           <h1
             ref={subtitleRef}
-            className="text-balance 
-                  text-3xl sm:text-3xl md:text-4xl lg:text-5xl 
-                  text-center lg:text-left
-                  font-bold text-white mb-5"
+            className="text-balance text-xl font-bold text-white md:text-6xl mb-5"
           >
             <ShineText className="font-bold" duration="10s">
-              {t("flaxseed_oil.hero.subtitle")}
+              {t("contact.hero.subtitle")}
             </ShineText>
           </h1>
 
-          {/* Hero Description */}
           <p
             ref={descriptionRef}
-            className="text-pretty text-white 
-                text-2xl text-justify
-                lg:text-left
-                mb-6"
+            className="text-pretty text-white text-2xl mb-6"
           >
-            {t("flaxseed_oil.hero.description")}
+            {t("contact.hero.description")}
           </p>
+
+          {/* <div ref={calloutRef} className="flex justify-center mt-30">
+            <Callout />
+          </div> */}
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

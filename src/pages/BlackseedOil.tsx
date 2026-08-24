@@ -136,6 +136,13 @@ const BlackSeedOilPage: React.FC = () => {
         <BlackseedHero />
       </section>
 
+      <section
+        className="rounded py-8 mt-12 sm:py-12
+        mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:mx-64"
+      >
+        <ProductInformationAccordion productItems={productInformation} />
+      </section>
+
       {/* White Background Section - Features */}
       <section
         className="rounded py-8 mt-12 sm:py-12 
@@ -221,13 +228,6 @@ const BlackSeedOilPage: React.FC = () => {
 
       {/* Contact Us */}
       {/* <section className="rounded bg-[#181818] py-8 mt-12 sm:py-12 mx-64"> */}
-
-      <section
-        className="rounded py-8 mt-12 sm:py-12
-        mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:mx-64"
-      >
-        <ProductInformationAccordion productItems={productInformation} />
-      </section>
 
       <section
         className="rounded py-12 sm:py-12 mt-12 

@@ -5,50 +5,77 @@ import RawSeedLogo from "./../../assets/rawseed_logo.png";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ShineText from "../ShineText";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const BlackseedHero: React.FC = () => {
+interface HeroProps {
+  duration?: number;
+  initialDelay?: number;
+  subtitleDuration?: number;
+  descriptionDuration?: number;
+  staggerDelay?: number;
+}
+
+const BlackseedHero: React.FC<HeroProps> = ({
+  duration = 1,
+  subtitleDuration = 2,
+  descriptionDuration = 10,
+  initialDelay = 0,
+  staggerDelay = 0.8,
+}) => {
   const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
-  const heroMessageRefs = useRef<HTMLParagraphElement[]>([]);
+  // const titleRef = useRef<HTMLHeadingElement | null>(null);
+  const subtitleRef = useRef<HTMLHeadingElement | null>(null);
+  const descriptionRef = useRef<HTMLParagraphElement | null>(null);
 
   useEffect(() => {
-    const elements = heroMessageRefs.current;
-
-    // Create one ScrollTrigger for the entire container
     const ctx = gsap.context(() => {
-      gsap.fromTo(
-        elements,
-        {
-          opacity: 0,
-          y: 60,
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 10%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+          // markers: true,
         },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          ease: "power3.out",
-          stagger: 0.8, // This is the magic: each item delays by 0.2s
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top 50%", // When the container hits 75% of viewport
-            end: "bottom 20%",
-            toggleActions: "play none none reverse",
-            // markers: true, // Remove in production
-          },
-        },
-      );
+      });
+
+      // [subtitleRef.current, descriptionRef.current].forEach(
+      //   (element, index) => {
+      //     if (element) {
+      //       timeline.fromTo(
+      //         element,
+      //         { opacity: 0, y: 60 },
+      //         { opacity: 1, y: 0, duration, ease: "power3.out" },
+      //         index === 0 ? 0 : `+=${staggerDelay}`,
+      //       );
+      //     }
+      //   },
+      // );
+      if (subtitleRef.current) {
+        timeline.fromTo(
+          subtitleRef.current,
+          { opacity: 0, y: 60 },
+          { opacity: 1, y: 0, duration: subtitleDuration },
+          initialDelay,
+        );
+      }
+
+      if (descriptionRef.current) {
+        timeline.fromTo(
+          descriptionRef.current,
+          { opacity: 0, y: 60 },
+          { opacity: 1, y: 0, duration: descriptionDuration },
+          `+=${staggerDelay}`,
+        );
+      }
     }, containerRef);
 
     return () => ctx.revert(); // Cleanup on unmount
-  }, []);
+  }, [duration, staggerDelay]);
 
-  const addToRefs = (el: HTMLParagraphElement | null) => {
-    if (el && !heroMessageRefs.current.includes(el)) {
-      heroMessageRefs.current.push(el);
-    }
-  };
   return (
     <>
       {/* Hero Background Image */}
@@ -63,7 +90,6 @@ const BlackseedHero: React.FC = () => {
 
       <div className="absolute top-[10%] sm:top-[20%] md:top-[35%]">
         <div
-          ref={containerRef}
           className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl 
           py-24 mx-auto"
         >
@@ -80,29 +106,31 @@ const BlackseedHero: React.FC = () => {
           </div>
 
           {/* Hero Heading */}
-          <h1
-            ref={addToRefs}
+          {/* <h1
+            ref={titleRef}
             className="text-balance 
             text-4xl sm:text-5xl md:text-6xl lg:text-7xl
             text-center lg:text-left
             font-bold text-white mb-5"
           >
             {t("blackseed_oil.hero.title")}
-          </h1>
+          </h1> */}
 
-          <h2
-            ref={addToRefs}
+          <h1
+            ref={subtitleRef}
             className="text-balance 
             text-2xl sm:text-3xl md:text-4xl lg:text-5xl
             text-center lg:text-left
             font-bold text-white mb-5"
           >
-            {t("blackseed_oil.hero.subtitle")}
-          </h2>
+            <ShineText className="font-bold" duration="10s">
+              {t("blackseed_oil.hero.subtitle")}
+            </ShineText>
+          </h1>
 
           {/* Hero Description */}
           <p
-            ref={addToRefs}
+            ref={descriptionRef}
             className="text-pretty text-white 
             text-2xl 
             text-center lg:text-left
