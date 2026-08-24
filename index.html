@@ -9,6 +9,28 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      const heroImages = {
+        "/rawseedapp": "/rawseedapp/rawseed-hero.webp",
+        "/rawseedapp/": "/rawseedapp/rawseed-hero.webp",
+        "/rawseedapp/sesame-oil": "/rawseedapp/sesame_seed_hero.webp",
+        "/rawseedapp/flaxseed-oil": "/rawseedapp/flaxseed_oil_hero.webp",
+        "/rawseedapp/blackseed-oil": "/rawseedapp/blackseed_hero_4k.webp",
+        "/rawseedapp/about-us": "/rawseedapp/about_us_hero.webp",
+        "/rawseedapp/contact": "/rawseedapp/flaxseed_flower_farm.webp",
+      };
+
+      const heroImage = heroImages[window.location.pathname];
+
+      if (heroImage) {
+        const preload = document.createElement("link");
+        preload.rel = "preload";
+        preload.as = "image";
+        preload.href = heroImage;
+        preload.type = "image/webp";
+        document.head.appendChild(preload);
+      }
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

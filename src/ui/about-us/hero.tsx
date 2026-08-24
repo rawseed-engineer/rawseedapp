@@ -85,7 +85,7 @@ const Hero: React.FC<HeroProps> = ({
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url("about_us_hero.jpg")`,
+          backgroundImage: `url("about_us_hero.webp")`,
           opacity: 0.9,
           filter: "brightness(50%)",
         }}

@@ -113,7 +113,7 @@ const Hero: React.FC<HeroProps> = ({
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat 
         brightness-20 md:brightness-50 opacity-90
-        bg-[url(/rawseedapp/rawseed-hero.jpg)]"
+        bg-[url(/rawseedapp/rawseed-hero.webp)]"
       />
 
       <div className="absolute top-[30%] sm:top-[20%] md:top-[35%]">

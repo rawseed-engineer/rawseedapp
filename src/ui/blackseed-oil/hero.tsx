@@ -82,7 +82,7 @@ const BlackseedHero: React.FC<HeroProps> = ({
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url("blackseed_hero_4k.jpg")`,
+          backgroundImage: `url("blackseed_hero_4k.webp")`,
           opacity: 0.9,
           filter: "brightness(50%)",
         }}
