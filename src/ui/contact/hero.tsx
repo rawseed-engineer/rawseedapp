@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Callout } from "../callout";
+// import { Callout } from "../callout";
 import ShineText from "../ShineText";
 
 gsap.registerPlugin(ScrollTrigger);
