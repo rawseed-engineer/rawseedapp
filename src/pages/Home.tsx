@@ -33,29 +33,33 @@ const Home = () => {
           <Hero />
         </section>
 
-        <section
+        {/* <section
           className="rounded py-8 sm:py-12 
           mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:128 
           my-24"
+        > */}
+        <section
+          className="rounded bg-[#181818] py-12 sm:py-24
+          "
         >
           <Products />
         </section>
 
         <section
-          className="rounded py-8 mt-12 sm:py-12 
+          className="rounded py-8 my-24 sm:py-12 
           mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:128"
         >
           <Story />
         </section>
 
-        <section
+        {/* <section
           className="rounded py-8 mt-12 sm:py-12 
           mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:128"
         >
           <WhatWeDo />
-        </section>
+        </section> */}
 
-        <section id="id1" className="py-12">
+        <section id="id1" className="py-0">
           <WhatWeDoScrollHighlight
             items={[
               {

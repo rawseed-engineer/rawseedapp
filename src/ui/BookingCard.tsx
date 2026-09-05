@@ -25,8 +25,8 @@ export default function BookingCard({
     <div
       className={`
         group relative w-[350px] h-[650px] flex-shrink-0 overflow-hidden rounded-2xl
-        text-center shadow-xl transition-all duration-500
-        hover:shadow-2xl
+        text-center transition-all duration-500
+        hover:shadow-2xl hover:shadow-yellow-300/70
       `}
       style={{
         backgroundImage: `url(${imageUrl})`,
@@ -44,7 +44,7 @@ export default function BookingCard({
       /> */}
       <div
         className="
-        absolute inset-0 bg-yellow-500/100 
+        absolute inset-0 bg-black
         opacity-0 transition-opacity duration-500 group-hover:opacity-70
       "
       />

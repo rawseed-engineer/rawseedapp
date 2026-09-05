@@ -83,7 +83,7 @@ const Products: React.FC = () => {
   };
 
   return (
-    <div ref={containerRef} className="mx-auto gap-8 px-8 sm:px-16">
+    <div ref={containerRef} className="mx-32 gap-8 px-8 sm:px-16">
       {/* <div className="flex justify-center text-center">
         <h2
           ref={addToRefs}
