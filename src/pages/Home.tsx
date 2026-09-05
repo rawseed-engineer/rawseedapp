@@ -1,7 +1,7 @@
 import "../i18n";
 import NavMenu from "../ui/nav/nav-menu";
 import Story from "../ui/home/story";
-import WhatWeDo from "../ui/home/what-we-do";
+// import WhatWeDo from "../ui/home/what-we-do";
 import Products from "../ui/home/products";
 import WhyRawSeed from "../ui/home/why-raw-seed";
 import Values from "../ui/home/values";

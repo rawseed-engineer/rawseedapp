@@ -16,23 +16,20 @@ interface HeroProps {
   subtitleDuration?: number;
   logoDuration?: number;
   descriptionDuration?: number;
-  circleDuration?: number;
 }
 
 const Hero: React.FC<HeroProps> = ({
   staggerDelay = 0.8,
   initialDelay = 0,
-  titleDuration = 1,
+  titleDuration = 0,
   subtitleDuration = 2,
   logoDuration = 1,
-  descriptionDuration = 10,
-  circleDuration = 1,
+  descriptionDuration = 7,
 }) => {
   const { t } = useTranslation();
 
   const containerRef = useRef<HTMLDivElement>(null);
   const logoRef = useRef<HTMLImageElement | null>(null);
-  const titleRef = useRef<HTMLHeadingElement | null>(null);
   const subtitleRef = useRef<HTMLHeadingElement | null>(null);
   const descriptionRef = useRef<HTMLParagraphElement | null>(null);
   const circleRef = useRef<HTMLImageElement | null>(null);
@@ -50,21 +47,12 @@ const Hero: React.FC<HeroProps> = ({
         },
       });
 
-      if (logoRef.current) {
+      if (logoRef.current && window.matchMedia("(max-width: 767px)").matches) {
         tl.fromTo(
           logoRef.current,
           { opacity: 0, y: 60 },
           { opacity: 1, y: 0, duration: logoDuration },
           initialDelay,
-        );
-      }
-
-      if (titleRef.current) {
-        tl.fromTo(
-          titleRef.current,
-          { opacity: 0, y: 60 },
-          { opacity: 1, y: 0, duration: titleDuration },
-          logoRef.current ? `+=${staggerDelay}` : initialDelay,
         );
       }
 
@@ -85,15 +73,6 @@ const Hero: React.FC<HeroProps> = ({
           `+=${staggerDelay}`,
         );
       }
-
-      if (circleRef.current) {
-        tl.fromTo(
-          circleRef.current,
-          { opacity: 0, y: 60 },
-          { opacity: 1, y: 0, duration: circleDuration },
-          `+=${staggerDelay}`,
-        );
-      }
     }, containerRef);
 
     return () => ctx.revert(); // Cleanup on unmount
@@ -104,7 +83,6 @@ const Hero: React.FC<HeroProps> = ({
     subtitleDuration,
     logoDuration,
     descriptionDuration,
-    circleDuration,
   ]);
 
   return (
@@ -130,17 +108,7 @@ const Hero: React.FC<HeroProps> = ({
               aspect-auto"
             />
           </div>
-          {/* Hero Heading */}
-          {/* <h1
-            ref={titleRef}
-            className="hidden md:block
-            text-balance 
-            text-4xl sm:text-5xl md:text-6xl lg:text-7xl
-            text-center lg:text-left
-            font-bold text-white  mb-5 mt-5"
-          >
-            {t("hero.home.title")}
-          </h1> */}
+
           <h1
             ref={subtitleRef}
             className="hidden md:block 

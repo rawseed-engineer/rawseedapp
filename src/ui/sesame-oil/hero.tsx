@@ -1,7 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import RawSeedLogo from "../../assets/rawseed_logo.png";
-
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -16,7 +15,6 @@ interface HeroProps {
   subtitleDuration?: number;
   logoDuration?: number;
   descriptionDuration?: number;
-  circleDuration?: number;
 }
 
 const Hero: React.FC<HeroProps> = ({
@@ -25,8 +23,7 @@ const Hero: React.FC<HeroProps> = ({
   titleDuration = 1,
   subtitleDuration = 2,
   logoDuration = 1,
-  descriptionDuration = 10,
-  circleDuration = 1,
+  descriptionDuration = 7,
 }) => {
   const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
@@ -46,7 +43,7 @@ const Hero: React.FC<HeroProps> = ({
         },
       });
 
-      if (logoRef.current) {
+      if (logoRef.current && window.matchMedia("(max-width: 767px)").matches) {
         tl.fromTo(
           logoRef.current,
           { opacity: 0, y: 60 },
@@ -63,8 +60,6 @@ const Hero: React.FC<HeroProps> = ({
           `+=${staggerDelay}`,
         );
       }
-
-      // subtitle is triggered on load, so don't include it in the scroll timeline
 
       if (descriptionRef.current) {
         tl.fromTo(
@@ -84,7 +79,6 @@ const Hero: React.FC<HeroProps> = ({
     subtitleDuration,
     logoDuration,
     descriptionDuration,
-    circleDuration,
   ]);
 
   return (
@@ -137,17 +131,6 @@ const Hero: React.FC<HeroProps> = ({
             </ShineText>
           </h1>
 
-          {/* <h2
-            ref={addToRefs}
-            className="text-balance 
-            text-2xl sm:text-3xl md:text-4xl lg:text-5xl
-            text-center lg:text-left
-            font-bold text-white mb-5"
-          >
-            {t("hero.sesame_oil.subtitle")}
-          </h2> */}
-
-          {/* Hero Description */}
           <p
             ref={descriptionRef}
             className="text-pretty text-white 

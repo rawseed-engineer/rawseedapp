@@ -1,7 +1,7 @@
 "use client"; // This makes it a Client Component since GSAP runs on the client
 
 import React from "react";
-import BlackSeedOilBottle from "../../assets/bottle_blackseed.jpg";
+import BlackSeedOilBottle from "../../assets/bottle_blackseed.png";
 import SesameSeedOilBottle from "../../assets/bottle_sesame_seed.png";
 import FlaxSeedOilBottle from "../../assets/bottle_flaxseed.png";
 // import GoldenDropLogo from "../../assets/golden_drop_logo.svg";
@@ -141,6 +141,8 @@ const Products: React.FC = () => {
             // title="Black Seed Oil"
             description={t("products.black_seed.description")}
             buttonText="Learn More"
+            imageSize="90%"
+            imagePosition="center 80%"
             buttonLink="/rawseedapp/blackseed-oil"
           />
         </div>

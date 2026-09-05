@@ -41,7 +41,7 @@ const EmailForm: React.FC = () => {
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
+    >,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -64,7 +64,7 @@ const EmailForm: React.FC = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(formData),
-        }
+        },
       );
       if (!response.ok) {
         const errorData = await response.json();
@@ -107,7 +107,7 @@ const EmailForm: React.FC = () => {
           y: 0,
           duration: 1,
           ease: "power3.out",
-          stagger: 0.7, // This is the magic: each item delays by 0.2s
+          // stagger: 0.7, // This is the magic: each item delays by 0.2s
           scrollTrigger: {
             trigger: containerRef.current,
             start: "top 30%", // When the container hits 75% of viewport
@@ -115,7 +115,7 @@ const EmailForm: React.FC = () => {
             toggleActions: "play none none reverse",
             // markers: true, // Remove in production
           },
-        }
+        },
       );
     }, containerRef);
 
@@ -133,7 +133,7 @@ const EmailForm: React.FC = () => {
       <div
         ref={addToRefs}
         className="bg-white w-7/8 lg:w-md p-1 lg:p-10 mt-16 mb-16 relative overflow-hidden rounded-lg shadow-lg 
-        duration-300 ease-in-out hover:-translate-y-4 hover:shadow-[#a18458]"
+        duration-300 hover:shadow-[#a18458]"
       >
         <div className=" mb-8 pb-5 relative">
           <div className="mb-2 flex items-center">

@@ -20,7 +20,7 @@ interface HeroProps {
 const BlackseedHero: React.FC<HeroProps> = ({
   duration = 1,
   subtitleDuration = 2,
-  descriptionDuration = 10,
+  descriptionDuration = 7,
   initialDelay = 0,
   staggerDelay = 0.8,
 }) => {
