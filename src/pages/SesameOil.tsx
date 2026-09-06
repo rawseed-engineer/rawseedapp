@@ -10,6 +10,7 @@ import SesamePageCallout from "../ui/sesame-oil/callout";
 import Hero from "../ui/sesame-oil/hero";
 import FullScreenVideo from "../ui/FullScreenVideo";
 import ProductInformationAccordion from "../ui/Accordion";
+import SesameSeedOilBottle from "../assets/bottle_sesame_seed.png";
 
 const SesameOil = () => {
   const nutritionUnit = "per XXX ml";
@@ -130,7 +131,11 @@ const SesameOil = () => {
         className="rounded py-8 mt-12 sm:py-12
         mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:mx-64"
       >
-        <ProductInformationAccordion productItems={productInformation} />
+        <ProductInformationAccordion
+          productItems={productInformation}
+          imageSrc={SesameSeedOilBottle}
+          imageAlt="Golden Drop Sesame Seed Oil bottle"
+        />
       </section>
       {/* <section
         className="rounded bg-white mt-12 sm:py-12 

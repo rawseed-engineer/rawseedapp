@@ -20,6 +20,7 @@ import SkinCare from "../ui/flaxseed-oil/skinCare";
 import FaceSerum from "../ui/flaxseed-oil/faceSerum";
 import ImageHairAndScalp from "../ui/flaxseed-oil/HairAndScalp";
 import ProductInformationAccordion from "../ui/Accordion";
+import FlaxseedOilBottle from "../assets/bottle_flaxseed.png";
 import type { ScrollHighlightItem } from "../ui/ScrollHighlightSection";
 const FlaxseedOil: React.FC = () => {
   const nutritionUnit = "per (5ml) teaspoon";
@@ -192,7 +193,11 @@ const FlaxseedOil: React.FC = () => {
           className="rounded py-8 mt-12 sm:py-12
         mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:mx-64"
         >
-          <ProductInformationAccordion productItems={productInformation} />
+          <ProductInformationAccordion
+            productItems={productInformation}
+            imageSrc={FlaxseedOilBottle}
+            imageAlt="Golden Drop Flaxseed Oil bottle"
+          />
         </section>
 
         <section

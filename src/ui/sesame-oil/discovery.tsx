@@ -1,4 +1,6 @@
 import React from "react";
+import { faDroplet } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTranslation } from "react-i18next";
 import SesameFlower from "../../assets/sesame_flower_plant.jpg";
 
@@ -37,7 +39,7 @@ const Discovery: React.FC = () => {
             toggleActions: "play none none reverse",
             // markers: true, // Remove in production
           },
-        }
+        },
       );
     }, containerRef);
 
@@ -56,19 +58,43 @@ const Discovery: React.FC = () => {
       className="mx-auto grid grid-cols-1 lg:grid-cols-2 
       items-center justify-items-center gap-8 px-8 sm:px-16"
     >
-      <div ref={addToRefs} className="space-y-4 text-neutral-600">
+      <div
+        ref={addToRefs}
+        className="relative z-10 space-y-4 bg-white/0 p-6 text-neutral-600 lg:-mr-60 lg:p-8"
+      >
         <h1
           className="text-balance text-[#a18458] 
-          text-5xl md:text-5xl font-bold tracking-tight text-shadow-lg"
+          text-5xl md:text-5xl tracking-tight text-shadow-lg"
         >
           {t("sesame.rediscovery.title")}
         </h1>
         <p className="text-pretty text-2xl">{t("sesame.rediscovery.p1")}</p>
         <p className="text-pretty text-2xl">{t("sesame.rediscovery.p2")}</p>
-        <ul className="list-disc list-inside">
-          <li className="text-2xl">{t("sesame.rediscovery.item1")}</li>
-          <li className="text-2xl">{t("sesame.rediscovery.item2")}</li>
-          <li className="text-2xl">{t("sesame.rediscovery.item3")}</li>
+        <ul className="space-y-3">
+          <li className="flex items-start gap-3 text-2xl">
+            <FontAwesomeIcon
+              icon={faDroplet}
+              className="mt-2 shrink-0 text-xl text-[#a18458]"
+              aria-hidden="true"
+            />
+            <span>{t("sesame.rediscovery.item1")}</span>
+          </li>
+          <li className="flex items-start gap-3 text-2xl">
+            <FontAwesomeIcon
+              icon={faDroplet}
+              className="mt-2 shrink-0 text-xl text-[#a18458]"
+              aria-hidden="true"
+            />
+            <span>{t("sesame.rediscovery.item2")}</span>
+          </li>
+          <li className="flex items-start gap-3 text-2xl">
+            <FontAwesomeIcon
+              icon={faDroplet}
+              className="mt-2 shrink-0 text-xl text-[#a18458]"
+              aria-hidden="true"
+            />
+            <span>{t("sesame.rediscovery.item3")}</span>
+          </li>
         </ul>
         <p className="text-pretty text-2xl">{t("sesame.rediscovery.p3")}</p>
 
@@ -86,7 +112,7 @@ const Discovery: React.FC = () => {
         src={SesameFlower}
         alt="Rawseed flower"
         // className="w-full brightness-70 aspect-auto"
-        className="aspect-auto"
+        className="relative z-0 aspect-auto w-full"
       />
     </div>
   );

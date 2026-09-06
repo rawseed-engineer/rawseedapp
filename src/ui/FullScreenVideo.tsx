@@ -87,7 +87,7 @@ const FullScreenVideo = () => {
             >
               <h2
                 ref={addToRefs}
-                className="text-balance text-[#a18458] text-5xl text-shadow-lg font-bold tracking-tight md:text-5xl"
+                className="text-balance text-[#a18458] text-5xl text-shadow-lg tracking-tight md:text-5xl"
               >
                 {t("history.title")}
               </h2>
@@ -104,14 +104,14 @@ const FullScreenVideo = () => {
               </div>
             </div>
 
-            <div ref={addToRefs}>
+            {/* <div ref={addToRefs}>
               <button
                 onClick={handlePlay}
                 className="bg-red-600 text-white px-6 py-3 mt-3 rounded-full text-lg font-semibold hover:bg-red-700 transition"
               >
                 <i>Watch Video</i>
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       )}

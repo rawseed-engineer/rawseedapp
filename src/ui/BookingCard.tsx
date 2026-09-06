@@ -1,6 +1,7 @@
 // import GoldenDropOnlyLogo from "../assets/golden_drop_logo_only.svg";
 import VeganIcon from "../assets/vegan-icon.png";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 interface BookingCardProps {
   imageUrl: string;
@@ -21,8 +22,16 @@ export default function BookingCard({
   imageSize = "cover",
   imagePosition = "center center",
 }: BookingCardProps) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const handleCardClick = () => {
+    if (window.matchMedia("(max-width: 1023px)").matches) {
+      setIsExpanded((expanded) => !expanded);
+    }
+  };
+
   return (
     <div
+      onClick={handleCardClick}
       className={`
         group relative w-[350px] h-[650px] flex-shrink-0 overflow-hidden rounded-2xl
         text-center transition-all duration-500
@@ -43,10 +52,11 @@ export default function BookingCard({
       "
       /> */}
       <div
-        className="
-        absolute inset-0 bg-black
-        opacity-0 transition-opacity duration-500 group-hover:opacity-70
-      "
+        className={`
+        absolute inset-0 bg-black opacity-0 transition-opacity duration-500
+        group-hover:opacity-70
+        ${isExpanded ? "opacity-70" : ""}
+      `}
       />
 
       {/* Book button – slides in from top on hover */}
@@ -56,10 +66,11 @@ export default function BookingCard({
       "
       >
         <div
-          className="
+          className={`
           translate-y-[-150%] opacity-0 transition-all duration-500 
           group-hover:translate-y-60 group-hover:opacity-100
-        "
+          ${isExpanded ? "translate-y-60 opacity-100" : ""}
+        `}
         >
           <Link
             to={buttonLink}
@@ -82,12 +93,13 @@ export default function BookingCard({
 
       {/* Information panel – slides up on hover */}
       <div
-        className="
+        className={`
         relative z-20 flex h-full flex-col 
         
         p-6 pt-60 transition-transform duration-500 
         group-hover:translate-y-[-206px]
-      "
+        ${isExpanded ? "translate-y-[-206px]" : ""}
+      `}
       >
         {/* <div className="mb-4 mt-24 flex items-center justify-center">
           <img
@@ -102,11 +114,12 @@ export default function BookingCard({
 
         {/* Extra details – fade in */}
         <div
-          className="
+          className={`
           mt-2 opacity-0 transition-opacity duration-700 
           group-hover:opacity-100 md:group-hover:opacity-100
           mt-50
-        "
+          ${isExpanded ? "opacity-100" : ""}
+        `}
         >
           <div className="">
             <p className="text-pretty text-white text-justify text-2xl">

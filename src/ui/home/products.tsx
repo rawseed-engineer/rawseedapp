@@ -102,9 +102,9 @@ const Products: React.FC = () => {
       </div> */}
 
       <div ref={addToRefs} className="m-12 text-center">
-        <h2 className="my-6 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl">
+        <h1 className="my-6 text-[#a18458] text-balance text-5xl text-shadow-lg tracking-tight md:text-5xl">
           {t("products.title")}
-        </h2>
+        </h1>
       </div>
 
       <div

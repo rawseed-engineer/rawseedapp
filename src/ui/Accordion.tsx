@@ -1,14 +1,17 @@
 // components/ShoppingHelpAccordion.jsx
 import { useState } from "react";
-import FlaxseedOilBottle from "../assets/bottle_flaxseed.png";
 import { useTranslation } from "react-i18next";
 
 interface ProductInformationProps {
   productItems: Array<{ title: string; content: React.ReactNode }>;
+  imageSrc: string;
+  imageAlt: string;
 }
 
 export default function ProductInformationAccordion({
   productItems: faqItems,
+  imageSrc,
+  imageAlt,
 }: ProductInformationProps) {
   const [openIndex, setOpenIndex] = useState(0); // first one open by default
   const { t } = useTranslation();
@@ -23,11 +26,7 @@ export default function ProductInformationAccordion({
       gap-1 px-8 sm:px-1 mb-60"
     >
       <div>
-        <img
-          src={FlaxseedOilBottle}
-          alt="Golden Drop Sesame Seed Oil"
-          className="aspect-auto h-180"
-        />
+        <img src={imageSrc} alt={imageAlt} className="aspect-auto h-180" />
       </div>
 
       <div>
@@ -40,7 +39,7 @@ export default function ProductInformationAccordion({
         </h2> */}
         <h1
           className="text-balance text-[#a18458] 
-          text-5xl md:text-5xl font-bold tracking-tight text-shadow-lg mb-8"
+          text-5xl md:text-5xl tracking-tight text-shadow-lg mb-8"
         >
           {t("sesame.product_information")}
         </h1>

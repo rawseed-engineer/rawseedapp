@@ -75,7 +75,7 @@ const Story: React.FC = () => {
         space-y-1 lg:space-y-4
         text-neutral-600"
       >
-        <h1 className="text-balance text-center lg:text-left text-[#a18458] text-5xl text-shadow-lg font-bold tracking-tight md:text-5xl">
+        <h1 className="text-balance text-center lg:text-left text-[#a18458] text-5xl text-shadow-lg tracking-tight md:text-5xl">
           {t("story.title")}
         </h1>
         <p className="text-pretty text-justify text-2xl">
@@ -83,6 +83,9 @@ const Story: React.FC = () => {
         </p>
         <p className="text-pretty text-justify text-2xl">
           {t("story.description.p2")}
+        </p>
+        <p className="text-pretty text-justify text-2xl mb-6">
+          {t("story.description.p3")}
         </p>
 
         <div className="text-pretty text-justify text-2xl">
@@ -112,9 +115,6 @@ const Story: React.FC = () => {
             ease-in-out
             peer-has-checked:max-h-200"
           >
-            <p className="text-pretty text-justify text-2xl mb-6">
-              {t("story.description.p3")}
-            </p>
             <p className="text-pretty text-justify text-2xl mb-6">
               {t("story.description.p4.text1")}
               <i>{t("story.description.p4.text2")}</i>

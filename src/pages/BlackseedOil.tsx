@@ -13,6 +13,7 @@ import Process from "../ui/blackseed-oil/process";
 import EmailForm from "../ui/email-form";
 import JoinOurJourney from "../ui/blackseed-oil/joinOurJourney";
 import ProductInformationAccordion from "../ui/Accordion";
+import BlackseedOilBottle from "../assets/bottle_blackseed.png";
 
 const BlackSeedOilPage: React.FC = () => {
   const { t } = useTranslation();
@@ -140,7 +141,11 @@ const BlackSeedOilPage: React.FC = () => {
         className="rounded py-8 mt-12 sm:py-12
         mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:mx-64"
       >
-        <ProductInformationAccordion productItems={productInformation} />
+        <ProductInformationAccordion
+          productItems={productInformation}
+          imageSrc={BlackseedOilBottle}
+          imageAlt="Golden Drop Black Seed Oil bottle"
+        />
       </section>
 
       {/* White Background Section - Features */}

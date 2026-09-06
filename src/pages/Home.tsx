@@ -121,9 +121,9 @@ const Home = () => {
         </section> */}
 
         {/* Contact Us */}
-        <section className="rounded py-8 mt-12 sm:py-12 mx-1 lg:mx-84">
+        <section className="rounded py-12 mt-12 sm:py-12 mx-1 lg:mx-84">
           <div
-            className="mx-auto grid grid-cols-1 items-center justify-items-center gap-8 px-10 sm:px-16 
+            className="mx-auto grid grid-cols-1 gap-16 px-24 sm:px-16 
             grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2"
           >
             <JoinOurJourney />

@@ -35,7 +35,7 @@ const Reasons: React.FC = () => {
           opacity: 1,
           y: 0,
           duration: 1,
-          ease: "power3.out",
+          ease: "none",
           stagger: 0.7, // This is the magic: each item delays by 0.2s
           scrollTrigger: {
             trigger: containerRef.current,
@@ -44,7 +44,7 @@ const Reasons: React.FC = () => {
             toggleActions: "play none none reverse",
             // markers: true, // Remove in production
           },
-        }
+        },
       );
     }, containerRef);
 
@@ -59,7 +59,7 @@ const Reasons: React.FC = () => {
 
   return (
     <div ref={containerRef}>
-      <h2 className="m-8 text-center text-balance text-5xl text-[#a18458] font-bold tracking-tight md:text-5xl">
+      <h2 className="m-8 text-center text-balance text-5xl text-[#a18458] tracking-tight md:text-5xl">
         {t("sesame.reason.heading")}
       </h2>
 
@@ -67,21 +67,21 @@ const Reasons: React.FC = () => {
       <div
         className="
         lg:px-32
-        mx-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 items-center 
+        mx-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 items-start 
         justify-items-center 
         gap-8 pt-8 pb-20 sm:px-64
         "
       >
-        <div ref={addToRefs} className="m-8 w-96 transition duration-300">
+        <div ref={addToRefs} className="m-8 w-96">
           <div className="flex items-center justify-center h-48 w-full rounded-lg">
             <FontAwesomeIcon
               icon={faUtensils}
               className="text-[#a18458]"
-              size="10x"
+              size="8x"
             />
           </div>
 
-          <h2 className="m-6 text-center text-balance text-3xl text-neutral-400 font-bold tracking-tight md:text-4xl">
+          <h2 className="m-6 text-center text-balance text-3xl text-neutral-400 tracking-tight md:text-4xl">
             {t("sesame.reason.p1.title")}
           </h2>
           <p className="text-center text-pretty text-neutral-500 text-2xl">
@@ -89,16 +89,16 @@ const Reasons: React.FC = () => {
           </p>
         </div>
 
-        <div ref={addToRefs} className="m-8 w-96 transition duration-300">
+        <div ref={addToRefs} className="m-8 w-96">
           <div className="flex items-center justify-center h-48 w-full rounded-lg">
             <FontAwesomeIcon
               icon={faHeartCircleCheck}
               className="text-[#a18458]"
-              size="10x"
+              size="8x"
             />
           </div>
 
-          <h2 className="m-6 text-center text-balance text-3xl text-neutral-400 font-bold tracking-tight md:text-4xl">
+          <h2 className="m-6 text-center text-balance text-3xl text-neutral-400 tracking-tight md:text-4xl">
             {t("sesame.reason.p2.title")}
           </h2>
           <p className="text-center text-pretty text-neutral-500 text-2xl">
@@ -106,16 +106,16 @@ const Reasons: React.FC = () => {
           </p>
         </div>
 
-        <div ref={addToRefs} className="m-8 w-96 transition duration-300 ">
+        <div ref={addToRefs} className="m-8 w-96">
           <div className="flex items-center justify-center h-48 w-full rounded-lg">
             <FontAwesomeIcon
               icon={faLemon}
               className="text-[#a18458]"
-              size="10x"
+              size="8x"
             />
           </div>
 
-          <h2 className="m-6 text-center text-balance text-3xl text-neutral-400 font-bold tracking-tight md:text-4xl">
+          <h2 className="m-6 text-center text-balance text-3xl text-neutral-400 tracking-tight md:text-4xl">
             {t("sesame.reason.p3.title")}
           </h2>
           <p className="text-center text-pretty text-neutral-500 text-2xl">
@@ -124,16 +124,16 @@ const Reasons: React.FC = () => {
         </div>
       </div>
 
-      <div className="mx-auto grid grid-cols-1 items-center justify-items-center gap-8 pt-8 pb-20 sm:px-64 lg:grid-cols-2">
-        <div ref={addToRefs} className="m-8 w-96 transition duration-300 ">
+      <div className="mx-auto grid grid-cols-1 items-start justify-items-center gap-8 pt-8 pb-20 sm:px-64 lg:grid-cols-2">
+        <div ref={addToRefs} className="m-8 w-96">
           <div className="flex items-center justify-center h-48 w-full rounded-lg">
             <FontAwesomeIcon
               icon={faTemperatureThreeQuarters}
               className="text-[#a18458]"
-              size="10x"
+              size="8x"
             />
           </div>
-          <h2 className="m-6 text-center text-balance text-3xl text-neutral-400 font-bold tracking-tight md:text-4xl">
+          <h2 className="m-6 text-center text-balance text-3xl text-neutral-400 tracking-tight md:text-4xl">
             {t("sesame.reason.p4.title")}
           </h2>
           <p className="text-center text-pretty text-neutral-500 text-2xl">
@@ -141,16 +141,16 @@ const Reasons: React.FC = () => {
           </p>
         </div>
 
-        <div ref={addToRefs} className="m-8 w-96 transition duration-300 ">
+        <div ref={addToRefs} className="m-8 w-96">
           <div className="flex items-center justify-center h-48 w-full rounded-lg">
             <FontAwesomeIcon
               icon={faEarthAsia}
               className="text-[#a18458]"
-              size="10x"
+              size="8x"
             />
           </div>
 
-          <h2 className="m-6 text-center text-balance text-3xl text-neutral-400 font-bold tracking-tight md:text-4xl">
+          <h2 className="m-6 text-center text-balance text-3xl text-neutral-400 tracking-tight md:text-4xl">
             {t("sesame.reason.p5.title")}
           </h2>
 
