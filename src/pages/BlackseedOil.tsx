@@ -145,6 +145,7 @@ const BlackSeedOilPage: React.FC = () => {
           productItems={productInformation}
           imageSrc={BlackseedOilBottle}
           imageAlt="Golden Drop Black Seed Oil bottle"
+          imageHeight="h-150"
         />
       </section>
 

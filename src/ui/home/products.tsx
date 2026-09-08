@@ -141,8 +141,8 @@ const Products: React.FC = () => {
             // title="Black Seed Oil"
             description={t("products.black_seed.description")}
             buttonText="Learn More"
-            imageSize="90%"
-            imagePosition="center 80%"
+            imageSize="80%"
+            imagePosition="center 90%"
             buttonLink="/rawseedapp/blackseed-oil"
           />
         </div>
