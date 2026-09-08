@@ -118,8 +118,8 @@ const Products: React.FC = () => {
             description={t("products.sesame.description")}
             buttonText="Learn More"
             buttonLink="/rawseedapp/sesame-oil"
-            imageSize="100%"
-            imagePosition="center 60%"
+            imageSize="117%"
+            imagePosition="center 80%"
           />
         </div>
 

@@ -135,6 +135,7 @@ const SesameOil = () => {
           productItems={productInformation}
           imageSrc={SesameSeedOilBottle}
           imageAlt="Golden Drop Sesame Seed Oil bottle"
+          imageHeight="h-160"
         />
       </section>
       {/* <section

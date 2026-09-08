@@ -6,12 +6,14 @@ interface ProductInformationProps {
   productItems: Array<{ title: string; content: React.ReactNode }>;
   imageSrc: string;
   imageAlt: string;
+  imageHeight?: string;
 }
 
 export default function ProductInformationAccordion({
   productItems: faqItems,
   imageSrc,
   imageAlt,
+  imageHeight = "h-180",
 }: ProductInformationProps) {
   const [openIndex, setOpenIndex] = useState(0); // first one open by default
   const { t } = useTranslation();
@@ -26,7 +28,11 @@ export default function ProductInformationAccordion({
       gap-1 px-8 sm:px-1 mb-60"
     >
       <div>
-        <img src={imageSrc} alt={imageAlt} className="aspect-auto h-180" />
+        <img
+          src={imageSrc}
+          alt={imageAlt}
+          className={`aspect-auto ${imageHeight}`}
+        />
       </div>
 
       <div>
