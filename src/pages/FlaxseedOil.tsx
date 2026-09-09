@@ -14,11 +14,11 @@ import JoinOurJourney from "../ui/home/joinOurJourney";
 import EmailForm from "../ui/email-form";
 
 import UseCases from "../ui/flaxseed-oil/useCases";
-import Smoothie from "../ui/flaxseed-oil/smoothie";
+// import Smoothie from "../ui/flaxseed-oil/smoothie";
 import Salad from "../ui/blackseed-oil/salad";
-import SkinCare from "../ui/flaxseed-oil/skinCare";
-import FaceSerum from "../ui/flaxseed-oil/faceSerum";
-import ImageHairAndScalp from "../ui/flaxseed-oil/HairAndScalp";
+// import SkinCare from "../ui/flaxseed-oil/skinCare";
+// import FaceSerum from "../ui/flaxseed-oil/faceSerum";
+// import ImageHairAndScalp from "../ui/flaxseed-oil/HairAndScalp";
 import ProductInformationAccordion from "../ui/Accordion";
 import FlaxseedOilBottle from "../assets/bottle_flaxseed.png";
 import type { ScrollHighlightItem } from "../ui/ScrollHighlightSection";

@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 import NavMenu from "../ui/nav/nav-menu";
 // import Team from "../ui/about-us/team";
 import Footer from "../ui/nav/footer";
@@ -9,7 +9,7 @@ import JoinOurJourney from "../ui/home/joinOurJourney";
 import EmailForm from "../ui/email-form";
 
 const AboutUs: React.FC = () => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   return (
     <>
       <div className="min-h-screen antialiased">
