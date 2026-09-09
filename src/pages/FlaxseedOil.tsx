@@ -221,12 +221,12 @@ const FlaxseedOil: React.FC = () => {
         </section>
 
         {/* White Background Section - Features */}
-        <section
+        {/* <section
           className="rounded py-12 sm:py-24 mt-12 
           mx-4 sm:mx-4 lg:mx-24 xl:mx-48 2xl:128"
         >
           <Smoothie />
-        </section>
+        </section> */}
 
         <section
           className="rounded py-12 sm:py-12 mt-12 
@@ -235,23 +235,23 @@ const FlaxseedOil: React.FC = () => {
           <Salad />
         </section>
 
-        <section className="flex-grow overflow-x-auto w-full ">
+        {/* <section className="flex-grow overflow-x-auto w-full ">
           <SkinCare />
-        </section>
+        </section> */}
 
-        <section
+        {/* <section
           className="rounded py-12 sm:py-24 mt-12 
           mx-4 sm:mx-4 lg:mx-24 xl:mx-48 2xl:128"
         >
           <FaceSerum />
-        </section>
+        </section> */}
 
-        <section
+        {/* <section
           className="rounded py-12 sm:py-12 mt-12
           mx-4 sm:mx-4 lg:mx-24 xl:mx-48 2xl:128"
         >
           <ImageHairAndScalp />
-        </section>
+        </section> */}
 
         <section
           className="rounded py-12 sm:py-12 mt-36 

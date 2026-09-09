@@ -72,7 +72,7 @@ const Process: React.FC = () => {
             />
           </p>
         </div>
-        <h2 className="text-center text-balance text-3xl text-neutral-400 text-shadow-lg font-bold tracking-tight md:text-4xl">
+        <h2 className="text-center text-balance text-3xl text-neutral-400 text-shadow-lg tracking-tight md:text-4xl">
           {t("blackseed_oil.process.cold_pressed.title")}
         </h2>
       </div>
@@ -87,7 +87,7 @@ const Process: React.FC = () => {
             />
           </p>
         </div>
-        <h2 className="text-center text-balance text-3xl text-neutral-400 text-shadow-lg font-bold tracking-tight md:text-4xl">
+        <h2 className="text-center text-balance text-3xl text-neutral-400 text-shadow-lg tracking-tight md:text-4xl">
           {t("blackseed_oil.process.rich.title")}
         </h2>
       </div>
@@ -102,7 +102,7 @@ const Process: React.FC = () => {
             />
           </p>
         </div>
-        <h2 className="text-center text-balance text-3xl text-neutral-400 text-shadow-lg font-bold tracking-tight md:text-4xl">
+        <h2 className="text-center text-balance text-3xl text-neutral-400 text-shadow-lg tracking-tight md:text-4xl">
           {t("blackseed_oil.process.bottle.title")}
         </h2>
       </div>
@@ -117,7 +117,7 @@ const Process: React.FC = () => {
             />
           </p>
         </div>
-        <h2 className="text-center text-balance text-3xl text-neutral-400 text-shadow-lg font-bold tracking-tight md:text-4xl">
+        <h2 className="text-center text-balance text-3xl text-neutral-400 text-shadow-lg tracking-tight md:text-4xl">
           {t("blackseed_oil.process.pure.title")}
         </h2>
       </div>

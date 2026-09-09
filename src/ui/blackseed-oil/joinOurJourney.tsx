@@ -7,7 +7,7 @@ const JoinOurJourney: React.FC = () => {
     <div className="max-w-md space-y-4">
       <h1
         className="text-balance text-5xl md:text-5xl text-[#a18458] 
-        font-bold text-shadow-lg tracking-tight"
+        text-shadow-lg tracking-tight"
       >
         {t("blackseed_oil.journey.title")}
       </h1>

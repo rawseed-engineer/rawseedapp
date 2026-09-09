@@ -64,7 +64,7 @@ const HairSkinBeauty: React.FC = () => {
         />
       </div>
       <div ref={addToRefs} className="max-w-md text-neutral-600 space-y-4">
-        <h2 className="text-balance text-[#a18458] text-5xl font-bold text-shadow-lg tracking-tight md:text-5xl">
+        <h2 className="text-balance text-[#a18458] text-5xl text-shadow-lg tracking-tight md:text-5xl">
           {t("blackseed_oil.healthy_skin_and_hair.title")}
         </h2>
         <p className="text-pretty text-2xl">
