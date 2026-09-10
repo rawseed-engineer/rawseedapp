@@ -151,7 +151,7 @@ const BlackSeedOilPage: React.FC = () => {
 
       {/* White Background Section - Features */}
       <section
-        className="rounded py-8 mt-12 sm:py-12 
+        className="rounded py-8 mb-12 sm:pb-24 
         mx-4 sm:mx-4 md:mx-4 lg:mx-24 xl:mx-48 2xl:128"
       >
         <Story />
@@ -228,7 +228,7 @@ const BlackSeedOilPage: React.FC = () => {
         </div>
       </section> */}
 
-      <section className="rounded bg-[#181818] py-12 sm:py-24">
+      <section className="rounded bg-[#181818] py-12 sm:py-48">
         <Process />
       </section>
 
@@ -241,7 +241,7 @@ const BlackSeedOilPage: React.FC = () => {
       >
         <div
           className="mx-auto grid grid-cols-1 lg:grid-cols-2 
-          items-center justify-items-center gap-8 px-1 sm:px-16"
+           justify-items-center gap-8 px-1 sm:px-16"
         >
           <JoinOurJourney />
           <EmailForm />

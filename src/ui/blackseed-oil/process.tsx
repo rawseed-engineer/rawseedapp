@@ -60,9 +60,9 @@ const Process: React.FC = () => {
     <div
       ref={containerRef}
       className="mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 
-      items-center justify-items-center gap-8 pt-8 pb-4 px-4 lg:px-64"
+      items-center justify-items-center gap-8 pt-4 pb-4 px-4 lg:px-64"
     >
-      <div ref={addToRefs} className="transition duration-300 hover:scale-110">
+      <div ref={addToRefs} className="duration-300 hover:scale-110">
         <div className="h-64 flex justify-center items-center">
           <p>
             <FontAwesomeIcon
@@ -77,7 +77,7 @@ const Process: React.FC = () => {
         </h2>
       </div>
 
-      <div ref={addToRefs} className="transition duration-300 hover:scale-110">
+      <div ref={addToRefs} className="duration-300 hover:scale-110">
         <div className="h-64 flex justify-center items-center">
           <p>
             <FontAwesomeIcon
@@ -92,7 +92,7 @@ const Process: React.FC = () => {
         </h2>
       </div>
 
-      <div ref={addToRefs} className="transition duration-300 hover:scale-110">
+      <div ref={addToRefs} className="duration-300 hover:scale-110">
         <div className="h-64 flex justify-center items-center">
           <p>
             <FontAwesomeIcon
@@ -107,7 +107,7 @@ const Process: React.FC = () => {
         </h2>
       </div>
 
-      <div ref={addToRefs} className="transition duration-300 hover:scale-110">
+      <div ref={addToRefs} className="duration-300 hover:scale-110">
         <div className="h-64 flex justify-center items-center">
           <p>
             <FontAwesomeIcon

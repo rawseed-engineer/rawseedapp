@@ -6,13 +6,13 @@
   "hero": {
     "home": {
       "title": "Welcome to RawSeed",
-      "subtitle": "Wholesome Oils for Healthy Living",
+      "subtitle": "Wholesome oils for healthy living",
       "description": "At RawSeed, we believe that nature holds the key to true nourishment. Founded in Great Britain, our mission is to reconnect people with the honest nutritional strength of natural oils—pure, unrefined and rooted in tradition. We specialise in the production of cold-pressed sesame oil and black seed oil, proudly presented under our flagship brand: Golden Drop.",
       "learn": "Contact us"
     },
     "sesame_oil": {
       "title": "Sesame Oil",
-      "subtitle": "Pure Oil from Afghan Soil",
+      "subtitle": "Pure oil from Afghan soil",
       "description": "At RawSeed, we believe in using ingredients that have stood the test of time. Sesame oil is one of the oldest, most nourishing oils known to humankind—yet it remains underused in modern kitchens. Here's why we think it’s time for sesame oil to reclaim its place in your pantry.",
       "learn": "Contact us"
     }
@@ -151,7 +151,7 @@
   "blackseed_oil": {
     "hero": {
       "title": "Why Black Seed Oil?",
-      "subtitle": "A Drop of Tradition. A Lifetime of Benefits.",
+      "subtitle": "An ancient remedy for modern life",
       "description": "For centuries, black seed oil has been revered as a healing remedy across cultures and continents. Known as the “Oil of the Pharaohs” it was mentioned in ancient medical texts and is now gaining global recognition for its powerful natural benefits. At RawSeed, we’re proud to produce premium, cold-pressed black seed oil that honours this timeless legacy.",
       "learn": "Contact us"
     },
@@ -211,7 +211,7 @@
   "flaxseed_oil": {
     "hero": {
       "title": "Pure Cold-Pressed Flaxseed Oil",
-      "subtitle": "Omega Rich in Every Drop",
+      "subtitle": "Omega rich in every drop",
       "description": "Golden Drop premium cold-pressed flaxseed oil is extracted without heat or chemicals, preserving the highest levels of alpha-linolenic acid (ALA), nature's most potent plant-based omega-3. This golden treasure delivers exceptional nutritional benefits, from supporting cardiovascular wellness and promoting glowing skin to reducing inflammation. Lift your daily routine with this pure, unrefined superfood oil for greater health and vitality.",
       "learn": "Contact us"
     },
