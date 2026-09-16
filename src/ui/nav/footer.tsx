@@ -206,10 +206,10 @@ const Footer: React.FC = () => {
                 >
                   Privacy Policy
                 </h2>
-                <p className="mt-1 text-sm text-[#cfb997]">
+                {/* <p className="mt-1 text-sm text-[#cfb997]">
                   General template for RawSeed Ltd. Please review this with a
                   qualified legal adviser before publishing.
-                </p>
+                </p> */}
               </div>
               <button
                 type="button"
@@ -245,10 +245,10 @@ const Footer: React.FC = () => {
                   Sharing and retention
                 </h3>
                 <p>
-                  Form submissions are sent to our email service provider, which
-                  processes the information on our behalf. We retain personal
-                  information only for as long as necessary for the purposes
-                  described or as required by law.
+                  RawSeed Ltd. does not sell or share your personal information
+                  with third-party providers. We retain personal information
+                  only for as long as necessary for the purposes described or as
+                  required by law.
                 </p>
               </section>
               <section>
@@ -276,11 +276,14 @@ const Footer: React.FC = () => {
               <section>
                 <h3 className="font-semibold text-white">Policy details</h3>
                 <p>
-                  Effective date: [insert date]. Data controller: RawSeed Ltd.,
-                  167-169 Great Portland Street, 5th Floor, London, W1W 5PF. Add
-                  the applicable legal basis, supervisory authority, cookie
-                  details, and international transfer information before
-                  publication.
+                  Effective date: 16 September 2026. Data controller: RawSeed
+                  Ltd., 167-169 Great Portland Street, 5th Floor, London, W1W
+                  5PF. We use personal information from enquiries to respond to
+                  you and manage our communications with you. This website does
+                  not use cookies or third-party tracking technologies, and we
+                  do not transfer your personal information to third-party
+                  providers. You can contact us at info@rawseed.co.uk with any
+                  privacy questions or requests.
                 </p>
               </section>
             </div>

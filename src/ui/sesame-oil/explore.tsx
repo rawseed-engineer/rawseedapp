@@ -50,15 +50,11 @@ const Explore: React.FC = () => {
   };
 
   return (
-    <div ref={containerRef} className="space-y-4 test-justify">
+    <div ref={containerRef} className="max-w-md space-y-6 mt-24 test-justify">
       <h2 className="text-balance text-4xl tracking-tight text-[#a18458] text-shadow-lg md:text-5xl">
         {t("sesame.callout.inquiry_title")}
       </h2>
-      <p
-        ref={addToRefs}
-        className=" text-2xl md:text-3xl text-neutral-600
-         tracking-tight"
-      >
+      <p ref={addToRefs} className=" text-2xl md:text-2xl text-neutral-600">
         {t("sesame.callout.p1")}
       </p>
     </div>

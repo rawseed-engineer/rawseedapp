@@ -72,7 +72,7 @@ const FullScreenVideo = () => {
         <div
           className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
           style={{
-            backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("video_thumbnail.jpg")`,
+            backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("video_thumbnail.jpeg")`,
             // opacity: 0.9,
             // filter: "brightness(30%)",
           }}
@@ -107,7 +107,7 @@ const FullScreenVideo = () => {
             <div ref={addToRefs}>
               <button
                 onClick={handlePlay}
-                className="bg-red-600 text-white px-6 py-3 mt-3 rounded-full text-lg font-semibold hover:bg-red-700 transition"
+                className="hidden bg-red-600 text-white px-6 py-3 mt-3 rounded-full text-lg font-semibold hover:bg-red-700 transition"
               >
                 <i>Watch Video</i>
               </button>

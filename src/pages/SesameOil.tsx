@@ -212,7 +212,7 @@ const SesameOil = () => {
       >
         <div
           className="mx-auto grid grid-cols-1 lg:grid-cols-2
-          items-center justify-items-center px-2 sm:px-4 lg:px-8
+           justify-items-center px-2 sm:px-4 lg:px-8
           "
         >
           <Explore />
