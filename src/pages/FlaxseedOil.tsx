@@ -107,7 +107,7 @@ const FlaxseedOil: React.FC = () => {
       content: (
         <div>
           <div>
-            <b>100% Cold-Pressed Flaxseed (Linseed) Oil</b> Oil
+            <b>100% Cold-Pressed Flaxseed (Linseed) Oil</b>
           </div>
           <div>
             Allergy Information: Produced in a facility that also handles sesame
@@ -259,7 +259,7 @@ const FlaxseedOil: React.FC = () => {
         >
           <div
             className="mx-auto grid grid-cols-1 lg:grid-cols-2 
-            items-center justify-items-center gap-8 px-1 sm:px-16"
+            justify-items-center gap-8 px-1 sm:px-16"
           >
             <JoinOurJourney />
             <EmailForm />

@@ -15,7 +15,7 @@ const Contact: React.FC = () => {
 
         {/* Contact Us */}
         <section className="rounded py-8 mt-12 sm:py-12 mx-1 lg:mx-84">
-          <div className="mx-auto grid grid-cols-1 items-center justify-items-center gap-8 px-8 sm:px-16 md:grid-cols-2">
+          <div className="mx-auto grid grid-cols-1 justify-items-center gap-8 px-8 sm:px-16 md:grid-cols-2">
             <JoinOurJourney />
             <EmailForm />
           </div>
