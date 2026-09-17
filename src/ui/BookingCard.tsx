@@ -35,7 +35,7 @@ export default function BookingCard({
       className={`
         group relative w-[350px] h-[650px] flex-shrink-0 overflow-hidden rounded-2xl
         text-center transition-all duration-500
-        hover:shadow-2xl hover:shadow-yellow-300/70
+        hover:shadow-2xl hover:shadow-gray-500/70
       `}
       style={{
         backgroundImage: `url(${imageUrl})`,
@@ -53,8 +53,8 @@ export default function BookingCard({
       /> */}
       <div
         className={`
-        absolute inset-0 bg-black opacity-0 transition-opacity duration-500
-        group-hover:opacity-70
+        absolute inset-0 bg-gradient-to-t  from-[#a67c00] to-transparent opacity-0 transition-opacity duration-500
+        group-hover:opacity-80
         ${isExpanded ? "opacity-70" : ""}
       `}
       />
@@ -95,7 +95,6 @@ export default function BookingCard({
       <div
         className={`
         relative z-20 flex h-full flex-col 
-        
         p-6 pt-60 transition-transform duration-500 
         group-hover:translate-y-[-206px]
         ${isExpanded ? "translate-y-[-206px]" : ""}

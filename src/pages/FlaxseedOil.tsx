@@ -2,8 +2,9 @@ import React from "react";
 import NavMenu from "../ui/nav/nav-menu";
 import Hero from "../ui/flaxseed-oil/hero";
 import Story from "../ui/flaxseed-oil/story";
-import ScrollHighlightSection from "../ui/ScrollHighlightSection";
+// import ScrollHighlightSection from "../ui/ScrollHighlightSection";
 // import ScrollHighlightItem from "../ui/ScrollHighlightSection";
+import WhatWeDoScrollHighlight from "../ui/home/whatWeDoScrollHighlight";
 import benefit1 from "../assets/example1_health_protection.jpg";
 import benefit2 from "../assets/example2_anti_inflammatory.jpg";
 import benefit3 from "../assets/example3_digestive_health.jpg";
@@ -22,6 +23,7 @@ import SkinCare from "../ui/flaxseed-oil/skinCare";
 import ProductInformationAccordion from "../ui/Accordion";
 import FlaxseedOilBottle from "../assets/bottle_flaxseed.png";
 import type { ScrollHighlightItem } from "../ui/ScrollHighlightSection";
+// import type WhatWeDoScrollHighlight from "../ui/home/whatWeDoScrollHighlight";
 const FlaxseedOil: React.FC = () => {
   const nutritionUnit = "per (5ml) teaspoon";
 
@@ -212,8 +214,9 @@ const FlaxseedOil: React.FC = () => {
           mx-4 sm:mx-4 md:mx-4 lg:mx-24 
           xl:mx-48 2xl:128"
         > */}
-        <section className="py-12">
-          <ScrollHighlightSection items={scrollItems} />
+        <section className="pt-12">
+          {/* <ScrollHighlightSection items={scrollItems} /> */}
+          <WhatWeDoScrollHighlight heading="Benefits" items={scrollItems} />
         </section>
 
         <section className="flex-grow overflow-x-auto w-full ">

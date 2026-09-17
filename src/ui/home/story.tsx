@@ -115,10 +115,13 @@ const Story: React.FC = () => {
             ease-in-out
             peer-has-checked:max-h-200"
           >
-            <p className="text-pretty text-justify text-2xl mb-6">
+            {/* <p className="text-pretty text-justify text-2xl mb-6">
               {t("story.description.p4.text1")}
               <i>{t("story.description.p4.text2")}</i>
               {t("story.description.p4.text3")}
+            </p> */}
+            <p className="text-pretty text-justify text-2xl mb-6">
+              {t("story.description.p4")}
             </p>
             <p className="text-pretty text-justify text-2xl mb-6">
               {t("story.description.p5")}

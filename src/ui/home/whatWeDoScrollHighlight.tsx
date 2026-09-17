@@ -1,6 +1,12 @@
 import { useState } from "react";
 
-const WhatWeDoScrollHighlight = ({ items }: { items: any[] }) => {
+const WhatWeDoScrollHighlight = ({
+  heading,
+  items,
+}: {
+  heading: string;
+  items: any[];
+}) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeItem = items[activeIndex] ?? items[0];
 
@@ -19,19 +25,24 @@ const WhatWeDoScrollHighlight = ({ items }: { items: any[] }) => {
             <h2 className="text-5xl tracking-tight lg:text-5xl">
               {activeItem.key}
             </h2>
-            <p
+            {activeItem.description.map((paragraph: string, index: number) => (
+              <p className="mt-6 text-pretty text-2xl leading-8" key={index}>
+                {paragraph}
+              </p>
+            ))}
+            {/* <p
               className="mt-6 text-pretty text-2xl leading-8"
               style={{ fontFamily: "roboto" }}
             >
               {activeItem.description}
-            </p>
+            </p> */}
           </div>
         </div>
 
         <div className="w-full lg:w-2/5 flex items-center justify-center p-6 lg:p-10">
           <div className="w-full rounded-3xl border border-white/20 bg-transparent p-6">
             <div className="mb-6 text-5xl tracking-tight text-slate-100 font-serif lg:text-5xl">
-              What We Do
+              {heading}
             </div>
             <div className="flex flex-col gap-4">
               {items.map((item, index) => (
