@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 // import { Link } from "react-router-dom";
-import { Callout } from "../callout";
+// import { Callout } from "../callout";
 
 const JoinOurJourney: React.FC = () => {
   const { t } = useTranslation();
