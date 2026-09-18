@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ShineText from "../ShineText";
-import ImageGoldenDropCircle from "../../assets/golden_drop_circle.svg";
+import ImageGoldenDropCircle from "../../assets/golden_drop_logo_only.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,12 +19,12 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({
-  staggerDelay = 0.8,
+  staggerDelay = 0.6,
   initialDelay = 0,
   titleDuration = 0,
   subtitleDuration = 2,
   logoDuration = 1,
-  descriptionDuration = 7,
+  descriptionDuration = 6,
 }) => {
   const { t } = useTranslation();
 
@@ -70,6 +70,15 @@ const Hero: React.FC<HeroProps> = ({
           descriptionRef.current,
           { opacity: 0, y: 60 },
           { opacity: 1, y: 0, duration: descriptionDuration },
+          `+=${staggerDelay}`,
+        );
+      }
+
+      if (circleRef.current) {
+        tl.fromTo(
+          circleRef.current,
+          { opacity: 0, y: 60 },
+          { opacity: 1, y: 0, duration: logoDuration },
           `+=${staggerDelay}`,
         );
       }
@@ -138,7 +147,7 @@ const Hero: React.FC<HeroProps> = ({
               ref={circleRef}
               src={ImageGoldenDropCircle}
               alt="Golden Drop Circle Logo"
-              className="h-[10rem] lg:h-[15rem] drop-shadow-lg"
+              className="h-[10rem] lg:h-[15rem] drop-shadow-xl drop-shadow-yellow-600"
             />
           </div>
         </div>

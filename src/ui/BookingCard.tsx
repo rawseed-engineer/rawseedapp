@@ -53,8 +53,8 @@ export default function BookingCard({
       /> */}
       <div
         className={`
-        absolute inset-0 bg-gradient-to-t  from-[#a67c00] to-transparent opacity-0 transition-opacity duration-500
-        group-hover:opacity-80
+        absolute inset-0 bg-gradient-to-t from-[#a67c00] to-transparent opacity-0 transition-opacity duration-500
+        group-hover:opacity-90
         ${isExpanded ? "opacity-70" : ""}
       `}
       />
@@ -96,8 +96,8 @@ export default function BookingCard({
         className={`
         relative z-20 flex h-full flex-col 
         p-6 pt-60 transition-transform duration-500 
-        group-hover:translate-y-[-206px]
-        ${isExpanded ? "translate-y-[-206px]" : ""}
+        group-hover:translate-y-[-246px]
+        ${isExpanded ? "translate-y-[-246px]" : ""}
       `}
       >
         {/* <div className="mb-4 mt-24 flex items-center justify-center">

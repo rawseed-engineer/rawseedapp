@@ -84,9 +84,6 @@ const Story: React.FC = () => {
         <p className="text-pretty text-justify text-2xl">
           {t("story.description.p2")}
         </p>
-        <p className="text-pretty text-justify text-2xl mb-6">
-          {t("story.description.p3")}
-        </p>
 
         <div className="text-pretty text-justify text-2xl">
           <label className="peer block w-full flex hover:animate-bounce">
@@ -120,6 +117,9 @@ const Story: React.FC = () => {
               <i>{t("story.description.p4.text2")}</i>
               {t("story.description.p4.text3")}
             </p> */}
+            <p className="text-pretty text-justify text-2xl mb-6">
+              {t("story.description.p3")}
+            </p>
             <p className="text-pretty text-justify text-2xl mb-6">
               {t("story.description.p4")}
             </p>
