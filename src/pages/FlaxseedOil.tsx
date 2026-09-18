@@ -30,32 +30,37 @@ const FlaxseedOil: React.FC = () => {
   const scrollItems: ScrollHighlightItem[] = [
     {
       key: "Heart Health",
-      description:
+      description: [
         "May lower cholesterol levels (total and LDL), reduce blood pressure and improve artery elasticity, potentially decreasing the risk of heart disease.",
+      ],
       image: benefit1,
     },
     {
       key: "Anti-Inflammatory Effects",
-      description:
+      description: [
         "The ALA in flaxseed oil can help reduce inflammation, which may benefit conditions like rheumatoid arthritis (although evidence is mixed for significant improvements in symptoms).",
+      ],
       image: benefit2,
     },
     {
       key: "Digestive Health",
-      description:
+      description: [
         "Can relieve constipation by promoting bowel regularity and improve stool consistency; it may also help with diarrhoea in certain cases.",
+      ],
       image: benefit3,
     },
     {
       key: "Skin Health",
-      description:
+      description: [
         "Topical or oral use may enhance skin hydration, smoothness and reduce sensitivity to irritation.",
+      ],
       image: benefit4,
     },
     {
       key: "Potential Cancer Protection",
-      description:
+      description: [
         "Test-tube and animal studies suggest that flaxseed may inhibit cancer cell growth in breast, colon and lung cancers. (Evidence in human cancers is limited.)",
+      ],
       image: benefit5,
     },
   ];

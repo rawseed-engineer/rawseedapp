@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export interface ScrollHighlightItem {
   key: string;
-  description: string;
+  description: string[];
   image: string;
 }
 
@@ -127,7 +127,9 @@ const ScrollHighlightSection: React.FC<ScrollHighlightSectionProps> = ({
                   <div className="absolute mx-5">
                     <div className="">
                       <p className="text-2xl md:text-2xl text-white">
-                        {item.description}
+                        {item.description.map((desc, j) => (
+                          <span key={j}>{desc}</span>
+                        ))}
                       </p>
                     </div>
                   </div>
