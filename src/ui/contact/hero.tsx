@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import { Callout } from "../callout";
 import ShineText from "../ShineText";
+import ImageGoldenDropCircle from "../../assets/golden_drop_logo_only.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,16 +14,18 @@ interface HeroProps {
   initialDelay?: number;
   titleDuration?: number;
   subtitleDuration?: number;
+  logoDuration?: number;
   descriptionDuration?: number;
   calloutDuration?: number;
 }
 
 const Hero: React.FC<HeroProps> = ({
-  staggerDelay = 0.8,
+  staggerDelay = 0.6,
   initialDelay = 0,
-  titleDuration = 1,
+  titleDuration = 0,
   subtitleDuration = 2,
-  descriptionDuration = 7,
+  logoDuration = 1,
+  descriptionDuration = 6,
   calloutDuration = 1,
 }) => {
   const { t } = useTranslation();
@@ -31,6 +34,7 @@ const Hero: React.FC<HeroProps> = ({
   const subtitleRef = useRef<HTMLHeadingElement | null>(null);
   const descriptionRef = useRef<HTMLParagraphElement | null>(null);
   const calloutRef = useRef<HTMLDivElement | null>(null);
+  const circleRef = useRef<HTMLImageElement | null>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -48,6 +52,7 @@ const Hero: React.FC<HeroProps> = ({
         [titleRef.current, titleDuration],
         [subtitleRef.current, subtitleDuration],
         [descriptionRef.current, descriptionDuration],
+        [circleRef.current, logoDuration],
         [calloutRef.current, calloutDuration],
       ] as const;
 
@@ -111,6 +116,15 @@ const Hero: React.FC<HeroProps> = ({
           >
             {t("contact.hero.description")}
           </p>
+
+          <div className="flex justify-center">
+            <img
+              ref={circleRef}
+              src={ImageGoldenDropCircle}
+              alt="Golden Drop Circle Logo"
+              className="h-[10rem] lg:h-[15rem] drop-shadow-xl drop-shadow-yellow-600"
+            />
+          </div>
 
           {/* <div ref={calloutRef} className="flex justify-center mt-30">
             <Callout />

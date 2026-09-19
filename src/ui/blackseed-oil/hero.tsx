@@ -1,34 +1,37 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import RawSeedLogo from "./../../assets/rawseed_logo.png";
-
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ShineText from "../ShineText";
+import ImageGoldenDropCircle from "../../assets/golden_drop_logo_only.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
 interface HeroProps {
+  staggerDelay?: number;
   duration?: number;
   initialDelay?: number;
   subtitleDuration?: number;
+  logoDuration?: number;
   descriptionDuration?: number;
-  staggerDelay?: number;
 }
 
 const BlackseedHero: React.FC<HeroProps> = ({
+  staggerDelay = 0.6,
   duration = 1,
-  subtitleDuration = 2,
-  descriptionDuration = 7,
   initialDelay = 0,
-  staggerDelay = 0.8,
+  subtitleDuration = 2,
+  logoDuration = 1,
+  descriptionDuration = 6,
 }) => {
   const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
   // const titleRef = useRef<HTMLHeadingElement | null>(null);
   const subtitleRef = useRef<HTMLHeadingElement | null>(null);
   const descriptionRef = useRef<HTMLParagraphElement | null>(null);
+  const circleRef = useRef<HTMLImageElement | null>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -68,6 +71,15 @@ const BlackseedHero: React.FC<HeroProps> = ({
           descriptionRef.current,
           { opacity: 0, y: 60 },
           { opacity: 1, y: 0, duration: descriptionDuration },
+          `+=${staggerDelay}`,
+        );
+      }
+
+      if (circleRef.current) {
+        timeline.fromTo(
+          circleRef.current,
+          { opacity: 0, y: 60 },
+          { opacity: 1, y: 0, duration: logoDuration },
           `+=${staggerDelay}`,
         );
       }
@@ -138,7 +150,14 @@ const BlackseedHero: React.FC<HeroProps> = ({
           >
             {t("blackseed_oil.hero.description")}
           </p>
-
+          <div className="flex justify-center">
+            <img
+              ref={circleRef}
+              src={ImageGoldenDropCircle}
+              alt="Golden Drop Circle Logo"
+              className="h-[10rem] lg:h-[15rem] drop-shadow-xl drop-shadow-yellow-600"
+            />
+          </div>
           {/* Call Out Button */}
           {/* <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <button className="group bg-gradient-to-tr from-amber-300 to-yellow-700 text-white px-10 py-5 rounded-full hover:from-amber-700 hover:to-yellow-300 transition-all duration-200 transform hover:scale-105 flex items-center text-xl font-semibold shadow-2xl">

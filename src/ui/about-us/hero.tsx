@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ShineText from "../ShineText";
+import ImageGoldenDropCircle from "../../assets/golden_drop_logo_only.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,21 +13,24 @@ interface HeroProps {
   initialDelay?: number;
   titleDuration?: number;
   subtitleDuration?: number;
+  logoDuration?: number;
   descriptionDuration?: number;
 }
 
 const Hero: React.FC<HeroProps> = ({
-  staggerDelay = 0.8,
+  staggerDelay = 0.6,
   initialDelay = 0,
-  titleDuration = 1,
+  titleDuration = 0,
   subtitleDuration = 2,
-  descriptionDuration = 7,
+  logoDuration = 1,
+  descriptionDuration = 6,
 }) => {
   const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement | null>(null);
   const subtitleRef = useRef<HTMLHeadingElement | null>(null);
   const descriptionRef = useRef<HTMLParagraphElement | null>(null);
+  const circleRef = useRef<HTMLImageElement | null>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -66,6 +70,15 @@ const Hero: React.FC<HeroProps> = ({
           `+=${staggerDelay}`,
         );
       }
+
+      if (circleRef.current) {
+        timeline.fromTo(
+          circleRef.current,
+          { opacity: 0, y: 60 },
+          { opacity: 1, y: 0, duration: logoDuration },
+          `+=${staggerDelay}`,
+        );
+      }
     }, containerRef);
 
     return () => ctx.revert();
@@ -74,6 +87,7 @@ const Hero: React.FC<HeroProps> = ({
     staggerDelay,
     titleDuration,
     subtitleDuration,
+    logoDuration,
     descriptionDuration,
   ]);
 
@@ -115,6 +129,15 @@ const Hero: React.FC<HeroProps> = ({
           >
             {t("hero.home.description")}
           </p>
+
+          <div className="flex justify-center">
+            <img
+              ref={circleRef}
+              src={ImageGoldenDropCircle}
+              alt="Golden Drop Circle Logo"
+              className="h-[10rem] lg:h-[15rem] drop-shadow-xl drop-shadow-yellow-600"
+            />
+          </div>
         </div>
       </div>
     </section>
