@@ -1,6 +1,6 @@
 import React from "react";
 import NavMenu from "../ui/nav/nav-menu";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 import BlackseedHero from "../ui/blackseed-oil/hero";
 import Story from "../ui/blackseed-oil/story";
 
@@ -17,7 +17,7 @@ import BlackseedOilBottle from "../assets/bottle_blackseed.png";
 import WhySpecial from "../ui/blackseed-oil/why-special";
 
 const BlackSeedOilPage: React.FC = () => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   const nutritionUnit = "per 100ml";
 
   const nutritionFacts = [
