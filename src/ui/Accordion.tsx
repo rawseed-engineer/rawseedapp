@@ -1,12 +1,19 @@
 // components/ShoppingHelpAccordion.jsx
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface ProductInformationProps {
   productItems: Array<{ title: string; content: React.ReactNode }>;
   imageSrc: string;
   imageAlt: string;
   imageHeight?: string;
+  staggerDelay?: number;
+  initialDelay?: number;
+  imageDuration?: number;
 }
 
 export default function ProductInformationAccordion({
@@ -14,12 +21,46 @@ export default function ProductInformationAccordion({
   imageSrc,
   imageAlt,
   imageHeight = "h-180",
+  staggerDelay = 0.6,
+  initialDelay = 2,
+  imageDuration = 1,
 }: ProductInformationProps) {
   const [openIndex, setOpenIndex] = useState(0); // first one open by default
   const { t } = useTranslation();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLImageElement | null>(null);
   const toggle = (index: any) => {
     setOpenIndex(openIndex === index ? -1 : index);
   };
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 10%",
+          end: "bottom 10%",
+          toggleActions: "play none none reverse",
+          // markers: true,
+        },
+      });
+
+      const animations = [[imageRef.current, imageDuration]] as const;
+
+      animations.forEach(([element, duration], index) => {
+        if (element) {
+          timeline.fromTo(
+            element,
+            { opacity: 0, y: 60 },
+            { opacity: 1, y: 0, duration },
+            index === 0 ? initialDelay : `+=${staggerDelay}`,
+          );
+        }
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, [initialDelay, staggerDelay, imageDuration]);
 
   return (
     <div
@@ -29,6 +70,7 @@ export default function ProductInformationAccordion({
     >
       <div>
         <img
+          ref={imageRef}
           src={imageSrc}
           alt={imageAlt}
           className={`aspect-auto ${imageHeight}`}

@@ -3,7 +3,7 @@ import NavMenu from "../ui/nav/nav-menu";
 import { useTranslation } from "react-i18next";
 import BlackseedHero from "../ui/blackseed-oil/hero";
 import Story from "../ui/blackseed-oil/story";
-import BlackseedCloseUp from "./../assets/blackseed_seed_closeup_4K.jpg";
+
 import ImmunityBooster from "../ui/blackseed-oil/immunity-booster";
 import HairSkinBeauty from "../ui/blackseed-oil/hair-skin-beauty";
 import PeacefulBodyBalance from "../ui/blackseed-oil/peaceful-body-balance";
@@ -14,6 +14,7 @@ import EmailForm from "../ui/email-form";
 import JoinOurJourney from "../ui/blackseed-oil/joinOurJourney";
 import ProductInformationAccordion from "../ui/Accordion";
 import BlackseedOilBottle from "../assets/bottle_blackseed.png";
+import WhySpecial from "../ui/blackseed-oil/why-special";
 
 const BlackSeedOilPage: React.FC = () => {
   const { t } = useTranslation();
@@ -121,7 +122,7 @@ const BlackSeedOilPage: React.FC = () => {
     },
     {
       title: "Suitable For",
-      content: "Vegans, Vegetarians, Halal, Kosher",
+      content: "Vegans or Halal",
     },
   ];
 
@@ -158,7 +159,8 @@ const BlackSeedOilPage: React.FC = () => {
       </section>
 
       <section className="flex-grow overflow-x-auto w-full ">
-        <div className="relative">
+        <WhySpecial />
+        {/* <div className="relative">
           <img
             src={BlackseedCloseUp}
             alt="Blackseed Close Up"
@@ -169,7 +171,7 @@ const BlackSeedOilPage: React.FC = () => {
               {t("blackseed_oil.why_special")}
             </h2>
           </div>
-        </div>
+        </div> */}
       </section>
 
       {/* White Background Section - Features */}

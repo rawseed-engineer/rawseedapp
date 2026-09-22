@@ -72,9 +72,9 @@ const Process: React.FC = () => {
             />
           </p>
         </div>
-        <h2 className="text-center text-balance text-3xl text-neutral-400 text-shadow-lg tracking-tight md:text-4xl">
+        <p className="text-center text-balance text-2xl text-neutral-400 text-shadow-lg tracking-tight md:text-3xl">
           {t("blackseed_oil.process.cold_pressed.title")}
-        </h2>
+        </p>
       </div>
 
       <div ref={addToRefs} className="duration-300 hover:scale-110">
@@ -87,9 +87,9 @@ const Process: React.FC = () => {
             />
           </p>
         </div>
-        <h2 className="text-center text-balance text-3xl text-neutral-400 text-shadow-lg tracking-tight md:text-4xl">
+        <p className="text-center text-balance text-2xl text-neutral-400 text-shadow-lg tracking-tight md:text-3xl">
           {t("blackseed_oil.process.rich.title")}
-        </h2>
+        </p>
       </div>
 
       <div ref={addToRefs} className="duration-300 hover:scale-110">
@@ -102,9 +102,9 @@ const Process: React.FC = () => {
             />
           </p>
         </div>
-        <h2 className="text-center text-balance text-3xl text-neutral-400 text-shadow-lg tracking-tight md:text-4xl">
+        <p className="text-center text-balance text-2xl text-neutral-400 text-shadow-lg tracking-tight md:text-3xl">
           {t("blackseed_oil.process.bottle.title")}
-        </h2>
+        </p>
       </div>
 
       <div ref={addToRefs} className="duration-300 hover:scale-110">
@@ -117,9 +117,9 @@ const Process: React.FC = () => {
             />
           </p>
         </div>
-        <h2 className="text-center text-balance text-3xl text-neutral-400 text-shadow-lg tracking-tight md:text-4xl">
+        <p className="text-center text-balance text-2xl text-neutral-400 text-shadow-lg tracking-tight md:text-3xl">
           {t("blackseed_oil.process.pure.title")}
-        </h2>
+        </p>
       </div>
     </div>
   );

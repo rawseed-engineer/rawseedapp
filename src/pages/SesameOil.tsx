@@ -111,7 +111,7 @@ const SesameOil = () => {
     },
     {
       title: "Suitable For",
-      content: "Vegetarians, Vegans, Kosher, Halal",
+      content: "Vegans or Halal",
     },
   ];
 

@@ -180,7 +180,7 @@ const FlaxseedOil: React.FC = () => {
     },
     {
       title: "Suitable For",
-      content: "Vegans, Vegetarians, Halal, Kosher",
+      content: "Vegans or Halal",
     },
   ];
 
