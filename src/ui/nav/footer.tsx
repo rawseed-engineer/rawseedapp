@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
@@ -18,6 +18,21 @@ import { useTranslation } from "react-i18next";
 const Footer: React.FC = () => {
   const { t } = useTranslation();
   const [isPrivacyPolicyOpen, setIsPrivacyPolicyOpen] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
+
+  useEffect(() => {
+    if (!toastMessage) return;
+
+    const timer = window.setTimeout(() => {
+      setToastMessage("");
+    }, 2200);
+
+    return () => window.clearTimeout(timer);
+  }, [toastMessage]);
+
+  const handleSocialClick = () => {
+    setToastMessage("Follow our journey soon");
+  };
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,40 +56,48 @@ const Footer: React.FC = () => {
             <h4 className="text-[1.1rem] text-white">Follow us on</h4>
             <ul className="mt-3 flex flex-wrap gap-2 p-0 list-none">
               <li>
-                <a
-                  href="#"
+                <button
+                  type="button"
                   aria-label="Facebook"
-                  className="flex h-10 w-10 items-center justify-center bg-[#181818] text-white transition-colors duration-200 hover:bg-[#3d5b99]"
+                  title="Follow our journey soon"
+                  onClick={handleSocialClick}
+                  className="flex h-10 w-10 items-center justify-center rounded bg-[#181818] text-gray-400 opacity-70 transition-colors duration-200 hover:opacity-100"
                 >
                   <FontAwesomeIcon icon={faFacebook} size="lg" />
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="#"
+                <button
+                  type="button"
                   aria-label="Instagram"
-                  className="flex h-10 w-10 items-center justify-center bg-[#181818] text-white transition-colors duration-200 hover:bg-[#c13584]"
+                  title="Follow our journey soon"
+                  onClick={handleSocialClick}
+                  className="flex h-10 w-10 items-center justify-center rounded bg-[#181818] text-gray-400 opacity-70 transition-colors duration-200 hover:opacity-100"
                 >
                   <FontAwesomeIcon icon={faInstagram} size="lg" />
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="#"
+                <button
+                  type="button"
                   aria-label="X"
-                  className="flex h-10 w-10 items-center justify-center bg-[#181818] text-white transition-colors duration-200 hover:bg-[#00aced]"
+                  title="Follow our journey soon"
+                  onClick={handleSocialClick}
+                  className="flex h-10 w-10 items-center justify-center rounded bg-[#181818] text-gray-400 opacity-70 transition-colors duration-200 hover:opacity-100"
                 >
                   <FontAwesomeIcon icon={faXTwitter} size="lg" />
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="#"
+                <button
+                  type="button"
                   aria-label="YouTube"
-                  className="flex h-10 w-10 items-center justify-center bg-[#181818] text-white transition-colors duration-200 hover:bg-[#e64a41]"
+                  title="Follow our journey soon"
+                  onClick={handleSocialClick}
+                  className="flex h-10 w-10 items-center justify-center rounded bg-[#181818] text-gray-400 opacity-70 transition-colors duration-200 hover:opacity-100"
                 >
                   <FontAwesomeIcon icon={faYoutube} size="lg" />
-                </a>
+                </button>
               </li>
             </ul>
           </div>
@@ -162,6 +185,12 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {toastMessage && (
+        <div className="fixed bottom-5 left-1/2 z-50 -translate-x-1/2 rounded-lg border border-[#cfb997] bg-[#181818] px-4 py-3 text-sm font-medium text-[#f5f1e8] shadow-lg shadow-black/30">
+          {toastMessage}
+        </div>
+      )}
 
       <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
         <p className="text-gray-400 mb-4 md:mb-0">
