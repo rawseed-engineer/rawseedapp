@@ -35,6 +35,8 @@ const Hero: React.FC<HeroProps> = ({
   const circleRef = useRef<HTMLImageElement | null>(null);
 
   useEffect(() => {
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
     // Create one ScrollTrigger for the entire container
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
@@ -47,7 +49,7 @@ const Hero: React.FC<HeroProps> = ({
         },
       });
 
-      if (logoRef.current && window.matchMedia("(max-width: 767px)").matches) {
+      if (logoRef.current && isMobile) {
         tl.fromTo(
           logoRef.current,
           { opacity: 0, y: 60 },
@@ -56,7 +58,7 @@ const Hero: React.FC<HeroProps> = ({
         );
       }
 
-      if (subtitleRef.current) {
+      if (!isMobile && subtitleRef.current) {
         tl.fromTo(
           subtitleRef.current,
           { opacity: 0, y: 60 },
@@ -65,7 +67,7 @@ const Hero: React.FC<HeroProps> = ({
         );
       }
 
-      if (descriptionRef.current) {
+      if (!isMobile && descriptionRef.current) {
         tl.fromTo(
           descriptionRef.current,
           { opacity: 0, y: 60 },
@@ -79,7 +81,7 @@ const Hero: React.FC<HeroProps> = ({
           circleRef.current,
           { opacity: 0, y: 60 },
           { opacity: 1, y: 0, duration: logoDuration },
-          `+=${staggerDelay}`,
+          isMobile ? `+=0` : `+=${staggerDelay}`,
         );
       }
     }, containerRef);

@@ -23,6 +23,7 @@ const EmailForm: React.FC = () => {
   const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
   const formRefs = useRef<HTMLParagraphElement[]>([]);
+  const isMobile = window.matchMedia("(max-width: 767px)").matches;
 
   const [formData, setFormData] = useState<FormData>({
     subject: "RawSeed Customer Enquiry",
@@ -110,8 +111,8 @@ const EmailForm: React.FC = () => {
           // stagger: 0.7, // This is the magic: each item delays by 0.2s
           scrollTrigger: {
             trigger: containerRef.current,
-            start: "top 30%", // When the container hits 75% of viewport
-            end: "bottom 20%",
+            start: isMobile ? "top 10%" : "top 30%", // When the container hits 75% of viewport
+            end: "bottom 10%",
             toggleActions: "play none none reverse",
             // markers: true, // Remove in production
           },
@@ -132,7 +133,7 @@ const EmailForm: React.FC = () => {
     <div ref={containerRef}>
       <div
         ref={addToRefs}
-        className="bg-white w-7/8 lg:w-md p-1 lg:p-10 mt-16 mb-16 relative overflow-hidden rounded-lg shadow-lg 
+        className="bg-white  lg:w-md p-1 lg:p-10 mt-16 mb-16 relative overflow-hidden rounded-lg shadow-lg 
         duration-300 hover:shadow-[#a18458]"
       >
         <div className=" mb-8 pb-5 relative">

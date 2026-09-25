@@ -83,24 +83,7 @@ const Products: React.FC = () => {
   };
 
   return (
-    <div ref={containerRef} className="mx-32 gap-8 px-8 sm:px-16">
-      {/* <div className="flex justify-center text-center">
-        <h2
-          ref={addToRefs}
-          className="my-6 text-[#a18458] text-balance text-4xl text-shadow-lg font-bold tracking-tight md:text-4xl"
-        >
-          {t("products.heading")}
-        </h2>
-      </div>
-      <div className="flex justify-center">
-        <img
-          ref={addToRefs}
-          src={GoldenDropLogo}
-          alt="Golden Drop Logo"
-          className="mx-8 my-20 w-md aspect-auto brightness-80 drop-shadow-lg"
-        />
-      </div> */}
-
+    <div ref={containerRef} className=" gap-8 sm:px-8 sm:px-16 sm:mx-32">
       <div ref={addToRefs} className="m-12 text-center">
         <h1 className="my-6 text-[#a18458] text-balance text-5xl text-shadow-lg tracking-tight md:text-5xl">
           {t("products.title")}

@@ -23,6 +23,7 @@ export default function BookingCard({
   imagePosition = "center center",
 }: BookingCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
+
   const handleCardClick = () => {
     if (window.matchMedia("(max-width: 1023px)").matches) {
       setIsExpanded((expanded) => !expanded);
