@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import SeedsHorizontal from "../../assets/seeds_horizontal.jpg";
-import SeedsVertical from "../../assets/seeds_vertical.jpg";
+import SeedsHorizontal from "../../assets/seeds_horizontal.webp";
+import SeedsVertical from "../../assets/seeds_vertical.webp";
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -43,7 +43,7 @@ const ColdPressed = () => {
             toggleActions: "play none none reverse",
             // markers: true, // Remove in production
           },
-        }
+        },
       );
     }, containerRef);
 
@@ -86,8 +86,8 @@ const ColdPressed = () => {
          rounded-xl"
         >
           <p
-            className="text-2xl sm:text-xl md:text-2xl lg:text-4xl
-          text-neutral-200 text-center"
+            className="text-2xl sm:text-xl md:text-2xl lg:text-3xl
+          text-neutral-200 text-center text-justify"
           >
             {t("what_we_do.p2")}
           </p>

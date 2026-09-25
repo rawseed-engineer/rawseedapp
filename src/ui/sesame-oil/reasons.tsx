@@ -84,7 +84,7 @@ const Reasons: React.FC = () => {
           <h2 className="m-6 text-center text-balance text-3xl text-neutral-400 tracking-tight md:text-4xl">
             {t("sesame.reason.p1.title")}
           </h2>
-          <p className="text-center text-pretty text-neutral-500 text-2xl">
+          <p className="text-center text-pretty text-justify text-neutral-500 text-2xl">
             {t("sesame.reason.p1.description")}
           </p>
         </div>
@@ -101,7 +101,7 @@ const Reasons: React.FC = () => {
           <h2 className="m-6 text-center text-balance text-3xl text-neutral-400 tracking-tight md:text-4xl">
             {t("sesame.reason.p2.title")}
           </h2>
-          <p className="text-center text-pretty text-neutral-500 text-2xl">
+          <p className="text-center text-pretty text-justify text-neutral-500 text-2xl">
             {t("sesame.reason.p2.description")}
           </p>
         </div>
@@ -118,7 +118,7 @@ const Reasons: React.FC = () => {
           <h2 className="m-6 text-center text-balance text-3xl text-neutral-400 tracking-tight md:text-4xl">
             {t("sesame.reason.p3.title")}
           </h2>
-          <p className="text-center text-pretty text-neutral-500 text-2xl">
+          <p className="text-center text-pretty text-justify text-neutral-500 text-2xl">
             {t("sesame.reason.p3.description")}
           </p>
         </div>
@@ -136,7 +136,7 @@ const Reasons: React.FC = () => {
           <h2 className="m-6 text-center text-balance text-3xl text-neutral-400 tracking-tight md:text-4xl">
             {t("sesame.reason.p4.title")}
           </h2>
-          <p className="text-center text-pretty text-neutral-500 text-2xl">
+          <p className="text-center text-pretty text-justify text-neutral-500 text-2xl">
             {t("sesame.reason.p4.description")}
           </p>
         </div>
@@ -154,7 +154,7 @@ const Reasons: React.FC = () => {
             {t("sesame.reason.p5.title")}
           </h2>
 
-          <p className="text-center text-pretty text-neutral-500 text-2xl">
+          <p className="text-center text-pretty text-justify text-neutral-500 text-2xl">
             {t("sesame.reason.p5.description")}
           </p>
         </div>

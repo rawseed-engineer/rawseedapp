@@ -54,7 +54,10 @@ const Explore: React.FC = () => {
       <h2 className="text-balance text-4xl tracking-tight text-[#a18458] text-shadow-lg md:text-5xl">
         {t("sesame.callout.inquiry_title")}
       </h2>
-      <p ref={addToRefs} className=" text-2xl md:text-2xl text-neutral-600">
+      <p
+        ref={addToRefs}
+        className=" text-2xl md:text-2xl text-neutral-600 text-justify"
+      >
         {t("sesame.callout.p1")}
       </p>
     </div>

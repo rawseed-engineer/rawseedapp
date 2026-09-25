@@ -68,8 +68,12 @@ const Discovery: React.FC = () => {
         >
           {t("sesame.rediscovery.title")}
         </h1>
-        <p className="text-pretty text-2xl">{t("sesame.rediscovery.p1")}</p>
-        <p className="text-pretty text-2xl">{t("sesame.rediscovery.p2")}</p>
+        <p className="text-pretty text-justify text-2xl">
+          {t("sesame.rediscovery.p1")}
+        </p>
+        <p className="text-pretty text-justify text-2xl">
+          {t("sesame.rediscovery.p2")}
+        </p>
         <ul className="space-y-3">
           <li className="flex items-start gap-3 text-2xl">
             <FontAwesomeIcon
@@ -96,7 +100,9 @@ const Discovery: React.FC = () => {
             <span>{t("sesame.rediscovery.item3")}</span>
           </li>
         </ul>
-        <p className="text-pretty text-2xl">{t("sesame.rediscovery.p3")}</p>
+        <p className="text-pretty text-justify text-2xl">
+          {t("sesame.rediscovery.p3")}
+        </p>
 
         {/* <YnsLink
           className="inline-flex h-10 items-center justify-center rounded-full bg-gradient-to-tr from-amber-300 to-yellow-700 px-6 font-medium text-neutral-950 

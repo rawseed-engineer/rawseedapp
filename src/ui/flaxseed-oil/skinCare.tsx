@@ -63,7 +63,7 @@ const skinCare: React.FC = () => {
         </h2>
         <p
           ref={addToRefs}
-          className="text-lg sm:text-2xl text-neutral-200  mx-auto"
+          className="text-lg sm:text-2xl text-justify text-neutral-200  mx-auto"
         >
           {t("flaxseed_oil.skin_health.description")}
         </p>

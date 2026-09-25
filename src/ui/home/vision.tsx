@@ -23,14 +23,14 @@ const Vision: React.FC = () => {
             {t("vision.title")}
           </h2>
 
-          <p className="text-xl sm:text-xl md:text-2xl md:text-2xl lg:text-2xl text-neutral-200">
+          <p className="text-xl sm:text-xl md:text-2xl md:text-2xl lg:text-2xl text-neutral-200 text-justify">
             {t("vision.p1")}
           </p>
 
-          <p className="text-xl sm:text-xl md:text-2xl md:text-2xl lg:text-2xl text-neutral-200">
+          <p className="text-xl sm:text-xl md:text-2xl md:text-2xl lg:text-2xl text-neutral-200 text-justify">
             {t("vision.p2")}
           </p>
-          <ul className="list-disc list-inside text-neutral-200 text-xl sm:text-xl md:text-2xl md:text-2xl lg:text-2xl">
+          <ul className="list-disc list-inside text-neutral-200 text-xl sm:text-xl md:text-2xl md:text-2xl lg:text-2xl text-justify">
             <li className="flex items-start gap-3 text-2xl">
               <FontAwesomeIcon
                 icon={faDroplet}
@@ -57,7 +57,9 @@ const Vision: React.FC = () => {
             </li> */}
           </ul>
 
-          <p className="text-2xl text-neutral-200">{t("vision.p3")}</p>
+          <p className="text-2xl text-neutral-200 text-justify">
+            {t("vision.p3")}
+          </p>
         </div>
       </div>
     </div>

@@ -5,6 +5,8 @@ import ImageHealthyHair from "../../assets/healthy_hair.jpg";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDroplet } from "@fortawesome/free-solid-svg-icons/faDroplet";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,17 +69,35 @@ const HairSkinBeauty: React.FC = () => {
         <h2 className="text-balance text-[#a18458] text-5xl text-shadow-lg tracking-tight md:text-5xl">
           {t("blackseed_oil.healthy_skin_and_hair.title")}
         </h2>
-        <p className="text-pretty text-2xl">
+        <p className="text-pretty text-justify text-2xl">
           {t("blackseed_oil.healthy_skin_and_hair.p1")}
         </p>
-        <li className="text-2xl">
-          {t("blackseed_oil.healthy_skin_and_hair.item1")}
+
+        <li className="flex items-start gap-3 text-2xl">
+          <FontAwesomeIcon
+            icon={faDroplet}
+            className="mt-2 shrink-0 text-xl text-[#a18458]"
+            aria-hidden="true"
+          />
+          <span>{t("blackseed_oil.healthy_skin_and_hair.item1")}</span>
         </li>
-        <li className="text-2xl">
-          {t("blackseed_oil.healthy_skin_and_hair.item2")}
+
+        <li className="flex items-start gap-3 text-2xl">
+          <FontAwesomeIcon
+            icon={faDroplet}
+            className="mt-2 shrink-0 text-xl text-[#a18458]"
+            aria-hidden="true"
+          />
+          <span>{t("blackseed_oil.healthy_skin_and_hair.item2")}</span>
         </li>
-        <li className="text-2xl">
-          {t("blackseed_oil.healthy_skin_and_hair.item3")}
+
+        <li className="flex items-start gap-3 text-2xl">
+          <FontAwesomeIcon
+            icon={faDroplet}
+            className="mt-2 shrink-0 text-xl text-[#a18458]"
+            aria-hidden="true"
+          />
+          <span>{t("blackseed_oil.healthy_skin_and_hair.item3")}</span>
         </li>
       </div>
     </div>

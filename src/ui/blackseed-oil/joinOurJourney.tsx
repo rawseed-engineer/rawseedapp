@@ -11,10 +11,10 @@ const JoinOurJourney: React.FC = () => {
       >
         {t("blackseed_oil.journey.title")}
       </h1>
-      <p className="text-pretty text-neutral-600 text-2xl">
+      <p className="text-pretty text-justify text-neutral-600 text-2xl">
         {t("blackseed_oil.journey.p1")}
       </p>
-      <p className="text-pretty text-neutral-600 text-2xl">
+      <p className="text-pretty text-justify text-neutral-600 text-2xl">
         {t("blackseed_oil.journey.p2")}
       </p>
     </div>

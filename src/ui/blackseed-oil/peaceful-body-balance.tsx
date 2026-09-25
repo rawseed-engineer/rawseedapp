@@ -60,7 +60,7 @@ const PeacefulBodyBalance: React.FC = () => {
         <h1 className="text-balance text-[#a18458] text-5xl text-shadow-lg tracking-tight md:text-5xl">
           {t("blackseed_oil.peaceful_mind_body.title")}
         </h1>
-        <p className="text-pretty text-2xl">
+        <p className="text-pretty text-justify text-2xl">
           {t("blackseed_oil.peaceful_mind_body.description")}
         </p>
       </div>

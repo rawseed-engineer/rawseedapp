@@ -36,9 +36,9 @@
     "expand": "Read more"
   },
   "what_we_do": {
-    "title": "What We Do",
+    "title": "What we do",
     "p1": "We produce and supply 100% cold-pressed oils that are:",
-    "item1": "Free of Additives",
+    "item1": "Free of additives",
     "item2": "Unrefined",
     "item3": "Packed with nutrients",
     "item4": "Ethically sourced",
@@ -84,7 +84,7 @@
     "p6": "Superior ingredients, meticulous care from the seed to the bottle."
   },
   "vision": {
-    "title": "Our Vision",
+    "title": "Our Mission",
     "p1": "We envision a world where natural, honest and thoughtfully sourced foods are valued and accessible to all.",
     "p2": "We aim to inspire people to:",
     "p3": "As we grow, we plan to expand our range with carefully selected cold-pressed oils and natural products, guided by the same principles of quality, authenticity and responsible sourcing.",
@@ -92,7 +92,7 @@
     "item2": "Make informed choices for everyday wellbeing"
   },
   "journey": {
-    "title": "Join Us on Our Journey",
+    "title": "Join us on our journey",
     "p1": "RawSeed is more than just a food brand. For us, it is about bringing people closer to natural, quality ingredients and the traditions behind them. We want to grow alongside a community that values authentic taste, thoughtful sourcing and better choices for everyday living.",
     "p2": "We invite you to discover Golden Drop, our range of carefully selected natural oils, sourced with care and chosen for their quality and character. Explore our story and experience the difference that quality, tradition and careful sourcing can make.",
     "p3": "Welcome to RawSeed."
@@ -138,7 +138,7 @@
     },
     "callout": {
       "title": "Are You Ready to Make the Switch?",
-      "inquiry_title": "Let's Find the Right Oil for You",
+      "inquiry_title": "Let's find the right oil for you",
       "p1": "Explore our product range and learn more about how sesame oil can enhance your recipes, your health and your lifestyle."
     },
     "product_information": "Product Information"
@@ -198,7 +198,7 @@
       }
     },
     "journey": {
-      "title": "Bring the Blessing Home",
+      "title": "Bring the blessing home",
       "p1": "Black seed oil is more than a supplement—it’s a daily ritual, a gift from nature, and a bridge between ancient wisdom and modern health.",
       "p2": "Try Golden Drop Black Seed Oil and experience the benefits of a remedy that has been trusted for generations."
     }

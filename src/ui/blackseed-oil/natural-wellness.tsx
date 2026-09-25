@@ -67,7 +67,7 @@ const NaturalWellness: React.FC = () => {
         <h2 className="text-balance text-[#a18458] text-5xl text-shadow-lg tracking-tight md:text-5xl">
           {t("blackseed_oil.natural_wellness.title")}
         </h2>
-        <p className="text-pretty text-2xl">
+        <p className="text-pretty text-justify text-2xl">
           {t("blackseed_oil.natural_wellness.description")}
         </p>
       </div>

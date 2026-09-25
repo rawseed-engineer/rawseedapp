@@ -26,7 +26,10 @@ const WhatWeDoScrollHighlight = ({
               {activeItem.key}
             </h2>
             {activeItem.description.map((paragraph: string, index: number) => (
-              <p className="mt-6 text-pretty text-2xl leading-8" key={index}>
+              <p
+                className="mt-6 text-pretty text-justify text-2xl leading-8"
+                key={index}
+              >
                 {paragraph}
               </p>
             ))}

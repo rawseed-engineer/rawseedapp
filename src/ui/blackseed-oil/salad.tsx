@@ -65,7 +65,7 @@ const Salad: React.FC = () => {
         <h2 className="text-balance text-[#a18458] text-5xl text-shadow-lg tracking-tight md:text-5xl">
           {t("flaxseed_oil.use_cases.salad.title")}
         </h2>
-        <p className="text-pretty text-2xl">
+        <p className="text-pretty text-justify text-2xl">
           {t("flaxseed_oil.use_cases.salad.description")}
         </p>
       </div>

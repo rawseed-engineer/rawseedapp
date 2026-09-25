@@ -61,10 +61,10 @@ const Home = () => {
 
         <section id="id1" className="py-0">
           <WhatWeDoScrollHighlight
-            heading="What We Do"
+            heading="What we do?"
             items={[
               {
-                key: "Free of Additives",
+                key: "Free of additives",
                 description: [
                   "Our cold-pressed oils contain no added preservatives, artificial flavours or unnecessary additives. Carefully sourced from trusted producers, our sesame, black seed and flaxseed oils are selected for their purity, natural character and authentic taste.",
                   "With nothing unnecessary added, Golden Drop brings you oils that are simple, natural and made to complement everyday cooking.",
@@ -99,10 +99,7 @@ const Home = () => {
           />
         </section>
 
-        <section
-          className="flex-grow overflow-x-auto w-full 
-          "
-        >
+        <section className="flex-grow overflow-x-auto w-full">
           <ColdPressed />
         </section>
 
