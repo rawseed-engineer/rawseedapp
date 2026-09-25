@@ -20,6 +20,7 @@ const FullScreenVideo = () => {
 
   useEffect(() => {
     const elements = historyRefs.current;
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
 
     // Create one ScrollTrigger for the entire container
     const ctx = gsap.context(() => {
@@ -37,7 +38,7 @@ const FullScreenVideo = () => {
           stagger: 0.7, // This is the magic: each item delays by 0.2s
           scrollTrigger: {
             trigger: containerRef.current,
-            start: "top 30%", // When the container hits 75% of viewport
+            start: isMobile ? "top 10%" : "top 30%", // When the container hits 75% of viewport
             end: "bottom 20%",
             toggleActions: "play none none reverse",
             // markers: true, // Remove in production
@@ -83,22 +84,22 @@ const FullScreenVideo = () => {
           >
             <div
               className="max-w-sm lg:max-w-xl text-neutral-400
-              space-y-1 lg:space-y-4"
+              space-y-1 lg:space-y-4 mx-8"
             >
               <h2
                 ref={addToRefs}
-                className="text-balance text-[#a18458] text-5xl text-shadow-lg tracking-tight md:text-5xl"
+                className="text-balance text-[#a18458] text-4xl text-shadow-lg tracking-tight md:text-5xl"
               >
                 {t("history.title")}
               </h2>
               <div ref={addToRefs}>
-                <p className="text-pretty md:text-justify text-2xl">
+                <p className="text-pretty text-justify text-2xl">
                   {t("history.p1")}
                 </p>
-                <p className="text-pretty md:text-justify text-2xl">
+                <p className="text-pretty text-justify text-2xl">
                   {t("history.p2")}
                 </p>
-                <p className="text-pretty md:text-justify text-2xl">
+                <p className="text-pretty text-justify text-2xl">
                   {t("history.p3")}
                 </p>
               </div>

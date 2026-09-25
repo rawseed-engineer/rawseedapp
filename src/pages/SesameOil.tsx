@@ -13,8 +13,8 @@ import ProductInformationAccordion from "../ui/Accordion";
 import SesameSeedOilBottle from "../assets/bottle_sesame_seed.png";
 
 const SesameOil = () => {
+  const isMobile = window.matchMedia("(max-width: 767px)").matches;
   const nutritionUnit = "per XXX ml";
-
   const nutritionFacts = [
     {
       key: "Energy",
@@ -135,7 +135,7 @@ const SesameOil = () => {
           productItems={productInformation}
           imageSrc={SesameSeedOilBottle}
           imageAlt="Golden Drop Sesame Seed Oil bottle"
-          imageHeight="h-160"
+          imageHeight={isMobile ? "h-110" : "h-170"}
         />
       </section>
       {/* <section

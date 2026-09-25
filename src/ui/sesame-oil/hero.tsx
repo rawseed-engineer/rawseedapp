@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import RawSeedLogo from "../../assets/rawseed_logo.png";
+import RawSeedLogo from "../../assets/rawseed_logo3.png";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -105,15 +105,16 @@ const Hero: React.FC<HeroProps> = ({
         }}
       />
 
-      <div className="absolute top-[10%] sm:top-[20%] lg:top-[35%] ">
-        <div className="relative z-10  px-4 py-12 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div className="absolute top-[30%] sm:top-[20%] lg:top-[35%] ">
+        <div className="relative z-10  px-10 py-12 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           {/* Hero Logo - Mobile only */}
           <div className="flex items-center justify-center">
             <img
               ref={logoRef}
               src={RawSeedLogo}
               alt="RawSeed Logo"
-              className="block md:hidden lg:hidden mx-8 mb-8 h-[3rem] lg:h-[5rem] aspect-auto"
+              className="block md:hidden lg:hidden mx-8 mb-8 
+              h-[12rem] lg:h-[12rem] aspect-auto"
             />
           </div>
 
@@ -144,7 +145,7 @@ const Hero: React.FC<HeroProps> = ({
 
           <p
             ref={descriptionRef}
-            className="text-pretty text-white 
+            className="hidden md:block text-pretty text-white 
             text-2xl
             text-center text-justify lg:text-left 
             mb-6"

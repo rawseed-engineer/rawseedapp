@@ -66,7 +66,7 @@ export default function ProductInformationAccordion({
     <div
       className="mx-auto grid grid-cols-1 lg:grid-cols-2 
       items-center justify-items-center 
-      gap-1 px-8 sm:px-1 mb-60"
+      gap-1 px-1 sm:px-1 mb-60"
     >
       <div>
         <img
@@ -87,7 +87,7 @@ export default function ProductInformationAccordion({
         </h2> */}
         <h1
           className="text-balance text-[#a18458] 
-          text-5xl md:text-5xl tracking-tight text-shadow-lg mb-8"
+          text-4xl md:text-5xl tracking-tight text-shadow-lg mb-8 mt-16"
         >
           {t("sesame.product_information")}
         </h1>

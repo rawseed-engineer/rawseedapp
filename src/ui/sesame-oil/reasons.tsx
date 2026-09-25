@@ -59,7 +59,7 @@ const Reasons: React.FC = () => {
 
   return (
     <div ref={containerRef}>
-      <h2 className="m-8 text-center text-balance text-5xl text-[#a18458] tracking-tight md:text-5xl">
+      <h2 className="m-8 text-center text-balance text-4xl md:text-5xl text-[#a18458] tracking-tight md:text-5xl">
         {t("sesame.reason.heading")}
       </h2>
 
@@ -72,7 +72,7 @@ const Reasons: React.FC = () => {
         gap-8 pt-8 pb-20 sm:px-64
         "
       >
-        <div ref={addToRefs} className="m-8 w-96">
+        <div ref={addToRefs} className="m-8 w-80 md:w-96">
           <div className="flex items-center justify-center h-48 w-full rounded-lg">
             <FontAwesomeIcon
               icon={faUtensils}
@@ -89,7 +89,7 @@ const Reasons: React.FC = () => {
           </p>
         </div>
 
-        <div ref={addToRefs} className="m-8 w-96">
+        <div ref={addToRefs} className="m-8 w-80 md:w-96">
           <div className="flex items-center justify-center h-48 w-full rounded-lg">
             <FontAwesomeIcon
               icon={faHeartCircleCheck}
@@ -106,7 +106,7 @@ const Reasons: React.FC = () => {
           </p>
         </div>
 
-        <div ref={addToRefs} className="m-8 w-96">
+        <div ref={addToRefs} className="m-8 w-80 md:w-96">
           <div className="flex items-center justify-center h-48 w-full rounded-lg">
             <FontAwesomeIcon
               icon={faLemon}
@@ -125,7 +125,7 @@ const Reasons: React.FC = () => {
       </div>
 
       <div className="mx-auto grid grid-cols-1 items-start justify-items-center gap-8 pt-8 pb-20 sm:px-64 lg:grid-cols-2">
-        <div ref={addToRefs} className="m-8 w-96">
+        <div ref={addToRefs} className="m-8 w-80 md:w-96">
           <div className="flex items-center justify-center h-48 w-full rounded-lg">
             <FontAwesomeIcon
               icon={faTemperatureThreeQuarters}
@@ -141,7 +141,7 @@ const Reasons: React.FC = () => {
           </p>
         </div>
 
-        <div ref={addToRefs} className="m-8 w-96">
+        <div ref={addToRefs} className="m-8 w-80 md:w-96">
           <div className="flex items-center justify-center h-48 w-full rounded-lg">
             <FontAwesomeIcon
               icon={faEarthAsia}

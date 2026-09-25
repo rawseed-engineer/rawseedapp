@@ -56,7 +56,7 @@ const Discovery: React.FC = () => {
     <div
       ref={containerRef}
       className="mx-auto grid grid-cols-1 lg:grid-cols-2 
-      items-center justify-items-center gap-8 px-8 sm:px-16"
+      items-center justify-items-center gap-8 px-0 sm:px-16"
     >
       <div
         ref={addToRefs}
@@ -64,7 +64,7 @@ const Discovery: React.FC = () => {
       >
         <h1
           className="text-balance text-[#a18458] 
-          text-5xl md:text-5xl tracking-tight text-shadow-lg"
+          text-4xl md:text-5xl tracking-tight text-shadow-lg"
         >
           {t("sesame.rediscovery.title")}
         </h1>

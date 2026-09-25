@@ -1,5 +1,5 @@
 import React from "react";
-import SesamePlant from "../../assets/sesame_crop_field.jpg";
+import SesamePlant from "../../assets/sesame_crop_field_vertical.jpg";
 import { useTranslation } from "react-i18next";
 
 import { useEffect, useRef } from "react";
@@ -37,7 +37,7 @@ const SesamePageCallout: React.FC = () => {
             toggleActions: "play none none reverse",
             // markers: true, // Remove in production
           },
-        }
+        },
       );
     }, containerRef);
 
