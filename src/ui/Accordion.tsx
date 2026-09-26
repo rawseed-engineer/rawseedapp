@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import ShineText from "./ShineText";
 
 gsap.registerPlugin(ScrollTrigger);
 
