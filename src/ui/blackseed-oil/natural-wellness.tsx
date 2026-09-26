@@ -56,20 +56,27 @@ const NaturalWellness: React.FC = () => {
       className="mx-auto grid grid-cols-1 md:grid-cols-2 
       items-center justify-items-center gap-8 px-8 sm:px-16"
     >
-      <div ref={addToRefs}>
+      <div ref={addToRefs} className="hidden md:block mx-4">
         <img
           src={ImageNaturalWellness}
           alt="RawSeed's blackseed oils make your hair and skin healthy"
-          className="mx-8"
+          className="aspect-auto"
         />
       </div>
       <div ref={addToRefs} className="max-w-md text-neutral-600 space-y-4">
-        <h2 className="text-balance text-[#a18458] text-5xl text-shadow-lg tracking-tight md:text-5xl">
+        <h2 className="text-balance text-[#a18458] text-4xl md:text-5xl text-shadow-lg tracking-tight text-center md:text-left">
           {t("blackseed_oil.natural_wellness.title")}
         </h2>
         <p className="text-pretty text-justify text-2xl">
           {t("blackseed_oil.natural_wellness.description")}
         </p>
+      </div>
+      <div ref={addToRefs} className="block md:hidden mx-4">
+        <img
+          src={ImageNaturalWellness}
+          alt="RawSeed's blackseed oils make your hair and skin healthy"
+          className="aspect-auto"
+        />
       </div>
     </div>
   );

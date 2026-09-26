@@ -64,7 +64,11 @@ const Story: React.FC = () => {
         className=" 
         space-y-1 lg:space-y-4 text-neutral-600"
       >
-        <h1 className="text-balance text-[#a18458] text-5xl text-shadow-lg tracking-tight md:text-5xl">
+        <h1
+          className="text-balance text-[#a18458] text-4xl md:text-5xl 
+        text-shadow-lg tracking-tight md:text-5xl
+        text-center md:text-left"
+        >
           {t("blackseed_oil.story.title")}
         </h1>
         <p className="text-pretty text-justify text-2xl">
@@ -81,11 +85,11 @@ const Story: React.FC = () => {
           {t("blackseed_oil.story.p3")}
         </p>
       </div>
-      <div ref={addToRefs}>
+      <div ref={addToRefs} className="mx-4">
         <img
           src={BlackseedFlower}
           alt="Blackseed Oils"
-          className="mx-8 aspect-auto"
+          className="aspect-auto"
         />
       </div>
     </div>

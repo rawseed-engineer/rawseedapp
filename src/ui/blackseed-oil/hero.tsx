@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import RawSeedLogo from "./../../assets/rawseed_logo.png";
+// import RawSeedLogo from "./../../assets/rawseed_logo.png";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -13,7 +13,8 @@ interface HeroProps {
   staggerDelay?: number;
   duration?: number;
   initialDelay?: number;
-  subtitleDuration?: number;
+  titleDuration?: number;
+  mobileTitleDuration?: number;
   logoDuration?: number;
   descriptionDuration?: number;
 }
@@ -22,14 +23,16 @@ const BlackseedHero: React.FC<HeroProps> = ({
   staggerDelay = 0.6,
   duration = 1,
   initialDelay = 0,
-  subtitleDuration = 2,
+  titleDuration = 2,
+  mobileTitleDuration = 2,
   logoDuration = 1,
   descriptionDuration = 6,
 }) => {
   const { t } = useTranslation();
+  const isMobile = window.matchMedia("(max-width: 767px)").matches;
   const containerRef = useRef<HTMLDivElement>(null);
-  // const titleRef = useRef<HTMLHeadingElement | null>(null);
-  const subtitleRef = useRef<HTMLHeadingElement | null>(null);
+  const titleRef = useRef<HTMLHeadingElement | null>(null);
+  const mobileTitleRef = useRef<HTMLHeadingElement | null>(null);
   const descriptionRef = useRef<HTMLParagraphElement | null>(null);
   const circleRef = useRef<HTMLImageElement | null>(null);
 
@@ -57,16 +60,24 @@ const BlackseedHero: React.FC<HeroProps> = ({
       //     }
       //   },
       // );
-      if (subtitleRef.current) {
+      if (!isMobile && titleRef.current) {
         timeline.fromTo(
-          subtitleRef.current,
+          titleRef.current,
           { opacity: 0, y: 60 },
-          { opacity: 1, y: 0, duration: subtitleDuration },
+          { opacity: 1, y: 0, duration: titleDuration },
+          initialDelay,
+        );
+      }
+      if (isMobile && mobileTitleRef.current) {
+        timeline.fromTo(
+          mobileTitleRef.current,
+          { opacity: 0, y: 60 },
+          { opacity: 1, y: 0, duration: mobileTitleDuration },
           initialDelay,
         );
       }
 
-      if (descriptionRef.current) {
+      if (!isMobile && descriptionRef.current) {
         timeline.fromTo(
           descriptionRef.current,
           { opacity: 0, y: 60 },
@@ -100,12 +111,12 @@ const BlackseedHero: React.FC<HeroProps> = ({
         }}
       />
 
-      <div className="absolute top-[10%] sm:top-[20%] md:top-[35%]">
+      <div className="absolute top-[30%] sm:top-[20%] md:top-[35%]">
         <div
           className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl 
           py-24 mx-auto"
         >
-          <div className="flex items-center justify-center">
+          {/* <div className="flex items-center justify-center">
             <img
               src={RawSeedLogo}
               alt="RawSeed Logo"
@@ -115,7 +126,7 @@ const BlackseedHero: React.FC<HeroProps> = ({
                 h-[3rem] lg:h-[5rem] 
                 aspect-auto"
             />
-          </div>
+          </div> */}
 
           {/* Hero Heading */}
           {/* <h1
@@ -129,8 +140,16 @@ const BlackseedHero: React.FC<HeroProps> = ({
           </h1> */}
 
           <h1
-            ref={subtitleRef}
-            className="text-balance 
+            ref={mobileTitleRef}
+            className="block md:hidden text-balance text-center text-white 
+          text-5xl md:text-5xl tracking-tight text-shadow-lg mb-8 "
+          >
+            {t("blackseed_oil.hero.subtitle")}
+          </h1>
+
+          <h1
+            ref={titleRef}
+            className="hidden md:block text-balance 
             text-2xl sm:text-3xl md:text-4xl lg:text-5xl
             text-center lg:text-left
             font-bold text-white mb-5"
@@ -143,7 +162,7 @@ const BlackseedHero: React.FC<HeroProps> = ({
           {/* Hero Description */}
           <p
             ref={descriptionRef}
-            className="text-pretty text-white 
+            className="hidden md:block text-pretty text-white 
             text-2xl 
             text-center lg:text-left
             mb-6"

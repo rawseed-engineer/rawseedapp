@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import BlackseedCloseUp from "../../assets/blackseed_seed_closeup_4K.jpg";
+import BlackseedCloseUpVertical from "../../assets/blackseed_seed_closeup_4K_vertical.jpg";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
@@ -51,7 +52,11 @@ export default function WhySpecial({
     <section ref={containerRef} aria-labelledby="why-special-title">
       <div className="relative">
         <img
-          src={BlackseedCloseUp}
+          src={
+            window.matchMedia("(max-width: 414px)").matches
+              ? BlackseedCloseUpVertical
+              : BlackseedCloseUp
+          }
           alt="Blackseed Close Up"
           className="w-full brightness-40 aspect-auto"
         />

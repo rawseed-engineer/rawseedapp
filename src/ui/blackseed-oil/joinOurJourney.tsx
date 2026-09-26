@@ -4,10 +4,11 @@ import { useTranslation } from "react-i18next";
 const JoinOurJourney: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <div className="max-w-md space-y-4 pt-24">
+    <div className="max-w-md space-y-4 pt-24 mx-4">
       <h1
-        className="text-balance text-5xl md:text-5xl text-[#a18458] 
-        text-shadow-lg tracking-tight"
+        className="text-balance text-4xl md:text-5xl text-[#a18458] 
+        text-shadow-lg tracking-tight
+        text-center md:text-left"
       >
         {t("blackseed_oil.journey.title")}
       </h1>

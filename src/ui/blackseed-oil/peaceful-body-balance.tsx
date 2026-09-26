@@ -56,19 +56,31 @@ const PeacefulBodyBalance: React.FC = () => {
       className="mx-auto grid grid-cols-1 md:grid-cols-2 
       items-center justify-items-center gap-8 px-8 sm:px-16"
     >
+      <div ref={addToRefs} className="hidden md:block mx-4">
+        <img
+          src={ImagePeacefulMind}
+          alt="Rawseed's blackseed oil promotes a peaceful mind"
+          className="aspect-auto"
+        />
+      </div>
+
       <div ref={addToRefs} className="max-w-md space-y-4 text-neutral-600">
-        <h1 className="text-balance text-[#a18458] text-5xl text-shadow-lg tracking-tight md:text-5xl">
+        <h1
+          className="text-balance text-[#a18458] text-shadow-lg tracking-tight 
+        text-4xl md:text-5xl text-center md:text-left"
+        >
           {t("blackseed_oil.peaceful_mind_body.title")}
         </h1>
         <p className="text-pretty text-justify text-2xl">
           {t("blackseed_oil.peaceful_mind_body.description")}
         </p>
       </div>
-      <div ref={addToRefs}>
+
+      <div ref={addToRefs} className="block md:hidden mx-4">
         <img
           src={ImagePeacefulMind}
           alt="Rawseed's blackseed oil promotes a peaceful mind"
-          className="mx-8"
+          className="aspect-auto"
         />
       </div>
     </div>

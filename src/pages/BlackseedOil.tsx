@@ -18,6 +18,7 @@ import WhySpecial from "../ui/blackseed-oil/why-special";
 
 const BlackSeedOilPage: React.FC = () => {
   // const { t } = useTranslation();
+  const isMobile = window.matchMedia("(max-width: 767px)").matches;
   const nutritionUnit = "per 100ml";
 
   const nutritionFacts = [
@@ -146,7 +147,7 @@ const BlackSeedOilPage: React.FC = () => {
           productItems={productInformation}
           imageSrc={BlackseedOilBottle}
           imageAlt="Golden Drop Black Seed Oil bottle"
-          imageHeight="h-150"
+          imageHeight={isMobile ? "h-100" : "h-150"}
         />
       </section>
 
@@ -160,18 +161,6 @@ const BlackSeedOilPage: React.FC = () => {
 
       <section className="flex-grow overflow-x-auto w-full ">
         <WhySpecial />
-        {/* <div className="relative">
-          <img
-            src={BlackseedCloseUp}
-            alt="Blackseed Close Up"
-            className="w-full brightness-40 aspect-auto"
-          />
-          <div className="absolute text-5xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 space-y-4">
-            <h2 className="text-4xl sm:text-5xl text-neutral-200">
-              {t("blackseed_oil.why_special")}
-            </h2>
-          </div>
-        </div> */}
       </section>
 
       {/* White Background Section - Features */}

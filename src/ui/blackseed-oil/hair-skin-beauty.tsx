@@ -58,7 +58,7 @@ const HairSkinBeauty: React.FC = () => {
       className="mx-auto grid grid-cols-1 md:grid-cols-2 
       items-center justify-items-center gap-8 px-8 sm:px-16"
     >
-      <div ref={addToRefs}>
+      <div ref={addToRefs} className="hidden md:block">
         <img
           src={ImageHealthyHair}
           alt="RawSeed's blackseed oils make your hair and skin healthy"
@@ -66,7 +66,10 @@ const HairSkinBeauty: React.FC = () => {
         />
       </div>
       <div ref={addToRefs} className="max-w-md text-neutral-600 space-y-4">
-        <h2 className="text-balance text-[#a18458] text-5xl text-shadow-lg tracking-tight md:text-5xl">
+        <h2
+          className="text-balance text-[#a18458] text-shadow-lg tracking-tight 
+        text-4xl md:text-5xl text-center md:text-left"
+        >
           {t("blackseed_oil.healthy_skin_and_hair.title")}
         </h2>
         <p className="text-pretty text-justify text-2xl">
@@ -99,6 +102,13 @@ const HairSkinBeauty: React.FC = () => {
           />
           <span>{t("blackseed_oil.healthy_skin_and_hair.item3")}</span>
         </li>
+      </div>
+      <div ref={addToRefs} className="block md:hidden mx-4">
+        <img
+          src={ImageHealthyHair}
+          alt="RawSeed's blackseed oils make your hair and skin healthy"
+          className="aspect-auto"
+        />
       </div>
     </div>
   );

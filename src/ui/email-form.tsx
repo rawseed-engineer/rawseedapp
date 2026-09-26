@@ -143,7 +143,7 @@ const EmailForm: React.FC = () => {
               className="text-[#a18458] inline-block mr-4"
               style={{ height: "36px" }}
             />
-            <span className="text-center text-balance text-[#a18458] text-shadow-lg text-5xl">
+            <span className="text-center text-balance text-[#a18458] text-shadow-lg text-4xl md:text-5xl">
               <h2>{t("contact.title")}</h2>
             </span>
           </div>
