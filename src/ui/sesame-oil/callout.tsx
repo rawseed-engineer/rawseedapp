@@ -16,7 +16,6 @@ const SesamePageCallout: React.FC = () => {
 
   useEffect(() => {
     const elements = calloutRefs.current;
-    const isMobile = window.matchMedia("(max-width: 767px)").matches;
 
     // Create one ScrollTrigger for the entire container
     const ctx = gsap.context(() => {

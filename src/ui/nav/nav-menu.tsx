@@ -19,10 +19,11 @@ const NavMenu: React.FC = () => {
 
   useEffect(() => {
     setActivePath(location.pathname);
+    setIsMenuOpen(false);
   }, [location.pathname]);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen((open) => !open);
   };
 
   useEffect(() => {
@@ -182,45 +183,58 @@ const NavMenu: React.FC = () => {
         {/* Mobile menu button */}
         <button
           onClick={toggleMenu}
-          className="lg:hidden text-4xl text-white hover:text-gray-300 transition-colors duration-200"
+          type="button"
+          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-navigation"
+          className="relative z-30 flex h-11 w-11 items-center justify-center text-white transition-colors duration-200 hover:text-gray-300 lg:hidden"
         >
-          {isMenuOpen ? (
-            // <X className="w-6 h-6" />
-            `X`
-          ) : (
-            // <Menu className="w-6 h-6" />
-            // `Menu`
-            <FontAwesomeIcon
-              icon={faBars}
-              className="text-white inline-block"
-              style={{ height: "36px" }}
-            />
-          )}
+          <span
+            aria-hidden="true"
+            className={`absolute h-[2px] w-8 bg-current transition-transform duration-300 ease-in-out motion-reduce:transition-none ${
+              isMenuOpen ? "translate-y-0 rotate-45" : "-translate-y-[9px]"
+            }`}
+          />
+          <span
+            aria-hidden="true"
+            className={`absolute h-[2px] w-8 bg-current transition-[opacity,transform] duration-200 ease-in-out motion-reduce:transition-none ${
+              isMenuOpen ? "scale-x-0 opacity-0" : "scale-x-100 opacity-100"
+            }`}
+          />
+          <span
+            aria-hidden="true"
+            className={`absolute h-[2px] w-8 bg-current transition-transform duration-300 ease-in-out motion-reduce:transition-none ${
+              isMenuOpen ? "translate-y-0 -rotate-45" : "translate-y-[9px]"
+            }`}
+          />
         </button>
       </div>
 
       {/* Mobile Navigation Menu */}
-      {isMenuOpen && (
-        // <div
-        //   className="lg:hidden absolute top-full left-0 right-0 bg-slate-800
-        //   backdrop-blur-lg  border-t border-gray-700
-        //   translate-y-1/2
-        //   animate-[smoothAppear_2s_ease_forwards]"
-        // >
-        // <div
-        //   className="lg:hidden absolute top-full left-0 right-0
-        //     transition: 300ms left cubic-bezier(0.77, 0, 0.175, 1)"
-        // >
-        <div
-          className="h-full fixed left-0 w-[250px] mt-6
-          transform translate-x-4
-          transition-transform duration-250 ease-in-out
-          linear-gradient(180deg, #FC466B 0%, #3F5EFB 100%)"
-        >
-          <div className="px-4 py-6 space-y-4 bg-[#181818] bg-opacity-90 backdrop-blur-lg border-t border-gray-700">
+      <button
+        type="button"
+        aria-label="Close navigation menu"
+        tabIndex={isMenuOpen ? 0 : -1}
+        aria-hidden={!isMenuOpen}
+        onClick={() => setIsMenuOpen(false)}
+        className={`fixed inset-0 z-10 bg-black/45 transition-opacity duration-300 motion-reduce:transition-none lg:hidden ${
+          isMenuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+        }`}
+      />
+      <div
+        id="mobile-navigation"
+        aria-hidden={!isMenuOpen}
+        className={`fixed left-0 top-0 z-20 h-dvh w-[250px] overflow-y-auto border-r border-white/10 bg-[#181818]/95 pt-24 shadow-xl backdrop-blur-lg transition-[transform,visibility] duration-300 ease-[cubic-bezier(0.77,0,0.175,1)] motion-reduce:transition-none lg:hidden ${
+          isMenuOpen ? "visible translate-x-0" : "invisible -translate-x-full"
+        }`}
+      >
+        <div className="space-y-4 px-4 pb-6">
             <Link
               to="/rawseedapp/"
-              onClick={() => setActivePath("/rawseedapp/")}
+              onClick={() => {
+                setActivePath("/rawseedapp/");
+                setIsMenuOpen(false);
+              }}
             >
               <div
                 className="block text-gray-300 hover:text-white transition-colors duration-200 py-2"
@@ -234,7 +248,7 @@ const NavMenu: React.FC = () => {
                 Home
               </div>
             </Link>
-            <Link to="/rawseedapp/sesame-oil">
+            <Link to="/rawseedapp/sesame-oil" onClick={() => setIsMenuOpen(false)}>
               <div
                 className="block text-gray-300 hover:text-white transition-colors duration-200 py-2"
                 onClick={() => setActivePath("/rawseedapp/sesame-oil")}
@@ -248,7 +262,7 @@ const NavMenu: React.FC = () => {
                 {t("menu.sesame_oil")}
               </div>
             </Link>
-            <Link to="/rawseedapp/flaxseed-oil">
+            <Link to="/rawseedapp/flaxseed-oil" onClick={() => setIsMenuOpen(false)}>
               <div
                 className="block text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200 py-2"
                 onClick={() => setActivePath("/rawseedapp/flaxseed-oil")}
@@ -262,7 +276,7 @@ const NavMenu: React.FC = () => {
                 {t("menu.flax_seed_oil")}
               </div>
             </Link>
-            <Link to="/rawseedapp/blackseed-oil">
+            <Link to="/rawseedapp/blackseed-oil" onClick={() => setIsMenuOpen(false)}>
               <div
                 className="block text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200 py-2"
                 onClick={() => setActivePath("/rawseedapp/blackseed-oil")}
@@ -276,7 +290,7 @@ const NavMenu: React.FC = () => {
                 {t("menu.black_seed_oil")}
               </div>
             </Link>
-            <Link to="/rawseedapp/about-us">
+            <Link to="/rawseedapp/about-us" onClick={() => setIsMenuOpen(false)}>
               <div
                 className="block text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200 py-2"
                 onClick={() => setActivePath("/rawseedapp/about-us")}
@@ -293,7 +307,10 @@ const NavMenu: React.FC = () => {
 
             <Link
               to="/rawseedapp/contact"
-              onClick={() => setActivePath("/rawseedapp/contact")}
+              onClick={() => {
+                setActivePath("/rawseedapp/contact");
+                setIsMenuOpen(false);
+              }}
             >
               <div
                 className="block text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200 py-2 
@@ -308,9 +325,8 @@ const NavMenu: React.FC = () => {
                 {t("menu.get_started")}
               </div>
             </Link>
-          </div>
         </div>
-      )}
+      </div>
     </nav>
   );
 };
