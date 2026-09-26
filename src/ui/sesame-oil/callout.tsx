@@ -1,5 +1,6 @@
 import React from "react";
-import SesamePlant from "../../assets/sesame_crop_field_vertical.jpg";
+import SesamePlant from "../../assets/sesame_crop_field.jpg";
+import SesamePlantVertical from "../../assets/sesame_crop_field_vertical.jpg";
 import { useTranslation } from "react-i18next";
 
 import { useEffect, useRef } from "react";
@@ -15,6 +16,7 @@ const SesamePageCallout: React.FC = () => {
 
   useEffect(() => {
     const elements = calloutRefs.current;
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
 
     // Create one ScrollTrigger for the entire container
     const ctx = gsap.context(() => {
@@ -53,7 +55,11 @@ const SesamePageCallout: React.FC = () => {
   return (
     <div ref={containerRef} className="relative">
       <img
-        src={SesamePlant}
+        src={
+          window.matchMedia("(max-width: 414px)").matches
+            ? SesamePlantVertical
+            : SesamePlant
+        }
         alt="Rawseed Plant"
         className="w-full brightness-30 aspect-auto"
       />

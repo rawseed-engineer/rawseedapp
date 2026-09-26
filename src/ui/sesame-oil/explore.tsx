@@ -50,8 +50,11 @@ const Explore: React.FC = () => {
   };
 
   return (
-    <div ref={containerRef} className="max-w-md space-y-6 mt-24 test-justify">
-      <h2 className="text-balance text-4xl tracking-tight text-[#a18458] text-shadow-lg md:text-5xl">
+    <div
+      ref={containerRef}
+      className="max-w-md space-y-6 mt-24 test-justify mx-4"
+    >
+      <h2 className="text-balance text-4xl tracking-tight text-[#a18458] text-shadow-lg text-center md:text-left md:text-5xl">
         {t("sesame.callout.inquiry_title")}
       </h2>
       <p
