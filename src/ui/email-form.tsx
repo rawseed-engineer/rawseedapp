@@ -111,8 +111,8 @@ const EmailForm: React.FC = () => {
           // stagger: 0.7, // This is the magic: each item delays by 0.2s
           scrollTrigger: {
             trigger: containerRef.current,
-            start: isMobile ? "top 10%" : "top 30%", // When the container hits 75% of viewport
-            end: "bottom 10%",
+            start: isMobile ? "top 50%" : "top 30%", // When the container hits 75% of viewport
+            // end: isMobile ? "bottom 0%" : "bottom 10%",
             toggleActions: "play none none reverse",
             // markers: true, // Remove in production
           },

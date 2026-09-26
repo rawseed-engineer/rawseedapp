@@ -38,7 +38,7 @@ const FullScreenVideo = () => {
           stagger: 0.7, // This is the magic: each item delays by 0.2s
           scrollTrigger: {
             trigger: containerRef.current,
-            start: isMobile ? "top 10%" : "top 30%", // When the container hits 75% of viewport
+            start: isMobile ? "top 40%" : "top 30%", // When the container hits 75% of viewport
             end: "bottom 20%",
             toggleActions: "play none none reverse",
             // markers: true, // Remove in production
@@ -88,7 +88,7 @@ const FullScreenVideo = () => {
             >
               <h2
                 ref={addToRefs}
-                className="text-balance text-[#a18458] text-4xl text-shadow-lg tracking-tight md:text-5xl"
+                className="text-center md:text-left text-balance text-[#a18458] text-4xl text-shadow-lg tracking-tight md:text-5xl"
               >
                 {t("history.title")}
               </h2>

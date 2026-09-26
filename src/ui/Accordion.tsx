@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ShineText from "./ShineText";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -86,7 +87,7 @@ export default function ProductInformationAccordion({
           <span className="h-px w-16 flex-1 bg-teal-700 md:w-24" />
         </h2> */}
         <h1
-          className="text-balance text-[#a18458] 
+          className="text-balance text-[#a18458] text-center md:text-left
           text-4xl md:text-5xl tracking-tight text-shadow-lg mb-8 mt-16"
         >
           {t("sesame.product_information")}
