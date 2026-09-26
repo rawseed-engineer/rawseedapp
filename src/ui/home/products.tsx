@@ -85,7 +85,7 @@ const Products: React.FC = () => {
   return (
     <div ref={containerRef} className=" gap-8 sm:px-8 sm:px-16 sm:mx-32">
       <div ref={addToRefs} className="m-12 text-center">
-        <h1 className="my-6 text-[#a18458] text-balance text-5xl text-shadow-lg tracking-tight md:text-5xl">
+        <h1 className="my-6 text-[#a18458] text-balance text-4xl text-shadow-lg tracking-tight md:text-5xl">
           {t("products.title")}
         </h1>
       </div>

@@ -19,10 +19,43 @@ const WhatWeDoScrollHighlight = ({
       }}
     >
       <div className="absolute inset-0 bg-black/50" />
-      <div className="relative mx-auto w-full max-w-7xl px-8 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-center min-h-[calc(100vh-64px)]">
-        <div className="w-full lg:w-3/5 flex items-center justify-center px-6 py-12 lg:px-12 lg:py-16 font-serif">
+      <div className="relative mx-auto w-full max-w-7xl px-2 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-start lg:justify-center min-h-[calc(100vh-64px)]">
+        {/* <div className="w-full lg:w-2/5 flex items-center justify-center p-2 sm:p-6 lg:p-10"> */}
+        {/* <div className="w-full rounded-3xl border border-white/20 bg-transparent p-2 sm:p-6 mt-4"> */}
+        <div className="my-3 tracking-tight text-slate-100 font-serif sm:mb-6 text-4xl md:text-5xl text-center">
+          {heading}
+        </div>
+        <div
+          className="grid gap-1.5 lg:flex lg:flex-col lg:gap-4"
+          style={{
+            gridTemplateColumns: `repeat(${items.length}, minmax(0, 1fr))`,
+          }}
+        >
+          {items.map((item, index) => (
+            <button
+              key={item.key ?? index}
+              type="button"
+              onClick={() => setActiveIndex(index)}
+              onMouseEnter={() => setActiveIndex(index)}
+              className={`w-full rounded-xl border p-0.5 text-center transition duration-200 ease-in-out sm:rounded-3xl sm:p-3 lg:p-5 lg:text-left ${
+                index === activeIndex
+                  ? "border-[#a18458] bg-[#a18458] text-white shadow-lg"
+                  : "border-white/30 bg-white/10 text-slate-200 hover:border-[#a18458] hover:bg-white hover:text-slate-900"
+              }`}
+              aria-pressed={index === activeIndex}
+            >
+              <span className="block text-[9px] font-semibold leading-tight sm:text-sm lg:text-lg">
+                {item.key}
+              </span>
+            </button>
+          ))}
+        </div>
+        {/* </div> */}
+        {/* </div> */}
+
+        <div className="w-full lg:w-3/5 flex items-center justify-center px-6 py-8 lg:px-12 lg:py-16 font-serif">
           <div className="w-full max-w-4xl text-white">
-            <h2 className="text-5xl tracking-tight lg:text-5xl">
+            <h2 className="text-4xl tracking-tight md:text-5xl text-center md:text-left">
               {activeItem.key}
             </h2>
             {activeItem.description.map((paragraph: string, index: number) => (
@@ -39,34 +72,6 @@ const WhatWeDoScrollHighlight = ({
             >
               {activeItem.description}
             </p> */}
-          </div>
-        </div>
-
-        <div className="w-full lg:w-2/5 flex items-center justify-center p-6 lg:p-10">
-          <div className="w-full rounded-3xl border border-white/20 bg-transparent p-6">
-            <div className="mb-6 text-5xl tracking-tight text-slate-100 font-serif lg:text-5xl">
-              {heading}
-            </div>
-            <div className="flex flex-col gap-4">
-              {items.map((item, index) => (
-                <button
-                  key={item.key ?? index}
-                  type="button"
-                  onClick={() => setActiveIndex(index)}
-                  onMouseEnter={() => setActiveIndex(index)}
-                  className={`w-full rounded-3xl border p-5 text-left transition duration-200 ease-in-out ${
-                    index === activeIndex
-                      ? "border-[#a18458] bg-[#a18458] text-white shadow-lg"
-                      : "border-white/30 bg-white/10 text-slate-200 hover:border-[#a18458] hover:bg-white hover:text-slate-900"
-                  }`}
-                  aria-pressed={index === activeIndex}
-                >
-                  <span className="block text-lg font-semibold">
-                    {item.key}
-                  </span>
-                </button>
-              ))}
-            </div>
           </div>
         </div>
       </div>
