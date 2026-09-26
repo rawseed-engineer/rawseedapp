@@ -4,8 +4,8 @@ import { useTranslation } from "react-i18next";
 // import RawSeedLogo from "./../../assets/rawseed_logo.png";
 import { Link, useLocation } from "react-router-dom";
 import RawSeedLogo from "../../assets/rawseed_logo2.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faBars } from "@fortawesome/free-solid-svg-icons";
 import ButtonWithExpandingUnderline from "../ButtonWithExpandingUnderline";
 
 const NavMenu: React.FC = () => {
@@ -184,7 +184,9 @@ const NavMenu: React.FC = () => {
         <button
           onClick={toggleMenu}
           type="button"
-          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-label={
+            isMenuOpen ? "Close navigation menu" : "Open navigation menu"
+          }
           aria-expanded={isMenuOpen}
           aria-controls="mobile-navigation"
           className="relative z-30 flex h-11 w-11 items-center justify-center text-white transition-colors duration-200 hover:text-gray-300 lg:hidden"
@@ -218,7 +220,9 @@ const NavMenu: React.FC = () => {
         aria-hidden={!isMenuOpen}
         onClick={() => setIsMenuOpen(false)}
         className={`fixed inset-0 z-10 bg-black/45 transition-opacity duration-300 motion-reduce:transition-none lg:hidden ${
-          isMenuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+          isMenuOpen
+            ? "pointer-events-auto opacity-100"
+            : "pointer-events-none opacity-0"
         }`}
       />
       <div
@@ -229,102 +233,111 @@ const NavMenu: React.FC = () => {
         }`}
       >
         <div className="space-y-4 px-4 pb-6">
-            <Link
-              to="/rawseedapp/"
-              onClick={() => {
-                setActivePath("/rawseedapp/");
-                setIsMenuOpen(false);
-              }}
+          <Link
+            to="/rawseedapp/"
+            onClick={() => {
+              setActivePath("/rawseedapp/");
+              setIsMenuOpen(false);
+            }}
+          >
+            <div
+              className="block text-gray-300 hover:text-white transition-colors duration-200 py-2"
+              style={
+                activePath === "/rawseedapp/" ||
+                location.pathname === "/rawseedapp/"
+                  ? { color: "#a18458" }
+                  : undefined
+              }
             >
-              <div
-                className="block text-gray-300 hover:text-white transition-colors duration-200 py-2"
-                style={
-                  activePath === "/rawseedapp/" ||
-                  location.pathname === "/rawseedapp/"
-                    ? { color: "#a18458" }
-                    : undefined
-                }
-              >
-                Home
-              </div>
-            </Link>
-            <Link to="/rawseedapp/sesame-oil" onClick={() => setIsMenuOpen(false)}>
-              <div
-                className="block text-gray-300 hover:text-white transition-colors duration-200 py-2"
-                onClick={() => setActivePath("/rawseedapp/sesame-oil")}
-                style={
-                  activePath === "/rawseedapp/sesame-oil" ||
-                  location.pathname === "/rawseedapp/sesame-oil"
-                    ? { color: "#a18458" }
-                    : undefined
-                }
-              >
-                {t("menu.sesame_oil")}
-              </div>
-            </Link>
-            <Link to="/rawseedapp/flaxseed-oil" onClick={() => setIsMenuOpen(false)}>
-              <div
-                className="block text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200 py-2"
-                onClick={() => setActivePath("/rawseedapp/flaxseed-oil")}
-                style={
-                  activePath === "/rawseedapp/flaxseed-oil" ||
-                  location.pathname === "/rawseedapp/flaxseed-oil"
-                    ? { color: "#a18458" }
-                    : undefined
-                }
-              >
-                {t("menu.flax_seed_oil")}
-              </div>
-            </Link>
-            <Link to="/rawseedapp/blackseed-oil" onClick={() => setIsMenuOpen(false)}>
-              <div
-                className="block text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200 py-2"
-                onClick={() => setActivePath("/rawseedapp/blackseed-oil")}
-                style={
-                  activePath === "/rawseedapp/blackseed-oil" ||
-                  location.pathname === "/rawseedapp/blackseed-oil"
-                    ? { color: "#a18458" }
-                    : undefined
-                }
-              >
-                {t("menu.black_seed_oil")}
-              </div>
-            </Link>
-            <Link to="/rawseedapp/about-us" onClick={() => setIsMenuOpen(false)}>
-              <div
-                className="block text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200 py-2"
-                onClick={() => setActivePath("/rawseedapp/about-us")}
-                style={
-                  activePath === "/rawseedapp/about-us" ||
-                  location.pathname === "/rawseedapp/about-us"
-                    ? { color: "#a18458" }
-                    : undefined
-                }
-              >
-                About Us
-              </div>
-            </Link>
+              Home
+            </div>
+          </Link>
+          <Link
+            to="/rawseedapp/sesame-oil"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <div
+              className="block text-gray-300 hover:text-white transition-colors duration-200 py-2"
+              onClick={() => setActivePath("/rawseedapp/sesame-oil")}
+              style={
+                activePath === "/rawseedapp/sesame-oil" ||
+                location.pathname === "/rawseedapp/sesame-oil"
+                  ? { color: "#a18458" }
+                  : undefined
+              }
+            >
+              {t("menu.sesame_oil")}
+            </div>
+          </Link>
+          <Link
+            to="/rawseedapp/flaxseed-oil"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <div
+              className="block text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200 py-2"
+              onClick={() => setActivePath("/rawseedapp/flaxseed-oil")}
+              style={
+                activePath === "/rawseedapp/flaxseed-oil" ||
+                location.pathname === "/rawseedapp/flaxseed-oil"
+                  ? { color: "#a18458" }
+                  : undefined
+              }
+            >
+              {t("menu.flax_seed_oil")}
+            </div>
+          </Link>
+          <Link
+            to="/rawseedapp/blackseed-oil"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <div
+              className="block text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200 py-2"
+              onClick={() => setActivePath("/rawseedapp/blackseed-oil")}
+              style={
+                activePath === "/rawseedapp/blackseed-oil" ||
+                location.pathname === "/rawseedapp/blackseed-oil"
+                  ? { color: "#a18458" }
+                  : undefined
+              }
+            >
+              {t("menu.black_seed_oil")}
+            </div>
+          </Link>
+          <Link to="/rawseedapp/about-us" onClick={() => setIsMenuOpen(false)}>
+            <div
+              className="block text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200 py-2"
+              onClick={() => setActivePath("/rawseedapp/about-us")}
+              style={
+                activePath === "/rawseedapp/about-us" ||
+                location.pathname === "/rawseedapp/about-us"
+                  ? { color: "#a18458" }
+                  : undefined
+              }
+            >
+              About Us
+            </div>
+          </Link>
 
-            <Link
-              to="/rawseedapp/contact"
-              onClick={() => {
-                setActivePath("/rawseedapp/contact");
-                setIsMenuOpen(false);
-              }}
-            >
-              <div
-                className="block text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200 py-2 
+          <Link
+            to="/rawseedapp/contact"
+            onClick={() => {
+              setActivePath("/rawseedapp/contact");
+              setIsMenuOpen(false);
+            }}
+          >
+            <div
+              className="block text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200 py-2 
               "
-                style={
-                  activePath === "/rawseedapp/contact" ||
-                  location.pathname === "/rawseedapp/contact"
-                    ? { color: "#a18458" }
-                    : undefined
-                }
-              >
-                {t("menu.get_started")}
-              </div>
-            </Link>
+              style={
+                activePath === "/rawseedapp/contact" ||
+                location.pathname === "/rawseedapp/contact"
+                  ? { color: "#a18458" }
+                  : undefined
+              }
+            >
+              {t("menu.get_started")}
+            </div>
+          </Link>
         </div>
       </div>
     </nav>
