@@ -61,7 +61,7 @@ const UseCases: React.FC = () => {
         ref={addToRefs}
         className="absolute text-5xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 space-y-4"
       >
-        <h2 className="text-4xl sm:text-5xl text-neutral-200">
+        <h2 className="text-3xl sm:text-5xl text-neutral-200 text-center md:text-left">
           {t("flaxseed_oil.use_cases.title")}
         </h2>
       </div>

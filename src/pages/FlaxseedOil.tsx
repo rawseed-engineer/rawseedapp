@@ -25,6 +25,8 @@ import FlaxseedOilBottle from "../assets/bottle_flaxseed.png";
 import type { ScrollHighlightItem } from "../ui/ScrollHighlightSection";
 // import type WhatWeDoScrollHighlight from "../ui/home/whatWeDoScrollHighlight";
 const FlaxseedOil: React.FC = () => {
+  const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
   const nutritionUnit = "per (5ml) teaspoon";
 
   const scrollItems: ScrollHighlightItem[] = [
@@ -204,6 +206,7 @@ const FlaxseedOil: React.FC = () => {
             productItems={productInformation}
             imageSrc={FlaxseedOilBottle}
             imageAlt="Golden Drop Flaxseed Oil bottle"
+            imageHeight={isMobile ? "h-110" : "h-170"}
           />
         </section>
 
@@ -267,7 +270,7 @@ const FlaxseedOil: React.FC = () => {
         >
           <div
             className="mx-auto grid grid-cols-1 lg:grid-cols-2 
-            justify-items-center gap-8 px-1 sm:px-16"
+            justify-items-center gap-8 px-4 sm:px-16"
           >
             <JoinOurJourney />
             <EmailForm />

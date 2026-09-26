@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 // import RawSeedLogo from "./../../assets/rawseed_logo.png";
 import { Link, useLocation } from "react-router-dom";
 import RawSeedLogo from "../../assets/rawseed_logo2.png";
+import RawSeedMobileLogo from "../../assets/rawseed_logo3.png";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faBars } from "@fortawesome/free-solid-svg-icons";
 import ButtonWithExpandingUnderline from "../ButtonWithExpandingUnderline";
@@ -45,9 +46,16 @@ const NavMenu: React.FC = () => {
     >
       {/* Sticky Navigation */}
       <div className="flex items-center justify-between lg:max-w-7xl mx-auto">
-        <div className="hidden md:block flex items-center space-x-2">
+        <div className="hidden lg:block flex items-center space-x-2">
           <Link
             to="/rawseedapp"
+            aria-hidden={!isSticky}
+            tabIndex={isSticky ? 0 : -1}
+            className={`transition-[opacity,transform] duration-700 ease-out motion-reduce:transition-none ${
+              isSticky
+                ? "translate-y-0 opacity-100"
+                : "-translate-y-2 opacity-0"
+            }`}
             style={{
               textDecoration:
                 location.pathname === "/rawseedapp" ? "underline" : "none",
@@ -180,36 +188,55 @@ const NavMenu: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile menu button */}
-        <button
-          onClick={toggleMenu}
-          type="button"
-          aria-label={
-            isMenuOpen ? "Close navigation menu" : "Open navigation menu"
-          }
-          aria-expanded={isMenuOpen}
-          aria-controls="mobile-navigation"
-          className="relative z-30 flex h-11 w-11 items-center justify-center text-white transition-colors duration-200 hover:text-gray-300 lg:hidden"
-        >
-          <span
-            aria-hidden="true"
-            className={`absolute h-[2px] w-8 bg-current transition-transform duration-300 ease-in-out motion-reduce:transition-none ${
-              isMenuOpen ? "translate-y-0 rotate-45" : "-translate-y-[9px]"
+        {/* Mobile menu controls */}
+        <div className="flex w-full items-center justify-between lg:hidden">
+          <button
+            onClick={toggleMenu}
+            type="button"
+            aria-label={
+              isMenuOpen ? "Close navigation menu" : "Open navigation menu"
+            }
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation"
+            className="relative z-30 flex h-11 w-11 items-center justify-center text-white transition-colors duration-200 hover:text-gray-300"
+          >
+            <span
+              aria-hidden="true"
+              className={`absolute h-[2px] w-8 bg-current transition-transform duration-300 ease-in-out motion-reduce:transition-none ${
+                isMenuOpen ? "translate-y-0 rotate-45" : "-translate-y-[9px]"
+              }`}
+            />
+            <span
+              aria-hidden="true"
+              className={`absolute h-[2px] w-8 bg-current transition-[opacity,transform] duration-200 ease-in-out motion-reduce:transition-none ${
+                isMenuOpen ? "scale-x-0 opacity-0" : "scale-x-100 opacity-100"
+              }`}
+            />
+            <span
+              aria-hidden="true"
+              className={`absolute h-[2px] w-8 bg-current transition-transform duration-300 ease-in-out motion-reduce:transition-none ${
+                isMenuOpen ? "translate-y-0 -rotate-45" : "translate-y-[9px]"
+              }`}
+            />
+          </button>
+          <Link
+            to="/rawseedapp/"
+            aria-label="RawSeed home"
+            aria-hidden={!isSticky}
+            tabIndex={isSticky ? 0 : -1}
+            className={`relative z-30 transition-[opacity,transform] duration-700 ease-out motion-reduce:transition-none ${
+              isSticky
+                ? "translate-y-0 opacity-100"
+                : "-translate-y-2 opacity-0"
             }`}
-          />
-          <span
-            aria-hidden="true"
-            className={`absolute h-[2px] w-8 bg-current transition-[opacity,transform] duration-200 ease-in-out motion-reduce:transition-none ${
-              isMenuOpen ? "scale-x-0 opacity-0" : "scale-x-100 opacity-100"
-            }`}
-          />
-          <span
-            aria-hidden="true"
-            className={`absolute h-[2px] w-8 bg-current transition-transform duration-300 ease-in-out motion-reduce:transition-none ${
-              isMenuOpen ? "translate-y-0 -rotate-45" : "translate-y-[9px]"
-            }`}
-          />
-        </button>
+          >
+            <img
+              src={RawSeedMobileLogo}
+              alt="RawSeed"
+              className="h-10 w-auto object-contain"
+            />
+          </Link>
+        </div>
       </div>
 
       {/* Mobile Navigation Menu */}

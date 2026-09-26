@@ -137,7 +137,7 @@ const EmailForm: React.FC = () => {
         duration-300 hover:shadow-[#a18458]"
       >
         <div className=" mb-8 pb-5 relative">
-          <div className="mb-2 flex items-center">
+          <div className="m-2 flex items-center">
             <FontAwesomeIcon
               icon={faComments}
               className="text-[#a18458] inline-block mr-4"

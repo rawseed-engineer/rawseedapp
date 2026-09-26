@@ -12,7 +12,8 @@ interface HeroProps {
   staggerDelay?: number;
   initialDelay?: number;
   titleDuration?: number;
-  subtitleDuration?: number;
+  mobileTitleDuration?: number;
+  // subtitleDuration?: number;
   logoDuration?: number;
   descriptionDuration?: number;
   circleDuration?: number;
@@ -21,16 +22,17 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({
   staggerDelay = 0.6,
   initialDelay = 0,
-  titleDuration = 0,
-  subtitleDuration = 2,
+  titleDuration = 2,
+  mobileTitleDuration = 2,
   logoDuration = 1,
   descriptionDuration = 6,
   circleDuration = 1,
 }) => {
   const { t } = useTranslation();
-
+  const isMobile = window.matchMedia("(max-width: 767px)").matches;
   const containerRef = useRef<HTMLDivElement>(null);
-  const subtitleRef = useRef<HTMLHeadingElement | null>(null);
+  const titleRef = useRef<HTMLHeadingElement | null>(null);
+  const mobileTitleRef = useRef<HTMLHeadingElement | null>(null);
   const descriptionRef = useRef<HTMLParagraphElement | null>(null);
   const circleRef = useRef<HTMLImageElement | null>(null);
 
@@ -46,16 +48,25 @@ const Hero: React.FC<HeroProps> = ({
         },
       });
 
-      if (subtitleRef.current) {
+      if (!isMobile && titleRef.current) {
         tl.fromTo(
-          subtitleRef.current,
+          titleRef.current,
           { opacity: 0, y: 60 },
-          { opacity: 1, y: 0, duration: subtitleDuration },
+          { opacity: 1, y: 0, duration: titleDuration },
           initialDelay,
         );
       }
 
-      if (descriptionRef.current) {
+      if (isMobile && mobileTitleRef.current) {
+        tl.fromTo(
+          mobileTitleRef.current,
+          { opacity: 0, y: 60 },
+          { opacity: 1, y: 0, duration: mobileTitleDuration },
+          initialDelay,
+        );
+      }
+
+      if (!isMobile && descriptionRef.current) {
         tl.fromTo(
           descriptionRef.current,
           { opacity: 0, y: 60 },
@@ -79,7 +90,6 @@ const Hero: React.FC<HeroProps> = ({
     initialDelay,
     staggerDelay,
     titleDuration,
-    subtitleDuration,
     logoDuration,
     descriptionDuration,
     circleDuration,
@@ -91,7 +101,6 @@ const Hero: React.FC<HeroProps> = ({
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          // backgroundImage: `url("/rawseedapp/hero_image_home.jpg")`,
           backgroundImage: `url("flaxseed_oil_hero.webp")`,
           opacity: 0.9,
           filter: "brightness(50%)",
@@ -103,8 +112,16 @@ const Hero: React.FC<HeroProps> = ({
           {/* Hero Heading */}
 
           <h1
-            ref={subtitleRef}
-            className="text-balance 
+            ref={mobileTitleRef}
+            className="block md:hidden text-balance text-center text-white 
+          text-5xl md:text-5xl tracking-tight text-shadow-lg mb-8 "
+          >
+            {t("flaxseed_oil.hero.subtitle")}
+          </h1>
+
+          <h1
+            ref={titleRef}
+            className="hidden md:block text-balance 
                   text-3xl sm:text-3xl md:text-4xl lg:text-5xl 
                   text-center lg:text-left
                   font-bold text-white mb-5"
@@ -117,7 +134,7 @@ const Hero: React.FC<HeroProps> = ({
           {/* Hero Description */}
           <p
             ref={descriptionRef}
-            className="text-pretty text-white 
+            className="hidden md:block text-pretty text-white 
                 text-2xl text-justify
                 lg:text-left
                 mb-6"

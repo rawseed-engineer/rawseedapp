@@ -1,5 +1,6 @@
 import React from "react";
 import FlaxseedWithHand from "../../assets/flaxseed_skin_care.jpg";
+import FlaxseedWithHandVertical from "../../assets/flaxseed_skin_care_vertical.jpg";
 import { useTranslation } from "react-i18next";
 
 import { useEffect, useRef } from "react";
@@ -9,6 +10,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const skinCare: React.FC = () => {
+  const isMobile = window.matchMedia("(max-width: 767px)").matches;
   const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRefs = useRef<HTMLParagraphElement[]>([]);
@@ -53,17 +55,20 @@ const skinCare: React.FC = () => {
   return (
     <div ref={containerRef} className="relative">
       <img
-        src={FlaxseedWithHand}
+        src={isMobile ? FlaxseedWithHandVertical : FlaxseedWithHand}
         alt="Flaxseed with hands"
         className="w-full brightness-40 aspect-auto"
       />
-      <div className="absolute text-5xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 space-y-4">
-        <h2 ref={addToRefs} className="text-4xl sm:text-5xl text-neutral-200">
+      <div className="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 space-y-4 px-4 text-5xl text-white sm:w-auto sm:px-0">
+        <h2
+          ref={addToRefs}
+          className="text-4xl sm:text-5xl text-neutral-200 text-center md:text-left mx-4"
+        >
           {t("flaxseed_oil.skin_health.title")}
         </h2>
         <p
           ref={addToRefs}
-          className="text-lg sm:text-2xl text-justify text-neutral-200  mx-auto"
+          className="text-2xl sm:text-2xl text-justify text-neutral-200 mx-4"
         >
           {t("flaxseed_oil.skin_health.description")}
         </p>
