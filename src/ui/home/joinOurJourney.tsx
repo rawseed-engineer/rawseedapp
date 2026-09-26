@@ -6,8 +6,11 @@ import { useTranslation } from "react-i18next";
 const JoinOurJourney: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <div className="max-w-md space-y-6 text-justify mt-24">
-      <h1 className="text-5xl text-[#a18458] text-shadow-lg tracking-tight md:text-5xl">
+    <div className="max-w-md space-y-6 text-justify mx-4 mt-24">
+      <h1
+        className="text-[#a18458] text-shadow-lg tracking-tight 
+      text-4xl md:text-5xl text-center md:text-left"
+      >
         {t("journey.title")}
       </h1>
       <p className="text-pretty text-neutral-600 text-2xl">{t("journey.p1")}</p>

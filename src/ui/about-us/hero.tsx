@@ -12,7 +12,8 @@ interface HeroProps {
   staggerDelay?: number;
   initialDelay?: number;
   titleDuration?: number;
-  subtitleDuration?: number;
+  mobileTitleDuration?: number;
+  // subtitleDuration?: number;
   logoDuration?: number;
   descriptionDuration?: number;
 }
@@ -20,15 +21,16 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({
   staggerDelay = 0.6,
   initialDelay = 0,
-  titleDuration = 0,
-  subtitleDuration = 2,
+  titleDuration = 2,
+  mobileTitleDuration = 2,
   logoDuration = 1,
   descriptionDuration = 6,
 }) => {
   const { t } = useTranslation();
+  const isMobile = window.matchMedia("(max-width: 767px)").matches;
   const containerRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement | null>(null);
-  const subtitleRef = useRef<HTMLHeadingElement | null>(null);
+  const mobileTitleRef = useRef<HTMLHeadingElement | null>(null);
   const descriptionRef = useRef<HTMLParagraphElement | null>(null);
   const circleRef = useRef<HTMLImageElement | null>(null);
 
@@ -44,25 +46,25 @@ const Hero: React.FC<HeroProps> = ({
         },
       });
 
-      if (titleRef.current) {
+      if (!isMobile && titleRef.current) {
         timeline.fromTo(
           titleRef.current,
           { opacity: 0, y: 60 },
           { opacity: 1, y: 0, duration: titleDuration },
-          initialDelay,
-        );
-      }
-
-      if (subtitleRef.current) {
-        timeline.fromTo(
-          subtitleRef.current,
-          { opacity: 0, y: 60 },
-          { opacity: 1, y: 0, duration: subtitleDuration },
           `+=${staggerDelay}`,
         );
       }
 
-      if (descriptionRef.current) {
+      if (isMobile && mobileTitleRef.current) {
+        timeline.fromTo(
+          mobileTitleRef.current,
+          { opacity: 0, y: 60 },
+          { opacity: 1, y: 0, duration: mobileTitleDuration },
+          `+=${staggerDelay}`,
+        );
+      }
+
+      if (!isMobile && descriptionRef.current) {
         timeline.fromTo(
           descriptionRef.current,
           { opacity: 0, y: 60 },
@@ -86,7 +88,6 @@ const Hero: React.FC<HeroProps> = ({
     initialDelay,
     staggerDelay,
     titleDuration,
-    subtitleDuration,
     logoDuration,
     descriptionDuration,
   ]);
@@ -115,8 +116,16 @@ const Hero: React.FC<HeroProps> = ({
           </h1> */}
 
           <h1
-            ref={subtitleRef}
-            className="text-balance text-xl font-bold text-white md:text-6xl mb-5"
+            ref={mobileTitleRef}
+            className="block md:hidden text-balance text-center text-white 
+          text-5xl md:text-5xl tracking-tight text-shadow-lg mb-8 "
+          >
+            {t("about_us.subtitle")}
+          </h1>
+
+          <h1
+            ref={titleRef}
+            className="hidden md:block text-balance text-xl font-bold text-white md:text-6xl mb-5"
           >
             <ShineText className="font-bold" duration="10s">
               {t("about_us.subtitle")}
@@ -125,7 +134,7 @@ const Hero: React.FC<HeroProps> = ({
 
           <p
             ref={descriptionRef}
-            className="text-pretty text-white text-2xl mb-6"
+            className="hidden md:block text-pretty text-white text-2xl mb-6"
           >
             {t("hero.home.description")}
           </p>

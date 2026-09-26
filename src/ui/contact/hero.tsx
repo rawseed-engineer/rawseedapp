@@ -13,7 +13,7 @@ interface HeroProps {
   staggerDelay?: number;
   initialDelay?: number;
   titleDuration?: number;
-  subtitleDuration?: number;
+  mobileTitleDuration?: number;
   logoDuration?: number;
   descriptionDuration?: number;
   calloutDuration?: number;
@@ -23,15 +23,16 @@ const Hero: React.FC<HeroProps> = ({
   staggerDelay = 0.6,
   initialDelay = 0,
   titleDuration = 0,
-  subtitleDuration = 2,
+  mobileTitleDuration = 2,
   logoDuration = 1,
   descriptionDuration = 6,
   calloutDuration = 1,
 }) => {
   const { t } = useTranslation();
+  const isMobile = window.matchMedia("(max-width: 767px)").matches;
   const containerRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement | null>(null);
-  const subtitleRef = useRef<HTMLHeadingElement | null>(null);
+  const mobileTitleRef = useRef<HTMLHeadingElement | null>(null);
   const descriptionRef = useRef<HTMLParagraphElement | null>(null);
   const calloutRef = useRef<HTMLDivElement | null>(null);
   const circleRef = useRef<HTMLImageElement | null>(null);
@@ -49,9 +50,13 @@ const Hero: React.FC<HeroProps> = ({
       });
 
       const animations = [
-        [titleRef.current, titleDuration],
-        [subtitleRef.current, subtitleDuration],
-        [descriptionRef.current, descriptionDuration],
+        ...(!isMobile ? ([[titleRef.current, titleDuration]] as const) : []),
+        ...(isMobile
+          ? ([[mobileTitleRef.current, mobileTitleDuration]] as const)
+          : []),
+        ...(!isMobile
+          ? ([[descriptionRef.current, descriptionDuration]] as const)
+          : []),
         [circleRef.current, logoDuration],
         [calloutRef.current, calloutDuration],
       ] as const;
@@ -73,7 +78,7 @@ const Hero: React.FC<HeroProps> = ({
     initialDelay,
     staggerDelay,
     titleDuration,
-    subtitleDuration,
+    mobileTitleDuration,
     descriptionDuration,
     calloutDuration,
   ]);
@@ -94,16 +99,17 @@ const Hero: React.FC<HeroProps> = ({
 
       <div className="absolute top-[35%]">
         <div className="relative z-10 px-4 py-12 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-          {/* <h1
-            ref={titleRef}
-            className="text-balance text-5xl font-bold text-white md:text-7xl mb-5"
+          <h1
+            ref={mobileTitleRef}
+            className="block md:hidden text-balance text-center text-white 
+          text-5xl md:text-5xl tracking-tight text-shadow-lg mb-8 "
           >
-            {t("contact.hero.title")}
-          </h1> */}
+            {t("contact.hero.subtitle")}
+          </h1>
 
           <h1
-            ref={subtitleRef}
-            className="text-balance text-xl font-bold text-white md:text-6xl mb-5"
+            ref={titleRef}
+            className="hidden md:block text-balance text-xl font-bold text-white md:text-6xl mb-5"
           >
             <ShineText className="font-bold" duration="10s">
               {t("contact.hero.subtitle")}
@@ -112,7 +118,7 @@ const Hero: React.FC<HeroProps> = ({
 
           <p
             ref={descriptionRef}
-            className="text-pretty text-white text-2xl mb-6"
+            className="hidden md:block text-pretty text-white text-2xl mb-6"
           >
             {t("contact.hero.description")}
           </p>

@@ -49,13 +49,6 @@ const NavMenu: React.FC = () => {
         <div className="hidden lg:block flex items-center space-x-2">
           <Link
             to="/rawseedapp"
-            aria-hidden={!isSticky}
-            tabIndex={isSticky ? 0 : -1}
-            className={`transition-[opacity,transform] duration-700 ease-out motion-reduce:transition-none ${
-              isSticky
-                ? "translate-y-0 opacity-100"
-                : "-translate-y-2 opacity-0"
-            }`}
             style={{
               textDecoration:
                 location.pathname === "/rawseedapp" ? "underline" : "none",
