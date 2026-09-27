@@ -76,7 +76,8 @@ const Reasons: React.FC = () => {
           <div className="flex items-center justify-center h-48 w-full rounded-lg">
             <FontAwesomeIcon
               icon={faUtensils}
-              className="text-[#a18458]"
+              className="text-[#a18458] animate-gold-shadow-pulse"
+              style={{ animationDuration: "3.1s", animationDelay: "0s" }}
               size="8x"
             />
           </div>
@@ -93,7 +94,8 @@ const Reasons: React.FC = () => {
           <div className="flex items-center justify-center h-48 w-full rounded-lg">
             <FontAwesomeIcon
               icon={faHeartCircleCheck}
-              className="text-[#a18458]"
+              className="text-[#a18458] animate-gold-shadow-pulse"
+              style={{ animationDuration: "3.1s", animationDelay: "0.4s" }}
               size="8x"
             />
           </div>
@@ -110,7 +112,8 @@ const Reasons: React.FC = () => {
           <div className="flex items-center justify-center h-48 w-full rounded-lg">
             <FontAwesomeIcon
               icon={faLemon}
-              className="text-[#a18458]"
+              className="text-[#a18458] animate-gold-shadow-pulse"
+              style={{ animationDuration: "3.1s", animationDelay: "0.8s" }}
               size="8x"
             />
           </div>
@@ -129,7 +132,8 @@ const Reasons: React.FC = () => {
           <div className="flex items-center justify-center h-48 w-full rounded-lg">
             <FontAwesomeIcon
               icon={faTemperatureThreeQuarters}
-              className="text-[#a18458]"
+              className="text-[#a18458] animate-gold-shadow-pulse"
+              style={{ animationDuration: "3.1s", animationDelay: "1.2s" }}
               size="8x"
             />
           </div>
@@ -145,7 +149,8 @@ const Reasons: React.FC = () => {
           <div className="flex items-center justify-center h-48 w-full rounded-lg">
             <FontAwesomeIcon
               icon={faEarthAsia}
-              className="text-[#a18458]"
+              className="text-[#a18458] animate-gold-shadow-pulse"
+              style={{ animationDuration: "3.1s", animationDelay: "1.6s" }}
               size="8x"
             />
           </div>
