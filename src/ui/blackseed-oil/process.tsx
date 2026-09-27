@@ -67,7 +67,8 @@ const Process: React.FC = () => {
           <p>
             <FontAwesomeIcon
               icon={faDroplet}
-              className="text-[#a18458] p-16"
+              className="text-[#a18458] p-16 animate-gold-shadow-pulse"
+              style={{ animationDuration: "3.1s", animationDelay: "0s" }}
               size="8x"
             />
           </p>
@@ -82,7 +83,8 @@ const Process: React.FC = () => {
           <p>
             <FontAwesomeIcon
               icon={faHandHoldingDroplet}
-              className="text-[#a18458] p-16"
+              className="text-[#a18458] p-16 animate-gold-shadow-pulse"
+              style={{ animationDuration: "3.1s", animationDelay: "0.4s" }}
               size="8x"
             />
           </p>
@@ -97,7 +99,8 @@ const Process: React.FC = () => {
           <p>
             <FontAwesomeIcon
               icon={faBottleDroplet}
-              className="text-[#a18458] p-16"
+              className="text-[#a18458] p-16 animate-gold-shadow-pulse"
+              style={{ animationDuration: "3.1s", animationDelay: "0.8s" }}
               size="8x"
             />
           </p>
@@ -108,11 +111,12 @@ const Process: React.FC = () => {
       </div>
 
       <div ref={addToRefs} className="duration-300 hover:scale-110">
-        <div className="h-64 flex justify-center items-center">
+        <div className="h-64 flex justify-center items-censter">
           <p>
             <FontAwesomeIcon
               icon={faLeaf}
-              className="text-[#a18458] p-16"
+              className="text-[#a18458] p-16 animate-gold-shadow-pulse"
+              style={{ animationDuration: "3.1s", animationDelay: "1.2s" }}
               size="8x"
             />
           </p>

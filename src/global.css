@@ -127,6 +127,20 @@ li {
   }
 }
 
+@keyframes goldShadowPulse {
+  0%,
+  100% {
+    filter: drop-shadow(0 8px 8px rgba(218, 165, 32, 1));
+  }
+  50% {
+    filter: drop-shadow(0 12px 12px rgba(218, 165, 32, 1));
+  }
+}
+
+.animate-gold-shadow-pulse {
+  animation: goldShadowPulse 2s ease-in-out infinite;
+}
+
 @keyframes scroll {
   0% {
     opacity: 0;
