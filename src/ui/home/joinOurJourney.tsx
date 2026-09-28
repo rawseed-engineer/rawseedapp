@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 // import { Link } from "react-router-dom";
 // import { Callout } from "../callout";
+import GoldenDropFamily from "../../assets/goldendropfamily.png";
 
 const JoinOurJourney: React.FC = () => {
   const { t } = useTranslation();
@@ -25,6 +26,12 @@ const JoinOurJourney: React.FC = () => {
       {/* <p className="flex justify-center">
         <Callout />
       </p> */}
+      <img
+        src={GoldenDropFamily}
+        alt="Golden Drop oils"
+        // className="w-full brightness-70 aspect-auto"
+        className="relative z-0 aspect-auto w-50"
+      />
     </div>
   );
 };

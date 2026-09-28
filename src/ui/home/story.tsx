@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import AllOils from "../../assets/sesame_fruit.jpg";
 import DrySeeds from "../../assets/sesame_seed_dry.jpg";
+import GoldenDropFamily from "../../assets/goldendropfamily.png";
 
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
@@ -9,16 +10,22 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const storyImages = [
+  { src: AllOils, alt: "All RawSeed Oils" },
+  { src: DrySeeds, alt: "Dry sesame seeds" },
+  { src: GoldenDropFamily, alt: "Golden Drop oil products" },
+];
+
 const Story: React.FC = () => {
   const { t } = useTranslation();
-  const [showDrySeeds, setShowDrySeeds] = useState(false);
+  const [activeImage, setActiveImage] = useState(0);
 
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRefs = useRef<HTMLParagraphElement[]>([]);
 
   useEffect(() => {
     const imageInterval = window.setInterval(() => {
-      setShowDrySeeds((isDrySeedsVisible) => !isDrySeedsVisible);
+      setActiveImage((currentImage) => (currentImage + 1) % storyImages.length);
     }, 5000);
 
     return () => window.clearInterval(imageInterval);
@@ -130,21 +137,23 @@ const Story: React.FC = () => {
         </div>
       </div>
       <div className="relative hidden lg:block mx-8" ref={addToRefs}>
-        <img
-          src={AllOils}
-          alt="All RawSeed Oils"
-          className={`block aspect-auto w-full transition-opacity duration-1000 ease-in-out ${
-            showDrySeeds ? "opacity-0" : "opacity-100"
-          }`}
-        />
-        <img
-          src={DrySeeds}
-          alt="Dry sesame seeds"
-          aria-hidden={!showDrySeeds}
-          className={`absolute inset-0 block h-full w-full object-cover transition-opacity duration-1000 ease-in-out ${
-            showDrySeeds ? "opacity-100" : "opacity-0"
-          }`}
-        />
+        {storyImages.map(({ src, alt }, index) => (
+          <img
+            key={src}
+            src={src}
+            alt={alt}
+            aria-hidden={activeImage !== index}
+            className={`${
+              index === 0
+                ? "block aspect-auto w-full"
+                : `absolute inset-0 block h-full w-full ${
+                    index === 2 ? "object-contain bg-white" : "object-cover"
+                  }`
+            } transition-opacity duration-1000 ease-in-out ${
+              activeImage === index ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
       </div>
     </div>
   );
