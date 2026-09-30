@@ -5,6 +5,13 @@ import Story from "../ui/flaxseed-oil/story";
 // import ScrollHighlightSection from "../ui/ScrollHighlightSection";
 // import ScrollHighlightItem from "../ui/ScrollHighlightSection";
 import WhatWeDoScrollHighlight from "../ui/home/whatWeDoScrollHighlight";
+import {
+  faBowlFood,
+  faFireFlameSimple,
+  faHeartPulse,
+  faShieldHeart,
+  faSpa,
+} from "@fortawesome/free-solid-svg-icons";
 import benefit1 from "../assets/example1_health_protection.jpg";
 import benefit2 from "../assets/example2_anti_inflammatory.jpg";
 import benefit3 from "../assets/example3_digestive_health.jpg";
@@ -22,16 +29,17 @@ import SkinCare from "../ui/flaxseed-oil/skinCare";
 // import ImageHairAndScalp from "../ui/flaxseed-oil/HairAndScalp";
 import ProductInformationAccordion from "../ui/Accordion";
 import FlaxseedOilBottle from "../assets/bottle_flaxseed.png";
-import type { ScrollHighlightItem } from "../ui/ScrollHighlightSection";
+import type { WhatWeDoScrollHighlightItem } from "../ui/home/whatWeDoScrollHighlight";
 // import type WhatWeDoScrollHighlight from "../ui/home/whatWeDoScrollHighlight";
 const FlaxseedOil: React.FC = () => {
   const isMobile = window.matchMedia("(max-width: 767px)").matches;
 
   const nutritionUnit = "per (5ml) teaspoon";
 
-  const scrollItems: ScrollHighlightItem[] = [
+  const scrollItems: WhatWeDoScrollHighlightItem[] = [
     {
       key: "Heart Health",
+      icon: faHeartPulse,
       description: [
         "May lower cholesterol levels (total and LDL), reduce blood pressure and improve artery elasticity, potentially decreasing the risk of heart disease.",
       ],
@@ -39,6 +47,7 @@ const FlaxseedOil: React.FC = () => {
     },
     {
       key: "Anti-Inflammatory Effects",
+      icon: faFireFlameSimple,
       description: [
         "The ALA in flaxseed oil can help reduce inflammation, which may benefit conditions like rheumatoid arthritis (although evidence is mixed for significant improvements in symptoms).",
       ],
@@ -46,6 +55,7 @@ const FlaxseedOil: React.FC = () => {
     },
     {
       key: "Digestive Health",
+      icon: faBowlFood,
       description: [
         "Can relieve constipation by promoting bowel regularity and improve stool consistency; it may also help with diarrhoea in certain cases.",
       ],
@@ -53,6 +63,7 @@ const FlaxseedOil: React.FC = () => {
     },
     {
       key: "Skin Health",
+      icon: faSpa,
       description: [
         "Topical or oral use may enhance skin hydration, smoothness and reduce sensitivity to irritation.",
       ],
@@ -60,6 +71,7 @@ const FlaxseedOil: React.FC = () => {
     },
     {
       key: "Potential Cancer Protection",
+      icon: faShieldHeart,
       description: [
         "Test-tube and animal studies suggest that flaxseed may inhibit cancer cell growth in breast, colon and lung cancers. (Evidence in human cancers is limited.)",
       ],
@@ -224,7 +236,10 @@ const FlaxseedOil: React.FC = () => {
         > */}
         <section className="pt-12">
           {/* <ScrollHighlightSection items={scrollItems} /> */}
-          <WhatWeDoScrollHighlight heading="Benefits" items={scrollItems} />
+          <WhatWeDoScrollHighlight
+            heading="Explore the potential benefits of flaxseed oil."
+            items={scrollItems}
+          />
         </section>
 
         <section className="flex-grow overflow-x-auto w-full ">
