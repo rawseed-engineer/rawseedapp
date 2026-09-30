@@ -19,10 +19,10 @@ import {
   faWheatAwn,
 } from "@fortawesome/free-solid-svg-icons";
 // import TestimonialSlider from "../ui/TestimonialSlider";
-import benefit1 from "../assets/additives_free.jpg";
-import benefit2 from "../assets/unrefined_oil.jpg";
-import benefit3 from "../assets/nutrient_rich.jpg";
-import benefit4 from "../assets/ethically_sourced.jpg";
+import benefit1 from "../assets/additives_free.webp";
+import benefit2 from "../assets/unrefined_oil.webp";
+import benefit3 from "../assets/nutrient_rich.webp";
+import benefit4 from "../assets/ethically_sourced.webp";
 // import { Callout } from "../ui/callout";
 // import ScrollFadeText from "../ui/ScrollFadeText";
 
