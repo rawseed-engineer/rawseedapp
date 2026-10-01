@@ -12,11 +12,11 @@ import {
   faShieldHeart,
   faSpa,
 } from "@fortawesome/free-solid-svg-icons";
-import benefit1 from "../assets/example1_health_protection.jpg";
-import benefit2 from "../assets/example2_anti_inflammatory.jpg";
+import benefit1 from "../assets/example1_health_protection.webp";
+import benefit2 from "../assets/example2_anti_inflammatory.webp";
 import benefit3 from "../assets/example3_digestive_health.webp";
-import benefit4 from "../assets/example4_skin_health.jpg";
-import benefit5 from "../assets/example5_cancer_protection.jpg";
+import benefit4 from "../assets/example4_skin_health.webp";
+import benefit5 from "../assets/example5_cancer_protection.webp";
 import Footer from "../ui/nav/footer";
 import JoinOurJourney from "../ui/home/joinOurJourney";
 import EmailForm from "../ui/email-form";
