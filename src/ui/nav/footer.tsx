@@ -47,11 +47,11 @@ const Footer: React.FC = () => {
             />
           </div> */}
           <h3 className="text-lg font-semibold text-white mb-4">RawSeed</h3>
-          <p className="text-gray-200 mb-6 leading-relaxed">
+          <div className="text-gray-200 mb-6 leading-relaxed">
             <ShineText className="text-lg" duration="3s">
               {t("hero.home.subtitle")}
             </ShineText>
-          </p>
+          </div>
           <div className="w-full max-w-[350px]">
             <h4 className="text-[1.1rem] text-white">Follow us on</h4>
             <ul className="mt-3 flex flex-wrap gap-2 p-0 list-none">

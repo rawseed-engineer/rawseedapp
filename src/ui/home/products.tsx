@@ -13,7 +13,11 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import BookingCard from "../BookingCard";
 
-gsap.registerPlugin(ScrollTrigger);
+if (ScrollTrigger) {
+  gsap.registerPlugin(ScrollTrigger);
+} else {
+  console.error("ScrollTrigger plugin failed to load.");
+}
 
 const Products: React.FC = () => {
   const { t } = useTranslation();

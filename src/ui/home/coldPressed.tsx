@@ -1,12 +1,15 @@
 import { useTranslation } from "react-i18next";
 import SeedsHorizontal from "../../assets/seeds_horizontal.webp";
 import SeedsVertical from "../../assets/seeds_vertical.webp";
-
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+if (ScrollTrigger) {
+  gsap.registerPlugin(ScrollTrigger);
+} else {
+  console.error("ScrollTrigger plugin failed to load.");
+}
 
 /**
  * ColdPressed

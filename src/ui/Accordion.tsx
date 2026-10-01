@@ -4,7 +4,11 @@ import { useTranslation } from "react-i18next";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+if (ScrollTrigger) {
+  gsap.registerPlugin(ScrollTrigger);
+} else {
+  console.error("ScrollTrigger plugin failed to load.");
+}
 
 interface ProductInformationProps {
   productItems: Array<{ title: string; content: React.ReactNode }>;

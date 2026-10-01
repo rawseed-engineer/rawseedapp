@@ -8,7 +8,11 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+if (ScrollTrigger) {
+  gsap.registerPlugin(ScrollTrigger);
+} else {
+  console.error("ScrollTrigger plugin failed to load.");
+}
 
 const storyImages = [
   { src: AllOils, alt: "All RawSeed Oils" },

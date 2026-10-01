@@ -4,7 +4,11 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+if (ScrollTrigger) {
+  gsap.registerPlugin(ScrollTrigger);
+} else {
+  console.error("ScrollTrigger plugin failed to load.");
+}
 
 const FullScreenVideo = () => {
   const [isPlaying, setIsPlaying] = useState(false);

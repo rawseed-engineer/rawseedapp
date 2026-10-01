@@ -3,7 +3,11 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ScrollDownIndicator from "../ScrollDownIndicator";
 
-gsap.registerPlugin(ScrollTrigger);
+if (ScrollTrigger) {
+  gsap.registerPlugin(ScrollTrigger);
+} else {
+  console.error("ScrollTrigger plugin failed to load.");
+}
 
 const WhatWeDoScrollHighlight = ({ items }: { items: any[] }) => {
   const wrapperRef = useRef(null);

@@ -7,7 +7,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ShineText from "../ShineText";
 import ImageGoldenDropCircle from "../../assets/golden_drop_logo_only.svg";
 
-gsap.registerPlugin(ScrollTrigger);
+if (ScrollTrigger) {
+  gsap.registerPlugin(ScrollTrigger);
+} else {
+  console.error("ScrollTrigger plugin failed to load.");
+}
 
 interface HeroProps {
   staggerDelay?: number;
