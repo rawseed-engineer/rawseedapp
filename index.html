@@ -3,23 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
-    <link rel="icon" type="image/svg+xml" href="/rawseedapp/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rawseed</title>
-    <script type="module" crossorigin src="/rawseedapp/assets/index-B_PyjASY.js"></script>
-    <link rel="stylesheet" crossorigin href="/rawseedapp/assets/index-DDOFGwwU.css">
+    <script type="module" crossorigin src="/assets/index-C76do2uV.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-B-CUyKxY.css">
   </head>
   <body>
     <div id="root"></div>
     <script>
       const heroImages = {
-        "/rawseedapp": "rawseed-hero",
-        "/rawseedapp/": "rawseed-hero",
-        "/rawseedapp/sesame-oil": "sesame_seed_hero",
-        "/rawseedapp/flaxseed-oil": "flaxseed_oil_hero",
-        "/rawseedapp/blackseed-oil": "blackseed_hero_4k",
-        "/rawseedapp/about-us": "about_us_hero",
-        "/rawseedapp/contact": "flaxseed_flower_farm",
+        "": "rawseed-hero",
+        "/": "rawseed-hero",
+        "/sesame-oil": "sesame_seed_hero",
+        "/flaxseed-oil": "flaxseed_oil_hero",
+        "/blackseed-oil": "blackseed_hero_4k",
+        "/about-us": "about_us_hero",
+        "/contact": "flaxseed_flower_farm",
       };
 
       const heroImage = heroImages[window.location.pathname];
@@ -28,12 +28,12 @@
         const preload = document.createElement("link");
         preload.rel = "preload";
         preload.as = "image";
-        preload.href = `/rawseedapp/${heroImage}-1600.webp`;
+        preload.href = `/${heroImage}-1600.webp`;
         preload.imageSrcset = `
-          /rawseedapp/${heroImage}-480.webp 480w,
-          /rawseedapp/${heroImage}-800.webp 800w,
-          /rawseedapp/${heroImage}-1600.webp 1600w,
-          /rawseedapp/${heroImage}-1980.webp 1980w
+          /${heroImage}-480.webp 480w,
+          /${heroImage}-800.webp 800w,
+          /${heroImage}-1600.webp 1600w,
+          /${heroImage}-1980.webp 1980w
         `;
         preload.imageSizes = "100vw";
         preload.type = "image/webp";
