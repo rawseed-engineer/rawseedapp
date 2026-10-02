@@ -103,12 +103,19 @@ const Hero: React.FC<HeroProps> = ({
   return (
     <>
       {/* Hero Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat 
-        brightness-20 md:brightness-50 opacity-90
-        bg-[url(/rawseedapp/rawseed-hero.webp)]"
+      <img
+        src="/rawseedapp/rawseed-hero-1600.webp"
+        srcSet="
+          /rawseedapp/rawseed-hero-480.webp 480w,
+          /rawseedapp/rawseed-hero-800.webp 800w,
+          /rawseedapp/rawseed-hero-1600.webp 1600w,
+          /rawseedapp/rawseed-hero-1980.webp 1980w
+        "
+        sizes="100vw"
+        alt=""
+        fetchPriority="high"
+        className="absolute inset-0 h-full w-full object-cover brightness-20 opacity-90 md:brightness-50"
       />
-
       <div className="absolute top-[30%] sm:top-[20%] md:top-[35%]">
         <div className="relative z-10 px-10 py-12 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="flex items-center justify-center">

@@ -102,13 +102,18 @@ const BlackseedHero: React.FC<HeroProps> = ({
   return (
     <>
       {/* Hero Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url("blackseed_hero_4k.webp")`,
-          opacity: 0.9,
-          filter: "brightness(50%)",
-        }}
+      <img
+        src="/rawseedapp/blackseed_hero_4k-1600.webp"
+        srcSet="
+          /rawseedapp/blackseed_hero_4k-480.webp 480w,
+          /rawseedapp/blackseed_hero_4k-800.webp 800w,
+          /rawseedapp/blackseed_hero_4k-1600.webp 1600w,
+          /rawseedapp/blackseed_hero_4k-1980.webp 1980w
+        "
+        sizes="100vw"
+        alt=""
+        fetchPriority="high"
+        className="absolute inset-0 h-full w-full object-cover opacity-90 brightness-50"
       />
 
       <div className="absolute top-[30%] sm:top-[20%] md:top-[35%]">

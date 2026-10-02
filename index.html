@@ -11,13 +11,13 @@
     <div id="root"></div>
     <script>
       const heroImages = {
-        "/rawseedapp": "/rawseedapp/rawseed-hero.webp",
-        "/rawseedapp/": "/rawseedapp/rawseed-hero.webp",
-        "/rawseedapp/sesame-oil": "/rawseedapp/sesame_seed_hero.webp",
-        "/rawseedapp/flaxseed-oil": "/rawseedapp/flaxseed_oil_hero.webp",
-        "/rawseedapp/blackseed-oil": "/rawseedapp/blackseed_hero_4k.webp",
-        "/rawseedapp/about-us": "/rawseedapp/about_us_hero.webp",
-        "/rawseedapp/contact": "/rawseedapp/flaxseed_flower_farm.webp",
+        "/rawseedapp": "rawseed-hero",
+        "/rawseedapp/": "rawseed-hero",
+        "/rawseedapp/sesame-oil": "sesame_seed_hero",
+        "/rawseedapp/flaxseed-oil": "flaxseed_oil_hero",
+        "/rawseedapp/blackseed-oil": "blackseed_hero_4k",
+        "/rawseedapp/about-us": "about_us_hero",
+        "/rawseedapp/contact": "flaxseed_flower_farm",
       };
 
       const heroImage = heroImages[window.location.pathname];
@@ -26,7 +26,14 @@
         const preload = document.createElement("link");
         preload.rel = "preload";
         preload.as = "image";
-        preload.href = heroImage;
+        preload.href = `/rawseedapp/${heroImage}-1600.webp`;
+        preload.imageSrcset = `
+          /rawseedapp/${heroImage}-480.webp 480w,
+          /rawseedapp/${heroImage}-800.webp 800w,
+          /rawseedapp/${heroImage}-1600.webp 1600w,
+          /rawseedapp/${heroImage}-1980.webp 1980w
+        `;
+        preload.imageSizes = "100vw";
         preload.type = "image/webp";
         document.head.appendChild(preload);
       }

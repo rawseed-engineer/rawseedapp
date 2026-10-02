@@ -101,13 +101,18 @@ const Hero: React.FC<HeroProps> = ({
   return (
     <>
       {/* Hero Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url("sesame_seed_hero.webp")`,
-          opacity: 0.9,
-          filter: "brightness(50%)",
-        }}
+      <img
+        src="/rawseedapp/sesame_seed_hero-800.webp"
+        srcSet="
+          /rawseedapp/sesame_seed_hero-480.webp 480w,
+          /rawseedapp/sesame_seed_hero-800.webp 800w,
+          /rawseedapp/sesame_seed_hero-1600.webp 1600w,
+          /rawseedapp/sesame_seed_hero-1980.webp 1980w
+        "
+        sizes="100vw"
+        alt=""
+        fetchPriority="high"
+        className="absolute inset-0 h-full w-full object-cover opacity-90 brightness-50"
       />
 
       <div className="absolute top-[30%] sm:top-[20%] lg:top-[35%] ">

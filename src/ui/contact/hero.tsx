@@ -88,13 +88,18 @@ const Hero: React.FC<HeroProps> = ({
       id="home"
       className="relative min-h-screen flex items-center justify-center"
     >
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url("flaxseed_flower_farm.webp")`,
-          opacity: 0.9,
-          filter: "brightness(50%)",
-        }}
+      <img
+        src="/rawseedapp/flaxseed_flower_farm-1600.webp"
+        srcSet="
+          /rawseedapp/flaxseed_flower_farm-480.webp 480w,
+          /rawseedapp/flaxseed_flower_farm-800.webp 800w,
+          /rawseedapp/flaxseed_flower_farm-1600.webp 1600w,
+          /rawseedapp/flaxseed_flower_farm-1980.webp 1980w
+        "
+        sizes="100vw"
+        alt=""
+        fetchPriority="high"
+        className="absolute inset-0 h-full w-full object-cover opacity-90 brightness-50"
       />
 
       <div className="absolute top-[35%]">

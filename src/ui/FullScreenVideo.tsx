@@ -74,14 +74,22 @@ const FullScreenVideo = () => {
         ></iframe>
       ) : (
         // Preview state: Thumbnail with overlay text and play button
-        <div
-          className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
-          style={{
-            backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("video_thumbnail.jpeg")`,
-            // opacity: 0.9,
-            // filter: "brightness(30%)",
-          }}
-        >
+        <div className="absolute inset-0">
+          <img
+            src="/rawseedapp/video_thumbnail-800.webp"
+            srcSet="
+              /rawseedapp/video_thumbnail-480.webp 480w,
+              /rawseedapp/video_thumbnail-800.webp 800w,
+              /rawseedapp/video_thumbnail-1600.webp 1600w,
+              /rawseedapp/video_thumbnail-1980.webp 1980w
+            "
+            sizes="100vw"
+            alt=""
+            loading="lazy"
+            decoding="async"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/70" />
           <div
             ref={containerRef}
             className="absolute top-0 left-0 w-full h-full bg-opacity-50 flex flex-col items-center justify-center"
