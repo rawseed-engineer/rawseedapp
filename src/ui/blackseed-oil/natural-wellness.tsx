@@ -60,6 +60,8 @@ const NaturalWellness: React.FC = () => {
         <img
           src={ImageNaturalWellness}
           alt="RawSeed's blackseed oils make your hair and skin healthy"
+          loading="lazy"
+          decoding="async"
           className="aspect-auto"
         />
       </div>
@@ -75,6 +77,8 @@ const NaturalWellness: React.FC = () => {
         <img
           src={ImageNaturalWellness}
           alt="RawSeed's blackseed oils make your hair and skin healthy"
+          loading="lazy"
+          decoding="async"
           className="aspect-auto"
         />
       </div>

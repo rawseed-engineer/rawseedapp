@@ -89,6 +89,8 @@ const Story: React.FC = () => {
         <img
           src={BlackseedFlower}
           alt="Blackseed Oils"
+          loading="lazy"
+          decoding="async"
           className="aspect-auto"
         />
       </div>

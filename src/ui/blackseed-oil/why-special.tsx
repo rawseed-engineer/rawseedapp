@@ -74,6 +74,8 @@ export default function WhySpecial({
           <img
             src="/rawseedapp/blackseed_seed_closeup_4K.jpg"
             alt="Blackseed close up"
+            loading="lazy"
+            decoding="async"
             className="w-full brightness-40 aspect-auto"
           />
         </picture>

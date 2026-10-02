@@ -71,6 +71,8 @@ const ImmunityBooster: React.FC = () => {
         <img
           src={ImageImmunityBooster}
           alt="Rawseed's blackseed oil is an immunity booster"
+          loading="lazy"
+          decoding="async"
           className="aspect-auto"
         />
       </div>

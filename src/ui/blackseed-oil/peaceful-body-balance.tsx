@@ -72,6 +72,8 @@ const PeacefulBodyBalance: React.FC = () => {
         <img
           src={ImagePeacefulMind}
           alt="Rawseed's blackseed oil promotes a peaceful mind"
+          loading="lazy"
+          decoding="async"
           className="aspect-auto"
         />
       </div>

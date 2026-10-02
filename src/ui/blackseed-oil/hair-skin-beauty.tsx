@@ -62,6 +62,8 @@ const HairSkinBeauty: React.FC = () => {
         <img
           src={ImageHealthyHair}
           alt="RawSeed's blackseed oils make your hair and skin healthy"
+          loading="lazy"
+          decoding="async"
           className="mx-8"
         />
       </div>
@@ -107,6 +109,8 @@ const HairSkinBeauty: React.FC = () => {
         <img
           src={ImageHealthyHair}
           alt="RawSeed's blackseed oils make your hair and skin healthy"
+          loading="lazy"
+          decoding="async"
           className="aspect-auto"
         />
       </div>
