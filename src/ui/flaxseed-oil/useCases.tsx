@@ -1,5 +1,4 @@
 import React from "react";
-import FlaxseedCloseUp from "../../assets/flaxseed_closeup_4K.jpg";
 import { useTranslation } from "react-i18next";
 
 import { useEffect, useRef } from "react";
@@ -52,11 +51,25 @@ const UseCases: React.FC = () => {
 
   return (
     <div ref={containerRef} className="relative">
-      <img
-        src={FlaxseedCloseUp}
-        alt="Flaxseed Close Up"
-        className="w-full brightness-40 aspect-auto"
-      />
+      <picture>
+        <source
+          type="image/webp"
+          sizes="100vw"
+          srcSet="
+            /rawseedapp/flaxseed_closeup_4K-480.webp 480w,
+            /rawseedapp/flaxseed_closeup_4K-800.webp 800w,
+            /rawseedapp/flaxseed_closeup_4K-1600.webp 1600w,
+            /rawseedapp/flaxseed_closeup_4K-1980.webp 1980w
+          "
+        />
+        <img
+          src="/rawseedapp/flaxseed_closeup_4K.jpg"
+          alt="Flaxseed close up"
+          loading="lazy"
+          decoding="async"
+          className="w-full brightness-40 aspect-auto"
+        />
+      </picture>
       <div
         ref={addToRefs}
         className="absolute text-5xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 space-y-4"

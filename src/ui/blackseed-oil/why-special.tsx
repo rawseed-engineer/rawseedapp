@@ -1,6 +1,4 @@
 import { useTranslation } from "react-i18next";
-import BlackseedCloseUp from "../../assets/blackseed_seed_closeup_4K.jpg";
-import BlackseedCloseUpVertical from "../../assets/blackseed_seed_closeup_4K_vertical.jpg";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
@@ -51,15 +49,34 @@ export default function WhySpecial({
   return (
     <section ref={containerRef} aria-labelledby="why-special-title">
       <div className="relative">
-        <img
-          src={
-            window.matchMedia("(max-width: 414px)").matches
-              ? BlackseedCloseUpVertical
-              : BlackseedCloseUp
-          }
-          alt="Blackseed Close Up"
-          className="w-full brightness-40 aspect-auto"
-        />
+        <picture>
+          <source
+            media="(max-width: 414px)"
+            type="image/webp"
+            sizes="100vw"
+            srcSet="
+              /rawseedapp/blackseed_seed_closeup_4K_vertical-480.webp 480w,
+              /rawseedapp/blackseed_seed_closeup_4K_vertical-800.webp 800w,
+              /rawseedapp/blackseed_seed_closeup_4K_vertical-1200.webp 1200w,
+              /rawseedapp/blackseed_seed_closeup_4K_vertical-1572.webp 1572w
+            "
+          />
+          <source
+            type="image/webp"
+            sizes="100vw"
+            srcSet="
+              /rawseedapp/blackseed_seed_closeup_4K-480.webp 480w,
+              /rawseedapp/blackseed_seed_closeup_4K-800.webp 800w,
+              /rawseedapp/blackseed_seed_closeup_4K-1600.webp 1600w,
+              /rawseedapp/blackseed_seed_closeup_4K-1980.webp 1980w
+            "
+          />
+          <img
+            src="/rawseedapp/blackseed_seed_closeup_4K.jpg"
+            alt="Blackseed close up"
+            className="w-full brightness-40 aspect-auto"
+          />
+        </picture>
         <div
           ref={titleRef}
           className="absolute text-5xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 space-y-4"

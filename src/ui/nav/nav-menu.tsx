@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 // import RawSeedLogo from "./../../assets/rawseed_logo.png";
 import { Link, useLocation } from "react-router-dom";
@@ -13,6 +13,8 @@ const NavMenu: React.FC = () => {
   // const [count, setCount] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
+  const menuToggleRef = useRef<HTMLButtonElement>(null);
+  const mobileNavigationRef = useRef<HTMLDivElement>(null);
 
   const { t } = useTranslation();
   const location = useLocation();
@@ -22,6 +24,15 @@ const NavMenu: React.FC = () => {
     setActivePath(location.pathname);
     setIsMenuOpen(false);
   }, [location.pathname]);
+
+  useEffect(() => {
+    if (
+      !isMenuOpen &&
+      mobileNavigationRef.current?.contains(document.activeElement)
+    ) {
+      menuToggleRef.current?.focus();
+    }
+  }, [isMenuOpen]);
 
   const toggleMenu = () => {
     setIsMenuOpen((open) => !open);
@@ -184,6 +195,7 @@ const NavMenu: React.FC = () => {
         {/* Mobile menu controls */}
         <div className="flex w-full items-center justify-between lg:hidden">
           <button
+            ref={menuToggleRef}
             onClick={toggleMenu}
             type="button"
             aria-label={
@@ -246,8 +258,9 @@ const NavMenu: React.FC = () => {
         }`}
       />
       <div
+        ref={mobileNavigationRef}
         id="mobile-navigation"
-        aria-hidden={!isMenuOpen}
+        inert={!isMenuOpen}
         className={`fixed left-0 top-0 z-20 h-dvh w-[250px] overflow-y-auto border-r border-white/10 bg-[#181818]/95 pt-24 shadow-xl backdrop-blur-lg transition-[transform,visibility] duration-300 ease-[cubic-bezier(0.77,0,0.175,1)] motion-reduce:transition-none lg:hidden ${
           isMenuOpen ? "visible translate-x-0" : "invisible -translate-x-full"
         }`}

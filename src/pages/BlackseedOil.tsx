@@ -66,10 +66,6 @@ const BlackSeedOilPage: React.FC = () => {
       key: "Protein",
       value: "0 g",
     },
-    {
-      key: "Sodium",
-      value: "0 g",
-    },
   ];
 
   const productInformation = [

@@ -1,6 +1,4 @@
 import React from "react";
-import FlaxseedWithHand from "../../assets/flaxseed_skin_care.jpg";
-import FlaxseedWithHandVertical from "../../assets/flaxseed_skin_care_vertical.jpg";
 import { useTranslation } from "react-i18next";
 
 import { useEffect, useRef } from "react";
@@ -9,8 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const skinCare: React.FC = () => {
-  const isMobile = window.matchMedia("(max-width: 767px)").matches;
+const SkinCare: React.FC = () => {
   const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRefs = useRef<HTMLParagraphElement[]>([]);
@@ -54,11 +51,35 @@ const skinCare: React.FC = () => {
 
   return (
     <div ref={containerRef} className="relative">
-      <img
-        src={isMobile ? FlaxseedWithHandVertical : FlaxseedWithHand}
-        alt="Flaxseed with hands"
-        className="w-full brightness-40 aspect-auto"
-      />
+      <picture>
+        <source
+          media="(max-width: 767px)"
+          type="image/webp"
+          sizes="100vw"
+          srcSet="
+            /rawseedapp/flaxseed_skin_care_vertical-480.webp 480w,
+            /rawseedapp/flaxseed_skin_care_vertical-800.webp 800w,
+            /rawseedapp/flaxseed_skin_care_vertical-831.webp 831w
+          "
+        />
+        <source
+          type="image/webp"
+          sizes="100vw"
+          srcSet="
+            /rawseedapp/flaxseed_skin_care-480.webp 480w,
+            /rawseedapp/flaxseed_skin_care-800.webp 800w,
+            /rawseedapp/flaxseed_skin_care-1600.webp 1600w,
+            /rawseedapp/flaxseed_skin_care-1980.webp 1980w
+          "
+        />
+        <img
+          src="/rawseedapp/flaxseed_skin_care.jpg"
+          alt="Flaxseed with hands"
+          loading="lazy"
+          decoding="async"
+          className="w-full brightness-40 aspect-auto"
+        />
+      </picture>
       <div className="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 space-y-4 px-4 text-5xl text-white sm:w-auto sm:px-0">
         <h2
           ref={addToRefs}
@@ -77,4 +98,4 @@ const skinCare: React.FC = () => {
   );
 };
 
-export default skinCare;
+export default SkinCare;
