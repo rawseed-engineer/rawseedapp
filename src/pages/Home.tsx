@@ -19,10 +19,6 @@ import {
   faWheatAwn,
 } from "@fortawesome/free-solid-svg-icons";
 // import TestimonialSlider from "../ui/TestimonialSlider";
-import benefit1 from "../assets/additives_free.webp";
-import benefit2 from "../assets/unrefined_oil.webp";
-import benefit3 from "../assets/nutrient_rich.webp";
-import benefit4 from "../assets/ethically_sourced.webp";
 // import { Callout } from "../ui/callout";
 // import ScrollFadeText from "../ui/ScrollFadeText";
 
@@ -76,7 +72,7 @@ const Home = () => {
                   "Our cold-pressed oils contain no added preservatives, artificial flavours or unnecessary additives. Carefully sourced from trusted producers, our sesame, black seed and flaxseed oils are selected for their purity, natural character and authentic taste.",
                   "With nothing unnecessary added, Golden Drop brings you oils that are simple, natural and made to complement everyday cooking.",
                 ],
-                image: benefit1,
+                image: "additives_free",
               },
               {
                 key: "Unrefined",
@@ -85,7 +81,7 @@ const Home = () => {
                   "Our oils are unrefined, allowing them to retain their natural character, colour and distinctive flavour. Carefully sourced from trusted producers, our sesame, black seed and flaxseed oils offer authentic taste and natural goodness without unnecessary processing.",
                   "From the rich nuttiness of sesame to the distinctive character of black seed and the mild flavour of flaxseed, Golden Drop brings naturally distinctive oils to everyday cooking.",
                 ],
-                image: benefit2,
+                image: "unrefined_oil",
               },
               {
                 key: "Packed with nutrients",
@@ -94,7 +90,7 @@ const Home = () => {
                   "Our carefully selected oils naturally contain a range of valuable nutrients and beneficial compounds. Flaxseed oil is naturally rich in omega-3 fatty acids, while sesame oil contains naturally occurring antioxidants and other plant compounds. Black seed oil is also valued for its naturally occurring compounds, including thymoquinone.",
                   "Sourced from trusted producers, our oils retain their natural character and distinctive qualities. Golden Drop Sesame and Flaxseed Oils are versatile cooking oils, ideal for everyday meals, dressings and recipes, while Black Seed Oil offers a distinctive addition to a balanced lifestyle.",
                 ],
-                image: benefit3,
+                image: "nutrient_rich",
               },
               {
                 key: "Ethically sourced",
@@ -103,7 +99,7 @@ const Home = () => {
                   "We believe quality begins with responsible sourcing. We work with trusted suppliers who share our commitment to high standards, carefully selected seeds and consistent quality across our oils.",
                   "From sesame and flaxseed oils for everyday cooking to our distinctive black seed oil, we take care to source products with integrity and respect for the people and practices behind them. Our approach is simple: build trusted relationships and bring responsibly sourced, quality oils to our customers.",
                 ],
-                image: benefit4,
+                image: "ethically_sourced",
               },
             ]}
           />

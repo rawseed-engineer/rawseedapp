@@ -12,11 +12,6 @@ import {
   faShieldHeart,
   faSpa,
 } from "@fortawesome/free-solid-svg-icons";
-import benefit1 from "../assets/example1_health_protection.webp";
-import benefit2 from "../assets/example2_anti_inflammatory.webp";
-import benefit3 from "../assets/example3_digestive_health.webp";
-import benefit4 from "../assets/example4_skin_health.webp";
-import benefit5 from "../assets/example5_cancer_protection.webp";
 import Footer from "../ui/nav/footer";
 import JoinOurJourney from "../ui/home/joinOurJourney";
 import EmailForm from "../ui/email-form";
@@ -43,7 +38,7 @@ const FlaxseedOil: React.FC = () => {
       description: [
         "May lower cholesterol levels (total and LDL), reduce blood pressure and improve artery elasticity, potentially decreasing the risk of heart disease.",
       ],
-      image: benefit1,
+      image: "example1_health_protection",
     },
     {
       key: "Anti-Inflammatory Effects",
@@ -51,7 +46,7 @@ const FlaxseedOil: React.FC = () => {
       description: [
         "The ALA in flaxseed oil can help reduce inflammation, which may benefit conditions like rheumatoid arthritis (although evidence is mixed for significant improvements in symptoms).",
       ],
-      image: benefit2,
+      image: "example2_anti_inflammatory",
     },
     {
       key: "Digestive Health",
@@ -59,7 +54,8 @@ const FlaxseedOil: React.FC = () => {
       description: [
         "Can relieve constipation by promoting bowel regularity and improve stool consistency; it may also help with diarrhoea in certain cases.",
       ],
-      image: benefit3,
+      image: "example3_digestive_health",
+      imageWidths: [480, 800, 1404],
     },
     {
       key: "Skin Health",
@@ -67,7 +63,7 @@ const FlaxseedOil: React.FC = () => {
       description: [
         "Topical or oral use may enhance skin hydration, smoothness and reduce sensitivity to irritation.",
       ],
-      image: benefit4,
+      image: "example4_skin_health",
     },
     {
       key: "Potential Cancer Protection",
@@ -75,7 +71,7 @@ const FlaxseedOil: React.FC = () => {
       description: [
         "Test-tube and animal studies suggest that flaxseed may inhibit cancer cell growth in breast, colon and lung cancers. (Evidence in human cancers is limited.)",
       ],
-      image: benefit5,
+      image: "example5_cancer_protection",
     },
   ];
 

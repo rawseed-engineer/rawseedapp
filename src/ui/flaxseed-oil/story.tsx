@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import AllOils from "../../assets/flaxseed_fruit.jpg";
+import AllOils from "../../assets/flaxseed_fruit.webp";
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";

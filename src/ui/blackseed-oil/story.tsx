@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import BlackseedFlower from "../../assets/blackseed_flower_4K.jpg";
+import BlackseedFlower from "../../assets/blackseed_flower_4K.webp";
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";

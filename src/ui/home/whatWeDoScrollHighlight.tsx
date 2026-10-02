@@ -6,6 +6,7 @@ export interface WhatWeDoScrollHighlightItem {
   key: string;
   description: string[];
   image: string;
+  imageWidths?: number[];
   icon: IconDefinition;
 }
 
@@ -18,15 +19,27 @@ const WhatWeDoScrollHighlight = ({
 }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeItem = items[activeIndex] ?? items[0];
+  const imageWidths = activeItem.imageWidths ?? [480, 800, 1600, 1980];
+  const imageSrcSet = imageWidths
+    .map((width) => `/rawseedapp/${activeItem.image}-${width}.webp ${width}w`)
+    .join(", ");
 
   return (
     <div
-      className="relative w-screen overflow-hidden bg-cover bg-center bg-no-repeat"
+      className="relative w-screen overflow-hidden"
       style={{
-        backgroundImage: `url(${activeItem.image})`,
         minHeight: "calc(100vh - 64px)",
       }}
     >
+      <img
+        src={`/rawseedapp/${activeItem.image}-${imageWidths[imageWidths.length - 1]}.webp`}
+        srcSet={imageSrcSet}
+        sizes="100vw"
+        alt=""
+        loading="lazy"
+        decoding="async"
+        className="absolute inset-0 h-full w-full object-cover object-center"
+      />
       <div className="absolute inset-0 bg-black/50" />
       <div className="relative mx-auto flex min-h-[calc(100vh-64px)] w-full max-w-7xl flex-col items-center justify-start px-2 sm:px-6 lg:px-8">
         <div className="hidden w-full text-center font-serif text-4xl tracking-tight text-slate-100 lg:mb-0 lg:mt-36 lg:block lg:text-5xl">
