@@ -56,14 +56,14 @@ const UseCases: React.FC = () => {
           type="image/webp"
           sizes="100vw"
           srcSet="
-            /rawseedapp/flaxseed_closeup_4K-480.webp 480w,
-            /rawseedapp/flaxseed_closeup_4K-800.webp 800w,
-            /rawseedapp/flaxseed_closeup_4K-1600.webp 1600w,
-            /rawseedapp/flaxseed_closeup_4K-1980.webp 1980w
+            /flaxseed_closeup_4K-480.webp 480w,
+            /flaxseed_closeup_4K-800.webp 800w,
+            /flaxseed_closeup_4K-1600.webp 1600w,
+            /flaxseed_closeup_4K-1980.webp 1980w
           "
         />
         <img
-          src="/rawseedapp/flaxseed_closeup_4K.jpg"
+          src="/flaxseed_closeup_4K.jpg"
           alt="Flaxseed close up"
           loading="lazy"
           decoding="async"

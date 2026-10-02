@@ -55,24 +55,24 @@ export default function WhySpecial({
             type="image/webp"
             sizes="100vw"
             srcSet="
-              /rawseedapp/blackseed_seed_closeup_4K_vertical-480.webp 480w,
-              /rawseedapp/blackseed_seed_closeup_4K_vertical-800.webp 800w,
-              /rawseedapp/blackseed_seed_closeup_4K_vertical-1200.webp 1200w,
-              /rawseedapp/blackseed_seed_closeup_4K_vertical-1572.webp 1572w
+              /blackseed_seed_closeup_4K_vertical-480.webp 480w,
+              /blackseed_seed_closeup_4K_vertical-800.webp 800w,
+              /blackseed_seed_closeup_4K_vertical-1200.webp 1200w,
+              /blackseed_seed_closeup_4K_vertical-1572.webp 1572w
             "
           />
           <source
             type="image/webp"
             sizes="100vw"
             srcSet="
-              /rawseedapp/blackseed_seed_closeup_4K-480.webp 480w,
-              /rawseedapp/blackseed_seed_closeup_4K-800.webp 800w,
-              /rawseedapp/blackseed_seed_closeup_4K-1600.webp 1600w,
-              /rawseedapp/blackseed_seed_closeup_4K-1980.webp 1980w
+              /blackseed_seed_closeup_4K-480.webp 480w,
+              /blackseed_seed_closeup_4K-800.webp 800w,
+              /blackseed_seed_closeup_4K-1600.webp 1600w,
+              /blackseed_seed_closeup_4K-1980.webp 1980w
             "
           />
           <img
-            src="/rawseedapp/blackseed_seed_closeup_4K.jpg"
+            src="/blackseed_seed_closeup_4K.jpg"
             alt="Blackseed close up"
             loading="lazy"
             decoding="async"

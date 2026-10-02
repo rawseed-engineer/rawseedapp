@@ -57,23 +57,23 @@ const SkinCare: React.FC = () => {
           type="image/webp"
           sizes="100vw"
           srcSet="
-            /rawseedapp/flaxseed_skin_care_vertical-480.webp 480w,
-            /rawseedapp/flaxseed_skin_care_vertical-800.webp 800w,
-            /rawseedapp/flaxseed_skin_care_vertical-831.webp 831w
+            /flaxseed_skin_care_vertical-480.webp 480w,
+            /flaxseed_skin_care_vertical-800.webp 800w,
+            /flaxseed_skin_care_vertical-831.webp 831w
           "
         />
         <source
           type="image/webp"
           sizes="100vw"
           srcSet="
-            /rawseedapp/flaxseed_skin_care-480.webp 480w,
-            /rawseedapp/flaxseed_skin_care-800.webp 800w,
-            /rawseedapp/flaxseed_skin_care-1600.webp 1600w,
-            /rawseedapp/flaxseed_skin_care-1980.webp 1980w
+            /flaxseed_skin_care-480.webp 480w,
+            /flaxseed_skin_care-800.webp 800w,
+            /flaxseed_skin_care-1600.webp 1600w,
+            /flaxseed_skin_care-1980.webp 1980w
           "
         />
         <img
-          src="/rawseedapp/flaxseed_skin_care.jpg"
+          src="/flaxseed_skin_care.jpg"
           alt="Flaxseed with hands"
           loading="lazy"
           decoding="async"

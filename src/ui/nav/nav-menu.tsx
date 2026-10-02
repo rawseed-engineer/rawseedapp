@@ -59,12 +59,10 @@ const NavMenu: React.FC = () => {
       <div className="flex items-center justify-between lg:max-w-7xl mx-auto">
         <div className="hidden lg:block flex items-center space-x-2">
           <Link
-            to="/rawseedapp"
+            to="/"
             style={{
-              textDecoration:
-                location.pathname === "/rawseedapp" ? "underline" : "none",
-              fontWeight:
-                location.pathname === "/rawseedapp" ? "bold" : "normal",
+              textDecoration: location.pathname === "/" ? "underline" : "none",
+              fontWeight: location.pathname === "/" ? "bold" : "normal",
             }}
           >
             <img
@@ -77,21 +75,12 @@ const NavMenu: React.FC = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center space-x-8 text-3xl">
-          {/* <Link to="/rawseedapp/golden-drop">
-            <h2 className="text-43l text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200">
-              Golden Drop
-            </h2>
-          </Link> */}
-
           <ButtonWithExpandingUnderline className="text-3xl hover:text-white">
-            <Link
-              to="/rawseedapp/sesame-oil"
-              onClick={() => setActivePath("/rawseedapp/sesame-oil")}
-            >
+            <Link to="/sesame-oil" onClick={() => setActivePath("/sesame-oil")}>
               <h2
                 style={
-                  activePath === "/rawseedapp/sesame-oil" ||
-                  location.pathname === "/rawseedapp/sesame-oil"
+                  activePath === "/sesame-oil" ||
+                  location.pathname === "/sesame-oil"
                     ? { color: "#a18458" }
                     : undefined
                 }
@@ -103,13 +92,13 @@ const NavMenu: React.FC = () => {
 
           <ButtonWithExpandingUnderline className="text-3xl hover:text-white">
             <Link
-              to="/rawseedapp/flaxseed-oil"
-              onClick={() => setActivePath("/rawseedapp/flaxseed-oil")}
+              to="/flaxseed-oil"
+              onClick={() => setActivePath("/flaxseed-oil")}
             >
               <h2
                 style={
-                  activePath === "/rawseedapp/flaxseed-oil" ||
-                  location.pathname === "/rawseedapp/flaxseed-oil"
+                  activePath === "/flaxseed-oil" ||
+                  location.pathname === "/flaxseed-oil"
                     ? { color: "#a18458" }
                     : undefined
                 }
@@ -121,13 +110,13 @@ const NavMenu: React.FC = () => {
 
           <ButtonWithExpandingUnderline className="text-3xl hover:text-white">
             <Link
-              to="/rawseedapp/blackseed-oil"
-              onClick={() => setActivePath("/rawseedapp/blackseed-oil")}
+              to="/blackseed-oil"
+              onClick={() => setActivePath("/blackseed-oil")}
             >
               <h2
                 style={
-                  activePath === "/rawseedapp/blackseed-oil" ||
-                  location.pathname === "/rawseedapp/blackseed-oil"
+                  activePath === "/blackseed-oil" ||
+                  location.pathname === "/blackseed-oil"
                     ? { color: "#a18458" }
                     : undefined
                 }
@@ -138,14 +127,11 @@ const NavMenu: React.FC = () => {
           </ButtonWithExpandingUnderline>
 
           <ButtonWithExpandingUnderline className="text-3xl hover:text-white">
-            <Link
-              to="/rawseedapp/about-us"
-              onClick={() => setActivePath("/rawseedapp/about-us")}
-            >
+            <Link to="/about-us" onClick={() => setActivePath("/about-us")}>
               <h2
                 style={
-                  activePath === "/rawseedapp/about-us" ||
-                  location.pathname === "/rawseedapp/about-us"
+                  activePath === "/about-us" ||
+                  location.pathname === "/about-us"
                     ? { color: "#a18458" }
                     : undefined
                 }
@@ -155,22 +141,10 @@ const NavMenu: React.FC = () => {
             </Link>
           </ButtonWithExpandingUnderline>
 
-          {/* <Link to="/rawseedapp/contact">
-            <h2
-              className="bg-gradient-to-r from-[#996515] to-[#996515] text-white px-6 py-2 rounded-full 
-            "
-            >
-              {t("menu.get_started")}
-            </h2>
-          </Link> */}
-
           {/* bg-gradient-to-tr from-[#996515] to-[#a67c00] */}
 
           <div className="relative mt-4 flex h-12 w-12">
-            <Link
-              to="/rawseedapp/contact"
-              onClick={() => setActivePath("/rawseedapp/contact")}
-            >
+            <Link to="/contact" onClick={() => setActivePath("/contact")}>
               {/* <div className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gradient-to-tr from-amber-300 to-yellow-700 opacity-75"></div> */}
               <div className="absolute inline-flex h-full w-full animate-[ping_5s_cubic-bezier(0.22,1,0.36,1)_infinite] rounded-full bg-gradient-to-tr from-amber-300 to-yellow-700 opacity-75"></div>
               <div
@@ -225,7 +199,7 @@ const NavMenu: React.FC = () => {
             />
           </button>
           <Link
-            to="/rawseedapp/"
+            to="/"
             aria-label="RawSeed home"
             aria-hidden={!isSticky}
             tabIndex={isSticky ? 0 : -1}
@@ -267,17 +241,16 @@ const NavMenu: React.FC = () => {
       >
         <div className="space-y-4 px-4 pb-6">
           <Link
-            to="/rawseedapp/"
+            to="/"
             onClick={() => {
-              setActivePath("/rawseedapp/");
+              setActivePath("/");
               setIsMenuOpen(false);
             }}
           >
             <div
               className="block text-gray-300 hover:text-white transition-colors duration-200 py-2"
               style={
-                activePath === "/rawseedapp/" ||
-                location.pathname === "/rawseedapp/"
+                activePath === "/" || location.pathname === "/"
                   ? { color: "#a18458" }
                   : undefined
               }
@@ -285,16 +258,13 @@ const NavMenu: React.FC = () => {
               Home
             </div>
           </Link>
-          <Link
-            to="/rawseedapp/sesame-oil"
-            onClick={() => setIsMenuOpen(false)}
-          >
+          <Link to="/sesame-oil" onClick={() => setIsMenuOpen(false)}>
             <div
               className="block text-gray-300 hover:text-white transition-colors duration-200 py-2"
-              onClick={() => setActivePath("/rawseedapp/sesame-oil")}
+              onClick={() => setActivePath("/sesame-oil")}
               style={
-                activePath === "/rawseedapp/sesame-oil" ||
-                location.pathname === "/rawseedapp/sesame-oil"
+                activePath === "/sesame-oil" ||
+                location.pathname === "/sesame-oil"
                   ? { color: "#a18458" }
                   : undefined
               }
@@ -302,16 +272,13 @@ const NavMenu: React.FC = () => {
               {t("menu.sesame_oil")}
             </div>
           </Link>
-          <Link
-            to="/rawseedapp/flaxseed-oil"
-            onClick={() => setIsMenuOpen(false)}
-          >
+          <Link to="/flaxseed-oil" onClick={() => setIsMenuOpen(false)}>
             <div
               className="block text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200 py-2"
-              onClick={() => setActivePath("/rawseedapp/flaxseed-oil")}
+              onClick={() => setActivePath("/flaxseed-oil")}
               style={
-                activePath === "/rawseedapp/flaxseed-oil" ||
-                location.pathname === "/rawseedapp/flaxseed-oil"
+                activePath === "/flaxseed-oil" ||
+                location.pathname === "/flaxseed-oil"
                   ? { color: "#a18458" }
                   : undefined
               }
@@ -319,16 +286,13 @@ const NavMenu: React.FC = () => {
               {t("menu.flax_seed_oil")}
             </div>
           </Link>
-          <Link
-            to="/rawseedapp/blackseed-oil"
-            onClick={() => setIsMenuOpen(false)}
-          >
+          <Link to="/blackseed-oil" onClick={() => setIsMenuOpen(false)}>
             <div
               className="block text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200 py-2"
-              onClick={() => setActivePath("/rawseedapp/blackseed-oil")}
+              onClick={() => setActivePath("/blackseed-oil")}
               style={
-                activePath === "/rawseedapp/blackseed-oil" ||
-                location.pathname === "/rawseedapp/blackseed-oil"
+                activePath === "/blackseed-oil" ||
+                location.pathname === "/blackseed-oil"
                   ? { color: "#a18458" }
                   : undefined
               }
@@ -336,13 +300,12 @@ const NavMenu: React.FC = () => {
               {t("menu.black_seed_oil")}
             </div>
           </Link>
-          <Link to="/rawseedapp/about-us" onClick={() => setIsMenuOpen(false)}>
+          <Link to="/about-us" onClick={() => setIsMenuOpen(false)}>
             <div
               className="block text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200 py-2"
-              onClick={() => setActivePath("/rawseedapp/about-us")}
+              onClick={() => setActivePath("/about-us")}
               style={
-                activePath === "/rawseedapp/about-us" ||
-                location.pathname === "/rawseedapp/about-us"
+                activePath === "/about-us" || location.pathname === "/about-us"
                   ? { color: "#a18458" }
                   : undefined
               }
@@ -352,9 +315,9 @@ const NavMenu: React.FC = () => {
           </Link>
 
           <Link
-            to="/rawseedapp/contact"
+            to="/contact"
             onClick={() => {
-              setActivePath("/rawseedapp/contact");
+              setActivePath("/contact");
               setIsMenuOpen(false);
             }}
           >
@@ -362,8 +325,7 @@ const NavMenu: React.FC = () => {
               className="block text-gray-300 text-shadow-lg hover:text-white transition-colors duration-200 py-2 
               "
               style={
-                activePath === "/rawseedapp/contact" ||
-                location.pathname === "/rawseedapp/contact"
+                activePath === "/contact" || location.pathname === "/contact"
                   ? { color: "#a18458" }
                   : undefined
               }

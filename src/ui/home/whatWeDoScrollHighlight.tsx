@@ -21,7 +21,7 @@ const WhatWeDoScrollHighlight = ({
   const activeItem = items[activeIndex] ?? items[0];
   const imageWidths = activeItem.imageWidths ?? [480, 800, 1600, 1980];
   const imageSrcSet = imageWidths
-    .map((width) => `/rawseedapp/${activeItem.image}-${width}.webp ${width}w`)
+    .map((width) => `/${activeItem.image}-${width}.webp ${width}w`)
     .join(", ");
 
   return (
@@ -32,7 +32,7 @@ const WhatWeDoScrollHighlight = ({
       }}
     >
       <img
-        src={`/rawseedapp/${activeItem.image}-${imageWidths[imageWidths.length - 1]}.webp`}
+        src={`/${activeItem.image}-${imageWidths[imageWidths.length - 1]}.webp`}
         srcSet={imageSrcSet}
         sizes="100vw"
         alt=""

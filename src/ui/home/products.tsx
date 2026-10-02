@@ -104,7 +104,7 @@ const Products: React.FC = () => {
             // title="Sesame Seed Oil"
             description={t("products.sesame.description")}
             buttonText="Learn More"
-            buttonLink="/rawseedapp/sesame-oil"
+            buttonLink="/sesame-oil"
             imageSize="117%"
             imagePosition="center 80%"
           />
@@ -116,7 +116,7 @@ const Products: React.FC = () => {
             // title="Flaxseed Oil"
             description={t("products.flaxseed.description")}
             buttonText="Learn More"
-            buttonLink="/rawseedapp/flaxseed-oil"
+            buttonLink="/flaxseed-oil"
             imageSize="125%"
             imagePosition="center 60%"
           />
@@ -130,7 +130,7 @@ const Products: React.FC = () => {
             buttonText="Learn More"
             imageSize="80%"
             imagePosition="center 90%"
-            buttonLink="/rawseedapp/blackseed-oil"
+            buttonLink="/blackseed-oil"
           />
         </div>
       </div>

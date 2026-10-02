@@ -104,12 +104,12 @@ const Hero: React.FC<HeroProps> = ({
     <>
       {/* Hero Background Image */}
       <img
-        src="/rawseedapp/rawseed-hero-1600.webp"
+        src="/rawseed-hero-1600.webp"
         srcSet="
-          /rawseedapp/rawseed-hero-480.webp 480w,
-          /rawseedapp/rawseed-hero-800.webp 800w,
-          /rawseedapp/rawseed-hero-1600.webp 1600w,
-          /rawseedapp/rawseed-hero-1980.webp 1980w
+          /rawseed-hero-480.webp 480w,
+          /rawseed-hero-800.webp 800w,
+          /rawseed-hero-1600.webp 1600w,
+          /rawseed-hero-1980.webp 1980w
         "
         sizes="100vw"
         alt=""

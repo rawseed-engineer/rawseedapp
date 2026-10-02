@@ -103,12 +103,12 @@ const BlackseedHero: React.FC<HeroProps> = ({
     <>
       {/* Hero Background Image */}
       <img
-        src="/rawseedapp/blackseed_hero_4k-1600.webp"
+        src="/blackseed_hero_4k-1600.webp"
         srcSet="
-          /rawseedapp/blackseed_hero_4k-480.webp 480w,
-          /rawseedapp/blackseed_hero_4k-800.webp 800w,
-          /rawseedapp/blackseed_hero_4k-1600.webp 1600w,
-          /rawseedapp/blackseed_hero_4k-1980.webp 1980w
+          /blackseed_hero_4k-480.webp 480w,
+          /blackseed_hero_4k-800.webp 800w,
+          /blackseed_hero_4k-1600.webp 1600w,
+          /blackseed_hero_4k-1980.webp 1980w
         "
         sizes="100vw"
         alt=""

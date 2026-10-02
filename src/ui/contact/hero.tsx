@@ -89,12 +89,12 @@ const Hero: React.FC<HeroProps> = ({
       className="relative min-h-screen flex items-center justify-center"
     >
       <img
-        src="/rawseedapp/flaxseed_flower_farm-1600.webp"
+        src="/flaxseed_flower_farm-1600.webp"
         srcSet="
-          /rawseedapp/flaxseed_flower_farm-480.webp 480w,
-          /rawseedapp/flaxseed_flower_farm-800.webp 800w,
-          /rawseedapp/flaxseed_flower_farm-1600.webp 1600w,
-          /rawseedapp/flaxseed_flower_farm-1980.webp 1980w
+          /flaxseed_flower_farm-480.webp 480w,
+          /flaxseed_flower_farm-800.webp 800w,
+          /flaxseed_flower_farm-1600.webp 1600w,
+          /flaxseed_flower_farm-1980.webp 1980w
         "
         sizes="100vw"
         alt=""

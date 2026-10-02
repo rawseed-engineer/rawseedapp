@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const Callout: React.FC = ({}) => {
   return (
     <div className="relative flex h-10 w-10">
-      <Link to="/rawseedapp/contact">
+      <Link to="/contact">
         <div className="absolute inline-flex h-full w-full animate-[ping_5s_cubic-bezier(0.22,1,0.36,1)_infinite] rounded-full bg-gradient-to-tr from-amber-300 to-yellow-700 opacity-75"></div>
         {/* <div
           className="absolute

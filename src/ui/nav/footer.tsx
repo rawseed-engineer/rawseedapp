@@ -109,7 +109,7 @@ const Footer: React.FC = () => {
           <ul className="space-y-3">
             <li>
               <Link
-                to="/rawseedapp/"
+                to="/"
                 className="text-gray-400 hover:text-white transition-colors duration-200"
               >
                 Rawseed Home
@@ -117,7 +117,7 @@ const Footer: React.FC = () => {
             </li>
             <li>
               <Link
-                to="/rawseedapp/sesame-oil"
+                to="/sesame-oil"
                 className="text-gray-400 hover:text-white transition-colors duration-200"
               >
                 Sesame Oil
@@ -125,7 +125,7 @@ const Footer: React.FC = () => {
             </li>
             <li>
               <Link
-                to="/rawseedapp/blackseed-oil"
+                to="/blackseed-oil"
                 className="text-gray-400 hover:text-white transition-colors duration-200"
               >
                 Blackseed Oil
@@ -133,7 +133,7 @@ const Footer: React.FC = () => {
             </li>
             <li>
               <Link
-                to="/rawseedapp/flaxseed-oil"
+                to="/flaxseed-oil"
                 className="text-gray-400 hover:text-white transition-colors duration-200"
               >
                 Flaxseed Oil
@@ -141,7 +141,7 @@ const Footer: React.FC = () => {
             </li>
             <li>
               <a
-                href="/rawseedapp/about-us"
+                href="/about-us"
                 className="text-gray-400 hover:text-white transition-colors duration-200"
               >
                 About Us

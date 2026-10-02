@@ -16,18 +16,12 @@ function App() {
         <main>
           <ScrollToTop>
             <Routes>
-              <Route path="/rawseedapp" element={<Home />} />
-              <Route path="/rawseedapp/sesame-oil" element={<SesameOil />} />
-              <Route
-                path="/rawseedapp/blackseed-oil"
-                element={<BlackseedOil />}
-              />
-              <Route
-                path="/rawseedapp/flaxseed-oil"
-                element={<FlaxseedOil />}
-              />
-              <Route path="/rawseedapp/about-us" element={<AboutUs />} />
-              <Route path="/rawseedapp/contact" element={<Contact />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/sesame-oil" element={<SesameOil />} />
+              <Route path="/blackseed-oil" element={<BlackseedOil />} />
+              <Route path="/flaxseed-oil" element={<FlaxseedOil />} />
+              <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/contact" element={<Contact />} />
             </Routes>
           </ScrollToTop>
         </main>

@@ -98,12 +98,12 @@ const Hero: React.FC<HeroProps> = ({
       className="relative min-h-screen flex items-center justify-center"
     >
       <img
-        src="/rawseedapp/about_us_hero-1600.webp"
+        src="/about_us_hero-1600.webp"
         srcSet="
-          /rawseedapp/about_us_hero-480.webp 480w,
-          /rawseedapp/about_us_hero-800.webp 800w,
-          /rawseedapp/about_us_hero-1600.webp 1600w,
-          /rawseedapp/about_us_hero-1980.webp 1980w
+          /about_us_hero-480.webp 480w,
+          /about_us_hero-800.webp 800w,
+          /about_us_hero-1600.webp 1600w,
+          /about_us_hero-1980.webp 1980w
         "
         sizes="100vw"
         alt=""

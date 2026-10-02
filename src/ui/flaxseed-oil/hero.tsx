@@ -99,12 +99,12 @@ const Hero: React.FC<HeroProps> = ({
     <>
       {/* Hero Background Image */}
       <img
-        src="/rawseedapp/flaxseed_oil_hero-1600.webp"
+        src="/flaxseed_oil_hero-1600.webp"
         srcSet="
-          /rawseedapp/flaxseed_oil_hero-480.webp 480w,
-          /rawseedapp/flaxseed_oil_hero-800.webp 800w,
-          /rawseedapp/flaxseed_oil_hero-1600.webp 1600w,
-          /rawseedapp/flaxseed_oil_hero-1980.webp 1980w
+          /flaxseed_oil_hero-480.webp 480w,
+          /flaxseed_oil_hero-800.webp 800w,
+          /flaxseed_oil_hero-1600.webp 1600w,
+          /flaxseed_oil_hero-1980.webp 1980w
         "
         sizes="100vw"
         alt=""

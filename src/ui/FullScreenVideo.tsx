@@ -76,12 +76,12 @@ const FullScreenVideo = () => {
         // Preview state: Thumbnail with overlay text and play button
         <div className="absolute inset-0">
           <img
-            src="/rawseedapp/video_thumbnail-800.webp"
+            src="/video_thumbnail-800.webp"
             srcSet="
-              /rawseedapp/video_thumbnail-480.webp 480w,
-              /rawseedapp/video_thumbnail-800.webp 800w,
-              /rawseedapp/video_thumbnail-1600.webp 1600w,
-              /rawseedapp/video_thumbnail-1980.webp 1980w
+              /video_thumbnail-480.webp 480w,
+              /video_thumbnail-800.webp 800w,
+              /video_thumbnail-1600.webp 1600w,
+              /video_thumbnail-1980.webp 1980w
             "
             sizes="100vw"
             alt=""
